@@ -1,0 +1,98 @@
+/* 自定义样式 */
+
+.navbar {
+	background-color: #7B7B7B;
+	color: white;
+	height: 80px;
+	/* 调整为您希望的高度值 */
+	position: relative;
+	z-index: 1000;
+}
+.menu-col {
+	margin-top: 20px;
+	/* 调整为适当的间距值，以确保侧边栏不会覆盖导航栏 */
+	position: relative;
+	z-index: 900;
+}
+.accordion-button:not(.collapsed) {
+	background-color: transparent;
+}
+.accordion-button::after {
+	display: none;
+}
+.content {
+	min-height: calc(100vh - 80px);
+	/* 计算剩余可用高度 */
+	padding: 20px;
+	/* 添加内边距 */
+	box-sizing: border-box;
+	/* 确保内边距不增加元素的实际高度 */
+}
+.main-content-container {
+	background-color: #f8f8f8;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 20px;
+	margin-top: 20px;
+}
+.dropdown-submenu {
+	margin-left: 12px;
+	margin-top: 5px;
+	position: static;
+}
+.nested-dropdown-menu li {
+	position: relative;
+}
+@media (min-width: 992px) {
+	.dropdown-menu>li:hover>.dropdown-submenu {
+		display: block;
+	}
+	.dropdown-submenu {
+		position: absolute;
+	}
+	.dropdown-submenu, .dropdown-submenu[data-bs-popper] {
+		left: 100%;
+		margin-left: 0;
+		margin-top: 0;
+		top: -7px;
+	}
+	.dropdown-submenu.show {
+		display: none;
+	}
+}
+.login-container {
+	max-width: 400px;
+	margin: 0 auto;
+	margin-top: 150px;
+}
+.login-form {
+	background-color: #f8f8f8;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 20px;
+}
+.login-form .form-group {
+	margin-bottom: 20px;
+}
+.login-form label {
+	font-weight: bold;
+}
+.login-form input[type="text"],
+.login-form input[type="password"] {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+.login-form button {
+	width: 100%;
+	padding: 10px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.login-form button:hover {
+	background-color: #0056b3;
+}
