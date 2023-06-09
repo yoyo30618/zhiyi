@@ -19,7 +19,7 @@
 				<div class="col-lg-10">
 					<div class="main-content-container">
 						<!-- 在这里添加主要内容部分的内容 -->
-						123
+						你在儀表板
 					</div>
 				</div>
 			</div>

@@ -96,3 +96,70 @@
 .login-form button:hover {
 	background-color: #0056b3;
 }
+.ingredient-section {
+	background-color: #efdded;
+	border-radius: 10px;
+	padding: 10px;
+}
+.step-section {
+	background-color: #fefbda;
+	border-radius: 10px;
+	padding: 10px;
+	text-align:center;
+}
+.flow-section {
+	background-color: #fff4e5;
+	border-radius: 10px;
+	padding: 10px;
+	text-align:center;
+}
+.make-section {
+	background-color: #fde9e9;
+	border-radius: 10px;
+	padding: 10px;
+	text-align:center;
+}
+
+.step {
+	border-radius: 10px;
+	padding: 10px;
+	margin-bottom: 10px;
+	background-color: #fff;
+	cursor: pointer;
+}
+.with-ingredient {
+	background-color: yellow;
+  }
+  
+  .stacked-images {
+	position: relative;
+  }
+  
+  .stacked-images img {
+	position: absolute;
+	top: 0;
+	left: 35%;
+	transform: translateY(0);
+	z-index: 6;
+  }
+  
+  .stacked-images img:nth-child(2) {
+	transform: translateY(20%);
+	z-index: 5;
+  }  
+  .stacked-images img:nth-child(3) {
+	transform: translateY(30%);
+	z-index: 4;
+  }
+  .stacked-images img:nth-child(4) {
+	transform: translateY(40%);
+	z-index: 3;
+  }
+  .stacked-images img:nth-child(5) {
+	transform: translateY(50%);
+	z-index: 2;
+  }
+  .stacked-images img:nth-child(6) {
+	transform: translateY(60%);
+	z-index: 1;
+  }

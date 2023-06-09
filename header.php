@@ -61,12 +61,18 @@
 							</ul>
 						</li>
 					</ul>
-				</li>				
-				<li class="nav-item dropdown">
-					<a class="nav-link " href="<?php echo $parentDirectory; ?>dashboard.php" id="dropdown-menu-1" role="button">
-						儀錶板
-					</a>
-				</li>
+				</li>		
+				<?php
+					if(isset($_SESSION['TELic-LAB_Islogin']) && $_SESSION['TELic-LAB_Islogin']=="1"){
+						?>
+						<li class="nav-item dropdown">
+							<a class="nav-link " href="<?php echo $parentDirectory; ?>dashboard.php" id="dropdown-menu-1" role="button">
+								儀錶板
+							</a>
+						</li>
+						<?php
+					}
+				?>
 			</ul>
 			<ul class="navbar-nav ms-auto">
 				<li class="nav-item dropdown">
