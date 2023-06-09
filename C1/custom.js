@@ -6,10 +6,18 @@ function showContent(contentId) {
   document.getElementById("Isanswered").style.display = "none";
   document.getElementById("MoveToContent3").style.display = "none";
   ResetBurger();//整理乾淨漢堡區
+  ResetAns();//重整填答區
   // 根據contentId參數顯示相應的內容區塊
   document.getElementById("content" + contentId).style.display = "block";
 }
+function ResetAns(){
+	// 在這裡添加顯示演算法說明的邏輯
+	document.getElementById("answer").disabled = false;
+	document.getElementById("submitans").disabled = false;
+	document.getElementById("Isanswered").style.display = "none";
+	document.getElementById("algorithmExplanation").style.display = "none";
 
+}
 function checkAssembly() {//檢查流程圖與步驟是否相呼應
 	var stepOrder = [];
 	var flowchartOrder = [];

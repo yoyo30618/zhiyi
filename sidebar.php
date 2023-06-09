@@ -1,3 +1,9 @@
+<?php
+	if (!defined('IN_INDEX')) {
+		// 如果未定义 IN_INDEX 常量，表示未通过合法入口文件引入，终止脚本执行
+		exit('Access denied.');
+	}
+?>
 <div class="col-lg-2 bg-light menu-col">
 	<div class="accordion" id="courseAccordion">
 		<div class="accordion-item">

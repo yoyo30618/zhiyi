@@ -10,7 +10,10 @@
 		<title></title>
 	</head>
 	<body>
-		<?php include 'header.php'; ?>
+		<?php 
+			define('IN_INDEX', true);
+			include 'header.php'; 
+		?>
 
 		<div class="container-fluid content">
 			<div class="row">
