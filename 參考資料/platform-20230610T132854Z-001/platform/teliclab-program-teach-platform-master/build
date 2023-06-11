@@ -1,0 +1,6 @@
+docker build . -t shengchehsiao/teliclabctop    
+
+docker push shengcheshengchehsiao/teliclabctop
+
+docker run --name ctop -p 3000:3000 -d shengchehsiao/teliclabctop
+
