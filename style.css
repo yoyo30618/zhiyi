@@ -163,3 +163,19 @@
 	transform: translateY(60%);
 	z-index: 1;
   }
+  .tooltip-content {
+	display: none;
+	margin-top: 10px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	}
+  .inputstyle{
+	background:lightblue;
+  }
+  .ifstyle{
+	background:lightyellow;
+  }
+  .outputstyle{
+	background:pink;
+  }
