@@ -66,7 +66,7 @@ function showSoloNextStep() {
   if (SoloCurrentStep === 1) {
     var SoloInput = document.getElementById("SoloInput");
     SoloInputValue=SoloInput.value;
-    SoloMsg[0]="請輸入成績：<input id='SoloInput'>";
+    SoloMsg[0]="請輸入成績：<input id='SoloInput' type='number'>";
     SoloMsg[1]="請輸入成績："+SoloInputValue;
     SoloMsg[2]="請輸入成績："+SoloInputValue+"<br>及格！";
     SoloMsg[3]="請輸入成績："+SoloInputValue+"<br>不及格！";
