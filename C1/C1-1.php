@@ -15,7 +15,7 @@
 	<body>
 		<?php 
 			$nowdir=basename(dirname($_SERVER['PHP_SELF']));
-			$parentDirectory = ($nowdir === "C1" || $nowdir === "C2") ? "../" : "";
+			$parentDirectory = ($nowdir === "C1" || $nowdir === "C2"  || $nowdir === "C3"  || $nowdir === "C4") ? "../" : "";
 			define('IN_INDEX', true);
 			include $parentDirectory.'header.php'; 
 			if(!isset($_SESSION['TELic-LAB_Islogin']))

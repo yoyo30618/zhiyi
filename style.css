@@ -179,3 +179,20 @@
   .outputstyle{
 	background:pink;
   }
+  .forputstyle{
+	background:lightgreen;
+  }
+  #step-indicator {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 10px;
+  }
+  .step-arrow{
+	color:red;
+	font-size:15px;
+  }
+  .solo-step-arrow{
+	color:red;
+	font-size:15px;
+  }
+  

@@ -5,7 +5,7 @@
 	}
 	session_start();//開啟session
 	$nowdir=basename(dirname($_SERVER['PHP_SELF']));
-	$parentDirectory = ($nowdir === "C1" || $nowdir === "C2") ? "../" : "";
+	$parentDirectory = ($nowdir === "C1" || $nowdir === "C2"  || $nowdir === "C3"  || $nowdir === "C4") ? "../" : "";
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark">
 	<div class="container">
@@ -60,6 +60,36 @@
 								</li>								
 								<li>
 									<a class="dropdown-item" href="<?php echo $parentDirectory; ?>C2/C2-3.php">題目三</a>
+								</li>
+							</ul>
+						</li>						
+						<li class="nav-item dropdown">
+							<a class="dropdown-item d-inline d-lg-block" href="<?php echo $parentDirectory; ?>C3/C3.php">C3 選擇結構<em class="bi bi-chevron-compact-right d-none d-lg-inline float-end"></em> </a>
+							<a class="dropdown-item dropdown-toggle d-inline d-lg-none" href="#" id="dropdown-submenu-1" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+							<ul class="dropdown-menu dropdown-submenu" aria-labelledby="dropdown-submenu-1">
+								<li>
+									<a class="dropdown-item" href="<?php echo $parentDirectory; ?>C3/C3-1.php">題目一</a>
+								</li>								
+								<li>
+									<a class="dropdown-item" href="<?php echo $parentDirectory; ?>C3/C3-2.php">題目二</a>
+								</li>								
+								<li>
+									<a class="dropdown-item" href="<?php echo $parentDirectory; ?>C3/C3-3.php">題目三</a>
+								</li>
+							</ul>
+						</li>						
+						<li class="nav-item dropdown">
+							<a class="dropdown-item d-inline d-lg-block" href="<?php echo $parentDirectory; ?>C4/C4.php">C4 重複結構<em class="bi bi-chevron-compact-right d-none d-lg-inline float-end"></em> </a>
+							<a class="dropdown-item dropdown-toggle d-inline d-lg-none" href="#" id="dropdown-submenu-1" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+							<ul class="dropdown-menu dropdown-submenu" aria-labelledby="dropdown-submenu-1">
+								<li>
+									<a class="dropdown-item" href="<?php echo $parentDirectory; ?>C4/C4-1.php">題目一</a>
+								</li>								
+								<li>
+									<a class="dropdown-item" href="<?php echo $parentDirectory; ?>C4/C4-2.php">題目二</a>
+								</li>								
+								<li>
+									<a class="dropdown-item" href="<?php echo $parentDirectory; ?>C4/C4-3.php">題目三</a>
 								</li>
 							</ul>
 						</li>

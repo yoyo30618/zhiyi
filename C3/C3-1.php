@@ -25,7 +25,7 @@
 				"請輸入成績：59",
 				"請輸入成績：59<br>不及格！"
 			];
-			FlowPicPath='../pic/C2-1';
+			FlowPicPath='../pic/C3-1';
 		</script>
 		<div class="container-fluid content">
 			<div class="row">
@@ -59,13 +59,26 @@
 <a id='step5' class='step-arrow'> ➥</a>    <text class="outputstyle">print("不及格!")</text>
 </code>
 </pre>
-<button id="previous-btn" type="button">上一步</button>
-<button id="next-btn" type="button">下一步</button>
-
+										<div  style='text-align:center'>
+											<button id="previous-btn" type="button">上一步</button>
+											<button id="next-btn" type="button">下一步</button>
+										</div>
 									</div>
 									<div class="tab-pane fade" id="simulation" role="tabpanel" aria-labelledby="simulation-tab">
 										<!-- 左上區塊的程式模擬內容 -->
-										程式模擬
+<pre>
+<code class="language-python">
+<a id='solo-step1' class='solo-step-arrow'> ➥</a><text class="inputstyle">grade = int( input( "請輸入成績:" ) )</text>
+<a id='solo-step2' class='solo-step-arrow'> ➥</a><text class="ifstyle">if( <text class="inputstyle">grade</text> >= 60 ):</text>
+<a id='solo-step3' class='solo-step-arrow'> ➥</a>    <text class="outputstyle">print("及格!")</text>
+<a id='solo-step4' class='solo-step-arrow'> ➥</a><text class="ifstyle">else:</text>
+<a id='solo-step5' class='solo-step-arrow'> ➥</a>    <text class="outputstyle">print("不及格!")</text>
+</code>
+</pre>
+										<div  style='text-align:center'>
+											<button id="solo-previous-btn" type="button">上一步</button>
+											<button id="solo-next-btn" type="button">下一步</button>
+										</div>
 									</div>
 								</div><br>
 								<div id="step-indicator">
@@ -89,7 +102,7 @@
 									</div>
 									<div class="tab-pane fade" id="flowchart" role="tabpanel" aria-labelledby="flowchart-tab">
 										<!-- 右側區塊的程式流程圖內容 -->
-										<img id='flowpic' src='../pic/C2-1/step0.png'>
+										<img id='flowpic' src='../pic/C3-1/step0.png'>
 									</div>
 								</div>
 							</div>
@@ -102,5 +115,6 @@
 		<!-- 引入 Bootstrap 的 JavaScript 文件 -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 		<script src="../js/SwitchTag.js"></script>
+		<script src="../js/C3-1.js"></script>
 	</body>
 </html>

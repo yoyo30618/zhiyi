@@ -25,28 +25,28 @@
 				<div class="col-lg-10">
 					<div class="main-content-container">
 					<!-- 在这里添加主要内容部分的内容 -->
-						<h2>C2 循序結構</h2>
+						<h2>C4 重複結構</h2>
 						<div class="col-lg-10">
 							<div class="main-content-container">	
 								<div class="accordion" id="courseAccordion">
 									<div class="accordion-item">
-										<h2 class="accordion-header" id="headingC2">
-											<button class="accordion-button collapsed" type="button" onclick="window.location.href='C2-1.php'">
-												C2-1 題目一
+										<h2 class="accordion-header" id="headingC4">
+											<button class="accordion-button collapsed" type="button" onclick="window.location.href='C4-1.php'">
+												C4-1 題目一
 											</button>
 										</h2>
 									</div>
 									<div class="accordion-item">
-										<h2 class="accordion-header" id="headingC2">
-											<button class="accordion-button collapsed" type="button" onclick="window.location.href='C2-2.php'">
-												C2-2 題目二
+										<h2 class="accordion-header" id="headingC4">
+											<button class="accordion-button collapsed" type="button" onclick="window.location.href='C4-2.php'">
+												C4-2 題目二
 											</button>
 										</h2>
 									</div>
 									<div class="accordion-item">
-										<h2 class="accordion-header" id="headingC2">
-											<button class="accordion-button collapsed" type="button" onclick="window.location.href='C2-3.php'">
-												C2-3 題目三
+										<h2 class="accordion-header" id="headingC4">
+											<button class="accordion-button collapsed" type="button" onclick="window.location.href='C4-3.php'">
+												C4-3 題目三
 											</button>
 										</h2>
 									</div>
