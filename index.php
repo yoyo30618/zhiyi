@@ -34,9 +34,23 @@
 										</h2>
 									</div>
 									<div class="accordion-item">
-										<h2 class="accordion-header" id="headingC1">
+										<h2 class="accordion-header" id="headingC2">
     										<button class="accordion-button collapsed" type="button" onclick="window.location.href='C2/C2.php'">
 												C2 循序結構
+											</button>
+										</h2>
+									</div>
+									<div class="accordion-item">
+										<h2 class="accordion-header" id="headingC3">
+    										<button class="accordion-button collapsed" type="button" onclick="window.location.href='C3/C3.php'">
+												C3 選擇結構
+											</button>
+										</h2>
+									</div>
+									<div class="accordion-item">
+										<h2 class="accordion-header" id="headingC4">
+    										<button class="accordion-button collapsed" type="button" onclick="window.location.href='C4/C4.php'">
+												C4 重複結構
 											</button>
 										</h2>
 									</div>
