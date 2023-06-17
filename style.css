@@ -179,8 +179,11 @@
   .outputstyle{
 	background:pink;
   }
-  .forputstyle{
+  .forstyle{
 	background:lightgreen;
+  }
+  .cntstyle{
+	background:rgb(224, 106, 224);
   }
   #step-indicator {
 	border: 1px solid #ccc;
@@ -196,3 +199,6 @@
 	font-size:15px;
   }
   
+  td {
+	vertical-align: middle;
+  }

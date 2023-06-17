@@ -4,10 +4,9 @@ SoloCodeStep=[0,0,0];//箭頭該顯示的順序
 SoloMsgStep=[0,0,0];
 SoloPicStep=[0,0,0];
 SoloMsg=[
-  "請輸入成績：<input id='SoloInput' type='number'>",
-  "請輸入成績：",
-  "請輸入成績：<br>及格！",
-  "請輸入成績：<br>不及格！"
+  "請輸入n：<input id='SoloInput' type='number'>",
+  "請輸入n：0",
+  "請輸入n：<br>"
 ];
 var SoloInputValue = 0; // 儲存輸入框的值
 
@@ -62,31 +61,50 @@ function showSoloPreviousStep() {
 }
 
 function showSoloNextStep() {
-  SolostepArrows = SoloCodeStep.length;
-  
-  if (SoloCurrentStep === 1) {
+  if (SoloCurrentStep === 1) {//a.push(4);  
     var SoloInput = document.getElementById("SoloInput");
     SoloInputValue=SoloInput.value;
-    SoloMsg[0]="請輸入成績：<input id='SoloInput' type='number'>";
-    SoloMsg[1]="請輸入成績："+SoloInputValue;
-    SoloMsg[2]="請輸入成績："+SoloInputValue+"<br>及格！";
-    SoloMsg[3]="請輸入成績："+SoloInputValue+"<br>不及格！";
-    if(SoloInputValue>=60){
-      SoloCodeStep=[1,2,3];//箭頭該顯示的順序
-      SoloMsgStep=[0,1,2];
-      SoloPicStep=[1,3,4];
+    SoloMsgStep=[];
+    SoloCodeStep=[];
+
+    SoloPicStep=[];
+
+    SoloMsgStep.push(0);
+    SoloMsgStep.push(1);
+    SoloCodeStep.push(1);
+    SoloCodeStep.push(2);
+    SoloPicStep.push(1);
+    SoloPicStep.push(1);
+    var sum=0;
+    for (var i = 1; i <= SoloInputValue; i++) {
+      SoloMsgStep.push(1);
+      SoloMsgStep.push(1);
+      SoloCodeStep.push(3);
+      SoloCodeStep.push(4);
+      SoloPicStep.push(2);
+      SoloPicStep.push(3);
+      sum=sum+i;
     }
-    else{
-      SoloCodeStep=[1,2,4,5];//箭頭該顯示的順序
-      SoloMsgStep=[0,1,1,3];
-      SoloPicStep=[1,2,5,6];
-    }
+    SoloMsgStep.push(1);//最後一次迴圈判定
+    SoloCodeStep.push(3);//最後一次迴圈判定
+    SoloPicStep.push(4);
+
+    SoloMsgStep.push(2);
+    SoloCodeStep.push(5);
+    SoloPicStep.push(5);
+    //修改訊息內容
+    SoloMsg=[];
+    SoloMsg[0]="請輸入n：<input id='SoloInput' type='number'>";
+    SoloMsg[1]="請輸入n："+SoloInputValue;
+    SoloMsg[2]="請輸入n："+SoloInputValue+"<br>"+sum;
   }
+  SolostepArrows = SoloCodeStep.length;  
   var nextStep = SoloCurrentStep + 1;
   if (nextStep > SolostepArrows) {
     nextStep = SolostepArrows;
   }
   showSoloStep(nextStep);
+ 
 }
 
 // 監聽左右切換按鈕的點擊事件
@@ -101,17 +119,22 @@ document.getElementById("solo-next-btn").addEventListener("click", function () {
 $(document).ready(function(){
   $('#hintButton').click(function() {
     $('#hint1').popover({
-      content: '一個整數變數表示成績',
+      content: '一個整數變數表示迴圈範圍',
       placement: 'top',
       trigger: 'manual'
     }).popover('show');
     $('#hint2').popover({
-      content: '判斷條件：60分(含)以上為及格；59分(含)以下為不及格',
+      content: '重複結構',
       placement: 'top',
       trigger: 'manual'
     }).popover('show');
     $('#hint3').popover({
-      content: '輸出判斷後的結果',
+      content: '1+2+3+...+n',
+      placement: 'top',
+      trigger: 'manual'
+    }).popover('show');
+    $('#hint4').popover({
+      content: '輸出總和結果',
       placement: 'top',
       trigger: 'manual'
     }).popover('show');

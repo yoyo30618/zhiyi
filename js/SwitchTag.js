@@ -41,11 +41,11 @@ function showStep(step) {
   if (stepIndicator) {
     stepIndicator.innerHTML = MsgStep[step-1];
   }
-  
+
   // 更新圖片
   var stepImage = document.getElementById("flowpic");
   if (stepImage) {
-    var imageSrc = FlowPicPath+"/step"+CodeStep[step-1]+".png";
+    var imageSrc = FlowPicPath+"/step"+PicStep[step-1]+".png";
     if (imageSrc) {
       stepImage.src = imageSrc;
       stepImage.onerror = function() {

@@ -19,9 +19,11 @@
 		?>
 		<script> //在此設定本次程式預設執行順序
 			CodeStep=[1,2,4,5];//箭頭該顯示的順序
+			PicStep=[1,2,5,6];
 			MsgStep=[
 				"請輸入成績：59",
 				"請輸入成績：59",
+				"請輸入成績：59<br>及格！",
 				"請輸入成績：59",
 				"請輸入成績：59<br>不及格！"
 			];
@@ -33,10 +35,23 @@
 				<div class="col-lg-10">
 					<!--  主要部分  -->
 					<div class="main-content-container">
-						<h4 style='margin:auto;text-align:center;width:100%'>
-							請寫一個程式，<text class="inputstyle">讓使用者自行輸入成績</text>，並<text class="ifstyle">判斷該成績是否及格</text>，並<text class="outputstyle">輸出相對應的結果</text>。<br>
-							(如 輸入成績:90 輸出:及格!；輸入成績:55 輸出:不及格!)
-						</h4><br>
+					
+						
+						<table style='margin:auto;text-align:center;width:100%;font-size: 20px;'>
+							<tr>
+								<td><button type="button" class="btn btn-secondary rounded-circle" id="hintButton" >?</button></td>
+								<td>
+									請寫一個程式，
+									<text class="inputstyle" id="hint1">讓使用者自行輸入成績</text>
+									，並
+									<text class="ifstyle" id="hint2">判斷該成績是否及格</text>
+									，並
+									<text class="outputstyle" id="hint3">輸出相對應的結果</text>
+									。<br>
+									(如 輸入成績:90 輸出:及格!；輸入成績:55 輸出:不及格!)
+								</td>
+							</tr>
+						</table><br>
 						<div class="row">
 							<div class="col-lg-6">
 								<ul class="nav nav-tabs" id="left-tabs" role="tablist">
@@ -52,8 +67,8 @@
 										<!-- 左上區塊的程式範例內容 -->
 <pre>
 <code class="language-python">
-<a id='step1' class='step-arrow'> ➥</a><text class="inputstyle">grade = int( input( "請輸入成績:" ) )</text>
-<a id='step2' class='step-arrow'> ➥</a><text class="ifstyle">if( <text class="inputstyle">grade</text> >= 60 ):</text>
+<a id='step1' class='step-arrow'> ➥</a><text class="inputstyle">grade = int(input("請輸入成績:"))</text>
+<a id='step2' class='step-arrow'> ➥</a><text class="ifstyle">if(<text class="inputstyle">grade</text> >= 60):</text>
 <a id='step3' class='step-arrow'> ➥</a>    <text class="outputstyle">print("及格!")</text>
 <a id='step4' class='step-arrow'> ➥</a><text class="ifstyle">else:</text>
 <a id='step5' class='step-arrow'> ➥</a>    <text class="outputstyle">print("不及格!")</text>
@@ -68,8 +83,8 @@
 										<!-- 左上區塊的程式模擬內容 -->
 <pre>
 <code class="language-python">
-<a id='solo-step1' class='solo-step-arrow'> ➥</a><text class="inputstyle">grade = int( input( "請輸入成績:" ) )</text>
-<a id='solo-step2' class='solo-step-arrow'> ➥</a><text class="ifstyle">if( <text class="inputstyle">grade</text> >= 60 ):</text>
+<a id='solo-step1' class='solo-step-arrow'> ➥</a><text class="inputstyle">grade = int(input("請輸入成績:"))</text>
+<a id='solo-step2' class='solo-step-arrow'> ➥</a><text class="ifstyle">if(<text class="inputstyle">grade</text> >= 60):</text>
 <a id='solo-step3' class='solo-step-arrow'> ➥</a>    <text class="outputstyle">print("及格!")</text>
 <a id='solo-step4' class='solo-step-arrow'> ➥</a><text class="ifstyle">else:</text>
 <a id='solo-step5' class='solo-step-arrow'> ➥</a>    <text class="outputstyle">print("不及格!")</text>
@@ -114,6 +129,8 @@
 		</div>
 		<!-- 引入 Bootstrap 的 JavaScript 文件 -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 		<script src="../js/SwitchTag.js"></script>
 		<script src="../js/C3-1.js"></script>
 	</body>
