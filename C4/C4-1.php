@@ -127,7 +127,18 @@
 									</div>
 									<div class="tab-pane fade" id="flowchart" role="tabpanel" aria-labelledby="flowchart-tab">
 										<!-- 右側區塊的程式流程圖內容 -->
-										<img id='flowpic' src='../pic/C4-1/step0.png'>
+										<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+											<defs>
+												<pattern id="image-bg" x="0" y="0" width="100%" height="100%" patternUnits="userSpaceOnUse">
+													<image id="flowpic" href="../pic/C4-1/step0.png" x="0" y="0" width="500" height="500" preserveAspectRatio="none" />
+												</pattern>
+											</defs>
+											<rect x="0" y="0" width="500" height="500" fill="url(#image-bg)" />
+											<text id='text-step1' class='step-textX' x="280" y="120" fill="black">n=5</text>
+											<text id='text-step3' class='step-text' x="240" y="240" fill="black">sum=0,i=1</text>
+											<text id='text-step4' class='step-text' x="240" y="240" fill="black">sum=0,i=1</text>
+											<text id='text-step5' class='step-text' x="400" y="320" fill="black">sum=15</text>
+										</svg>
 									</div>
 								</div>
 							</div>
