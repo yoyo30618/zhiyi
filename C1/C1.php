@@ -16,7 +16,7 @@
 			define('IN_INDEX', true);
 			include $parentDirectory.'header.php'; 
 			if(!isset($_SESSION['TELic-LAB_Islogin']))
-				echo"<script  language=\"JavaScript\">alert('請先登入');location.href=\"../login.php\";</script>";
+				echo"<script  language=\"JavaScript\">alert('請先登入');location.href=\"".$parentDirectory."login.php\";</script>";
 		?>
 		<div class="container-fluid content">
 			<div class="row">
@@ -46,5 +46,6 @@
 		</div>
 		<!-- 引入 Bootstrap 的 JavaScript 文件 -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="../js/ClockTime.js"></script>
 	</body>
 </html>

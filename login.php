@@ -14,7 +14,7 @@
 		<?php 
 			define('IN_INDEX', true);
 			include 'header.php'; 
-			if(isset($_SESSION['TELic-LAB_Islogin']) && $_SESSION['TELic-LAB_Islogin']=="1")
+			if(isset($_SESSION['TELic-LAB_Islogin']) && $_SESSION['TELic-LAB_Islogin']=="1" &&  $_SESSION['TELic-Verify']==="T" )
 				echo"<script  language=\"JavaScript\">alert('您已經登入');location.href=\"dashboard.php\";</script>";
 		?>
 		<div class="container-fluid content">

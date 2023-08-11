@@ -19,7 +19,8 @@
 			define('IN_INDEX', true);
 			include $parentDirectory.'header.php'; 
 			if(!isset($_SESSION['TELic-LAB_Islogin']))
-				echo"<script  language=\"JavaScript\">alert('請先登入');location.href=\"../login.php\";</script>";
+				echo"<script  language=\"JavaScript\">alert('請先登入');location.href=\"".$parentDirectory."login.php\";</script>";
+				
 		?>
 		<div class="container-fluid content">
 			<div class="row">
@@ -169,5 +170,6 @@
 				</div>
 			</div>
 		</div>
+		<script src="../js/ClockTime.js"></script>
 	</body>
 </html>

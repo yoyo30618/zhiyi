@@ -29,23 +29,6 @@
 								<li>
 									<a class="dropdown-item" href="<?php echo $parentDirectory; ?>C1/C1-1.php">演算法是甚麼?</a>
 								</li>
-								<!-- 再下一層的範例
-									<li class="nav-item dropdown">
-										<a class="dropdown-item d-inline d-lg-block" href="/article_filter?category=5"> 前端 <em class="bi bi-chevron-compact-right d-none d-lg-inline float-end"></em> </a>
-										<a class="dropdown-item dropdown-toggle d-inline d-lg-none" href="#" id="dropdown-submenu-5" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
-										<ul class="dropdown-menu dropdown-submenu" aria-labelledby="dropdown-submenu-5">
-											<li>
-												<a class="dropdown-item" href="/article_filter?category=7">CSS</a>
-											</li>
-											<li>
-												<a class="dropdown-item" href="/article_filter?category=6">HTML</a>
-											</li>
-											<li>
-												<a class="dropdown-item" href="/article_filter?category=8">Javascript</a>
-											</li>
-										</ul>
-									</li> 
-								-->
 							</ul>
 						</li>						
 						<li class="nav-item dropdown">
@@ -96,7 +79,7 @@
 					</ul>
 				</li>		
 				<?php
-					if(isset($_SESSION['TELic-LAB_Islogin']) && $_SESSION['TELic-LAB_Islogin']=="1"){
+					if(isset($_SESSION['TELic-LAB_Islogin']) && $_SESSION['TELic-LAB_Islogin']=="1"  ){
 						?>
 						<li class="nav-item dropdown">
 							<a class="nav-link " href="<?php echo $parentDirectory; ?>dashboard.php" id="dropdown-menu-1" role="button">
@@ -127,7 +110,7 @@
 							}
 							else{
 								echo "<li><a class='dropdown-item' href='".$parentDirectory."login.php'>Login</a></li>";
-								echo "<li><a class='dropdown-item' href='".$parentDirectory."register.php'>Register</a></li>";
+								echo "<li><a class='dropdown-item' href='".$parentDirectory."Signup.php'>Signup</a></li>";
 							}
 						?>
 					</ul>

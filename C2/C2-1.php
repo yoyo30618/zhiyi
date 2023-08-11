@@ -15,7 +15,7 @@
 			define('IN_INDEX', true);
 			include $parentDirectory.'header.php'; 
 			if(!isset($_SESSION['TELic-LAB_Islogin']))
-				echo"<script  language=\"JavaScript\">alert('請先登入');location.href=\"../login.php\";</script>";
+				echo"<script  language=\"JavaScript\">alert('請先登入');location.href=\"".$parentDirectory."login.php\";</script>";
 		?>
 		<script> //在此設定本次程式預設執行順序
 			CodeStep=[1,2,4,5];//箭頭該顯示的順序
@@ -102,5 +102,6 @@
 		<!-- 引入 Bootstrap 的 JavaScript 文件 -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 		<script src="../js/SwitchTag.js"></script>
+		<script src="../js/ClockTime.js"></script>
 	</body>
 </html>

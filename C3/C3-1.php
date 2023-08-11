@@ -15,7 +15,7 @@
 			define('IN_INDEX', true);
 			include $parentDirectory.'header.php'; 
 			if(!isset($_SESSION['TELic-LAB_Islogin']))
-				echo"<script  language=\"JavaScript\">alert('請先登入');location.href=\"../login.php\";</script>";
+				echo"<script  language=\"JavaScript\">alert('請先登入');location.href=\"".$parentDirectory."login.php\";</script>";
 		?>
 		<script> //在此設定本次程式預設執行順序
 			CodeStep=[1,2,4,5];//箭頭該顯示的順序
@@ -124,11 +124,11 @@
 												</pattern>
 											</defs>
 											<rect x="0" y="0" width="500" height="500" fill="url(#image-bg)" />
-											<text id='text-step1' class='step-text' x="220" y="140" fill="black">grade=59</text>
+											<text id='text-step1' class='step-text' x="290" y="140" fill="black">grade=59</text>
 											<text id='text-step2' class='step-text' x="220" y="200" fill="black">grade=59</text>
-											<text id='text-step3' class='step-text' x="360" y="200" fill="black">grade=59</text>
-											<text id='text-step4' class='step-text' x="200" y="310" fill="black">grade=59</text>
-											<text id='text-step5' class='step-text' x="240" y="370" fill="black">grade=59</text>
+											<text id='text-step3' class='step-text' x="360" y="220" fill="black">grade=59</text>
+											<text id='text-step4' class='step-text' x="220" y="310" fill="black">grade=59</text>
+											<text id='text-step5' class='step-text' x="270" y="390" fill="black">grade=59</text>
 										</svg>
 									</div>
 								</div>
@@ -145,5 +145,6 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 		<script src="../js/SwitchTag.js"></script>
 		<script src="../js/C3-1.js"></script>
+		<script src="../js/ClockTime.js"></script>
 	</body>
 </html>

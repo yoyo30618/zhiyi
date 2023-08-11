@@ -15,9 +15,9 @@
 			if($row_login['Account']===$Account&&$row_login['Password']===$Password){#登入成功
 				$_SESSION['TELic-LAB_Account']=$row_login['Account'];//登入成功將資訊儲存到session中
 				$_SESSION['TELic-LAB_Islogin']=1;
-				$_SESSION['TELic-LAB_Status']=$row_login['Status'];
+				$_SESSION['TELic-Verify']=$row_login['Verify'];
 				$IsLogin=1;
-				echo"<script  language=\"JavaScript\">alert('登入成功');location.href=\"dashboard.php\";</script>";
+				echo"<script  language=\"JavaScript\">alert('登入成功');location.href=\"index.php\";</script>";
 				break;
 			}
 		}

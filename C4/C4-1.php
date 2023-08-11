@@ -15,7 +15,7 @@
 			define('IN_INDEX', true);
 			include $parentDirectory.'header.php'; 
 			if(!isset($_SESSION['TELic-LAB_Islogin']))
-				echo"<script  language=\"JavaScript\">alert('請先登入');location.href=\"../login.php\";</script>";
+				echo"<script  language=\"JavaScript\">alert('請先登入');location.href=\"".$parentDirectory."login.php\";</script>";
 		?>
 		<script> //在此設定本次程式預設執行順序
 			CodeStep=[1,2,3,4,3,4,3,4,3,4,3,4,3,5];//箭頭該顯示的順序
@@ -154,5 +154,6 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 		<script src="../js/SwitchTag.js"></script>
 		<script src="../js/C4-1.js"></script>
+		<script src="../js/ClockTime.js"></script>
 	</body>
 </html>
