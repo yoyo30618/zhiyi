@@ -1,0 +1,5 @@
+{Input}Chinese  = int(input("請輸入國文成績:")){EndInput}
+{Input}English = int(input("請輸入英文成績:")){EndInput}
+{Input}Math = int(input("請輸入數學成績:")){EndInput}
+ave_grade = {Operationstyle}( Chinese + English + Math ) // 3{EndOperationstyle}
+{Output}print("平均分數為:",ave_grade){EndOutput}

@@ -6,6 +6,9 @@
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" /><link href="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/themes/prism.min.css" rel="stylesheet" />
 		<!-- 引入自定義的 CSS 文件 -->
 		<link href="../style.css" rel="stylesheet" />
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 		<title></title>
 	</head>
 	<body>
@@ -14,6 +17,7 @@
 			$parentDirectory = ($nowdir === "C1" || $nowdir === "C2"  || $nowdir === "C3"  || $nowdir === "C4") ? "../" : "";
 			define('IN_INDEX', true);
 			include $parentDirectory.'header.php'; 
+			include $parentDirectory.'Fuctions.php'; 
 			if(!isset($_SESSION['TELic-LAB_Islogin']))
 				echo"<script  language=\"JavaScript\">alert('請先登入');location.href=\"".$parentDirectory."login.php\";</script>";
 		?>
@@ -35,20 +39,14 @@
 				<div class="col-lg-10">
 					<!--  主要部分  -->
 					<div class="main-content-container">
-					
-						
 						<table style='margin:auto;text-align:center;width:100%;font-size: 20px;'>
 							<tr>
 								<td><button type="button" class="btn btn-secondary rounded-circle" id="hintButton" >?</button></td>
 								<td>
-									小明想設計一個可以快速的計算出
-									<text class="operationstyle" id="hint1">平均分數</text>
-									的程式。<br>
-									請你設計一個程式，讓使用者分別
-									<text class="inputstyle" id="hint2">輸入國文、英文、數學的成績</text>
-									，再
-									<text class="outputstyle" id="hint3">輸出三個科目的平均分數</text>
-									。
+									<?php
+										LoadProblemFile("C2-1");
+										LoadProblemHint("C2-1");
+									?>
 								</td>
 							</tr>
 						</table><br>
@@ -66,13 +64,9 @@
 									<div class="tab-pane fade show active" id="example" role="tabpanel" aria-labelledby="example-tab">
 										<!-- 左上區塊的程式範例內容 -->
 <pre>
-<code class="language-python">
-<a id='step1' class='step-arrow'> ➥</a><text class="inputstyle">grade = int(input("請輸入成績:"))</text>
-<a id='step2' class='step-arrow'> ➥</a><text class="ifstyle">if(<text class="inputstyle">grade</text> >= 60):</text>
-<a id='step3' class='step-arrow'> ➥</a>    <text class="outputstyle">print("及格!")</text>
-<a id='step4' class='step-arrow'> ➥</a><text class="ifstyle">else:</text>
-<a id='step5' class='step-arrow'> ➥</a>    <text class="outputstyle">print("不及格!")</text>
-</code>
+<?php
+LoadProblemCode("C2-1",1);
+?>
 </pre>
 										<div  style='text-align:center'>
 											<button id="previous-btn" type="button">上一步</button>
@@ -81,14 +75,10 @@
 									</div>
 									<div class="tab-pane fade" id="simulation" role="tabpanel" aria-labelledby="simulation-tab">
 										<!-- 左上區塊的程式模擬內容 -->
-<pre>
-<code class="language-python">
-<a id='solo-step1' class='solo-step-arrow'> ➥</a><text class="inputstyle">grade = int(input("請輸入成績:"))</text>
-<a id='solo-step2' class='solo-step-arrow'> ➥</a><text class="ifstyle">if(<text class="inputstyle">grade</text> >= 60):</text>
-<a id='solo-step3' class='solo-step-arrow'> ➥</a>    <text class="outputstyle">print("及格!")</text>
-<a id='solo-step4' class='solo-step-arrow'> ➥</a><text class="ifstyle">else:</text>
-<a id='solo-step5' class='solo-step-arrow'> ➥</a>    <text class="outputstyle">print("不及格!")</text>
-</code>
+										<pre>
+<?php
+LoadProblemCode("C2-1",2);
+?>
 </pre>
 										<div  style='text-align:center'>
 											<button id="solo-previous-btn" type="button">上一步</button>
@@ -140,9 +130,6 @@
 			</div>
 		</div>
 		<!-- 引入 Bootstrap 的 JavaScript 文件 -->
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 		<script src="../js/SwitchTag.js"></script>
 		<script src="../js/C2-1.js"></script>
 		<script src="../js/ClockTime.js"></script>
