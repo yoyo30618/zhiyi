@@ -1,0 +1,21 @@
+請寫一個程式，
+    {Input}
+        {Hint1}
+            讓使用者自行輸入成績
+        {EndHint1}
+    {EndInput}
+，並
+    {If}
+        {Hint2}
+            判斷該成績是否及格
+        {EndHint2}
+    {EndIf}
+，並
+    {Output}
+        {Hint3}
+            輸出相對應的結果
+        {EndHint3}
+    {EndOutput}
+。
+    {\n}
+(如 輸入成績:90 輸出:及格!；輸入成績:55 輸出:不及格!)

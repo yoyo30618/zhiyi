@@ -19,9 +19,11 @@
 		?>
 		<script> //在此設定本次程式預設執行順序
 			CodeStep=[1,2,4,5];//箭頭該顯示的順序
+			PicStep=[1,2,5,6];
 			MsgStep=[
 				"請輸入成績：59",
 				"請輸入成績：59",
+				"請輸入成績：59<br>及格！",
 				"請輸入成績：59",
 				"請輸入成績：59<br>不及格！"
 			];
@@ -33,10 +35,23 @@
 				<div class="col-lg-10">
 					<!--  主要部分  -->
 					<div class="main-content-container">
-						<h4 style='margin:auto;text-align:center;width:100%'>
-							請寫一個程式，<text class="inputstyle">讓使用者自行輸入成績</text>，並<text class="ifstyle">判斷該成績是否及格</text>，並<text class="outputstyle">輸出相對應的結果</text>。<br>
-							(如 輸入成績:90 輸出:及格!；輸入成績:55 輸出:不及格!)
-						</h4><br>
+					
+						
+						<table style='margin:auto;text-align:center;width:100%;font-size: 20px;'>
+							<tr>
+								<td><button type="button" class="btn btn-secondary rounded-circle" id="hintButton" >?</button></td>
+								<td>
+									小明想設計一個可以快速的計算出
+									<text class="operationstyle" id="hint1">平均分數</text>
+									的程式。<br>
+									請你設計一個程式，讓使用者分別
+									<text class="inputstyle" id="hint2">輸入國文、英文、數學的成績</text>
+									，再
+									<text class="outputstyle" id="hint3">輸出三個科目的平均分數</text>
+									。
+								</td>
+							</tr>
+						</table><br>
 						<div class="row">
 							<div class="col-lg-6">
 								<ul class="nav nav-tabs" id="left-tabs" role="tablist">
@@ -52,20 +67,33 @@
 										<!-- 左上區塊的程式範例內容 -->
 <pre>
 <code class="language-python">
-<a id='step1' class='step-arrow'> ➥</a><text class="inputstyle">grade = int( input( "請輸入成績:" ) )</text>
-<a id='step2' class='step-arrow'> ➥</a><text class="ifstyle">if( <text class="inputstyle">grade</text> >= 60 ):</text>
+<a id='step1' class='step-arrow'> ➥</a><text class="inputstyle">grade = int(input("請輸入成績:"))</text>
+<a id='step2' class='step-arrow'> ➥</a><text class="ifstyle">if(<text class="inputstyle">grade</text> >= 60):</text>
 <a id='step3' class='step-arrow'> ➥</a>    <text class="outputstyle">print("及格!")</text>
 <a id='step4' class='step-arrow'> ➥</a><text class="ifstyle">else:</text>
 <a id='step5' class='step-arrow'> ➥</a>    <text class="outputstyle">print("不及格!")</text>
 </code>
 </pre>
-<button id="previous-btn" type="button">上一步</button>
-<button id="next-btn" type="button">下一步</button>
-
+										<div  style='text-align:center'>
+											<button id="previous-btn" type="button">上一步</button>
+											<button id="next-btn" type="button">下一步</button>
+										</div>
 									</div>
 									<div class="tab-pane fade" id="simulation" role="tabpanel" aria-labelledby="simulation-tab">
 										<!-- 左上區塊的程式模擬內容 -->
-										程式模擬
+<pre>
+<code class="language-python">
+<a id='solo-step1' class='solo-step-arrow'> ➥</a><text class="inputstyle">grade = int(input("請輸入成績:"))</text>
+<a id='solo-step2' class='solo-step-arrow'> ➥</a><text class="ifstyle">if(<text class="inputstyle">grade</text> >= 60):</text>
+<a id='solo-step3' class='solo-step-arrow'> ➥</a>    <text class="outputstyle">print("及格!")</text>
+<a id='solo-step4' class='solo-step-arrow'> ➥</a><text class="ifstyle">else:</text>
+<a id='solo-step5' class='solo-step-arrow'> ➥</a>    <text class="outputstyle">print("不及格!")</text>
+</code>
+</pre>
+										<div  style='text-align:center'>
+											<button id="solo-previous-btn" type="button">上一步</button>
+											<button id="solo-next-btn" type="button">下一步</button>
+										</div>
 									</div>
 								</div><br>
 								<div id="step-indicator">
@@ -89,7 +117,19 @@
 									</div>
 									<div class="tab-pane fade" id="flowchart" role="tabpanel" aria-labelledby="flowchart-tab">
 										<!-- 右側區塊的程式流程圖內容 -->
-										<img id='flowpic' src='../pic/C2-1/step0.png'>
+										<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+											<defs>
+												<pattern id="image-bg" x="0" y="0" width="100%" height="100%" patternUnits="userSpaceOnUse">
+													<image id="flowpic" href="../pic/C2-1/step0.png" x="0" y="0" width="500" height="500" preserveAspectRatio="none" />
+												</pattern>
+											</defs>
+											<rect x="0" y="0" width="500" height="500" fill="url(#image-bg)" />
+											<text id='text-step1' class='step-text' x="290" y="140" fill="black">grade=59</text>
+											<text id='text-step2' class='step-text' x="220" y="200" fill="black">grade=59</text>
+											<text id='text-step3' class='step-text' x="360" y="220" fill="black">grade=59</text>
+											<text id='text-step4' class='step-text' x="220" y="310" fill="black">grade=59</text>
+											<text id='text-step5' class='step-text' x="270" y="390" fill="black">grade=59</text>
+										</svg>
 									</div>
 								</div>
 							</div>
@@ -101,7 +141,10 @@
 		</div>
 		<!-- 引入 Bootstrap 的 JavaScript 文件 -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 		<script src="../js/SwitchTag.js"></script>
+		<script src="../js/C2-1.js"></script>
 		<script src="../js/ClockTime.js"></script>
 	</body>
 </html>

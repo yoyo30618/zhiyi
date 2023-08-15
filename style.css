@@ -1,205 +1,209 @@
 /* 自定义样式 */
 
 .navbar {
-	background-color: #7B7B7B;
-	color: white;
-	height: 80px;
-	/* 调整为您希望的高度值 */
-	position: relative;
-	z-index: 1000;
+  background-color: #7b7b7b;
+  color: white;
+  height: 80px;
+  /* 调整为您希望的高度值 */
+  position: relative;
+  z-index: 1000;
 }
 .menu-col {
-	margin-top: 20px;
-	/* 调整为适当的间距值，以确保侧边栏不会覆盖导航栏 */
-	position: relative;
-	z-index: 900;
+  margin-top: 20px;
+  /* 调整为适当的间距值，以确保侧边栏不会覆盖导航栏 */
+  position: relative;
+  z-index: 900;
 }
 .accordion-button:not(.collapsed) {
-	background-color: transparent;
+  background-color: transparent;
 }
 .accordion-button::after {
-	display: none;
+  display: none;
 }
 .content {
-	min-height: calc(100vh - 80px);
-	/* 计算剩余可用高度 */
-	padding: 20px;
-	/* 添加内边距 */
-	box-sizing: border-box;
-	/* 确保内边距不增加元素的实际高度 */
+  min-height: calc(100vh - 80px);
+  /* 计算剩余可用高度 */
+  padding: 20px;
+  /* 添加内边距 */
+  box-sizing: border-box;
+  /* 确保内边距不增加元素的实际高度 */
 }
 .main-content-container {
-	background-color: #f8f8f8;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	padding: 20px;
-	margin-top: 20px;
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
 }
 .dropdown-submenu {
-	margin-left: 12px;
-	margin-top: 5px;
-	position: static;
+  margin-left: 12px;
+  margin-top: 5px;
+  position: static;
 }
 .nested-dropdown-menu li {
-	position: relative;
+  position: relative;
 }
 @media (min-width: 992px) {
-	.dropdown-menu>li:hover>.dropdown-submenu {
-		display: block;
-	}
-	.dropdown-submenu {
-		position: absolute;
-	}
-	.dropdown-submenu, .dropdown-submenu[data-bs-popper] {
-		left: 100%;
-		margin-left: 0;
-		margin-top: 0;
-		top: -7px;
-	}
-	.dropdown-submenu.show {
-		display: none;
-	}
+  .dropdown-menu > li:hover > .dropdown-submenu {
+    display: block;
+  }
+  .dropdown-submenu {
+    position: absolute;
+  }
+  .dropdown-submenu,
+  .dropdown-submenu[data-bs-popper] {
+    left: 100%;
+    margin-left: 0;
+    margin-top: 0;
+    top: -7px;
+  }
+  .dropdown-submenu.show {
+    display: none;
+  }
 }
 .login-container {
-	max-width: 400px;
-	margin: 0 auto;
-	margin-top: 150px;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 150px;
 }
 .login-form {
-	background-color: #f8f8f8;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	padding: 20px;
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
 }
 .login-form .form-group {
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 .login-form label {
-	font-weight: bold;
+  font-weight: bold;
 }
 .login-form input[type="text"],
 .login-form input[type="password"] {
-	width: 100%;
-	padding: 10px;
-	border: 1px solid #ccc;
-	border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 .login-form button {
-	width: 100%;
-	padding: 10px;
-	background-color: #007bff;
-	color: #fff;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 .login-form button:hover {
-	background-color: #0056b3;
+  background-color: #0056b3;
 }
 .ingredient-section {
-	background-color: #efdded;
-	border-radius: 10px;
-	padding: 10px;
+  background-color: #efdded;
+  border-radius: 10px;
+  padding: 10px;
 }
 .step-section {
-	background-color: #fefbda;
-	border-radius: 10px;
-	padding: 10px;
-	text-align:center;
+  background-color: #fefbda;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
 }
 .flow-section {
-	background-color: #fff4e5;
-	border-radius: 10px;
-	padding: 10px;
-	text-align:center;
+  background-color: #fff4e5;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
 }
 .make-section {
-	background-color: #fde9e9;
-	border-radius: 10px;
-	padding: 10px;
-	text-align:center;
+  background-color: #fde9e9;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
 }
 
 .step {
-	border-radius: 10px;
-	padding: 10px;
-	margin-bottom: 10px;
-	background-color: #fff;
-	cursor: pointer;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  cursor: pointer;
 }
 .with-ingredient {
-	background-color: yellow;
-  }
-  
-  .stacked-images {
-	position: relative;
-  }
-  
-  .stacked-images img {
-	position: absolute;
-	top: 0;
-	left: 35%;
-	transform: translateY(0);
-	z-index: 6;
-  }
-  
-  .stacked-images img:nth-child(2) {
-	transform: translateY(20%);
-	z-index: 5;
-  }  
-  .stacked-images img:nth-child(3) {
-	transform: translateY(30%);
-	z-index: 4;
-  }
-  .stacked-images img:nth-child(4) {
-	transform: translateY(40%);
-	z-index: 3;
-  }
-  .stacked-images img:nth-child(5) {
-	transform: translateY(50%);
-	z-index: 2;
-  }
-  .stacked-images img:nth-child(6) {
-	transform: translateY(60%);
-	z-index: 1;
-  }
-  .tooltip-content {
-	display: none;
-	margin-top: 10px;
-	padding: 10px;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	}
-  .inputstyle{
-	background:lightblue;
-  }
-  .ifstyle{
-	background:lightyellow;
-  }
-  .outputstyle{
-	background:pink;
-  }
-  .forstyle{
-	background:lightgreen;
-  }
-  .cntstyle{
-	background:rgb(224, 106, 224);
-  }
-  #step-indicator {
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	padding: 10px;
-  }
-  .step-arrow{
-	color:red;
-	font-size:15px;
-	text-decoration:none;
-  }
-  .solo-step-arrow{
-	color:red;
-	font-size:15px;
-  }
-  
-  td {
-	vertical-align: middle;
-  }
+  background-color: yellow;
+}
+
+.stacked-images {
+  position: relative;
+}
+
+.stacked-images img {
+  position: absolute;
+  top: 0;
+  left: 35%;
+  transform: translateY(0);
+  z-index: 6;
+}
+
+.stacked-images img:nth-child(2) {
+  transform: translateY(20%);
+  z-index: 5;
+}
+.stacked-images img:nth-child(3) {
+  transform: translateY(30%);
+  z-index: 4;
+}
+.stacked-images img:nth-child(4) {
+  transform: translateY(40%);
+  z-index: 3;
+}
+.stacked-images img:nth-child(5) {
+  transform: translateY(50%);
+  z-index: 2;
+}
+.stacked-images img:nth-child(6) {
+  transform: translateY(60%);
+  z-index: 1;
+}
+.tooltip-content {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.operationstyle {
+  background: #EAD1E7;
+}
+.inputstyle {
+  background: lightblue;
+}
+.ifstyle {
+  background: lightyellow;
+}
+.outputstyle {
+  background: pink;
+}
+.forstyle {
+  background: lightgreen;
+}
+.cntstyle {
+  background: rgb(224, 106, 224);
+}
+#step-indicator {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+.step-arrow {
+  color: red;
+  font-size: 15px;
+  text-decoration: none;
+}
+.solo-step-arrow {
+  color: red;
+  font-size: 15px;
+}
+
+td {
+  vertical-align: middle;
+}
