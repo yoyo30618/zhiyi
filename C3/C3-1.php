@@ -20,19 +20,8 @@
 			include $parentDirectory.'Fuctions.php'; 
 			if(!isset($_SESSION['TELic-LAB_Islogin']))
 				echo"<script  language=\"JavaScript\">alert('請先登入');location.href=\"".$parentDirectory."login.php\";</script>";
+			LoadStepInfo("C3-1");//讀取相關步驟資訊
 		?>
-		<script> //在此設定本次程式預設執行順序
-			CodeStep=[1,2,4,5];//箭頭該顯示的順序
-			PicStep=[1,2,5,6];
-			MsgStep=[
-				"請輸入成績：59",
-				"請輸入成績：59",
-				"請輸入成績：59<br>及格！",
-				"請輸入成績：59",
-				"請輸入成績：59<br>不及格！"
-			];
-			FlowPicPath='../pic/C3-1';
-		</script>
 		<div class="container-fluid content">
 			<div class="row">
 				<?php include '../sidebar.php'; ?>
@@ -110,28 +99,26 @@ LoadProblemCode("C3-1",2);
 										<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
 											<defs>
 												<pattern id="image-bg" x="0" y="0" width="100%" height="100%" patternUnits="userSpaceOnUse">
-													<image id="flowpic" href="../pic/C3-1/step0.png" x="0" y="0" width="500" height="500" preserveAspectRatio="none" />
+													<image id="flowpic" href="../pic/C3-1/stepALL.png" x="0" y="0" width="500" height="500" preserveAspectRatio="none" />
 												</pattern>
 											</defs>
-											<rect x="0" y="0" width="500" height="500" fill="url(#image-bg)" />
-											<text id='text-step1' class='step-text' x="290" y="140" fill="black">grade=59</text>
-											<text id='text-step2' class='step-text' x="220" y="200" fill="black">grade=59</text>
-											<text id='text-step3' class='step-text' x="360" y="220" fill="black">grade=59</text>
-											<text id='text-step4' class='step-text' x="220" y="310" fill="black">grade=59</text>
-											<text id='text-step5' class='step-text' x="270" y="390" fill="black">grade=59</text>
+											<rect x="0" y="0" width="500" height="500" fill="url(#image-bg)" /><!--流程圖底圖-->
+											<text id='FlowInfo1' class='FlowInfo1' x="0" y="0" fill="black">FlowInfo1</text><!--流程圖提示資訊1-->
+											<text id='FlowInfo2' class='FlowInfo2' x="0" y="0" fill="black">FlowInfo2</text><!--流程圖提示資訊2-->
+											<text id='FlowInfo3' class='FlowInfo3' x="0" y="0" fill="black">FlowInfo3</text><!--流程圖提示資訊3-->
+											<text id='FlowInfo4' class='FlowInfo4' x="0" y="0" fill="black">FlowInfo4</text><!--流程圖提示資訊4-->
+											<text id='FlowInfo5' class='FlowInfo5' x="0" y="0" fill="black">FlowInfo5</text><!--流程圖提示資訊5-->
 										</svg>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<!--  主要部分  -->
 				</div>
 			</div>
 		</div>
 		<!-- 引入 Bootstrap 的 JavaScript 文件 -->
 		<script src="../js/SwitchTag.js"></script>
 		<script src="../js/C3-1.js"></script>
-		<script src="../js/ClockTime.js"></script>
 	</body>
 </html>

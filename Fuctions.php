@@ -59,7 +59,7 @@
 		$lines = explode("\n", $code);//以行切割
 		$formattedCode = '';
 		foreach ($lines as $index => $line) {
-			$stepNumber = $index + 1;
+			$stepNumber = $index;
 			if($mode==1)
 				$formattedLine = "<a id='step{$stepNumber}' class='step-arrow'> ➥</a>{$line}";
 			else if($mode==2)
@@ -69,6 +69,44 @@
 			}
 			$formattedCode .= $formattedLine ;
 		}
-		echo "<code class='language-python'>" . PHP_EOL . $formattedCode . PHP_EOL . "</code>";
+		echo "<code class='language-python'>" . PHP_EOL . $formattedCode . PHP_EOL . "</code>";	
+	}
+	function LoadStepInfo($filename) {
+		$jsonData = json_decode(file_get_contents('../ProblemStep/'.$filename.'.json'), true);
+        if ($jsonData) {
+			$CodeStep = $jsonData["CodeStep"];
+			$Msg = json_encode($jsonData["Msg"]); // Encode the array as JSON
+			$MsgStep = json_encode($jsonData["MsgStep"]);
+			$ArrowStep = json_encode($jsonData["ArrowStep"]);
+			$FlowStep = json_encode($jsonData["FlowStep"]);
+			$FlowInfo1 = json_encode($jsonData["FlowInfo1"]);
+			$FlowInfo2 = json_encode($jsonData["FlowInfo2"]);
+			$FlowInfo3 = json_encode($jsonData["FlowInfo3"]);
+			$FlowInfo4 = json_encode($jsonData["FlowInfo4"]);
+			$FlowInfo5 = json_encode($jsonData["FlowInfo5"]);
+			$OperationInfo = json_encode($jsonData["OperationInfo"]);
+			$FlowPicPath = json_encode($jsonData["FlowPicPath"]);
+			$DefaultInput = json_encode($jsonData["DefaultInput"]);
+			$jsCode = "
+				var CodeStep = " . $CodeStep . ";
+				var Msg = " . $Msg . ";
+				var MsgStep = " . $MsgStep . ";
+				var ArrowStep = " . $ArrowStep . ";
+				var FlowStep = " . $FlowStep . ";
+				var FlowInfo1 = " . $FlowInfo1 . ";
+				var FlowInfo2 = " . $FlowInfo2 . ";
+				var FlowInfo3 = " . $FlowInfo3 . ";
+				var FlowInfo4 = " . $FlowInfo4 . ";
+				var FlowInfo5 = " . $FlowInfo5 . ";
+				var OperationInfo = " . $OperationInfo . ";
+				var FlowPicPath = " . $FlowPicPath . ";
+				var DefaultInput = " . $DefaultInput . ";
+			";
+	
+			echo "<script>".$jsCode."</script>";
+        } else {
+            echo "Failed to load JSON data.";
+        }
+
 	}
 ?>

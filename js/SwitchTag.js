@@ -1,113 +1,211 @@
 var leftTabs = new bootstrap.Tab(document.getElementById("left-tabs"));
 var rightTabs = new bootstrap.Tab(document.getElementById("right-tabs"));
+let PageFirstStartTime = Date.now(); // 變數用於儲存用戶進入頁面的時間
+let ThisTagStartTime = Date.now(); // 變數用於儲存用戶進入某一頁籤的時間
 
 // 初始化頁籤
 leftTabs.show();
 rightTabs.show();
 
+document.addEventListener("DOMContentLoaded", function () {
+  // 預設選中 "程式範例" 頁籤
+  var exampleTab = document.getElementById("example-tab");
+  var exampleTabInstance = new bootstrap.Tab(exampleTab);
+  exampleTabInstance.show();
+
+  // 預設選中 "程式視覺化" 頁籤
+  var visualizationTab = document.getElementById("visualization-tab");
+  var visualizationTabInstance = new bootstrap.Tab(visualizationTab);
+  visualizationTabInstance.show();
+});
+
 // 監聽頁籤切換事件
+//左邊切換頁籤
 document
   .getElementById("left-tabs")
   .addEventListener("shown.bs.tab", function (event) {
-    // 左上區塊的頁籤切換處理
+    const toTabText = event.relatedTarget.textContent;
+    const page = window.location.pathname;
+    const lookTime = Date.now() - ThisTagStartTime;
+    const rightTabs = document
+      .getElementById("right-tabs")
+      .querySelectorAll(".nav-link");
+    rightTabs.forEach((tab) => {
+      if (tab.classList.contains("active")) {
+        currentRightTab = tab.textContent;
+      }
+    });
+    const left = toTabText;
+    const right = currentRightTab;
+    const data = { left, right, page, lookTime };
+    fetch("../save_visit_time.php", {
+      // 使用fetch API將數據發送到伺服器端保存
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    ThisTagStartTime = Date.now();
   });
-
+//右邊切換頁籤
 document
   .getElementById("right-tabs")
   .addEventListener("shown.bs.tab", function (event) {
     // 右側區塊的頁籤切換處理
+    const toTabText = event.relatedTarget.textContent;
+    const page = window.location.pathname;
+    const lookTime = Date.now() - ThisTagStartTime;
+    const leftTabs = document
+      .getElementById("left-tabs")
+      .querySelectorAll(".nav-link");
+    leftTabs.forEach((tab) => {
+      if (tab.classList.contains("active")) {
+        currentLeftTab = tab.textContent;
+      }
+    });
+    const left = currentLeftTab;
+    const right = toTabText;
+    const data = { left, right, page, lookTime };
+    fetch("../save_visit_time.php", {
+      // 使用fetch API將數據發送到伺服器端保存
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    ThisTagStartTime = Date.now();
   });
 
-var currentStep = 0; // 目前顯示的步驟
+// 監聽用戶離開頁面或關閉瀏覽器的事件
+window.onbeforeunload = function (event) {
+  // 計算用戶在此頁面上的停留時間
+  const page = window.location.pathname;
+  const visitTime = Date.now() - PageFirstStartTime;
+  const lookTime = Date.now() - ThisTagStartTime;
+  const rightTabs = document
+    .getElementById("right-tabs")
+    .querySelectorAll(".nav-link");
+  rightTabs.forEach((tab) => {
+    if (tab.classList.contains("active")) {
+      currentRightTab = tab.textContent;
+    }
+  });
+  const leftTabs = document
+    .getElementById("left-tabs")
+    .querySelectorAll(".nav-link");
+  leftTabs.forEach((tab) => {
+    if (tab.classList.contains("active")) {
+      currentLeftTab = tab.textContent;
+    }
+  });
+  const left = currentLeftTab;
+  const right = currentRightTab;
+  const data = { page, visitTime, left, right, lookTime };
 
-// 隱藏所有步驟箭頭
-var Arrows = document.querySelectorAll(".step-arrow");
-var stepArrows = CodeStep.length;
-Arrows.forEach(function (arrow) {
-    arrow.style.visibility = "hidden";
-});
-// 隱藏所有變數文字
-var Texts = document.querySelectorAll(".step-text");
-Texts.forEach(function (Text) {
-  Text.style.visibility = "hidden";
-});
-
-function showStep(step) {
-  // 隱藏所有步驟箭頭
+  // 使用fetch API將數據發送到伺服器端保存
+  fetch("../save_visit_time.php", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  });
+  ThisTagStartTime = Date.now();
+  // 返回字符串值，顯示給用戶確認對話框
+  return "您確定要離開本頁面嗎？";
+};
+function hiddenArrowText() {
+  var Arrows = document.querySelectorAll(".step-arrow");
   Arrows.forEach(function (arrow) {
     arrow.style.visibility = "hidden";
   });
-  // 隱藏所有變數文字
   var Texts = document.querySelectorAll(".step-text");
   Texts.forEach(function (Text) {
     Text.style.visibility = "hidden";
   });
+}
+hiddenArrowText();
+//*******************以下為步驟相關********************* */
+var currentStep = 0; // 目前顯示的步驟
+// 監聽左右切換按鈕的點擊事件
+document.getElementById("previous-btn").addEventListener("click", function () {
+  if (currentStep == 0) showStep(0);
+  else showStep(currentStep - 1);
+});
+document.getElementById("next-btn").addEventListener("click", function () {
+  if (currentStep == CodeStep - 1) showStep(currentStep);
+  else showStep(currentStep + 1);
+});
+
+function showStep(step) {
+  currentStep = step;
+  hiddenArrowText();
   // 顯示指定步驟的箭頭
-  var currentStepArrow = document.querySelectorAll("#step" + CodeStep[step-1]);
-  currentStepArrow.forEach(function(stepArrow) {
+  var currentStepArrow = document.querySelectorAll("#step" + ArrowStep[step]);
+  currentStepArrow.forEach(function (stepArrow) {
     stepArrow.style.visibility = "visible";
-  });
-  // 顯示指定步驟的變數文字
-  var currentStepText = document.querySelectorAll("#text-step" + CodeStep[step-1]);
-  currentStepText.forEach(function(StepText) {
-    StepText.style.visibility = "visible";
   });
   // 顯示指定步驟的訊息
   var stepIndicator = document.getElementById("step-indicator");
   if (stepIndicator) {
-    stepIndicator.innerHTML = MsgStep[step-1];
+    NowMsg = Msg[MsgStep[step]]; //如果有輸入框  要替換
+    for (let i = 1; i <= 5; i++) {
+      const placeholder = "{Input" + i + "}";
+      const placeBoxholder = "{InputBox" + i + "}";
+      NowMsg = NowMsg.replace(
+        new RegExp(placeholder, "g"),
+        DefaultInput["Input" + i]
+      );
+      NowMsg = NowMsg.replace(
+        new RegExp(placeBoxholder, "g"),
+        DefaultInput["Input" + i]
+      );
+    }
+    stepIndicator.innerHTML = NowMsg;
   }
-  // 更新圖片
+  // 更新流程圖
   var stepImage = document.getElementById("flowpic");
   if (stepImage) {
-    var imageSrc = FlowPicPath+"/step"+PicStep[step-1]+".png";
+    var imageSrc = FlowPicPath + "/step" + FlowStep[step] + ".png";
     if (imageSrc) {
       stepImage.setAttribute("href", imageSrc); // 移除 href 属性
-      // stepImage.setAttribute("xlink:href", imageSrc); // 添加 xlink:href 属性
-      stepImage.onerror = function() {
-        // 圖片載入失敗時顯示 step0.png
-        stepImage.setAttribute("href", FlowPicPath+"/step0.png");
+      stepImage.onerror = function () {
+        stepImage.setAttribute("href", FlowPicPath + "/stepALL.png");
       };
     }
   }
-
-  currentStep = step;
-}
-
-function showPreviousStep() {
-  var previousStep = currentStep - 1;
-  if (previousStep < 1) {
-    previousStep = 1;
+  //在流程圖加註文字
+  function updateFlowInfo(flowInfoId, newX, newY, newText) {
+    var flowInfoElement = document.getElementById(flowInfoId);
+    if (flowInfoElement) {
+      flowInfoElement.setAttribute("x", newX);
+      flowInfoElement.setAttribute("y", newY);
+      flowInfoElement.textContent = newText;
+    }
   }
-  showStep(previousStep);
-}
 
-function showNextStep() {
-  var nextStep = currentStep + 1;
-//   var totalSteps = stepArrows.length;
-  if (nextStep > stepArrows) {
-    nextStep = stepArrows;
+  // 批量更新流程图提示信息
+  for (let i = 1; i <= 5; i++) {
+    let flowInfoId = "FlowInfo" + i;
+    let flowInfoArray = eval("FlowInfo" + i); // 获取对应的 FlowInfo 数组
+    let newX = flowInfoArray[FlowStep[step]][1];
+    let newY = flowInfoArray[FlowStep[step]][2];
+    let newText = flowInfoArray[FlowStep[step]][0];
+
+    for (let i = 1; i <= 5; i++) {
+      const placeholder = "{Input" + i + "}";
+      const placeBoxholder = "{InputBox" + i + "}";
+      newText = newText.replace(
+        new RegExp(placeholder, "g"),
+        DefaultInput["Input" + i]
+      );
+      newText = newText.replace(
+        new RegExp(placeBoxholder, "g"),
+        DefaultInput["Input" + i]
+      );
+    }
+    updateFlowInfo(flowInfoId, newX, newY, newText);
   }
-  showStep(nextStep);
 }
-
-// 監聽左右切換按鈕的點擊事件
-document.getElementById("previous-btn").addEventListener("click", function () {
-  showPreviousStep();
-});
-
-document.getElementById("next-btn").addEventListener("click", function () {
-  showNextStep();
-});
-document.addEventListener("DOMContentLoaded", function() {
-    // 預設選中 "程式範例" 頁籤
-    var exampleTab = document.getElementById("example-tab");
-    var exampleTabInstance = new bootstrap.Tab(exampleTab);
-    exampleTabInstance.show();
-  
-    // 預設選中 "程式視覺化" 頁籤
-    var visualizationTab = document.getElementById("visualization-tab");
-    var visualizationTabInstance = new bootstrap.Tab(visualizationTab);
-    visualizationTabInstance.show();
-  });
-  

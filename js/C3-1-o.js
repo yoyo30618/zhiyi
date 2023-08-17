@@ -12,14 +12,17 @@ SoloMsg = [
 var SoloInputValue = 0; // 儲存輸入框的值
 
 var SoloCurrentStep = 0; // 目前顯示的步驟
-
-
-
-
-
-
-
-
+// 隱藏所有步驟箭頭
+var SoloArrows = document.querySelectorAll(".solo-step-arrow");
+var SolostepArrows = SoloCodeStep.length;
+SoloArrows.forEach(function (arrow) {
+  arrow.style.visibility = "hidden";
+});
+// 隱藏所有變數文字
+var Texts = document.querySelectorAll(".step-text");
+Texts.forEach(function (Text) {
+  Text.style.visibility = "hidden";
+});
 
 function showSoloStep(step) {
   // 隱藏所有步驟箭頭
