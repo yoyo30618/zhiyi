@@ -118,7 +118,7 @@ LoadProblemCode("C3-1",2);
 			</div>
 		</div>
 		<!-- 引入 Bootstrap 的 JavaScript 文件 -->
-		<script src="../js/SwitchTag.js"></script>
 		<script src="../js/C3-1.js"></script>
+		<script src="../js/SwitchTag.js"></script>
 	</body>
 </html>

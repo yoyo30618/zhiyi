@@ -121,12 +121,13 @@ function hiddenArrowText() {
   Arrows.forEach(function (arrow) {
     arrow.style.visibility = "hidden";
   });
-  var Texts = document.querySelectorAll(".step-text");
-  Texts.forEach(function (Text) {
-    Text.style.visibility = "hidden";
+  var Arrows = document.querySelectorAll(".solo-step-arrow");
+  Arrows.forEach(function (arrow) {
+    arrow.style.visibility = "hidden";
   });
 }
 hiddenArrowText();
+
 //*******************以下為步驟相關********************* */
 var currentStep = 0; // 目前顯示的步驟
 // 監聽左右切換按鈕的點擊事件
@@ -137,6 +138,35 @@ document.getElementById("previous-btn").addEventListener("click", function () {
 document.getElementById("next-btn").addEventListener("click", function () {
   if (currentStep == CodeStep - 1) showStep(currentStep);
   else showStep(currentStep + 1);
+});
+
+// 監聽左右切換按鈕的點擊事件
+document
+  .getElementById("solo-previous-btn")
+  .addEventListener("click", function () {
+    SetSolodata();
+    if (SoloCurrentStep == 0) showSoloStep(0);
+    else showSoloStep(SoloCurrentStep - 1);
+  });
+
+document.getElementById("solo-next-btn").addEventListener("click", function () {
+  //如果遇到對話框要先處理 記錄起來!
+  if (SoloCurrentStep == SoloCodeStep - 1) showSoloStep(SoloCurrentStep);
+  else {
+    //如果目前這一步  有輸入框 要記錄輸入框內容
+    var SoloInput1 = document.getElementById("SoloInput1");
+    if (SoloInput1) SoloInput[1] = SoloInput1.value;
+    var SoloInput2 = document.getElementById("SoloInput2");
+    if (SoloInput2) SoloInput[2] = SoloInput2.value;
+    var SoloInput3 = document.getElementById("SoloInput3");
+    if (SoloInput3) SoloInput[3] = SoloInput3.value;
+    var SoloInput4 = document.getElementById("SoloInput4");
+    if (SoloInput4) SoloInput[4] = SoloInput4.value;
+    var SoloInput5 = document.getElementById("SoloInput5");
+    if (SoloInput5) SoloInput[5] = SoloInput5.value;
+    SetSolodata();
+    showSoloStep(SoloCurrentStep + 1);
+  }
 });
 
 function showStep(step) {
@@ -205,6 +235,69 @@ function showStep(step) {
         new RegExp(placeBoxholder, "g"),
         DefaultInput["Input" + i]
       );
+    }
+    updateFlowInfo(flowInfoId, newX, newY, newText);
+  }
+}
+function showSoloStep(step) {
+  SoloCurrentStep = step;
+  hiddenArrowText();
+  // 顯示指定步驟的箭頭
+  var currentStepArrow = document.querySelectorAll(
+    "#solo-step" + SoloArrowStep[step]
+  );
+  currentStepArrow.forEach(function (stepArrow) {
+    stepArrow.style.visibility = "visible";
+  });
+  // 顯示指定步驟的訊息
+  var stepIndicator = document.getElementById("step-indicator");
+  if (stepIndicator) {
+    NowMsg = Msg[SoloMsgStep[step]]; //如果有輸入框  要替換
+    for (let i = 1; i <= 5; i++) {
+      const placeholder = "{Input" + i + "}";
+      const placeBoxholder = "{InputBox" + i + "}";
+      NowMsg = NowMsg.replace(new RegExp(placeholder, "g"), SoloInput[i]);
+      NowMsg = NowMsg.replace(
+        new RegExp(placeBoxholder, "g"),
+        "<input id='SoloInput" + i + "' type='number'>"
+      );
+    }
+    stepIndicator.innerHTML = NowMsg;
+  }
+  // 更新流程圖
+  var stepImage = document.getElementById("flowpic");
+  if (stepImage) {
+    var imageSrc = FlowPicPath + "/step" + SoloFlowStep[step] + ".png";
+    if (imageSrc) {
+      stepImage.setAttribute("href", imageSrc); // 移除 href 属性
+      stepImage.onerror = function () {
+        stepImage.setAttribute("href", FlowPicPath + "/stepALL.png");
+      };
+    }
+  }
+  //在流程圖加註文字
+  function updateFlowInfo(flowInfoId, newX, newY, newText) {
+    var flowInfoElement = document.getElementById(flowInfoId);
+    if (flowInfoElement) {
+      flowInfoElement.setAttribute("x", newX);
+      flowInfoElement.setAttribute("y", newY);
+      flowInfoElement.textContent = newText;
+    }
+  }
+
+  // 批量更新流程图提示信息
+  for (let i = 1; i <= 5; i++) {
+    let flowInfoId = "FlowInfo" + i;
+    let flowInfoArray = eval("FlowInfo" + i); // 获取对应的 FlowInfo 数组
+    let newX = flowInfoArray[SoloFlowStep[step]][1];
+    let newY = flowInfoArray[SoloFlowStep[step]][2];
+    let newText = flowInfoArray[SoloFlowStep[step]][0];
+
+    for (let i = 1; i <= 5; i++) {
+      const placeholder = "{Input" + i + "}";
+      const placeBoxholder = "{InputBox" + i + "}";
+      newText = newText.replace(new RegExp(placeholder, "g"), SoloInput[i]);
+      newText = newText.replace(new RegExp(placeBoxholder, "g"), SoloInput[i]);
     }
     updateFlowInfo(flowInfoId, newX, newY, newText);
   }
