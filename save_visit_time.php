@@ -17,14 +17,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         include_once("conn_mysql.php");        
 		$sql_query_visitTime="INSERT INTO `visitrecord` (`Account`, `Page`, `Time`) VALUES ('".$_SESSION['TELic-LAB_Account']."','$page', '$visitTime')";
 		mysqli_query($db_link,$sql_query_visitTime) or die("查詢失敗");	
-        $CodeMode=$data['left']; 
-        $FlowOperation=$data['right'];
-        $sql_query_lookTime="INSERT INTO `actionrecord`(`Account`, `Page`, `CodeMode`, `FlowOperation`, `Time`) VALUES  ('".$_SESSION['TELic-LAB_Account']."','".$page."','".$CodeMode."','".$FlowOperation."','".$data['lookTime']."')";
-		mysqli_query($db_link,$sql_query_lookTime) or die("查詢失敗");
-
-
-
-
+        if(isset($data['left']) && isset($data['right'])){
+            $CodeMode=$data['left']; 
+            $FlowOperation=$data['right'];
+            $sql_query_lookTime="INSERT INTO `actionrecord`(`Account`, `Page`, `CodeMode`, `FlowOperation`, `Time`) VALUES  ('".$_SESSION['TELic-LAB_Account']."','".$page."','".$CodeMode."','".$FlowOperation."','".$data['lookTime']."')";
+            mysqli_query($db_link,$sql_query_lookTime) or die("查詢失敗");
+        }
     }
     else if($data && isset($data['left']) && isset($data['right']) && isset($data['page']) && isset($data['lookTime'])) {
         include_once("conn_mysql.php");    

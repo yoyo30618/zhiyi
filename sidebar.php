@@ -16,8 +16,8 @@
 				<div class="accordion-body">
 					<ul class="list-unstyled">
 						<li>
-							<button onclick="location.href='<?php echo $parentDirectory; ?>C1/C1-1.php'" aria-controls="collapseC1-1" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseC1-1" data-bs-toggle="collapse" type="button">
-								C1-1 演算法是甚麼
+							<button onclick="location.href='<?php echo $parentDirectory; ?>C1/C1-0.php'" aria-controls="collapseC1-0" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseC1-0" data-bs-toggle="collapse" type="button">
+								演算法是甚麼
 								<span class="visually-hidden">Toggle Button</span>
 							</button>
 						</li>
@@ -90,6 +90,11 @@
 			<div aria-labelledby="headingC4" class="accordion-collapse collapse" data-bs-parent="#courseAccordion" id="collapseC4">
 				<div class="accordion-body">
 					<ul class="list-unstyled">
+						<li>
+							<button onclick="location.href='<?php echo $parentDirectory; ?>C4/C4-0.php'"  aria-controls="collapseC4-0" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseC4-0" data-bs-toggle="collapse" type="button">
+								重複結構說明
+							</button>
+						</li>
 						<li>
 							<button onclick="location.href='<?php echo $parentDirectory; ?>C4/C4-1.php'"  aria-controls="collapseC4-1" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseC4-1" data-bs-toggle="collapse" type="button">
 								題目一

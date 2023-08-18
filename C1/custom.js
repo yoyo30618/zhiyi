@@ -11,13 +11,32 @@ function showContent(contentId) {
   document.getElementById("content" + contentId).style.display = "block";
 }
 function ResetAns(){
-	// 在這裡添加顯示演算法說明的邏輯
 	document.getElementById("answer").disabled = false;
 	document.getElementById("submitans").disabled = false;
 	document.getElementById("Isanswered").style.display = "none";
 	document.getElementById("algorithmExplanation").style.display = "none";
+}
+function showAlgorithmExplanation() {
+  // 在這裡添加顯示演算法說明的邏輯
+  document.getElementById("answer").disabled = true;
+  document.getElementById("submitans").disabled = true;
+  document.getElementById("Isanswered").style.display = "inline";
+  document.getElementById("algorithmExplanation").style.display = "block";
+  
+  const page = window.location.pathname;
+  const ans = document.getElementById("answer").value; // 獲取回答內容
+  const data = { page, ans};
+  // 使用fetch API將數據發送到伺服器端保存
+  fetch("../save_ans.php", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  });
 
 }
+
 function checkAssembly() {//檢查流程圖與步驟是否相呼應
 	var stepOrder = [];
 	var flowchartOrder = [];
@@ -68,15 +87,6 @@ function checkAssembly() {//檢查流程圖與步驟是否相呼應
 	StackedBurgerElement.innerHTML  = BurgerTxt;
 	resultElement.style.display = "inline";
   }
-
-
-function showAlgorithmExplanation() {
-  // 在這裡添加顯示演算法說明的邏輯
-  document.getElementById("answer").disabled = true;
-  document.getElementById("submitans").disabled = true;
-  document.getElementById("Isanswered").style.display = "inline";
-  document.getElementById("algorithmExplanation").style.display = "block";
-}
 var ingredients = ["頂部麵包", "生菜", "肉餅", "底部麵包", "起司片", "番茄"];
 function generateIngredientOptions() {
   var optionsHTML = "";
