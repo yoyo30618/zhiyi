@@ -1,6 +1,7 @@
 var SoloCurrentStep = 0; // 目前顯示的步驟
 
 var SoloInput = [];
+var SoloOutput = ["","及格","不及格","","",""];
 var SoloCodeStep = 0;
 var SoloMsgStep = [];
 var SoloArrowStep = [];

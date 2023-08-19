@@ -85,10 +85,15 @@
 					if(isset($_SESSION['TELic-LAB_Islogin']) && $_SESSION['TELic-LAB_Islogin']=="1"  ){
 						?>
 						<li class="nav-item dropdown">
-							<a class="nav-link " href="<?php echo $parentDirectory; ?>dashboard.php" id="dropdown-menu-1" role="button">
-								儀錶板
-							</a>
-						</li>
+								<a class="nav-link dropdown-toggle" id="dropdown-menu-1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									儀錶板
+								</a>
+								<ul class="dropdown-menu nested-dropdown-menu" aria-labelledby="dropdown-menu-1">
+								<a class="dropdown-item d-inline d-lg-block" href="<?php echo $parentDirectory; ?>dashboard.php">頁面紀錄儀錶板<em class="bi bi-chevron-compact-right d-none d-lg-inline float-end"></em> </a>
+								<a class="dropdown-item d-inline d-lg-block" href="<?php echo $parentDirectory; ?>dashboardTag.php">頁籤紀錄儀錶板<em class="bi bi-chevron-compact-right d-none d-lg-inline float-end"></em> </a>
+												
+								</ul>
+							</li>	
 						<?php
 					}
 				?>

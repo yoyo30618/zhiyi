@@ -6,59 +6,37 @@
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" /><link href="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/themes/prism.min.css" rel="stylesheet" />
 		<!-- 引入自定義的 CSS 文件 -->
 		<link href="../style.css" rel="stylesheet" />
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 		<title></title>
 	</head>
 	<body>
 		<?php 
+			$ThisPage="C4-1";//要改的地方
 			$nowdir=basename(dirname($_SERVER['PHP_SELF']));
 			$parentDirectory = ($nowdir === "C1" || $nowdir === "C2"  || $nowdir === "C3"  || $nowdir === "C4") ? "../" : "";
 			define('IN_INDEX', true);
 			include $parentDirectory.'header.php'; 
+			include $parentDirectory.'Fuctions.php'; 
 			if(!isset($_SESSION['TELic-LAB_Islogin']))
 				echo"<script  language=\"JavaScript\">alert('請先登入');location.href=\"".$parentDirectory."login.php\";</script>";
+			LoadStepInfo($ThisPage);//讀取相關步驟資訊
 		?>
-		<script> //在此設定本次程式預設執行順序
-			CodeStep=[1,2,3,4,3,4,3,4,3,4,3,4,3,5];//箭頭該顯示的順序
-			PicStep=[1,2,3,4,3,4,3,4,3,4,3,4,3,5];
-			PicStep=[1,1,2,3,2,3,2,3,2,3,2,3,2,5];
-			MsgStep=[
-				"請輸入n：5",
-				"請輸入n：5",
-				"請輸入n：5",
-				"請輸入n：5",
-				"請輸入n：5",
-				"請輸入n：5",
-				"請輸入n：5",
-				"請輸入n：5",
-				"請輸入n：5",
-				"請輸入n：5",
-				"請輸入n：5",
-				"請輸入n：5",
-				"請輸入n：5",
-				"請輸入n：5<br>15"
-			];
-			FlowPicPath='../pic/C4-1';
-		</script>
 		<div class="container-fluid content">
 			<div class="row">
 				<?php include '../sidebar.php'; ?>
 				<div class="col-lg-10">
 					<!--  主要部分  -->
 					<div class="main-content-container">
-					
-						
 						<table style='margin:auto;text-align:center;width:100%;font-size: 20px;'>
 							<tr>
 								<td><button type="button" class="btn btn-secondary rounded-circle" id="hintButton" >?</button></td>
 								<td>
-									請設計一個程式，讓使用者可以自行
-									<text class="inputstyle" id="hint1">輸入一個整數n</text>
-									，並使用
-									<text class="forstyle" id="hint2">for迴圈</text>
-									<text class="cntstyle" id="hint3">計算1~n的總和</text>
-									，並
-									<text class="outputstyle" id="hint4">印出總和</text>
-									。<br>
+									<?php
+										LoadProblemFile($ThisPage);
+										LoadProblemHint($ThisPage);
+									?>
 								</td>
 							</tr>
 						</table><br>
@@ -76,13 +54,9 @@
 									<div class="tab-pane fade show active" id="example" role="tabpanel" aria-labelledby="example-tab">
 										<!-- 左上區塊的程式範例內容 -->
 <pre>
-<code class="language-python">
-<a id='step1' class='step-arrow'> ➥</a><text class="inputstyle">n = int(input("請輸入n:"))</text>
-<a id='step2' class='step-arrow'> ➥</a>sum = 0
-<a id='step3' class='step-arrow'> ➥</a><text class="forstyle">for i in range(1,n+1,1):</text>
-<a id='step4' class='step-arrow'> ➥</a>    sum = sum+i
-<a id='step5' class='step-arrow'> ➥</a><text class="outputstyle">print(sum)</text>
-</code>
+<?php
+LoadProblemCode($ThisPage,1);
+?>
 </pre>
 										<div  style='text-align:center'>
 											<button id="previous-btn" type="button">上一步</button>
@@ -91,14 +65,10 @@
 									</div>
 									<div class="tab-pane fade" id="simulation" role="tabpanel" aria-labelledby="simulation-tab">
 										<!-- 左上區塊的程式模擬內容 -->
-<pre>
-<code class="language-python">
-<a id='solo-step1' class='solo-step-arrow'> ➥</a><text class="inputstyle">n = int(input("請輸入n:"))</text>
-<a id='solo-step2' class='solo-step-arrow'> ➥</a>sum = 0
-<a id='solo-step3' class='solo-step-arrow'> ➥</a><text class="forstyle">for i in range(1,n+1,1):</text>
-<a id='solo-step4' class='solo-step-arrow'> ➥</a>    sum = sum+i
-<a id='solo-step5' class='solo-step-arrow'> ➥</a><text class="outputstyle">print(sum)</text>
-</code>
+										<pre>
+<?php
+LoadProblemCode($ThisPage,2);
+?>
 </pre>
 										<div  style='text-align:center'>
 											<button id="solo-previous-btn" type="button">上一步</button>
@@ -130,30 +100,26 @@
 										<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
 											<defs>
 												<pattern id="image-bg" x="0" y="0" width="100%" height="100%" patternUnits="userSpaceOnUse">
-													<image id="flowpic" href="../pic/C4-1/step0.png" x="0" y="0" width="500" height="500" preserveAspectRatio="none" />
+													<image id="flowpic" href="../pic/<?php echo $ThisPage;?>/stepALL.png" x="0" y="0" width="500" height="500" preserveAspectRatio="none" />
 												</pattern>
 											</defs>
-											<rect x="0" y="0" width="500" height="500" fill="url(#image-bg)" />
-											<text id='text-step1' class='step-textX' x="280" y="120" fill="black">n=5</text>
-											<text id='text-step3' class='step-text' x="240" y="240" fill="black">sum=0,i=1</text>
-											<text id='text-step4' class='step-text' x="240" y="240" fill="black">sum=0,i=1</text>
-											<text id='text-step5' class='step-text' x="400" y="320" fill="black">sum=15</text>
+											<rect x="0" y="0" width="500" height="500" fill="url(#image-bg)" /><!--流程圖底圖-->
+											<text id='FlowInfo1' class='FlowInfo1' x="0" y="0" fill="black">FlowInfo1</text><!--流程圖提示資訊1-->
+											<text id='FlowInfo2' class='FlowInfo2' x="0" y="0" fill="black">FlowInfo2</text><!--流程圖提示資訊2-->
+											<text id='FlowInfo3' class='FlowInfo3' x="0" y="0" fill="black">FlowInfo3</text><!--流程圖提示資訊3-->
+											<text id='FlowInfo4' class='FlowInfo4' x="0" y="0" fill="black">FlowInfo4</text><!--流程圖提示資訊4-->
+											<text id='FlowInfo5' class='FlowInfo5' x="0" y="0" fill="black">FlowInfo5</text><!--流程圖提示資訊5-->
 										</svg>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<!--  主要部分  -->
 				</div>
 			</div>
 		</div>
 		<!-- 引入 Bootstrap 的 JavaScript 文件 -->
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+		<script src="../js/<?php echo $ThisPage;?>.js"></script>
 		<script src="../js/SwitchTag.js"></script>
-		<script src="../js/C4-1.js"></script>
-		<script src="../js/ClockTime.js"></script>
 	</body>
 </html>

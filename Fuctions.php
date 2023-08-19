@@ -8,6 +8,8 @@
 		'EndIf' => '</text>',
 		'Output' => '<text class="outputstyle">',
 		'EndOutput' => '</text>',
+		'For' => '<text class="forstyle">',
+		'EndFor' => '</text>',
 		'\n' => '<br>',
 		'\t' => '&#09;',
 		'Hint1' => '<text id="Hint1">',
@@ -87,6 +89,7 @@
 			$OperationInfo = json_encode($jsonData["OperationInfo"]);
 			$FlowPicPath = json_encode($jsonData["FlowPicPath"]);
 			$DefaultInput = json_encode($jsonData["DefaultInput"]);
+			$DefaultOutput = json_encode($jsonData["DefaultOutput"]);
 			$jsCode = "
 				var CodeStep = " . $CodeStep . ";
 				var Msg = " . $Msg . ";
@@ -101,6 +104,7 @@
 				var OperationInfo = " . $OperationInfo . ";
 				var FlowPicPath = " . $FlowPicPath . ";
 				var DefaultInput = " . $DefaultInput . ";
+				var DefaultOutput = " . $DefaultOutput . ";
 			";
 	
 			echo "<script>".$jsCode."</script>";

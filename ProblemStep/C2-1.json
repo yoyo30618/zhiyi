@@ -13,30 +13,30 @@
         "FlowInfo":"為各步驟中 流程圖加註的文字(文字,x位置,y位置)"
     },
     "DefaultInput":{
-        "Input1":59,
-        "Input2":0,
-        "Input3":0,
+        "Input1":85,
+        "Input2":90,
+        "Input3":95,
         "Input4":0,
         "Input5":0
     },
     "DefaultOutput":{
-        "Output1":"及格",
-        "Output2":"不及格",
+        "Output1":90,
+        "Output2":0,
         "Output3":0,
         "Output4":0,
         "Output5":0
     },
-    "CodeStep":4,
+    "CodeStep":5,
     "Msg": [
-        "請輸入成績：{InputBox1}",
-        "請輸入成績：{Input1}分",
-        "請輸入成績：{Input1}分<br>{Output1}！",
-        "請輸入成績：{Input1}分<br>{Output2}！"
+        "請輸入國文成績：{InputBox1}",
+        "請輸入國文成績：{Input1}<br>請輸入英文成績：{InputBox2}",
+        "請輸入國文成績：{Input1}<br>請輸入英文成績：{Input2}<br>請輸入數學成績：{InputBox3}",
+        "請輸入國文成績：{Input1}<br>請輸入英文成績：{Input2}<br>請輸入數學成績：{Input3}<br>平均分數為：{Output1}分"
     ],
-    "MsgStep":[0,1,1,3],
-    "ArrowStep":[0,1,3,4],
+    "MsgStep":[0,1,2,2,3],
+    "ArrowStep":[0,1,2,3,4],
     "FlowStep":[0,1,4,5],
-    "FlowPicPath":"../pic/C3-1",
+    "FlowPicPath":"../pic/C2-1",
     "FlowInfo1":[
         ["grade={Input1}",290,140],
         ["grade={Input1}",220,200],

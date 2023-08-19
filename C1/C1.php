@@ -32,7 +32,7 @@
 									<div class="accordion-item">
 										<h2 class="accordion-header" id="headingC1">
     										<button class="accordion-button collapsed" type="button" onclick="window.location.href='C1-0.php'">
-												C1-1 演算法是甚麼
+												演算法是甚麼
 											</button>
 										</h2>
 									</div>

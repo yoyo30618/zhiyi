@@ -184,6 +184,7 @@ function showStep(step) {
     for (let i = 1; i <= 5; i++) {
       const placeholder = "{Input" + i + "}";
       const placeBoxholder = "{InputBox" + i + "}";
+      const placeoutholder = "{Output" + i + "}";
       NowMsg = NowMsg.replace(
         new RegExp(placeholder, "g"),
         DefaultInput["Input" + i]
@@ -191,6 +192,10 @@ function showStep(step) {
       NowMsg = NowMsg.replace(
         new RegExp(placeBoxholder, "g"),
         DefaultInput["Input" + i]
+      );
+      NowMsg = NowMsg.replace(
+        new RegExp(placeoutholder, "g"),
+        DefaultOutput["Output" + i]
       );
     }
     stepIndicator.innerHTML = NowMsg;
@@ -227,6 +232,7 @@ function showStep(step) {
     for (let i = 1; i <= 5; i++) {
       const placeholder = "{Input" + i + "}";
       const placeBoxholder = "{InputBox" + i + "}";
+      const placeoutholder = "{Output" + i + "}";
       newText = newText.replace(
         new RegExp(placeholder, "g"),
         DefaultInput["Input" + i]
@@ -234,6 +240,10 @@ function showStep(step) {
       newText = newText.replace(
         new RegExp(placeBoxholder, "g"),
         DefaultInput["Input" + i]
+      );
+      newText = newText.replace(
+        new RegExp(placeoutholder, "g"),
+        DefaultOutput["Output" + i]
       );
     }
     updateFlowInfo(flowInfoId, newX, newY, newText);
@@ -256,11 +266,13 @@ function showSoloStep(step) {
     for (let i = 1; i <= 5; i++) {
       const placeholder = "{Input" + i + "}";
       const placeBoxholder = "{InputBox" + i + "}";
+      const placeoutholder = "{Output" + i + "}";
       NowMsg = NowMsg.replace(new RegExp(placeholder, "g"), SoloInput[i]);
       NowMsg = NowMsg.replace(
         new RegExp(placeBoxholder, "g"),
-        "<input id='SoloInput" + i + "' type='number'>"
+        "<input id='SoloInput" + i + "' type='number' value='"+SoloInput[i]+"'>"
       );
+      NowMsg = NowMsg.replace(new RegExp(placeoutholder, "g"),SoloOutput[i]);
     }
     stepIndicator.innerHTML = NowMsg;
   }
@@ -296,8 +308,10 @@ function showSoloStep(step) {
     for (let i = 1; i <= 5; i++) {
       const placeholder = "{Input" + i + "}";
       const placeBoxholder = "{InputBox" + i + "}";
+      const placeoutBoxholder = "{Output" + i + "}";
       newText = newText.replace(new RegExp(placeholder, "g"), SoloInput[i]);
       newText = newText.replace(new RegExp(placeBoxholder, "g"), SoloInput[i]);
+      newText = newText.replace(new RegExp(placeoutBoxholder, "g"), SoloOutput[i]);
     }
     updateFlowInfo(flowInfoId, newX, newY, newText);
   }

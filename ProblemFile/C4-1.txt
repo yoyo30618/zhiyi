@@ -1,0 +1,16 @@
+請設計一個程式，讓使用者可以自行
+    {Input}
+        輸入一個整數n
+    {EndInput}
+，並使用
+    {For}
+        for迴圈
+    {EndFor}
+    {Operationstyle}
+        算出1~n的和
+    {EndOperationstyle}
+並
+    {Output}
+        印出總和
+    {EndOutput}
+。

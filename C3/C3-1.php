@@ -13,6 +13,7 @@
 	</head>
 	<body>
 		<?php 
+			$ThisPage="C3-1";//要改的地方
 			$nowdir=basename(dirname($_SERVER['PHP_SELF']));
 			$parentDirectory = ($nowdir === "C1" || $nowdir === "C2"  || $nowdir === "C3"  || $nowdir === "C4") ? "../" : "";
 			define('IN_INDEX', true);
@@ -20,7 +21,7 @@
 			include $parentDirectory.'Fuctions.php'; 
 			if(!isset($_SESSION['TELic-LAB_Islogin']))
 				echo"<script  language=\"JavaScript\">alert('請先登入');location.href=\"".$parentDirectory."login.php\";</script>";
-			LoadStepInfo("C3-1");//讀取相關步驟資訊
+			LoadStepInfo($ThisPage);//讀取相關步驟資訊
 		?>
 		<div class="container-fluid content">
 			<div class="row">
@@ -33,8 +34,8 @@
 								<td><button type="button" class="btn btn-secondary rounded-circle" id="hintButton" >?</button></td>
 								<td>
 									<?php
-										LoadProblemFile("C3-1");
-										LoadProblemHint("C3-1");
+										LoadProblemFile($ThisPage);
+										LoadProblemHint($ThisPage);
 									?>
 								</td>
 							</tr>
@@ -54,7 +55,7 @@
 										<!-- 左上區塊的程式範例內容 -->
 <pre>
 <?php
-LoadProblemCode("C3-1",1);
+LoadProblemCode($ThisPage,1);
 ?>
 </pre>
 										<div  style='text-align:center'>
@@ -66,7 +67,7 @@ LoadProblemCode("C3-1",1);
 										<!-- 左上區塊的程式模擬內容 -->
 										<pre>
 <?php
-LoadProblemCode("C3-1",2);
+LoadProblemCode($ThisPage,2);
 ?>
 </pre>
 										<div  style='text-align:center'>
@@ -99,7 +100,7 @@ LoadProblemCode("C3-1",2);
 										<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
 											<defs>
 												<pattern id="image-bg" x="0" y="0" width="100%" height="100%" patternUnits="userSpaceOnUse">
-													<image id="flowpic" href="../pic/C3-1/stepALL.png" x="0" y="0" width="500" height="500" preserveAspectRatio="none" />
+													<image id="flowpic" href="../pic/<?php echo $ThisPage;?>/stepALL.png" x="0" y="0" width="500" height="500" preserveAspectRatio="none" />
 												</pattern>
 											</defs>
 											<rect x="0" y="0" width="500" height="500" fill="url(#image-bg)" /><!--流程圖底圖-->
@@ -118,7 +119,7 @@ LoadProblemCode("C3-1",2);
 			</div>
 		</div>
 		<!-- 引入 Bootstrap 的 JavaScript 文件 -->
-		<script src="../js/C3-1.js"></script>
+		<script src="../js/<?php echo $ThisPage;?>.js"></script>
 		<script src="../js/SwitchTag.js"></script>
 	</body>
 </html>
