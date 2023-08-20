@@ -172,6 +172,7 @@ document.getElementById("solo-next-btn").addEventListener("click", function () {
 function showStep(step) {
   currentStep = step;
   hiddenArrowText();
+  DrawSvg(step);
   // 顯示指定步驟的箭頭
   var currentStepArrow = document.querySelectorAll("#step" + ArrowStep[step]);
   currentStepArrow.forEach(function (stepArrow) {
@@ -252,6 +253,7 @@ function showStep(step) {
 function showSoloStep(step) {
   SoloCurrentStep = step;
   hiddenArrowText();
+  DrawSvg(step);
   // 顯示指定步驟的箭頭
   var currentStepArrow = document.querySelectorAll(
     "#solo-step" + SoloArrowStep[step]
@@ -315,4 +317,43 @@ function showSoloStep(step) {
     }
     updateFlowInfo(flowInfoId, newX, newY, newText);
   }
+}
+function DrawSvg(step){
+  var svgContent = generateSvgContent(step);
+  var svgContainer = document.querySelector("#SVGPlace");
+  if (svgContainer) {
+      svgContainer.innerHTML = svgContent;
+  }
+}
+
+function generateSvgContent(step) {//將目前步驟之SVG指令包裝
+    var svgContent = '<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">';
+    for (var Operation of OperationInfo[step]) {
+      if(Operation[0]=="DrawLine"){
+        svgContent+=DrawLine(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
+      }//待更新
+      else if(Operation[0]=="Text"){
+        svgContent+=DrawLine(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
+      }
+      else if(Operation[0]=="DrawArrow"){
+        svgContent+=DrawLine(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
+      }
+      else if(Operation[0]=="InputBox"){
+        svgContent+=DrawLine(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
+      }
+      else if(Operation[0]=="OutputBox"){
+        svgContent+=DrawLine(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
+      }
+      else if(Operation[0]=="IfBox"){
+        svgContent+=DrawLine(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
+      }
+      else if(Operation[0]=="ForBox"){
+        svgContent+=DrawLine(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
+      }
+      else if(Operation[0]=="InputBox"){
+        svgContent+=DrawLine(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
+      }
+    }
+    svgContent+="</svg>";
+    return svgContent;
 }

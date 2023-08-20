@@ -55,12 +55,20 @@
     ],
     "OperationInfo":[
         [
+            ["DrawLine",10,10,2,3,"black"],
+            ["InputBox",10,10,2,3,"black"]
         ],
         [
+            ["DrawLine",10,10,2,3,"black"],
+            ["InputBox",10,10,2,3,"black"]
         ],
-        ["grade={Input1}",360,220],
-        ["grade={Input1}",220,310],
-        ["grade={Input1}",270,390],
-        ["grade={Input1}",270,390]
+        [
+            ["DrawLine",10,10,2,3,"black"],
+            ["InputBox",10,10,2,3,"black"]
+        ],
+        [
+            ["DrawLine",10,10,2,3,"black"],
+            ["InputBox",10,10,2,3,"black"]
+        ]
     ]
 } 

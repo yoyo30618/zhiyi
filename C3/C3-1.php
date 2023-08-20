@@ -93,7 +93,7 @@ LoadProblemCode($ThisPage,2);
 								<div class="tab-content" id="right-tabs-content">
 									<div class="tab-pane fade show active" id="visualization" role="tabpanel" aria-labelledby="visualization-tab">
 										<!-- 右側區塊的程式視覺化內容 -->
-										視覺化<br><br><br><br><br><br><br><br><br><br><br><br><br>
+										<div id="SVGPlace"></div>
 									</div>
 									<div class="tab-pane fade" id="flowchart" role="tabpanel" aria-labelledby="flowchart-tab">
 										<!-- 右側區塊的程式流程圖內容 -->
@@ -121,5 +121,6 @@ LoadProblemCode($ThisPage,2);
 		<!-- 引入 Bootstrap 的 JavaScript 文件 -->
 		<script src="../js/<?php echo $ThisPage;?>.js"></script>
 		<script src="../js/SwitchTag.js"></script>
+		<script src="../js/SVG.js"></script>
 	</body>
 </html>

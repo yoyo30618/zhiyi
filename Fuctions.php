@@ -111,6 +111,5 @@
         } else {
             echo "Failed to load JSON data.";
         }
-
 	}
 ?>
