@@ -6,7 +6,16 @@ var SoloCodeStep = 0;
 var SoloMsgStep = [];
 var SoloArrowStep = [];
 var SoloFlowStep = [];
-
+var SoloOperationInfo=[
+  [
+  ],
+  [
+  ],
+  ["grade={Input1}",360,220],
+  ["grade={Input1}",220,310],
+  ["grade={Input1}",270,390],
+  ["grade={Input1}",270,390]
+];
 function SetSolodata(){//C4-1
   //SoloInput[1]代表迴圈跑幾次
   

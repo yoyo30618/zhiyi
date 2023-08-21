@@ -121,5 +121,6 @@ LoadProblemCode($ThisPage,2);
 		<!-- 引入 Bootstrap 的 JavaScript 文件 -->
 		<script src="../js/<?php echo $ThisPage;?>.js"></script>
 		<script src="../js/SwitchTag.js"></script>
+		<script src="../js/SVG.js"></script>
 	</body>
 </html>

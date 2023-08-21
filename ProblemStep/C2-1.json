@@ -35,7 +35,7 @@
     ],
     "MsgStep":[0,1,2,2,3],
     "ArrowStep":[0,1,2,3,4],
-    "FlowStep":[0,1,4,5],
+    "FlowStep":[0,1,4,5,5],
     "FlowPicPath":"../pic/C2-1",
     "FlowInfo1":[
         ["grade={Input1}",290,140],
@@ -54,13 +54,12 @@
     "FlowInfo5":[
     ],
     "OperationInfo":[
-        [
-        ],
-        [
-        ],
-        ["grade={Input1}",360,220],
-        ["grade={Input1}",220,310],
-        ["grade={Input1}",270,390],
-        ["grade={Input1}",270,390]
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
     ]
 } 

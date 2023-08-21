@@ -55,20 +55,28 @@
     ],
     "OperationInfo":[
         [
-            ["DrawLine",10,10,2,3,"black"],
-            ["InputBox",10,10,2,3,"black"]
+            ["DrawLine",10,10,30,30,"black"],
+            ["DrawText","步驟一耶黑",10,10,15,"black"]
         ],
         [
-            ["DrawLine",10,10,2,3,"black"],
-            ["InputBox",10,10,2,3,"black"]
+            ["DrawLine",10,10,40,40,"black"],
+            ["DrawText","步驟二耶黑",10,20,15,"black"]
         ],
         [
-            ["DrawLine",10,10,2,3,"black"],
-            ["InputBox",10,10,2,3,"black"]
+            ["DrawLine",10,10,50,50,"black"],
+            ["DrawText","步驟三耶黑",10,30,15,"black"]
         ],
         [
-            ["DrawLine",10,10,2,3,"black"],
-            ["InputBox",10,10,2,3,"black"]
+            ["DrawLine",10,10,60,60,"black"],
+            ["DrawText","步驟五耶黑",10,40,15,"black"]
+        ],
+        [
+            ["DrawLine",10,10,60,60,"black"],
+            ["DrawText","步驟六耶黑",10,40,15,"black"]
+        ],
+        [
+            ["DrawLine",10,10,60,60,"black"],
+            ["DrawText","步驟七耶黑",10,40,15,"black"]
         ]
     ]
 } 

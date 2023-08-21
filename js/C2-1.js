@@ -6,7 +6,9 @@ var SoloCodeStep = 5;
 var SoloMsgStep = [0,1,2,2,3];
 var SoloArrowStep = [0,1,2,3,4];
 var SoloFlowStep = [0,1,2,3,4];
-
+var SoloOperationInfo=[ 
+  [],[],[],[],[],[]
+];
 function SetSolodata(){
   SoloOutput[1]=((Number(SoloInput[1])+Number(SoloInput[2])+Number(SoloInput[3]))/3).toFixed(2);;
 }
