@@ -30,6 +30,13 @@
 							<div class="main-content-container">	
 								<div class="accordion" id="courseAccordion">
 									<div class="accordion-item">
+										<h2 class="accordion-header" id="headingC4">
+											<button class="accordion-button collapsed" type="button" onclick="window.location.href='C3-0.php'">
+												選擇結構說明
+											</button>
+										</h2>
+									</div>
+									<div class="accordion-item">
 										<h2 class="accordion-header" id="headingC3">
 											<button class="accordion-button collapsed" type="button" onclick="window.location.href='C3-1.php'">
 												C3-1 題目一

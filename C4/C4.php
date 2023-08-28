@@ -31,6 +31,13 @@
 								<div class="accordion" id="courseAccordion">
 									<div class="accordion-item">
 										<h2 class="accordion-header" id="headingC4">
+											<button class="accordion-button collapsed" type="button" onclick="window.location.href='C4-0.php'">
+												重複結構說明
+											</button>
+										</h2>
+									</div>
+									<div class="accordion-item">
+										<h2 class="accordion-header" id="headingC4">
 											<button class="accordion-button collapsed" type="button" onclick="window.location.href='C4-1.php'">
 												C4-1 題目一
 											</button>

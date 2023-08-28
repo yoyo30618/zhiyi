@@ -376,8 +376,11 @@ function generateSvgContent(step, IsSolo) {
         svgContent += OutputBox(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
       else if (Operation[0] == "IfBox")
         svgContent += IfBox(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
-      else if (Operation[0] == "ForBox")
-        svgContent += ForBox(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
+        else if (Operation[0] == "ForBox")
+        svgContent += ForBox(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5],Operation[6],Operation[7],Operation[8],Operation[9]);
+        else if (Operation[0] == "InfoTextBox")
+        svgContent += InfoTextBox(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5],Operation[6],Operation[7],Operation[8]);
+    
     }
   }
   svgContent += "</svg>";

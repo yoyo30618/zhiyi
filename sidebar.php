@@ -63,6 +63,11 @@
 				<div class="accordion-body">
 					<ul class="list-unstyled">
 						<li>
+							<button onclick="location.href='<?php echo $parentDirectory; ?>C3/C3-0.php'"  aria-controls="collapseC4-0" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseC4-0" data-bs-toggle="collapse" type="button">
+								選擇結構說明
+							</button>
+						</li>
+						<li>
 							<button onclick="location.href='<?php echo $parentDirectory; ?>C3/C3-1.php'"  aria-controls="collapseC3-1" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseC3-1" data-bs-toggle="collapse" type="button">
 								題目一
 							</button>

@@ -51,6 +51,9 @@
 							<a class="dropdown-item dropdown-toggle d-inline d-lg-none" href="#" id="dropdown-submenu-1" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
 							<ul class="dropdown-menu dropdown-submenu" aria-labelledby="dropdown-submenu-1">
 								<li>
+									<a class="dropdown-item" href="<?php echo $parentDirectory; ?>C3/C3-0.php">選擇結構說明</a>
+								</li>
+								<li>
 									<a class="dropdown-item" href="<?php echo $parentDirectory; ?>C3/C3-1.php">題目一</a>
 								</li>								
 								<li>

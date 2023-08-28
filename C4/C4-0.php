@@ -29,7 +29,7 @@
 				<div class="col-lg-10">
 					<div class="main-content-container">
 					<!-- 在这里添加主要内容部分的内容 -->
-						<a href='C1.php' style='color:black;'>C4 重複結構</a> > <a href='C4-0.php' style='color:black;'>C4 重複結構</a>
+						<a href='C4.php' style='color:black;'>C4 重複結構</a> > <a href='C4-0.php' style='color:black;'>重複結構說明</a>
 						
 						<div class="col-lg-10">
 							<div class="main-content-container">
@@ -52,7 +52,7 @@
 										在還沒有學迴圈之前，如果我們用循序結構來實踐，需要<text style='color:red'>重複</text>輸入多次一模一樣的程式碼。<br>
 									</h3>
 									<div class="row">
-										<div class="col-lg-4" style='background-color: #F7A4A4;border-radius: 10px;padding: 10px;text-align:left;'>
+										<div class="col-lg-2" style='background-color: #F7A4A4;border-radius: 10px;padding: 10px;text-align:left;'>
 											<h5>
 												<text class='arrow1'>➔</text>print("跑彎道")<br>
 												<text style='visibility: hidden;' class='arrow2'>➔</text>print("跑直道")<br>
@@ -74,7 +74,7 @@
 											</h5>
 
 										</div>
-										<div class="col-lg-8 flow-section">
+										<div class="col-lg-10 flow-section">
 											<svg id="animation" width="600" height="450">
 												<!-- 操场底图 -->
 												<image x="0" y="0" width="600" height="450" xlink:href="../pic/playground.png" />
@@ -99,7 +99,7 @@
 									在程式的世界裡，我們可以使用「迴圈」，來處理重複的程序。<br>
 									</h3>
 									<div class="row">
-										<div class="col-lg-4" style='background-color: #E2F0D9;border-radius: 10px;padding: 10px;text-align:left;'>
+										<div class="col-lg-2" style='background-color: #E2F0D9;border-radius: 10px;padding: 10px;text-align:left;'>
 											<h5>
 											<text style='visibility: hidden;'>➔</text>for i in range(4) :<br>
 												<text class='newarrow1'>➔</text>&emsp;print("跑彎道")<br>
@@ -110,7 +110,7 @@
 											</h5>
 
 										</div>
-										<div class="col-lg-8 flow-section">
+										<div class="col-lg-10 flow-section">
 
 
 											<svg id="animation" width="600" height="450">
