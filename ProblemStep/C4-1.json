@@ -55,8 +55,8 @@
     "OperationInfo":[
         [
             
-            ["ForBox",5,5,500,50,3,5,5,"i", "black"],
-            ["InfoTextBox",5,5,100,23,16,"lightgreen", "black","range(1,n+1,1):"]
+            ["ForBox",5,100,500,100,3,99,99,"i", "black"],
+            ["InfoTextBox",5,5,120,30,16,"lightgreen", "black","range(1,n+1,1):"]
         ],
         [
         ],

@@ -8,7 +8,7 @@
 		if(($Account=='')||($Password==''))//空白帳密
 			echo"<script  language=\"JavaScript\">alert('使用者名稱或密碼不能為空');location.href=\"login.php\";</script>";
 		include_once("conn_mysql.php");
-		$sql_query_login="SELECT * FROM `TELic-LAB`.`account` WHERE 1";
+		$sql_query_login="SELECT * FROM `account` WHERE 1";
 		$Pwd_result=mysqli_query($db_link,$sql_query_login) or die("查詢失敗");//查詢帳密
 		$IsLogin=0;
 		while($row_login=mysqli_fetch_array($Pwd_result)){

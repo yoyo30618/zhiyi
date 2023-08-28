@@ -343,7 +343,7 @@ function DrawSoloSvg(step) {
 function generateSvgContent(step, IsSolo) {
   //將目前步驟之SVG指令包裝
   var svgContent =
-    '<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">';
+    '<svg width="700" height="500" xmlns="http://www.w3.org/2000/svg">';
   if (IsSolo) {
     for (var Operation of SoloOperationInfo[SoloFlowStep[step]]) {
       if (Operation[0] == "DrawLine")
