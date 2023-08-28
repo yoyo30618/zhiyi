@@ -37,7 +37,7 @@
 								<div id="content1" class="content-section" style='margin:0px auto;text-align:center;'>
        								<h2>關於我成為漢堡研發部門人員的故事</h2>
 									<p>歡迎你成為美味漢堡研發部的成員！公司將交給你第一份的任務：開發美味漢堡的食譜。</p>
-									<img src='../pic/C1-1-1.png'>
+									<img src='../pic/C1-1-1.png' style='max-width:100%;'>
 									<p>接下來，您將進行漢堡拼裝的任務。</p>
 									<button onclick="showContent(2)" class="btn btn-primary">開始漢堡拼裝任務</button>
 								</div>
@@ -159,7 +159,7 @@
 									<a id='Isanswered' style='color:green;'>感謝你的填答！</a><br><br><br>
 									<div id="algorithmExplanation" style="display: none;">
 										<h3>這就是演算法</h3>
-										<img src='../pic/C1-1-3.png'>
+										<img src='../pic/C1-1-3.png' style='max-width:100%;'>
 										<button onclick="location.href='../C2/C2.php'" class="btn btn-success">我了解了，繼續前進！</button>
 									</div>
 								</div>

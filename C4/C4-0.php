@@ -43,7 +43,7 @@
 										第四圈，我們會跑過兩次彎道兩次直道…<br><br>
 									</h4>
 									<h2>每一圈，我們都經歷一樣的歷程，且都會在相同位置遇上直道、彎道。</h2>
-									<img src='../pic/playground.png'><br>
+									<img src='../pic/playground.png' style='max-width:100%;'><br>
 									<button onclick="showContent(2)" class="btn btn-primary">下一頁</button>
 								</div>
 
@@ -148,7 +148,7 @@
 									<a id='Isanswered' style='color:green;'>感謝你的填答！</a><br><br><br>
 									<div id="algorithmExplanation" style="display: none;">
 										
-										<img src='../pic/C4-0-1.png'>
+										<img src='../pic/C4-0-1.png' style='max-width:100%;'>
 										<button onclick="location.href='../C4/C4-1.php'" class="btn btn-success">我了解了，繼續前進！</button>
 									</div>
 								</div>

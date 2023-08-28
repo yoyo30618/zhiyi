@@ -38,7 +38,7 @@
 									<h3>
 									今年的畢業旅行即將在年底前往日本大阪旅遊，但因天氣總是無法預測，為了確保旅程順利，在行前做了周詳的準備，無論遇晴天或是雨天，抑或其他突發情況，都應該有所準備。
 									</h3>
-									<img src='../pic/C3-0-1.png'><br>
+									<img src='../pic/C3-0-1.png' style='max-width:100%;'><br>
 									<button onclick="showContent(2)" class="btn btn-primary">下一頁</button>
 								</div>
 
@@ -52,7 +52,7 @@
 											<td><input type="radio" name="weather" value="4"><h3>沒下雨<h3></td>
 										</tr>
 										<tr>
-											<td colspan="2"><img src='../pic/C3-0-2.png'></td>
+											<td colspan="2"><img src='../pic/C3-0-2.png' style='max-width:100%;'></td>
 										</tr>
 										<tr>
 											<td colspan="2"><button onclick="showContent(0)" class="btn btn-primary">下一頁</button></td>											
@@ -60,19 +60,19 @@
 									</table>
 								</div>
 								<div id="content3" class="content-section" style='margin:0px auto;text-align:center;display: none;'>
-									<img id="contentImage1" src='../pic/C3-0-3-1.png'><br>
+									<img id="contentImage1" src='../pic/C3-0-3-1.png' style='max-width:100%;'><br>
 									<button onclick="travelLstStep()" class="btn btn-primary">上一頁</button>
 									<button onclick="travelNxtStep()" class="btn btn-primary">下一頁</button>
 								</div>
 								<div id="content4" class="content-section" style='margin:0px auto;text-align:center;display: none;'>
-									<img id="contentImage2" src='../pic/C3-0-4-1.png'><br>
+									<img id="contentImage2" src='../pic/C3-0-4-1.png' style='max-width:100%;'><br>
 									<button onclick="travelLstStep()" class="btn btn-primary">上一頁</button>
 									<button onclick="travelNxtStep()" class="btn btn-primary">下一頁</button>
 								</div>
 
 								<div id="content5" class="content-section" style="display: none;">
 									<h2>
-										<img src='../pic/answer.png' width="40" height="40">
+										<img src='../pic/answer.png' width="40" height="40" style='max-width:100%;'>
 										提問環節
 										<button onclick="showContent(2)" class="btn btn-outline-dark">重新選擇</button>
 									</h2>
@@ -85,7 +85,7 @@
 									<a id='Isanswered' style='color:green;'>感謝你的填答！</a><br><br><br>
 									<div id="algorithmExplanation" style="display: none;">
 										
-										<img src='../pic/C3-0-5.png'>
+										<img src='../pic/C3-0-5.png' style='max-width:100%;'>
 										<button onclick="location.href='../C3/C3-1.php'" class="btn btn-success">我了解了，繼續前進！</button>
 									</div>
 								</div>
