@@ -339,49 +339,39 @@ function DrawSoloSvg(step) {
     svgContainer.innerHTML = svgContent;
   }
 }
+function AddSVG(Operation) {
+  SVGname=Operation[0];
+  if (SVGname == "DrawLine")//OK
+    svgContent = DrawLine(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
+  else if (SVGname == "DrawText")//OK
+    svgContent = DrawText(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
+  else if (SVGname == "DrawArrow")//OK
+    svgContent = DrawArrow(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
+  else if (SVGname == "InputBox")
+    svgContent = InputBox(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
+  else if (SVGname == "OutputBox")
+    svgContent = OutputBox(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
+  else if (SVGname == "IfBox")
+    svgContent = IfBox(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
+  else if (SVGname == "ForBox")//OK
+    svgContent = ForBox(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5],Operation[6],Operation[7],Operation[8],Operation[9]);
+  else if (SVGname == "InfoTextBox")//OK
+    svgContent = InfoTextBox(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5],Operation[6],Operation[7],Operation[8]);
+  else if (SVGname == "ImgBox")//OK
+    svgContent = ImgBox(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
+  return svgContent;
+}
 
 function generateSvgContent(step, IsSolo) {
   //將目前步驟之SVG指令包裝
-  var svgContent =
-    '<svg width="700" height="500" xmlns="http://www.w3.org/2000/svg">';
+  var svgContent ='<svg width="700" height="500" xmlns="http://www.w3.org/2000/svg">';
   if (IsSolo) {
-    for (var Operation of SoloOperationInfo[SoloFlowStep[step]]) {
-      if (Operation[0] == "DrawLine")
-        svgContent += DrawLine(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
-      else if (Operation[0] == "DrawText")
-        svgContent += DrawText(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
-      else if (Operation[0] == "DrawArrow")
-        svgContent += DrawArrow(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
-      else if (Operation[0] == "InputBox")
-        svgContent += InputBox(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
-      else if (Operation[0] == "OutputBox")
-        svgContent += OutputBox(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
-      else if (Operation[0] == "IfBox")
-        svgContent += IfBox(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
-      else if (Operation[0] == "ForBox")
-        svgContent += ForBox(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
-    }
+    for (var Operation of SoloOperationInfo[SoloFlowStep[step]])
+      svgContent+=AddSVG(Operation);
   } 
   else {
-    for (var Operation of OperationInfo[FlowStep[step]]) {
-      if (Operation[0] == "DrawLine")
-        svgContent += DrawLine(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
-      else if (Operation[0] == "DrawText")
-        svgContent += DrawText(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
-      else if (Operation[0] == "DrawArrow")
-        svgContent += DrawArrow(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
-      else if (Operation[0] == "InputBox")
-        svgContent += InputBox(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
-      else if (Operation[0] == "OutputBox")
-        svgContent += OutputBox(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
-      else if (Operation[0] == "IfBox")
-        svgContent += IfBox(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
-        else if (Operation[0] == "ForBox")
-        svgContent += ForBox(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5],Operation[6],Operation[7],Operation[8],Operation[9]);
-        else if (Operation[0] == "InfoTextBox")
-        svgContent += InfoTextBox(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5],Operation[6],Operation[7],Operation[8]);
-    
-    }
+    for (var Operation of OperationInfo[FlowStep[step]])
+      svgContent+=AddSVG(Operation);
   }
   svgContent += "</svg>";
   return svgContent;

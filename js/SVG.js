@@ -63,10 +63,11 @@ function InfoTextBox($leftupX,$leftupY,$RightBottomX,$RightBottomY,$Size,$BackCo
     svgcode="";
     svgcode+="<rect x='"+$leftupX+"' y='"+$leftupY+"' width='"+Math.abs($leftupX-$RightBottomX)+"' height='"+Math.abs($RightBottomY-$leftupY)+"' rx='10' ry='10' fill='"+$BackColor+"'/>";
     svgcode+="<text x='"+($leftupX+5)+"' y='"+($leftupY+$Size)+"' font-family='Arial' font-size='"+$Size+"' fill='"+$Color+"'>"+$Text+"</text>";
-    
-    
-    
-    
+    return svgcode;
+}
+function ImgBox($leftupX,$leftupY,$width,$height,$picpath){
+    svgcode="";
+    svgcode+="<image x='"+$leftupX+"' y='"+$leftupY+"' width='"+$width+"' height='"+$height+"' xlink:href='"+$picpath+"' />";
     return svgcode;
 }
 function InputBox(){}
