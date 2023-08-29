@@ -1,16 +1,20 @@
 {
-    "_comment": {
-        "Msg":"為顯示文字",
-        "{InputBox}":"代表輸入框",
-        "{Input1}":"代表輸入值1",
-        "{Input2}":"代表輸入值2",
-        "{Input3}":"代表輸入值3",
-        "{Input4}":"代表輸入值4",
-        "{Input5}":"代表輸入值5",
+    "_comment":{
+        "DefaultInput1-5":"代表預設輸入值1-5",
+        "DefaultOutput1-5":"代表預設輸出值1-5",
+        "CodeStep":"預設程式有幾步(流程圖)",
+        "CodeStep_SVG":"預設程式有幾步(視覺化)",
+        "Msg":"為顯示訊息",
         "MsgStep":"為訊息顯示順序",
         "ArrowStep":"為箭頭順序",
         "FlowStep":"為流程圖順序",
-        "FlowInfo":"為各步驟中 流程圖加註的文字(文字,x位置,y位置)"
+        "OperationStep_SVG":"為視覺化顯示順序",
+        "MsgStep_SVG":"為訊息顯示順序(視覺化)",
+        "ArrowStep_SVG":"為箭頭順序(視覺化)",
+        "FlowStep_SVG":"為流程圖順序(視覺化)",
+        "FlowPicPath":"為流程圖路徑",
+        "FlowInfo1-5":"為各步驟中 流程圖加註的文字(文字,x位置,y位置)",
+        "OperationInfo":"視覺化的內容"
     },
     "DefaultInput":{
         "Input1":5,
@@ -27,6 +31,7 @@
         "Output5":0
     },
     "CodeStep":14,
+    "CodeStep_SVG":3,
     "Msg": [
         "請輸入n：{InputBox1}",
         "請輸入n：{Input1}",
@@ -35,6 +40,9 @@
     "MsgStep":[0,1,1,1,1,1,1,1,1,1,1,1,1,2],
     "ArrowStep":[0,1,2,3,2,3,2,3,2,3,2,3,2,4],
     "FlowStep":[0,1,1,2,1,2,1,2,1,2,1,2,3,4],
+    "MsgStep_SVG":[0,1,2],
+    "ArrowStep_SVG":[0,1,2],
+    "FlowStep_SVG":[0,1,2],
     "FlowPicPath":"../pic/C4-1",
     "FlowInfo1":[
         ["n={Input1}",290,140],
@@ -56,7 +64,8 @@
         [
             
             ["ForBox",5,100,500,100,3,99,99,"i", "black"],
-            ["InfoTextBox",5,5,120,30,16,"lightgreen", "black","range(1,n+1,1):"]
+            ["InfoTextBox",5,5,120,30,16,"lightgreen", "black","range(1,n+1,1):"],
+            ["ImgBox",5,5,120,50,"burger-1.png"]
         ],
         [
         ],

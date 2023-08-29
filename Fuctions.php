@@ -77,10 +77,15 @@
 		$jsonData = json_decode(file_get_contents('../ProblemStep/'.$filename.'.json'), true);
         if ($jsonData) {
 			$CodeStep = $jsonData["CodeStep"];
+			$CodeStep_SVG = $jsonData["CodeStep_SVG"];
 			$Msg = json_encode($jsonData["Msg"]); // Encode the array as JSON
 			$MsgStep = json_encode($jsonData["MsgStep"]);
+			$MsgStep_SVG = json_encode($jsonData["MsgStep_SVG"]);
 			$ArrowStep = json_encode($jsonData["ArrowStep"]);
+			$ArrowStep_SVG = json_encode($jsonData["ArrowStep_SVG"]);
 			$FlowStep = json_encode($jsonData["FlowStep"]);
+			$OperationStep_SVG = json_encode($jsonData["OperationStep_SVG"]);
+			$FlowStep_SVG = json_encode($jsonData["FlowStep_SVG"]);
 			$FlowInfo1 = json_encode($jsonData["FlowInfo1"]);
 			$FlowInfo2 = json_encode($jsonData["FlowInfo2"]);
 			$FlowInfo3 = json_encode($jsonData["FlowInfo3"]);
@@ -92,10 +97,15 @@
 			$DefaultOutput = json_encode($jsonData["DefaultOutput"]);
 			$jsCode = "
 				var CodeStep = " . $CodeStep . ";
+				var CodeStep_SVG = " . $CodeStep_SVG . ";
 				var Msg = " . $Msg . ";
 				var MsgStep = " . $MsgStep . ";
+				var MsgStep_SVG = " . $MsgStep_SVG . ";
 				var ArrowStep = " . $ArrowStep . ";
+				var ArrowStep_SVG = " . $ArrowStep_SVG . ";
 				var FlowStep = " . $FlowStep . ";
+				var OperationStep_SVG = " . $OperationStep_SVG . ";
+				var FlowStep_SVG = " . $FlowStep_SVG . ";
 				var FlowInfo1 = " . $FlowInfo1 . ";
 				var FlowInfo2 = " . $FlowInfo2 . ";
 				var FlowInfo3 = " . $FlowInfo3 . ";
@@ -105,6 +115,7 @@
 				var FlowPicPath = " . $FlowPicPath . ";
 				var DefaultInput = " . $DefaultInput . ";
 				var DefaultOutput = " . $DefaultOutput . ";
+				
 			";
 	
 			echo "<script>".$jsCode."</script>";

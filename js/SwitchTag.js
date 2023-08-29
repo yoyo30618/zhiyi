@@ -2,7 +2,8 @@ var leftTabs = new bootstrap.Tab(document.getElementById("left-tabs"));
 var rightTabs = new bootstrap.Tab(document.getElementById("right-tabs"));
 let PageFirstStartTime = Date.now(); // 變數用於儲存用戶進入頁面的時間
 let ThisTagStartTime = Date.now(); // 變數用於儲存用戶進入某一頁籤的時間
-
+NowTag = document.getElementById("right-tabs").querySelectorAll(".nav-link");
+NowTagValue="程式視覺化";
 // 初始化頁籤
 leftTabs.show();
 rightTabs.show();
@@ -76,6 +77,13 @@ document
       body: JSON.stringify(data),
     });
     ThisTagStartTime = Date.now();
+    currentStep=0;
+    SoloCurrentStep=0;
+    NowTag.forEach((tab) => {
+      if (tab.classList.contains("active")) {
+        NowTagValue = tab.textContent;
+      }
+    });
   });
 
 // 監聽用戶離開頁面或關閉瀏覽器的事件
@@ -136,8 +144,16 @@ document.getElementById("previous-btn").addEventListener("click", function () {
   else showStep(currentStep - 1);
 });
 document.getElementById("next-btn").addEventListener("click", function () {
-  if (currentStep == CodeStep - 1) showStep(currentStep);
-  else showStep(currentStep + 1);
+
+
+  if(NowTagValue=="程式視覺化"){
+    if (currentStep == CodeStep_SVG - 1) showStep(currentStep);
+    else showStep(currentStep + 1);
+  }
+  else{
+    if (currentStep == CodeStep - 1) showStep(currentStep);
+    else showStep(currentStep + 1);
+  }
 });
 
 // 監聽左右切換按鈕的點擊事件
@@ -151,22 +167,50 @@ document
 
 document.getElementById("solo-next-btn").addEventListener("click", function () {
   //如果遇到對話框要先處理 記錄起來!
-  if (SoloCurrentStep == SoloCodeStep - 1) showSoloStep(SoloCurrentStep);
-  else {
-    //如果目前這一步  有輸入框 要記錄輸入框內容
-    var SoloInput1 = document.getElementById("SoloInput1");
-    if (SoloInput1) SoloInput[1] = SoloInput1.value;
-    var SoloInput2 = document.getElementById("SoloInput2");
-    if (SoloInput2) SoloInput[2] = SoloInput2.value;
-    var SoloInput3 = document.getElementById("SoloInput3");
-    if (SoloInput3) SoloInput[3] = SoloInput3.value;
-    var SoloInput4 = document.getElementById("SoloInput4");
-    if (SoloInput4) SoloInput[4] = SoloInput4.value;
-    var SoloInput5 = document.getElementById("SoloInput5");
-    if (SoloInput5) SoloInput[5] = SoloInput5.value;
-    SetSolodata();
-    showSoloStep(SoloCurrentStep + 1);
+  if(NowTagValue=="程式視覺化"){
+    if (SoloCurrentStep == SoloCodeStep_SVG - 1) showSoloStep(SoloCurrentStep);
+    else{
+      //如果目前這一步  有輸入框 要記錄輸入框內容
+      var SoloInput1 = document.getElementById("SoloInput1");
+      if (SoloInput1) SoloInput[1] = SoloInput1.value;
+      var SoloInput2 = document.getElementById("SoloInput2");
+      if (SoloInput2) SoloInput[2] = SoloInput2.value;
+      var SoloInput3 = document.getElementById("SoloInput3");
+      if (SoloInput3) SoloInput[3] = SoloInput3.value;
+      var SoloInput4 = document.getElementById("SoloInput4");
+      if (SoloInput4) SoloInput[4] = SoloInput4.value;
+      var SoloInput5 = document.getElementById("SoloInput5");
+      if (SoloInput5) SoloInput[5] = SoloInput5.value;
+      SetSolodata();
+      showSoloStep(SoloCurrentStep + 1);
+    }
   }
+  else{
+    if (SoloCurrentStep == SoloCodeStep - 1) showSoloStep(SoloCurrentStep);
+    else {
+      //如果目前這一步  有輸入框 要記錄輸入框內容
+      var SoloInput1 = document.getElementById("SoloInput1");
+      if (SoloInput1) SoloInput[1] = SoloInput1.value;
+      var SoloInput2 = document.getElementById("SoloInput2");
+      if (SoloInput2) SoloInput[2] = SoloInput2.value;
+      var SoloInput3 = document.getElementById("SoloInput3");
+      if (SoloInput3) SoloInput[3] = SoloInput3.value;
+      var SoloInput4 = document.getElementById("SoloInput4");
+      if (SoloInput4) SoloInput[4] = SoloInput4.value;
+      var SoloInput5 = document.getElementById("SoloInput5");
+      if (SoloInput5) SoloInput[5] = SoloInput5.value;
+      SetSolodata();
+      showSoloStep(SoloCurrentStep + 1);
+    }
+  }
+
+
+
+
+
+
+
+  
 });
 
 function showStep(step) {
@@ -174,14 +218,16 @@ function showStep(step) {
   hiddenArrowText();
   DrawSvg(step);
   // 顯示指定步驟的箭頭
-  var currentStepArrow = document.querySelectorAll("#step" + ArrowStep[step]);
+  if(NowTagValue=="程式視覺化") var currentStepArrow = document.querySelectorAll("#step" + ArrowStep_SVG[step]);
+  else var currentStepArrow = document.querySelectorAll("#step" + ArrowStep[step]);
   currentStepArrow.forEach(function (stepArrow) {
     stepArrow.style.visibility = "visible";
   });
   // 顯示指定步驟的訊息
   var stepIndicator = document.getElementById("step-indicator");
   if (stepIndicator) {
-    NowMsg = Msg[MsgStep[step]]; //如果有輸入框  要替換
+    if(NowTagValue=="程式視覺化") NowMsg = Msg[MsgStep_SVG[step]];
+    else  NowMsg = Msg[MsgStep[step]];
     for (let i = 1; i <= 5; i++) {
       const placeholder = "{Input" + i + "}";
       const placeBoxholder = "{InputBox" + i + "}";
@@ -204,7 +250,10 @@ function showStep(step) {
   // 更新流程圖
   var stepImage = document.getElementById("flowpic");
   if (stepImage) {
-    var imageSrc = FlowPicPath + "/step" + FlowStep[step] + ".png";
+    if(NowTagValue=="程式視覺化")
+      var imageSrc = FlowPicPath + "/step" + FlowStep_SVG[step] + ".png";
+    else 
+      var imageSrc = FlowPicPath + "/step" + FlowStep[step] + ".png";
     if (imageSrc) {
       stepImage.setAttribute("href", imageSrc); // 移除 href 属性
       stepImage.onerror = function () {
@@ -226,10 +275,17 @@ function showStep(step) {
   for (let i = 1; i <= 5; i++) {
     let flowInfoId = "FlowInfo" + i;
     let flowInfoArray = eval("FlowInfo" + i); // 获取对应的 FlowInfo 数组
-    let newX = flowInfoArray[FlowStep[step]][1];
-    let newY = flowInfoArray[FlowStep[step]][2];
-    let newText = flowInfoArray[FlowStep[step]][0];
-
+    
+    if(NowTagValue=="程式視覺化"){
+      newX = flowInfoArray[FlowStep_SVG[step]][1];
+      newY = flowInfoArray[FlowStep_SVG[step]][2];
+      newText = flowInfoArray[FlowStep_SVG[step]][0];
+    }
+    else{
+      newX = flowInfoArray[FlowStep[step]][1];
+      newY = flowInfoArray[FlowStep[step]][2];
+      newText = flowInfoArray[FlowStep[step]][0];
+    }
     for (let i = 1; i <= 5; i++) {
       const placeholder = "{Input" + i + "}";
       const placeBoxholder = "{InputBox" + i + "}";
@@ -255,16 +311,16 @@ function showSoloStep(step) {
   hiddenArrowText();
   DrawSoloSvg(step);
   // 顯示指定步驟的箭頭
-  var currentStepArrow = document.querySelectorAll(
-    "#solo-step" + SoloArrowStep[step]
-  );
+  if(NowTagValue=="程式視覺化") var currentStepArrow = document.querySelectorAll("#solo-step" + SoloArrowStep_SVG[step]);
+  else var currentStepArrow = document.querySelectorAll("#solo-step" + SoloArrowStep[step]);
   currentStepArrow.forEach(function (stepArrow) {
     stepArrow.style.visibility = "visible";
   });
   // 顯示指定步驟的訊息
   var stepIndicator = document.getElementById("step-indicator");
   if (stepIndicator) {
-    NowMsg = Msg[SoloMsgStep[step]]; //如果有輸入框  要替換
+    if(NowTagValue=="程式視覺化") NowMsg = Msg[SoloMsgStep_SVG[step]];
+    else  NowMsg = Msg[SoloMsgStep[step]];
     for (let i = 1; i <= 5; i++) {
       const placeholder = "{Input" + i + "}";
       const placeBoxholder = "{InputBox" + i + "}";
@@ -285,7 +341,11 @@ function showSoloStep(step) {
   // 更新流程圖
   var stepImage = document.getElementById("flowpic");
   if (stepImage) {
-    var imageSrc = FlowPicPath + "/step" + SoloFlowStep[step] + ".png";
+    
+    if(NowTagValue=="程式視覺化")
+      var imageSrc = FlowPicPath + "/step" + SoloFlowStep_SVG[step] + ".png";
+    else
+      var imageSrc = FlowPicPath + "/step" + SoloFlowStep[step] + ".png";
     if (imageSrc) {
       stepImage.setAttribute("href", imageSrc); // 移除 href 属性
       stepImage.onerror = function () {
@@ -307,10 +367,16 @@ function showSoloStep(step) {
   for (let i = 1; i <= 5; i++) {
     let flowInfoId = "FlowInfo" + i;
     let flowInfoArray = eval("FlowInfo" + i); // 获取对应的 FlowInfo 数组
-    let newX = flowInfoArray[SoloFlowStep[step]][1];
-    let newY = flowInfoArray[SoloFlowStep[step]][2];
-    let newText = flowInfoArray[SoloFlowStep[step]][0];
-
+    if(NowTagValue=="程式視覺化"){
+      newX = flowInfoArray[SoloFlowStep_SVG[step]][1];
+      newY = flowInfoArray[SoloFlowStep_SVG[step]][2];
+      newText = flowInfoArray[SoloFlowStep_SVG[step]][0];
+    }
+    else{
+      newX = flowInfoArray[SoloFlowStep[step]][1];
+      newY = flowInfoArray[SoloFlowStep[step]][2];
+      newText = flowInfoArray[SoloFlowStep[step]][0];
+    }
     for (let i = 1; i <= 5; i++) {
       const placeholder = "{Input" + i + "}";
       const placeBoxholder = "{InputBox" + i + "}";
@@ -341,36 +407,57 @@ function DrawSoloSvg(step) {
 }
 function AddSVG(Operation) {
   SVGname=Operation[0];
+  TpOperation=[];
+  for (let z = 0; z < Operation.length; z++) {
+    Tp=String(Operation[z]);
+    for (let i = 1; i <= 5; i++) {
+      const placeholder = "{Input" + i + "}";
+      const placeBoxholder = "{InputBox" + i + "}";
+      const placeoutholder = "{Output" + i + "}";
+      Tp = Tp.replace(new RegExp(placeholder, "g"),SoloInput[i]);
+      Tp = Tp.replace(new RegExp(placeBoxholder, "g"),SoloInput[i]);
+      Tp = Tp.replace(new RegExp(placeoutholder, "g"),SoloOutput[i]);
+    }
+    TpOperation.push(Tp);
+  }
   if (SVGname == "DrawLine")//OK
-    svgContent = DrawLine(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
+    svgContent = DrawLine(TpOperation[1],TpOperation[2],TpOperation[3],TpOperation[4],TpOperation[5]);
   else if (SVGname == "DrawText")//OK
-    svgContent = DrawText(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
+    svgContent = DrawText(TpOperation[1],TpOperation[2],TpOperation[3],TpOperation[4],TpOperation[5]);
   else if (SVGname == "DrawArrow")//OK
-    svgContent = DrawArrow(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
+    svgContent = DrawArrow(TpOperation[1],TpOperation[2],TpOperation[3],TpOperation[4],TpOperation[5]);
   else if (SVGname == "InputBox")
-    svgContent = InputBox(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
+    svgContent = InputBox(TpOperation[1],TpOperation[2],TpOperation[3],TpOperation[4],TpOperation[5]);
   else if (SVGname == "OutputBox")
-    svgContent = OutputBox(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
+    svgContent = OutputBox(TpOperation[1],TpOperation[2],TpOperation[3],TpOperation[4],TpOperation[5]);
   else if (SVGname == "IfBox")
-    svgContent = IfBox(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
+    svgContent = IfBox(TpOperation[1],TpOperation[2],TpOperation[3],TpOperation[4],TpOperation[5]);
   else if (SVGname == "ForBox")//OK
-    svgContent = ForBox(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5],Operation[6],Operation[7],Operation[8],Operation[9]);
+    svgContent = ForBox(TpOperation[1],TpOperation[2],TpOperation[3],TpOperation[4],TpOperation[5],TpOperation[6],TpOperation[7],TpOperation[8],TpOperation[9]);
   else if (SVGname == "InfoTextBox")//OK
-    svgContent = InfoTextBox(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5],Operation[6],Operation[7],Operation[8]);
+    svgContent = InfoTextBox(TpOperation[1],TpOperation[2],TpOperation[3],TpOperation[4],TpOperation[5],TpOperation[6],TpOperation[7],TpOperation[8]);
   else if (SVGname == "ImgBox")//OK
-    svgContent = ImgBox(Operation[1],Operation[2],Operation[3],Operation[4],Operation[5]);
+    svgContent = ImgBox(TpOperation[1],TpOperation[2],TpOperation[3],TpOperation[4],TpOperation[5]);
+  else if(SVGname == "AssignArrow")//OK
+    svgContent = AssignArrow(TpOperation[1],TpOperation[2],TpOperation[3],TpOperation[4],TpOperation[5],TpOperation[6],TpOperation[7]);
+  else if(SVGname == "LeftBox")//OK
+    svgContent = LeftBox(TpOperation[1],TpOperation[2],TpOperation[3],TpOperation[4]);
+  else if(SVGname == "RightBox")//OK
+    svgContent = RightBox(TpOperation[1],TpOperation[2],TpOperation[3],TpOperation[4]);
+  else if(SVGname == "PrintBox")//OK
+    svgContent = PrintBox(TpOperation[1],TpOperation[2],TpOperation[3],TpOperation[4]);
   return svgContent;
 }
 
 function generateSvgContent(step, IsSolo) {
   //將目前步驟之SVG指令包裝
-  var svgContent ='<svg width="700" height="500" xmlns="http://www.w3.org/2000/svg">';
+  var svgContent ='<svg width="700" height="700" xmlns="http://www.w3.org/2000/svg">';
   if (IsSolo) {
-    for (var Operation of SoloOperationInfo[SoloFlowStep[step]])
+    for (var Operation of SoloOperationInfo[SoloOperationStep_SVG[step]])
       svgContent+=AddSVG(Operation);
   } 
   else {
-    for (var Operation of OperationInfo[FlowStep[step]])
+    for (var Operation of OperationInfo[OperationStep_SVG[step]])
       svgContent+=AddSVG(Operation);
   }
   svgContent += "</svg>";
