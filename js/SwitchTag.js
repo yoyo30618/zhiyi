@@ -414,9 +414,11 @@ function AddSVG(Operation) {
       const placeholder = "{Input" + i + "}";
       const placeBoxholder = "{InputBox" + i + "}";
       const placeoutholder = "{Output" + i + "}";
+      const placesolooutholder = "{SoloOutput" + i + "}";
       Tp = Tp.replace(new RegExp(placeholder, "g"),SoloInput[i]);
       Tp = Tp.replace(new RegExp(placeBoxholder, "g"),SoloInput[i]);
       Tp = Tp.replace(new RegExp(placeoutholder, "g"),SoloOutput[i]);
+      Tp = Tp.replace(new RegExp(placesolooutholder, "g"),SoloOutput[i]);
     }
     TpOperation.push(Tp);
   }

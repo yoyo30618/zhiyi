@@ -28,6 +28,13 @@
 								<div class="accordion" id="courseAccordion">
 									<div class="accordion-item">
 										<h2 class="accordion-header" id="headingC1">
+    										<button class="accordion-button collapsed" type="button" onclick="window.location.href='dashboard.php'">
+												主控台
+											</button>
+										</h2>
+									</div>
+									<div class="accordion-item">
+										<h2 class="accordion-header" id="headingC1">
     										<button class="accordion-button collapsed" type="button" onclick="window.location.href='C1/C1.php'">
 												C1 程式設計初探
 											</button>

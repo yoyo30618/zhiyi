@@ -21,105 +21,45 @@
 		<div class="container-fluid content">
 			<div class="row">
 				<?php include 'sidebar.php'; ?>
-				<?php
-					include_once("conn_mysql.php");
-					if(isset($_POST['recordsearch']) &&$_POST['recordsearch']!=""){
-						$sql_query_allrecordsearch="SELECT `Account`,`page`,SUM(`Time`) AS `TotalTime` FROM `visitrecord` WHERE `Account` = '".$_POST['recordsearch']."' GROUP BY `page` ORDER BY `Account` ASC, `page` ASC";
-						$sql_query_recordsearch="SELECT * FROM `visitrecord` WHERE `Account`='".$_POST['recordsearch']."'";
-					}
-					else if(isset($_SESSION['TELic-LAB_Islogin']) && $_SESSION['TELic-Verify']=="T"){
-						$sql_query_allrecordsearch="SELECT `Account`,`page`,SUM(`Time`) AS `TotalTime` FROM `visitrecord` GROUP BY `Account`,`page` ORDER BY `Account` ASC, `page` ASC;";	
-						$sql_query_recordsearch="SELECT * FROM `visitrecord` WHERE 1";
-					}
-					else{
-						$sql_query_allrecordsearch="SELECT `Account`,`page`,SUM(`Time`) AS `TotalTime` FROM `visitrecord` WHERE `Account` = '".$_SESSION['TELic-LAB_Account']."' GROUP BY `page` ORDER BY `Account` ASC, `page` ASC";	
-						$sql_query_recordsearch="SELECT * FROM `visitrecord` WHERE `Account`='".$_SESSION['TELic-LAB_Account']."'";					
-					}
-					$allrecordsearch_result=mysqli_query($db_link,$sql_query_allrecordsearch) or die("查詢失敗");
-					$recordsearch_result=mysqli_query($db_link,$sql_query_recordsearch) or die("查詢失敗");
-				?>
+
 				<div class="col-lg-10">
 					<div class="main-content-container">
-						<form action='dashboard.php' method='POST'>
-							<table class="table table-hover">
-								<thead>
-									<tr>
-									<th scope="col">各頁面瀏覽紀錄</th>
-									<th scope="col">
-										<?php
-											if(isset($_SESSION['TELic-LAB_Islogin']) && $_SESSION['TELic-Verify']=="T"){
-												$search="";
-												if(isset($_POST["recordsearch"])) $search=$_POST["recordsearch"];
-												echo "<input type='text' class='form-control' placeholder='Username' name='recordsearch' value='".$search."'>";
-											}
-										?>
-									</th>
-									<th scope="col">
-										<?php
-											if(isset($_SESSION['TELic-LAB_Islogin']) && $_SESSION['TELic-Verify']=="T")
-												echo "<button type='submit' class='btn btn-success'>查詢</button>";
-										?>
-									</th>
-									</tr>
-									<tr>
-										<th scope="col">帳號</th>
-										<th scope="col">頁面</th>
-										<th scope="col">總瀏覽時長</th>
-									</tr>
-								</thead>
-								<tbody>
-									<?php
-										while($row_allrecordsearch=mysqli_fetch_array($allrecordsearch_result)){
-											$nowpage=$row_allrecordsearch['page'];
-											echo "<tr>";
-												echo "<th scope='row'>".$row_allrecordsearch['Account']."</th>";
-												echo "<td>".$nowpage."</td>";
-												echo "<td>".((int)$row_allrecordsearch['TotalTime']/1000)."</td>";
-											echo "</tr>";
-										}
-									?>
-								</tbody>
-							</table>
-							<table class="table table-hover">
-								<thead>
-									<tr>
-									<th scope="col" colspan="2">各頁面瀏覽紀錄</th>
-									<th scope="col">
-									</th>
-									<th scope="col">
-									</th>
-									<th scope="col">
-									</th>
-									</tr>
-									<tr>
-									<th scope="col">#</th>
-									<th scope="col">帳號</th>
-									<th scope="col">頁面</th>
-									<th scope="col">離開時間</th>
-									<th scope="col">時長(秒)</th>
-									</tr>
-								</thead>
-								<tbody>
-									<?php
-										while($row_recordsearch=mysqli_fetch_array($recordsearch_result)){
-											$nowpage=$row_recordsearch['Page'];
-											echo "<tr>";
-												echo "<th scope='row'>".$row_recordsearch['_ID']."</th>";
-												echo "<td>".$row_recordsearch['Account']."</td>";
-												echo "<td>".$nowpage."</td>";
-												echo "<td>".$row_recordsearch['TimeStarp']."</td>";
-												echo "<td>".((int)$row_recordsearch['Time']/1000)."</td>";
-											echo "</tr>";
-										}
-									?>
-								</tbody>
-							</table>
-						</form>
+					<!-- 在这里添加主要内容部分的内容 -->
+						<h2>主控台</h2>
+						<div class="col-lg-10">
+							<div class="main-content-container">	
+								<div class="accordion" id="courseAccordion">
+									<div class="accordion-item">
+										<h2 class="accordion-header" id="headingC2">
+											<button class="accordion-button collapsed" type="button" onclick="window.location.href='dashboardPage.php'">
+												頁面瀏覽紀錄
+											</button>
+										</h2>
+									</div>
+									<div class="accordion-item">
+										<h2 class="accordion-header" id="headingC2">
+											<button class="accordion-button collapsed" type="button" onclick="window.location.href='dashboardTag.php'">
+												頁籤切換紀錄
+											</button>
+										</h2>
+									</div>
+									<div class="accordion-item">
+										<h2 class="accordion-header" id="headingC2">
+											<button class="accordion-button collapsed" type="button" onclick="window.location.href='dashboardAns.php'">
+												問答回答紀錄
+											</button>
+										</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+					<!-- 在这里添加主要内容部分的内容 -->
 					</div>
 				</div>
 			</div>
 		</div>
 		<!-- 引入 Bootstrap 的 JavaScript 文件 -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="../js/ClockTime.js"></script>
 	</body>
 </html>
