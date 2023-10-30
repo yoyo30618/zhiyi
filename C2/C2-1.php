@@ -41,7 +41,7 @@
 							</tr>
 						</table><br>
 						<div class="row">
-							<div class="col-lg-6">
+							<div class="col-lg-4">
 								<ul class="nav nav-tabs" id="left-tabs" role="tablist">
 									<li class="nav-item" role="presentation">
 										<button class="nav-link active" id="example-tab" data-bs-toggle="tab" data-bs-target="#example" type="button" role="tab" aria-controls="example" aria-selected="true">程式範例</button>
@@ -81,7 +81,7 @@ LoadProblemCode($ThisPage,2);
 									程式執行結果顯示：<br>
 								</div>
 							</div>
-							<div class="col-lg-6">
+							<div class="col-lg-8">
 								<ul class="nav nav-tabs" id="right-tabs" role="tablist">
 									<li class="nav-item" role="presentation">
 										<button class="nav-link active" id="visualization-tab" data-bs-toggle="tab" data-bs-target="#visualization" type="button" role="tab" aria-controls="visualization" aria-selected="true">程式視覺化</button>

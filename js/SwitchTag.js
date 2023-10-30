@@ -8,6 +8,7 @@ NowTagValue="程式視覺化";
 leftTabs.show();
 rightTabs.show();
 
+
 document.addEventListener("DOMContentLoaded", function () {
   // 預設選中 "程式範例" 頁籤
   var exampleTab = document.getElementById("example-tab");
@@ -453,7 +454,7 @@ function AddSVG(Operation) {
 
 function generateSvgContent(step, IsSolo) {
   //將目前步驟之SVG指令包裝
-  var svgContent ='<svg width="700" height="700" xmlns="http://www.w3.org/2000/svg">';
+  var svgContent ='<svg width="700" height="700" xmlns="http://www.w3.org/2000/svg" id="your-svg-id">';
   if (IsSolo) {
     for (var Operation of SoloOperationInfo[SoloOperationStep_SVG[step]])
       svgContent+=AddSVG(Operation);

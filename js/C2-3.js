@@ -421,7 +421,7 @@ var SoloOperationInfo=[
     ["DrawText","{Output1}",110,500,16,"black"],
     ["ImgBox",300,285,90,90,"VarBox.png"],
     ["DrawText","int",330,325,20,"black"],
-    ["DrawText","{InputBox2}",330,365,20,"black"],
+    ["DrawText","{Output1}",330,365,20,"black"],
     ["AssignArrow",125,325,290,335,18,"指派","black"],
     ["ImgBox",70,500,300,200,"C2-3/C2-3-12.png"]
 ],
@@ -455,7 +455,7 @@ var SoloOperationInfo=[
     ["DrawText","{Output1}",110,500,16,"black"],
     ["ImgBox",300,285,90,90,"VarBox.png"],
     ["DrawText","int",330,325,20,"black"],
-    ["DrawText","{InputBox2}",330,365,20,"black"],
+    ["DrawText","{Output1}",330,365,20,"black"],
     ["AssignArrow",125,325,290,335,18,"指派","black"],
     ["ImgBox",70,500,300,200,"C2-3/C2-3-12.png"],
     ["DrawText","平均分數為:{Output1}",140,640,20,"black"]
