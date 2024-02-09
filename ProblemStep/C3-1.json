@@ -41,6 +41,7 @@
     "MsgStep":[0,1,1,3],
     "ArrowStep":[0,1,3,4],
     "FlowStep":[0,1,4,5],
+    "OperationStep_SVG":[0,1,2,3],
     "MsgStep_SVG":[0,1,2],
     "ArrowStep_SVG":[0,1,2],
     "FlowStep_SVG":[0,1,2],

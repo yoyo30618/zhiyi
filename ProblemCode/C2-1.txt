@@ -1,3 +1,3 @@
-{Input}c = float(input("請輸入攝氏溫度")){EndInput}
-{Input}f{EndInput}{Operationstyle} = 9 / 5 * {Input}c{EndInput} + 32{EndOperationstyle}
-{Output}print("華氏溫度為:",f,"度"){EndOutput}
+{Input}name = input("請輸入名字:"){EndInput}
+{Input}num = int(input("請輸入座號:")){EndInput}
+{Output}print(name,num,"號"){EndOutput}

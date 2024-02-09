@@ -1,1 +1,1 @@
-請撰寫一個轉換華氏和攝氏溫度程式，讓使用者{Input}輸入攝氏溫度(C){EndInput}，並{Output}輸出對應的華氏溫度(F){EndOutput}。{\n}(註:F=9/5*C+32)
+請撰寫一個程式，讓使用者可自行{Input}{Hint1}輸入名字和座號{EndHint1}{EndInput}，並將{Output}{Hint2}結果輸出在同一行{EndHint2}{Output}。

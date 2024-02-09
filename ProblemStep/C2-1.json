@@ -17,32 +17,34 @@
         "OperationInfo":"視覺化的內容"
     },
     "DefaultInput":{
-        "Input1":25,
-        "Input2":0,
+        "Input1":"王小明",
+        "Input2":"23",
         "Input3":0,
         "Input4":0,
         "Input5":0
     },
     "DefaultOutput":{
-        "Output1":"77.0",
+        "Output1":"王小明 23",
         "Output2":0,
         "Output3":0,
         "Output4":0,
         "Output5":0
     },
     "CodeStep":3,
-    "CodeStep_SVG":10,
+    "CodeStep_SVG":11,
     "Msg": [
-        "請輸入攝氏溫度{InputBox1}",
-        "請輸入攝氏溫度{Input1}",
-        "請輸入攝氏溫度{Input1}<br>華氏溫度為: {Output1} 度"
+        "請輸入名字：{InputBox1}",
+        "請輸入名字：{Input1}",
+        "請輸入名字：{Input1}<br>請輸入座號：{InputBox2}",
+        "請輸入名字：{Input1}<br>請輸入座號：{Input2}",
+        "請輸入名字：{Input1}<br>請輸入座號：{Input2}<br>{Output1} 號"
     ],
     "MsgStep":[0,1,2],
-    "ArrowStep":[0,1,2,1,2,0,1,2],
+    "ArrowStep":[0,1,2],
     "FlowStep":[0,1,2],
-    "OperationStep_SVG":[0,1,2,3,4,5,6,7,8,9,10,11],
-    "MsgStep_SVG":[0,0,0,0,1,1,1,1,2,2],
-    "ArrowStep_SVG":[0,0,0,0,1,1,1,1,2,2],
+    "OperationStep_SVG":[0,1,2,3,4,5,6,7,8,9,10],
+    "MsgStep_SVG":[0,1,1,1,2,3,3,3,3,3,4],
+    "ArrowStep_SVG":[0,0,0,0,1,1,1,1,1,2,2],
     "FlowStep_SVG":[0,0,0,0,1,1,1,1,2,2],
     "FlowPicPath":"../pic/C2-1",
     "FlowInfo1":[
@@ -56,6 +58,9 @@
         ["f={Output1}",30,50]
     ], 
     "FlowInfo3":[
+        ["f={Output1}",30,10],
+        ["f={Output1}",30,30],
+        ["f={Output1}",30,50]
     ], 
     "FlowInfo4":[
     ], 
@@ -63,130 +68,52 @@
     ],
     "OperationInfo":[
         [
-            ["LeftBox",0,0,200,300],
-            ["RightBox",250,0,200,300],
-            ["ImgBox",50,50,100,100,"C2-1/C2-1-2.png"],
-            ["ImgBox",450,10,250,50,"C2-1/C2-1-4.png"]
+            ["ImgBox",10,10,600,600,"C2-1/vision/pic1.png"]
         ],
         [
-            ["LeftBox",0,0,200,300],
-            ["RightBox",250,0,200,300],
-            ["ImgBox",50,50,100,100,"C2-1/C2-1-2.png"],
-            ["ImgBox",450,10,250,50,"C2-1/C2-1-5.png"],
-            ["ImgBox",500,40,100,100,"VarBox.png"],
-            ["DrawText","str",540,85,20,"black"],
-            ["DrawText","25",540,120,20,"black"]
+            ["ImgBox",10,10,600,600,"C2-1/vision/pic2.png"],
+            ["DrawText","\"王小明\"",475,205,20,"black"]
         ],
         [
-            ["LeftBox",0,0,200,300],
-            ["RightBox",250,0,200,300],
-            ["ImgBox",50,50,100,100,"C2-1/C2-1-2.png"],
-            ["ImgBox",450,10,250,50,"C2-1/C2-1-6.png"],
-            ["ImgBox",500,40,100,100,"VarBox.png"],
-            ["DrawText","float",530,85,20,"black"],
-            ["DrawText","25.0",530,120,20,"black"]
+            ["ImgBox",10,10,600,600,"C2-1/vision/pic3.png"],
+            ["DrawText","\"王小明\"",305,210,20,"black"]
         ],
         [
-            ["LeftBox",0,0,200,300],
-            ["RightBox",250,0,200,300],
-            ["ImgBox",50,50,100,100,"C2-1/C2-1-2.png"],
-            ["ImgBox",300,40,100,100,"VarBox.png"],
-            ["DrawText","float",330,85,20,"black"],
-            ["DrawText","25.0",330,120,20,"black"],
-            ["AssignArrow",120,90,290,100,18,"指派","black"]
+            ["ImgBox",10,10,600,600,"C2-1/vision/pic4.png"],
+            ["DrawText","\"王小明\"",305,210,20,"black"]
         ],
         [
-            ["LeftBox",0,0,200,300],
-            ["RightBox",250,0,200,300],
-            ["ImgBox",50,50,100,100,"C2-1/C2-1-2.png"],
-            ["ImgBox",300,40,100,100,"VarBox.png"],
-            ["DrawText","float",330,85,20,"black"],
-            ["DrawText","25.0",330,120,20,"black"],
-            ["AssignArrow",120,90,290,100,18,"指派","black"],
-            ["ImgBox",50,150,100,100,"C2-1/C2-1-3.png"],
-            ["ImgBox",50,250,350,300,"C2-1/C2-1-7.png"]
+            ["ImgBox",10,10,600,600,"C2-1/vision/pic5.png"],
+            ["DrawText","\"王小明\"",305,210,20,"black"]
         ],
         [
-            ["LeftBox",0,0,200,300],
-            ["RightBox",250,0,200,300],
-            ["ImgBox",50,50,100,100,"C2-1/C2-1-2.png"],
-            ["ImgBox",300,40,100,100,"VarBox.png"],
-            ["DrawText","float",330,85,20,"black"],
-            ["DrawText","25.0",330,120,20,"black"],
-            ["AssignArrow",120,90,290,100,18,"指派","black"],
-            ["ImgBox",50,150,100,100,"C2-1/C2-1-3.png"],
-            ["ImgBox",50,250,350,300,"C2-1/C2-1-7.png"],
-            ["DrawText","25.0",250,435,16,"black"]
+            ["ImgBox",10,10,600,600,"C2-1/vision/pic6.png"],
+            ["DrawText","\"王小明\"",305,210,20,"black"],
+            ["DrawText","\"23\"",475,295,20,"black"]
         ],
         [
-            ["LeftBox",0,0,200,300],
-            ["RightBox",250,0,200,300],
-            ["ImgBox",50,50,100,100,"C2-1/C2-1-2.png"],
-            ["ImgBox",300,40,100,100,"VarBox.png"],
-            ["DrawText","float",330,85,20,"black"],
-            ["DrawText","25.0",330,120,20,"black"],
-            ["AssignArrow",120,90,290,100,18,"指派","black"],
-            ["ImgBox",50,150,100,100,"C2-1/C2-1-3.png"],
-            ["ImgBox",50,250,350,300,"C2-1/C2-1-7.png"],
-            ["DrawText","25.0",250,435,16,"black"],
-            ["DrawText","77.0",130,435,16,"black"],
-            ["ImgBox",300,140,100,100,"VarBox.png"],
-            ["DrawText","float",330,185,20,"black"],
-            ["DrawText","77.0",330,220,20,"black"]
+            ["ImgBox",10,10,600,600,"C2-1/vision/pic7.png"],
+            ["DrawText","\"王小明\"",305,210,20,"black"],
+            ["DrawText","23",475,295,20,"black"]
         ],
         [
-            ["LeftBox",0,0,200,300],
-            ["RightBox",250,0,200,300],
-            ["ImgBox",50,50,100,100,"C2-1/C2-1-2.png"],
-            ["ImgBox",300,40,100,100,"VarBox.png"],
-            ["DrawText","float",330,85,20,"black"],
-            ["DrawText","25.0",330,120,20,"black"],
-            ["AssignArrow",120,90,290,100,18,"指派","black"],
-            ["ImgBox",50,150,100,100,"C2-1/C2-1-3.png"],
-            ["ImgBox",50,250,350,300,"C2-1/C2-1-7.png"],
-            ["DrawText","25.0",250,435,16,"black"],
-            ["DrawText","77.0",130,435,16,"black"],
-            ["ImgBox",300,140,100,100,"VarBox.png"],
-            ["DrawText","float",330,185,20,"black"],
-            ["DrawText","77.0",330,220,20,"black"],
-            ["AssignArrow",120,190,290,200,18,"指派","black"]
+            ["ImgBox",10,10,600,600,"C2-1/vision/pic8.png"],
+            ["DrawText","\"王小明\"",305,210,20,"black"],
+            ["DrawText","23",305,290,20,"black"]
         ],
         [
-            ["LeftBox",0,0,200,300],
-            ["RightBox",250,0,200,300],
-            ["ImgBox",50,50,100,100,"C2-1/C2-1-2.png"],
-            ["ImgBox",300,40,100,100,"VarBox.png"],
-            ["DrawText","float",330,85,20,"black"],
-            ["DrawText","25.0",330,120,20,"black"],
-            ["AssignArrow",120,90,290,100,18,"指派","black"],
-            ["ImgBox",50,150,100,100,"C2-1/C2-1-3.png"],
-            ["ImgBox",50,250,350,300,"C2-1/C2-1-7.png"],
-            ["DrawText","25.0",250,435,16,"black"],
-            ["DrawText","77.0",130,435,16,"black"],
-            ["ImgBox",300,140,100,100,"VarBox.png"],
-            ["DrawText","float",330,185,20,"black"],
-            ["DrawText","77.0",330,220,20,"black"],
-            ["AssignArrow",120,190,290,200,18,"指派","black"],
-            ["ImgBox",50,300,350,450,"C2-1/C2-1-1.png"]
+            ["ImgBox",10,10,600,600,"C2-1/vision/pic9.png"],
+            ["DrawText","\"王小明\"",305,210,20,"black"],
+            ["DrawText","23",305,290,20,"black"]
         ],
         [
-            ["LeftBox",0,0,200,300],
-            ["RightBox",250,0,200,300],
-            ["ImgBox",50,50,100,100,"C2-1/C2-1-2.png"],
-            ["ImgBox",300,40,100,100,"VarBox.png"],
-            ["DrawText","float",330,85,20,"black"],
-            ["DrawText","25.0",330,120,20,"black"],
-            ["AssignArrow",120,90,290,100,18,"指派","black"],
-            ["ImgBox",50,150,100,100,"C2-1/C2-1-3.png"],
-            ["ImgBox",50,250,350,300,"C2-1/C2-1-7.png"],
-            ["DrawText","25.0",250,435,16,"black"],
-            ["DrawText","77.0",130,435,16,"black"],
-            ["ImgBox",300,140,100,100,"VarBox.png"],
-            ["DrawText","float",330,185,20,"black"],
-            ["DrawText","77.0",330,220,20,"black"],
-            ["AssignArrow",120,190,290,200,18,"指派","black"],
-            ["ImgBox",50,300,350,450,"C2-1/C2-1-1.png"],
-            ["DrawText","華氏溫度為:77.0度",130,560,20,"black"]
+            ["VideoBox",10,50,600,600,"C2-1/vision/vid1.mp4"],
+            ["DrawText","函式 print(name, num,\"號\")",120,25,20,"black"]
+        ],
+        [
+            ["ImgBox",10,10,600,600,"C2-1/vision/pic10.png"],
+            ["DrawText","函式 print(name, num,\"號\")",120,25,20,"black"],
+            ["DrawText","王小明 23 號",255,370,12,"black"]
         ]
     ]
 } 

@@ -85,6 +85,13 @@ function ImgBox($leftupX,$leftupY,$width,$height,$picpath){
     svgcode+="<image x='"+$leftupX+"' y='"+$leftupY+"' width='"+$width+"' height='"+$height+"' xlink:href='../pic/"+$picpath+"' />";
     return svgcode;
 }
+function VideoBox($leftupX,$leftupY,$width,$height,$picpath){
+    svgcode="";
+    $leftupX=Number($leftupX);$leftupY=Number($leftupY);
+    $width=Number($width);$height=Number($height);
+    svgcode+="<foreignObject x='"+$leftupX+"' y='"+$leftupY+"' width='"+$width+"' height='"+$height+"'><video width="+$width+" height="+$height+" src='../pic/"+$picpath+"' controls autoplay='true'></video></foreignObject>";
+    return svgcode;
+}
 function AssignArrow($x1,$y1,$x2,$y2,$size,$Text,$color){
     svgcode="";
     $x1=Number($x1);$y1=Number($y1);

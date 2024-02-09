@@ -23,6 +23,7 @@
 				echo"<script  language=\"JavaScript\">alert('請先登入');location.href=\"".$parentDirectory."login.php\";</script>";
 			LoadStepInfo($ThisPage);//讀取相關步驟資訊
 		?>
+		</video>
 		<div class="container-fluid content">
 			<div class="row">
 				<?php include '../sidebar.php'; ?>
