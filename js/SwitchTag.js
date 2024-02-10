@@ -66,7 +66,6 @@ function showStep(step) {
   for (let i = 1; i <= CodeStep; i++) {
     let flowInfoId = "FlowInfo" + i;
     let flowInfoArray = eval("FlowInfo" + i); // 获取对应的 FlowInfo 数组
-    
     if(NowTagValue=="程式視覺化"){
       newX = flowInfoArray[FlowStep_SVG[step]][1];
       newY = flowInfoArray[FlowStep_SVG[step]][2];

@@ -1,5 +1,4 @@
-{Input}Chinese  = int(input("請輸入國文成績:")){EndInput}
-{Input}English = int(input("請輸入英文成績:")){EndInput}
-{Input}Math = int(input("請輸入數學成績:")){EndInput}
-ave_grade = {Operationstyle}( Chinese + English + Math ) // 3{EndOperationstyle}
-{Output}print("平均分數為:",ave_grade){EndOutput}
+{Input}n = int(input("請輸入雞蛋總數：")){EndInput}
+{Operationstyle}b = n // 6{EndOperationstyle}
+{Operationstyle}r = n % 6{EndOperationstyle}
+{Output}print("總共可以販售",b,"盒雞蛋，剩餘",r,"顆雞蛋"){EndOutput}
