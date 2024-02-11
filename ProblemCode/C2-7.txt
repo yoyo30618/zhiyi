@@ -1,0 +1,4 @@
+{Input}h = float(input("請輸入身高(公尺):")){EndInput}
+{Input}w = float(input("請輸入體重:")){EndInput}
+{Operationstyle}bmi = w/(h*h){EndOperationstyle}
+{Output}print("BMI為",bmi){EndOutput}

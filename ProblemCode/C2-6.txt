@@ -1,0 +1,6 @@
+{Input}r = int(input("請輸入半徑")){EndInput}
+{Operationstyle}area = (r ** 2) * 3.14{EndOperationstyle}
+{Operationstyle}c = r * 2 * 3.14{EndOperationstyle}
+{Output}print("圓面積為", area){EndOutput}
+{Output}print("圓周長為", c){EndOutput}
+

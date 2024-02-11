@@ -1,0 +1,2 @@
+請試著寫一個{Operationstyle}{Hint1}計算BMI{EndHint1}{EndOperationstyle}的程式，讓使用者自行{Input}{Hint2}輸入身高(公尺)及體重{EndHint2}{EndInput}，並{Output}{Hint3}輸出計算後的結果{EndHint3}{EndOutput}。 <br>
+(註:考慮到{Input}身高和體重可能有小數點{EndInput})

@@ -1,0 +1,5 @@
+{Input}feet = int(input("請輸入呎：")){EndInput}
+{Input}inches = int(input("請輸入吋：")){EndInput}
+{Operationstyle}feet = feet * 12{EndOperationstyle}
+{Operationstyle}cm = (feet+inches) * 2.54{EndOperationstyle}
+{Output}print(cm, "公分"){EndOutput}

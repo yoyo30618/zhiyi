@@ -1,0 +1,3 @@
+美國職籃NBA球員除了有過人的球技，身材的優勢也是非常重要。<br>
+請寫一個程式將球員身高從{Operationstyle}呎吋轉換為公分{EndOperationstyle}。 <br>
+例如：{Input}輸入：6(呎)9(吋){EndInput}，{Output}輸出：205.74公分{EndOutput} (註：{Operationstyle}一呎=12吋，一吋=2.54公分{EndOperationstyle})。

@@ -1,0 +1,2 @@
+請寫一個程式，讓使用者{Input}{Hint1}輸入圓的半徑(正整數){EndHint1}{EndInput}，<br>
+並分別{Output}{Hint2}輸出計算後的{EndHint2}{EndOutput}{Operationstyle}{Hint3}面積和周長{EndHint3}{EndOperationstyle}。(註 : 圓周率 = 3.14)
