@@ -137,7 +137,7 @@
             ["DrawText","2",530,500,20,"black"]
         ],
         [
-            ["VideoBox",10,50,600,600,"C2-3/vision/vid1.mp4"],
+            ["VideoBox",10,0,600,600,"C2-3/vision/vid1.mp4"],
             ["DrawText","函式 print (\"總共可以販售\",  b , \"盒雞蛋，剩餘\",  r , \"顆雞蛋\")",120,25,20,"black"]
         ],
         [

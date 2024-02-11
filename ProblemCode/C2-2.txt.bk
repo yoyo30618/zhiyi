@@ -1,4 +1,0 @@
-{Input}n = int(input("請輸入共有幾顆雞蛋")){EndInput}
-{Input}b{EndInput}{Operationstyle} = {EndOperationstyle}{Input}n{EndInput}{Operationstyle} // 6{EndOperationstyle}
-{Input}r{EndInput}{Operationstyle} = {EndOperationstyle}{Input}n{EndInput}{Operationstyle} % 6{EndOperationstyle}
-{Output}print("總共可以販售",b,"盒雞蛋，剩餘",r,"顆雞蛋"){EndOutput}

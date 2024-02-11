@@ -1,5 +1,5 @@
 <?php
-	$Env="Server"; //Server Local
+	$Env="Local"; //Server Local
 	if($Env=="Server") $db_link=@mysqli_connect("127.0.0.1","yoyo30618","yoyo0516");
 	else $db_link=@mysqli_connect("127.0.0.1","root","yoyo0516");
 	if(!$db_link)

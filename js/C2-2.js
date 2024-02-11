@@ -48,7 +48,7 @@ var SoloOperationInfo=[
         ["DrawText","{Output1}",160,455,20,"black"]
     ],
     [
-        ["VideoBox",10,50,600,600,"C2-2/vision/vid1.mp4"],
+        ["VideoBox",10,0,600,600,"C2-2/vision/vid1.mp4"],
         ["DrawText","函式 print(\"華氏溫度為： \",     f    , \"度\")",120,25,20,"black"]
     ],
     [

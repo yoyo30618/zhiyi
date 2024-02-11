@@ -107,7 +107,7 @@
             ["DrawText","23",305,290,20,"black"]
         ],
         [
-            ["VideoBox",10,50,600,600,"C2-1/vision/vid1.mp4"],
+            ["VideoBox",10,0,600,600,"C2-1/vision/vid1.mp4"],
             ["DrawText","函式 print(name, num,\"號\")",120,25,20,"black"]
         ],
         [

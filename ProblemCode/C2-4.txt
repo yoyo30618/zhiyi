@@ -1,0 +1,5 @@
+{Input}Chinese = float(input("請輸入國文成績:")){EndInput}
+{Input}English = float(input("請輸入英文成績:")){EndInput}
+{Input}Math = float(input("請輸入數學成績:")){EndInput}
+{Operationstyle}avg = (Chinese + English + Math) / 3{EndOperationstyle}
+{Output}print("平均分數為:",avg){EndOutput}
