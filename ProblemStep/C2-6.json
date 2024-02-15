@@ -31,28 +31,22 @@
         "Output5":0
     },
     "CodeStep":5,
-    "CodeStep_SVG":17,
+    "CodeStep_SVG":19,
     "Msg": [
         "請輸入半徑：{InputBox1}",
         "請輸入半徑：{Input1}",
         "請輸入半徑：{Input1}<br>圓面積為 {Output1}",
         "請輸入半徑：{Input1}<br>圓面積為 {Output1}<br>圓周長為 {Output2}"
     ],
-    "MsgStep":[0,1,2,2,3],
-    "ArrowStep":[0,1,2,3,4,5],
-    "FlowStep":[0,1,2,3,4,5],
-    "OperationStep_SVG":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16],
-    "MsgStep_SVG":[0,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,3],
-    "ArrowStep_SVG":[0,0,0,0,0,1,1,1,1,2,2,2,2,3,3,4,4],
-    "FlowStep_SVG":[0,0,0,0,1,1,1,1,2,2,2,2,3,3,3,3,3,3,3,4,4],
+    "MsgStep":[0,1,1,2,3],
+    "ArrowStep":[0,1,2,3,4],
+    "FlowStep":[0,1,2,3,3],
+    "OperationStep_SVG":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18],
+    "MsgStep_SVG":[0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,3],
+    "ArrowStep_SVG":[0,0,0,0,0,0,0,1,1,1,1,1,2,2,2,2,2,3,4],
+    "FlowStep_SVG":[0,0,0,0,0,0,0,1,1,1,1,1,2,2,2,2,2,3,4],
     "FlowPicPath":"../pic/C2-6",
     "FlowInfo1":[
-        ["grade={Input1}",290,140],
-        ["grade={Input1}",220,200],
-        ["grade={Input1}",360,220],
-        ["grade={Input1}",360,220],
-        ["grade={Input1}",220,310],
-        ["grade={Input1}",260,390]
     ], 
     "FlowInfo2":[
     ], 
@@ -68,87 +62,101 @@
         ],
         [
             ["ImgBox",10,10,600,600,"C2-6/vision/pic2.png"],
-            ["DrawText","\"3\"",470,190,20,"black"]
+            ["DrawText","\"3\"",460,200,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-6/vision/pic3.png"],
-            ["DrawText","3",470,190,20,"black"]
+            ["DrawText","3",460,200,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-6/vision/pic4.png"],
-            ["DrawText","3",290,190,20,"black"]
+            ["DrawText","3",460,200,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-6/vision/pic5.png"],
-            ["DrawText","3",290,190,20,"black"]
+            ["DrawText","3",280,190,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-6/vision/pic6.png"],
-            ["DrawText","3",290,190,20,"black"]
-        ],
-        [
-            ["ImgBox",10,10,600,600,"C2-6/vision/pic6.png"],
-            ["DrawText","3",290,190,20,"black"],
-            ["DrawText","3",250,460,20,"black"]
+            ["DrawText","3",280,190,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-6/vision/pic7.png"],
-            ["DrawText","3",290,190,20,"black"],
-            ["DrawText","3",250,460,20,"black"],
-            ["DrawText","28.26",290,255,20,"black"],
-            ["DrawText","28.26",145,460,20,"black"]
+            ["DrawText","3",280,190,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-6/vision/pic8.png"],
-            ["DrawText","3",290,190,20,"black"],
-            ["DrawText","3",250,460,20,"black"],
-            ["DrawText","28.26",290,255,20,"black"],
-            ["DrawText","28.26",145,460,20,"black"]
+            ["DrawText","3",280,190,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-6/vision/pic9.png"],
-            ["DrawText","3",290,190,20,"black"],
-            ["DrawText","28.26",290,255,20,"black"]
-        ],
-        [
-            ["ImgBox",10,10,600,600,"C2-6/vision/pic9.png"],
-            ["DrawText","3",290,190,20,"black"],
-            ["DrawText","3",250,460,20,"black"],
-            ["DrawText","28.26",290,255,20,"black"]
+            ["DrawText","3",280,190,20,"black"],
+            ["DrawText","3",250,460,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-6/vision/pic10.png"],
-            ["DrawText","3",290,190,20,"black"],
+            ["DrawText","3",280,190,20,"black"],
             ["DrawText","3",250,460,20,"black"],
-            ["DrawText","28.26",290,255,20,"black"],
-            ["DrawText","18.84",290,320,20,"black"],
-            ["DrawText","18.84",145,460,20,"black"]
+            ["DrawText","28.26",280,255,20,"black"],
+            ["DrawText","28.26",145,460,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-6/vision/pic11.png"],
-            ["DrawText","3",290,190,20,"black"],
+            ["DrawText","3",280,190,20,"black"],
             ["DrawText","3",250,460,20,"black"],
-            ["DrawText","28.26",290,255,20,"black"],
-            ["DrawText","18.84",290,320,20,"black"],
-            ["DrawText","18.84",145,460,20,"black"]
+            ["DrawText","28.26",280,255,20,"black"],
+            ["DrawText","28.26",145,460,20,"black"]
         ],
         [
-            ["VideoBox",10,0,600,600,"C2-6/vision/vid1.mp4"],
-            ["DrawText","函式 print(\"圓面積為\", area)",120,25,20,"black"]
+            ["ImgBox",10,10,600,600,"C2-6/vision/pic12.png"],
+            ["DrawText","3",280,190,20,"black"],
+            ["DrawText","3",250,460,20,"black"],
+            ["DrawText","28.26",280,255,20,"black"],
+            ["DrawText","28.26",145,460,20,"black"]
         ],
         [
-            ["ImgBox",10,10,600,600,"C2-6/vision/pic99.png"],
-            ["DrawText","函式 print(\"圓面積為\", area)",120,25,20,"black"],
-            ["DrawText","圓面積為  28.26",250,370,12,"black"]
+            ["ImgBox",10,10,600,600,"C2-6/vision/pic13.png"],
+            ["DrawText","3",280,190,20,"black"],
+            ["DrawText","28.26",280,255,20,"black"]
         ],
         [
-            ["VideoBox",10,0,600,600,"C2-6/vision/vid1.mp4"],
-            ["DrawText","函式 print(\"圓周長為\", c)",120,25,20,"black"]
+            ["ImgBox",10,10,600,600,"C2-6/vision/pic14.png"],
+            ["DrawText","3",280,190,20,"black"],
+            ["DrawText","3",250,460,20,"black"],
+            ["DrawText","28.26",280,255,20,"black"]
         ],
         [
-            ["ImgBox",10,10,600,600,"C2-6/vision/pic99.png"],
-            ["DrawText","函式 print(\"圓周長為\", c)",120,25,20,"black"],
-            ["DrawText","圓周長為  18.84",250,370,12,"black"]
+            ["ImgBox",10,10,600,600,"C2-6/vision/pic15.png"],
+            ["DrawText","3",280,190,20,"black"],
+            ["DrawText","3",250,460,20,"black"],
+            ["DrawText","28.26",280,255,20,"black"],
+            ["DrawText","18.84",145,460,20,"black"],
+            ["DrawText","18.84",280,330,20,"black"]
+        ],
+        [
+            ["ImgBox",10,10,600,600,"C2-6/vision/pic16.png"],
+            ["DrawText","3",280,190,20,"black"],
+            ["DrawText","3",250,460,20,"black"],
+            ["DrawText","28.26",280,255,20,"black"],
+            ["DrawText","18.84",145,460,20,"black"],
+            ["DrawText","18.84",280,330,20,"black"]
+        ],
+        [
+            ["ImgBox",10,10,600,600,"C2-6/vision/pic17.png"],
+            ["DrawText","3",280,190,20,"black"],
+            ["DrawText","3",250,460,20,"black"],
+            ["DrawText","28.26",280,255,20,"black"],
+            ["DrawText","18.84",145,460,20,"black"],
+            ["DrawText","18.84",280,330,20,"black"]
+        ],
+        [
+            ["ImgBox",10,10,600,600,"C2-6/vision/pic18.png"],
+            ["DrawText","圓面積為 28.26",240,280,16,"white"]
+        ],
+        [
+            ["ImgBox",10,10,600,600,"C2-6/vision/pic19.png"],
+            ["DrawText","圓面積為 28.26",240,280,16,"white"],
+            ["DrawText","圓周長為 18.84",240,300,16,"white"]
         ]
     ]
 } 
