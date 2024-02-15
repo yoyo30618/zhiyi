@@ -3,13 +3,13 @@ var rightTabs = new bootstrap.Tab(document.getElementById("right-tabs"));
 let PageFirstStartTime = Date.now(); // 變數用於儲存用戶進入頁面的時間
 let ThisTagStartTime = Date.now(); // 變數用於儲存用戶進入某一頁籤的時間
 NowTag = document.getElementById("right-tabs").querySelectorAll(".nav-link");
-NowTagValue="程式視覺化";
+NowTagValue="程式邏輯分析";
 function showStep(step) {
   currentStep = step;
   hiddenArrowText();
   DrawSvg(step);
   // 顯示指定步驟的箭頭
-  if(NowTagValue=="程式視覺化") var currentStepArrow = document.querySelectorAll("#step" + ArrowStep_SVG[step]);
+  if(NowTagValue=="程式邏輯分析") var currentStepArrow = document.querySelectorAll("#step" + ArrowStep_SVG[step]);
   else var currentStepArrow = document.querySelectorAll("#step" + ArrowStep[step]);
   currentStepArrow.forEach(function (stepArrow) {
     stepArrow.style.visibility = "visible";
@@ -17,7 +17,7 @@ function showStep(step) {
   // 顯示指定步驟的訊息
   var stepIndicator = document.getElementById("step-indicator");
   if (stepIndicator) {
-    if(NowTagValue=="程式視覺化") NowMsg = Msg[MsgStep_SVG[step]];
+    if(NowTagValue=="程式邏輯分析") NowMsg = Msg[MsgStep_SVG[step]];
     else  NowMsg = Msg[MsgStep[step]];
     for (let i = 1; i <= 5; i++) {
       const placeholder = "{Input" + i + "}";
@@ -41,7 +41,7 @@ function showStep(step) {
   // 更新流程圖
   var stepImage = document.getElementById("flowpic");
   if (stepImage) {
-    if(NowTagValue=="程式視覺化")
+    if(NowTagValue=="程式邏輯分析")
       var imageSrc = FlowPicPath + "/step" + FlowStep_SVG[step] + ".png";
     else 
       var imageSrc = FlowPicPath + "/step" + FlowStep[step] + ".png";
@@ -66,7 +66,7 @@ function showStep(step) {
   for (let i = 1; i <= CodeStep; i++) {
     let flowInfoId = "FlowInfo" + i;
     let flowInfoArray = eval("FlowInfo" + i); // 获取对应的 FlowInfo 数组
-    if(NowTagValue=="程式視覺化"){
+    if(NowTagValue=="程式邏輯分析"){
       newX = flowInfoArray[FlowStep_SVG[step]][1];
       newY = flowInfoArray[FlowStep_SVG[step]][2];
       newText = flowInfoArray[FlowStep_SVG[step]][0];
@@ -101,7 +101,7 @@ function showSoloStep(step) {
   hiddenArrowText();
   DrawSoloSvg(step);
   // 顯示指定步驟的箭頭
-  if(NowTagValue=="程式視覺化") var currentStepArrow = document.querySelectorAll("#solo-step" + SoloArrowStep_SVG[step]);
+  if(NowTagValue=="程式邏輯分析") var currentStepArrow = document.querySelectorAll("#solo-step" + SoloArrowStep_SVG[step]);
   else var currentStepArrow = document.querySelectorAll("#solo-step" + SoloArrowStep[step]);
   currentStepArrow.forEach(function (stepArrow) {
     stepArrow.style.visibility = "visible";
@@ -109,7 +109,7 @@ function showSoloStep(step) {
   // 顯示指定步驟的訊息
   var stepIndicator = document.getElementById("step-indicator");
   if (stepIndicator) {
-    if(NowTagValue=="程式視覺化") NowMsg = Msg[SoloMsgStep_SVG[step]];
+    if(NowTagValue=="程式邏輯分析") NowMsg = Msg[SoloMsgStep_SVG[step]];
     else  NowMsg = Msg[SoloMsgStep[step]];
     for (let i = 1; i <= 5; i++) {
       const placeholder = "{Input" + i + "}";
@@ -130,7 +130,7 @@ function showSoloStep(step) {
   // 更新流程圖
   var stepImage = document.getElementById("flowpic");
   if (stepImage) {
-    if(NowTagValue=="程式視覺化")
+    if(NowTagValue=="程式邏輯分析")
       var imageSrc = FlowPicPath + "/step" + SoloFlowStep_SVG[step] + ".png";
     else
       var imageSrc = FlowPicPath + "/step" + SoloFlowStep[step] + ".png";
@@ -153,7 +153,7 @@ function showSoloStep(step) {
   for (let i = 1; i <= CodeStep; i++) {
     let flowInfoId = "FlowInfo" + i;
     let flowInfoArray = eval("FlowInfo" + i); // 获取对应的 FlowInfo 数组
-    if(NowTagValue=="程式視覺化"){
+    if(NowTagValue=="程式邏輯分析"){
       newX = flowInfoArray[SoloFlowStep_SVG[step]][1];
       newY = flowInfoArray[SoloFlowStep_SVG[step]][2];
       newText = flowInfoArray[SoloFlowStep_SVG[step]][0];
@@ -238,7 +238,7 @@ document.getElementById("previous-btn").addEventListener("click", function () {
   else showStep(currentStep - 1);
 });
 document.getElementById("next-btn").addEventListener("click", function () {
-  if(NowTagValue=="程式視覺化"){
+  if(NowTagValue=="程式邏輯分析"){
     if (currentStep == CodeStep_SVG - 1) showStep(currentStep);
     else showStep(currentStep + 1);
   }
@@ -259,7 +259,7 @@ document
 
 document.getElementById("solo-next-btn").addEventListener("click", function () {
   //如果遇到對話框要先處理 記錄起來!
-  if(NowTagValue=="程式視覺化"){
+  if(NowTagValue=="程式邏輯分析"){
     if (SoloCurrentStep == SoloCodeStep_SVG - 1) showSoloStep(SoloCurrentStep);
     else{
       //如果目前這一步  有輸入框 要記錄輸入框內容
@@ -480,7 +480,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var exampleTab = document.getElementById("example-tab");
   var exampleTabInstance = new bootstrap.Tab(exampleTab);
   exampleTabInstance.show();
-  // 預設選中 "程式視覺化" 頁籤
+  // 預設選中 "程式邏輯分析" 頁籤
   var visualizationTab = document.getElementById("visualization-tab");
   var visualizationTabInstance = new bootstrap.Tab(visualizationTab);
   visualizationTabInstance.show();

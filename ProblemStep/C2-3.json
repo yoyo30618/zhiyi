@@ -30,28 +30,22 @@
         "Output4":0,
         "Output5":0
     },
-    "CodeStep":5,
-    "CodeStep_SVG":14,
+    "CodeStep":4,
+    "CodeStep_SVG":18,
     "Msg": [
         "請輸入雞蛋總數：{InputBox1}",
         "請輸入雞蛋總數：{Input1}",
         "請輸入雞蛋總數：{Input1}<br>總共可以販售{Output1}盒雞蛋，剩餘{Output2}顆雞蛋"
     ],
-    "MsgStep":[0,1,2,2,3],
-    "ArrowStep":[0,1,2,3,4,5],
-    "FlowStep":[0,1,2,3,4,5],
-    "OperationStep_SVG":[0,1,2,3,4,5,6,7,8,9,10,11,12,13],
-    "MsgStep_SVG":[0,1,1,1,1,1,1,1,1,1,1,1,1,2],
-    "ArrowStep_SVG":[0,0,0,0,1,1,1,1,2,2,2,2,3,3],
-    "FlowStep_SVG":[0,0,0,0,1,1,1,1,2,2,2,2,3,3,3,3,3,3,3,4,4],
+    "MsgStep":[0,1,1,2],
+    "ArrowStep":[0,1,2,3],
+    "FlowStep":[0,1,2,3],
+    "OperationStep_SVG":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],
+    "MsgStep_SVG":[0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2],
+    "ArrowStep_SVG":[0,0,0,0,0,0,0,1,1,1,1,1,2,2,2,2,2,3],
+    "FlowStep_SVG":[0,0,0,0,0,0,0,1,1,1,1,1,2,2,2,2,2,3],
     "FlowPicPath":"../pic/C2-3",
     "FlowInfo1":[
-        ["grade={Input1}",290,140],
-        ["grade={Input1}",220,200],
-        ["grade={Input1}",360,220],
-        ["grade={Input1}",360,220],
-        ["grade={Input1}",220,310],
-        ["grade={Input1}",260,390]
     ], 
     "FlowInfo2":[
     ], 
@@ -63,88 +57,112 @@
     ],
     "OperationInfo":[
         [
-            ["ImgBox",10,10,600,600,"C2-3/vision/pic1.png"],
-            ["DrawText","\"8\"",450,200,20,"black"]
+            ["ImgBox",10,10,600,600,"C2-3/vision/pic1.png"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-3/vision/pic2.png"],
-            ["DrawText","8",450,200,20,"black"]
+            ["DrawText","\"8\"",450,200,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-3/vision/pic3.png"],
-            ["DrawText","8",280,200,20,"black"]
+            ["DrawText","8",450,200,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-3/vision/pic4.png"],
-            ["DrawText","8",280,200,20,"black"]
+            ["DrawText","8",450,200,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-3/vision/pic5.png"],
-            ["DrawText","8",280,200,20,"black"]
-        ],
-        [
-            ["ImgBox",10,10,600,600,"C2-3/vision/pic5.png"],
-            ["DrawText","8",280,200,20,"black"],
-            ["DrawText","8",200,480,20,"black"]
+            ["DrawText","8",280,195,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-3/vision/pic6.png"],
-            ["DrawText","8",280,200,20,"black"],
-            ["DrawText","8",200,480,20,"black"],
-            ["DrawText","1",280,280,20,"black"],
-            ["DrawText","1",120,480,20,"black"],
-            ["DrawText","1",530,450,20,"black"]
+            ["DrawText","8",280,195,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-3/vision/pic7.png"],
-            ["DrawText","8",280,200,20,"black"],
-            ["DrawText","8",200,480,20,"black"],
-            ["DrawText","1",280,280,20,"black"],
-            ["DrawText","1",120,480,20,"black"],
-            ["DrawText","1",530,450,20,"black"]
+            ["DrawText","8",280,195,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-3/vision/pic8.png"],
-            ["DrawText","8",280,200,20,"black"],
-            ["DrawText","1",280,280,20,"black"],
-            ["DrawText","1",530,450,20,"black"]
-        ],
-        [
-            ["ImgBox",10,10,600,600,"C2-3/vision/pic8.png"],
-            ["DrawText","8",280,200,20,"black"],
-            ["DrawText","8",200,480,20,"black"],
-            ["DrawText","1",280,280,20,"black"],
-            ["DrawText","1",530,450,20,"black"]
+            ["DrawText","8",280,195,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-3/vision/pic9.png"],
-            ["DrawText","8",280,200,20,"black"],
-            ["DrawText","8",200,480,20,"black"],
-            ["DrawText","1",280,280,20,"black"],
-            ["DrawText","2",120,480,20,"black"],
-            ["DrawText","2",280,360,20,"black"],
-            ["DrawText","1",530,450,20,"black"],
-            ["DrawText","2",530,500,20,"black"]
+            ["DrawText","8",280,195,20,"black"],
+            ["DrawText","8",210,490,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-3/vision/pic10.png"],
-            ["DrawText","8",280,200,20,"black"],
-            ["DrawText","8",200,480,20,"black"],
-            ["DrawText","1",280,280,20,"black"],
-            ["DrawText","2",120,480,20,"black"],
-            ["DrawText","2",280,360,20,"black"],
-            ["DrawText","1",530,450,20,"black"],
-            ["DrawText","2",530,500,20,"black"]
-        ],
-        [
-            ["VideoBox",10,0,600,600,"C2-3/vision/vid1.mp4"],
-            ["DrawText","函式 print (\"總共可以販售\",  b , \"盒雞蛋，剩餘\",  r , \"顆雞蛋\")",120,25,20,"black"]
+            ["DrawText","8",280,195,20,"black"],
+            ["DrawText","8",210,490,20,"black"],
+            ["DrawText","1",130,490,20,"black"],
+            ["DrawText","1",280,270,20,"black"],
+            ["DrawText","1",550,470,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-3/vision/pic11.png"],
-            ["DrawText","函式 print (\"總共可以販售\",  b , \"盒雞蛋，剩餘\",  r , \"顆雞蛋\")",120,25,20,"black"],
-            ["DrawText","總共可以販售1盒雞蛋",250,370,12,"black"],
-            ["DrawText","剩餘2顆雞蛋",250,385,12,"black"]
+            ["DrawText","8",280,195,20,"black"],
+            ["DrawText","8",210,490,20,"black"],
+            ["DrawText","1",130,490,20,"black"],
+            ["DrawText","1",280,270,20,"black"],
+            ["DrawText","1",550,470,20,"black"]
+        ],
+        [
+            ["ImgBox",10,10,600,600,"C2-3/vision/pic12.png"],
+            ["DrawText","8",280,195,20,"black"],
+            ["DrawText","8",210,490,20,"black"],
+            ["DrawText","1",130,490,20,"black"],
+            ["DrawText","1",280,270,20,"black"],
+            ["DrawText","1",550,470,20,"black"]
+        ],
+        [
+            ["ImgBox",10,10,600,600,"C2-3/vision/pic13.png"],
+            ["DrawText","8",280,195,20,"black"],
+            ["DrawText","1",280,270,20,"black"],
+            ["DrawText","1",550,470,20,"black"]
+        ],
+        [
+            ["ImgBox",10,10,600,600,"C2-3/vision/pic14.png"],
+            ["DrawText","8",280,195,20,"black"],
+            ["DrawText","8",210,490,20,"black"],
+            ["DrawText","1",280,270,20,"black"],
+            ["DrawText","1",550,470,20,"black"]
+        ],
+        [
+            ["ImgBox",10,10,600,600,"C2-3/vision/pic15.png"],
+            ["DrawText","8",280,195,20,"black"],
+            ["DrawText","8",210,490,20,"black"],
+            ["DrawText","2",130,490,20,"black"],
+            ["DrawText","1",280,270,20,"black"],
+            ["DrawText","2",280,355,20,"black"],
+            ["DrawText","1",550,470,20,"black"],
+            ["DrawText","2",550,510,20,"black"]
+        ],
+        [
+            ["ImgBox",10,10,600,600,"C2-3/vision/pic16.png"],
+            ["DrawText","8",280,195,20,"black"],
+            ["DrawText","8",210,490,20,"black"],
+            ["DrawText","2",130,490,20,"black"],
+            ["DrawText","1",280,270,20,"black"],
+            ["DrawText","2",280,355,20,"black"],
+            ["DrawText","1",550,470,20,"black"],
+            ["DrawText","2",550,510,20,"black"]
+        ],
+        [
+            ["ImgBox",10,10,600,600,"C2-3/vision/pic17.png"],
+            ["DrawText","8",280,195,20,"black"],
+            ["DrawText","8",210,490,20,"black"],
+            ["DrawText","2",130,490,20,"black"],
+            ["DrawText","1",280,270,20,"black"],
+            ["DrawText","2",280,355,20,"black"],
+            ["DrawText","1",550,470,20,"black"],
+            ["DrawText","2",550,510,20,"black"]
+        ],
+        [
+            ["ImgBox",10,10,600,600,"C2-3/vision/pic18.png"],
+            ["DrawText","總共可以販售1盒雞蛋",230,280,16,"white"],
+            ["DrawText","剩餘2顆雞蛋",230,300,16,"white"]
         ]
     ]
 } 

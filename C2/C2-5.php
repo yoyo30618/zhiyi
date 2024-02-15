@@ -82,7 +82,7 @@ LoadProblemCode($ThisPage,2);
 							<div class="col-lg-8">
 								<ul class="nav nav-tabs" id="right-tabs" role="tablist">
 									<li class="nav-item" role="presentation">
-										<button class="nav-link active" id="visualization-tab" data-bs-toggle="tab" data-bs-target="#visualization" type="button" role="tab" aria-controls="visualization" aria-selected="true">程式視覺化</button>
+										<button class="nav-link active" id="visualization-tab" data-bs-toggle="tab" data-bs-target="#visualization" type="button" role="tab" aria-controls="visualization" aria-selected="true">程式邏輯分析</button>
 									</li>
 									<li class="nav-item" role="presentation">
 										<button class="nav-link" id="flowchart-tab" data-bs-toggle="tab" data-bs-target="#flowchart" type="button" role="tab" aria-controls="flowchart" aria-selected="false">程式流程圖</button>
@@ -90,7 +90,7 @@ LoadProblemCode($ThisPage,2);
 								</ul>
 								<div class="tab-content" id="right-tabs-content">
 									<div class="tab-pane fade show active" id="visualization" role="tabpanel" aria-labelledby="visualization-tab">
-										<!-- 右側區塊的程式視覺化內容 -->
+										<!-- 右側區塊的程式邏輯分析內容 -->
 										<div id="SVGPlace"></div>
 									</div>
 									<div class="tab-pane fade" id="flowchart" role="tabpanel" aria-labelledby="flowchart-tab">
