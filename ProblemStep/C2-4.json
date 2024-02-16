@@ -17,7 +17,7 @@
         "OperationInfo":"視覺化的內容"
     },
     "DefaultInput":{
-        "Input1":85,
+        "Input1":85.0,
         "Input2":77.2,
         "Input3":64.3,
         "Input4":0,
@@ -69,120 +69,120 @@
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic3.png"],
-            ["DrawText","85",435,190,20,"black"]
+            ["DrawText","85.0",435,190,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic4.png"],
-            ["DrawText","85",435,190,20,"black"]
+            ["DrawText","85.0",435,190,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic5.png"],
-            ["DrawText","85",270,190,20,"black"]
+            ["DrawText","85.0",270,190,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic6.png"],
-            ["DrawText","85",270,190,20,"black"]
+            ["DrawText","85.0",270,190,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic7.png"],
-            ["DrawText","85",270,190,20,"black"]
+            ["DrawText","85.0",270,190,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic8.png"],
-            ["DrawText","85",270,190,20,"black"]
+            ["DrawText","85.0",270,190,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic9.png"],
-            ["DrawText","85",270,190,20,"black"],
+            ["DrawText","85.0",270,190,20,"black"],
             ["DrawText","\"77.2\"",435,270,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic10.png"],
-            ["DrawText","85",270,190,20,"black"],
+            ["DrawText","85.0",270,190,20,"black"],
             ["DrawText","77.2",435,270,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic11.png"],
-            ["DrawText","85",270,190,20,"black"],
+            ["DrawText","85.0",270,190,20,"black"],
             ["DrawText","77.2",435,270,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic12.png"],
-            ["DrawText","85",270,190,20,"black"],
+            ["DrawText","85.0",270,190,20,"black"],
             ["DrawText","77.2",270,250,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic13.png"],
-            ["DrawText","85",270,190,20,"black"],
+            ["DrawText","85.0",270,190,20,"black"],
             ["DrawText","77.2",270,250,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic14.png"],
-            ["DrawText","85",270,190,20,"black"],
+            ["DrawText","85.0",270,190,20,"black"],
             ["DrawText","77.2",270,250,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic15.png"],
-            ["DrawText","85",270,190,20,"black"],
+            ["DrawText","85.0",270,190,20,"black"],
             ["DrawText","77.2",270,250,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic16.png"],
-            ["DrawText","85",270,190,20,"black"],
+            ["DrawText","85.0",270,190,20,"black"],
             ["DrawText","77.2",270,250,20,"black"],
             ["DrawText","\"64.3\"",440,330,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic17.png"],
-            ["DrawText","85",270,190,20,"black"],
+            ["DrawText","85.0",270,190,20,"black"],
             ["DrawText","77.2",270,250,20,"black"],
             ["DrawText","64.3",440,330,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic18.png"],
-            ["DrawText","85",270,190,20,"black"],
+            ["DrawText","85.0",270,190,20,"black"],
             ["DrawText","77.2",270,250,20,"black"],
             ["DrawText","64.3",440,330,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic19.png"],
-            ["DrawText","85",270,190,20,"black"],
+            ["DrawText","85.0",270,190,20,"black"],
             ["DrawText","77.2",270,250,20,"black"],
             ["DrawText","64.3",270,315,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic20.png"],
-            ["DrawText","85",270,190,20,"black"],
+            ["DrawText","85.0",270,190,20,"black"],
             ["DrawText","77.2",270,250,20,"black"],
             ["DrawText","64.3",270,315,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic21.png"],
-            ["DrawText","85",270,190,20,"black"],
+            ["DrawText","85.0",270,190,20,"black"],
             ["DrawText","77.2",270,250,20,"black"],
             ["DrawText","64.3",270,315,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic22.png"],
-            ["DrawText","85",270,190,20,"black"],
+            ["DrawText","85.0",270,190,20,"black"],
             ["DrawText","77.2",270,250,20,"black"],
             ["DrawText","64.3",270,315,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic23.png"],
-            ["DrawText","85",270,190,20,"black"],
+            ["DrawText","85.0",270,190,20,"black"],
             ["DrawText","77.2",270,250,20,"black"],
             ["DrawText","64.3",270,315,20,"black"],
-            ["DrawText","85",220,490,20,"black"],
+            ["DrawText","85.0",220,490,20,"black"],
             ["DrawText","77.2",290,490,20,"black"],
             ["DrawText","64.3",365,490,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic24.png"],
-            ["DrawText","85",270,190,20,"black"],
+            ["DrawText","85.0",270,190,20,"black"],
             ["DrawText","77.2",270,250,20,"black"],
             ["DrawText","64.3",270,315,20,"black"],
-            ["DrawText","85",220,490,20,"black"],
+            ["DrawText","85.0",220,490,20,"black"],
             ["DrawText","77.2",290,490,20,"black"],
             ["DrawText","64.3",365,490,20,"black"],
             ["DrawText","75.5",135,490,20,"black"],
@@ -190,10 +190,10 @@
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic25.png"],
-            ["DrawText","85",270,190,20,"black"],
+            ["DrawText","85.0",270,190,20,"black"],
             ["DrawText","77.2",270,250,20,"black"],
             ["DrawText","64.3",270,315,20,"black"],
-            ["DrawText","85",220,490,20,"black"],
+            ["DrawText","85.0",220,490,20,"black"],
             ["DrawText","77.2",290,490,20,"black"],
             ["DrawText","64.3",365,490,20,"black"],
             ["DrawText","75.5",135,490,20,"black"],
@@ -201,10 +201,10 @@
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic26.png"],
-            ["DrawText","85",270,190,20,"black"],
+            ["DrawText","85.0",270,190,20,"black"],
             ["DrawText","77.2",270,250,20,"black"],
             ["DrawText","64.3",270,315,20,"black"],
-            ["DrawText","85",220,490,20,"black"],
+            ["DrawText","85.0",220,490,20,"black"],
             ["DrawText","77.2",290,490,20,"black"],
             ["DrawText","64.3",365,490,20,"black"],
             ["DrawText","75.5",135,490,20,"black"],

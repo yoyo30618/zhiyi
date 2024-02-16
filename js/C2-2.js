@@ -70,7 +70,7 @@ var SoloFlowStep_SVG = [0,0,0,0,1,1,1,1,2,2,2,2,2];
     ],
     [
         ["ImgBox",10,10,600,600,"C2-2/vision/pic13.png"],
-        ["DrawText","華氏溫度為{Output1}度",230,280,16,"white"]
+        ["DrawText","華氏溫度為：{Output1}度",230,280,16,"white"]
     ]
 ];
 function SetSolodata(){

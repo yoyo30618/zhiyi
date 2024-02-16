@@ -29,7 +29,7 @@
   /* 确保内边距不增加元素的实际高度 */
 }
 .main-content-container {
-  background-color: #f8f8f8;
+  background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 20px;
@@ -184,13 +184,14 @@
   background: pink;
 }
 .forstyle {
-  background: lightgreen;
+  background: lightgreen; 
 }
 .cntstyle {
   background: rgb(224, 106, 224);
 }
 #step-indicator {
-  border: 1px solid #ccc;
+  border: 1px solid #f8f8f8a0;
+  background: #f8f8f8;
   border-radius: 5px;
   padding: 10px;
 }
@@ -202,8 +203,19 @@
 .solo-step-arrow {
   color: red;
   font-size: 15px;
+  text-decoration: none;
 }
 
 td {
   vertical-align: middle;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+.typingtext {
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 5s steps(50, end);
 }

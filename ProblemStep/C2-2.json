@@ -35,7 +35,7 @@
     "Msg": [
         "請輸入攝氏溫度：{InputBox1}",
         "請輸入攝氏溫度：{Input1}",
-        "請輸入攝氏溫度：{Input1}<br>華氏溫度為: {Output1} 度"
+        "請輸入攝氏溫度：{Input1}<br>華氏溫度為：{Output1} 度"
     ],
     "MsgStep":[0,1,2],
     "ArrowStep":[0,1,2],
@@ -115,7 +115,7 @@
         ],
         [
             ["ImgBox",10,10,600,600,"C2-2/vision/pic13.png"],
-            ["DrawText","華氏溫度為77.0度",230,280,16,"white"]
+            ["DrawText","華氏溫度為：77.0度",230,280,16,"white"]
         ]
     ]
 } 

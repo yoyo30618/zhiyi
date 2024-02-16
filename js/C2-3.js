@@ -126,5 +126,5 @@ function SetSolodata(){
     SoloOutput[1]= Math.floor(Number(SoloInput[1]) / 6);
     SoloOutput[2]=Number(SoloInput[1])%6;
     SoloOutput[3]="總共可以販售"+SoloOutput[1]+"盒雞蛋";
-    SoloOutput[4]="剩餘"+SoloOutput[2]+"顆雞蛋";
+    SoloOutput[4]="，剩餘"+SoloOutput[2]+"顆雞蛋";
 }

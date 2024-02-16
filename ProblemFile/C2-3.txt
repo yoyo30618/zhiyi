@@ -1,2 +1,2 @@
 安心雞蛋農場販售的雞蛋一盒有6顆。請寫一個程式，讓農場主人{Input}{Hint1}輸入總共有幾顆雞蛋{EndHint1}{EndInput}
-，並{Output}輸出共{EndOutput}{Operationstyle}{Hint2}可販售幾盒雞蛋和剩餘的雞蛋數量{EndHint2}{EndOperationstyle}。
+，並{Output}{Hint3}輸出{EndHint3}共{EndOutput}{Operationstyle}{Hint2}可販售幾盒雞蛋和剩餘的雞蛋數量{EndHint2}{EndOperationstyle}。
