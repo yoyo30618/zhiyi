@@ -189,8 +189,13 @@
 .cntstyle {
   background: rgb(224, 106, 224);
 }
+.tab-content{
+  border: 1px solid #000000a0;
+  border-radius: 5px;
+  padding: 10px;
+}
 #step-indicator {
-  border: 1px solid #f8f8f8a0;
+  border: 1px solid #000000a0;
   background: #f8f8f8;
   border-radius: 5px;
   padding: 10px;
