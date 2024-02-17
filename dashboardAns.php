@@ -1,5 +1,5 @@
 <?php
-	session_start();//開啟session
+	if(!session_id()) session_start();//開啟session
 ?>
 <!DOCTYPE html>
 <html>

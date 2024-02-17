@@ -1,6 +1,6 @@
 <?php
 	header("Content-Type:text/html;charset=utf-8");//設定編碼
-	session_start();//開啟session
+	if(!session_id()) session_start();//開啟session
 	if(isset($_POST['SignupSys']))//如果是由post進入
 	{
 		if($_POST['Verify']==="T"||$_POST['Verify']==="S"){
