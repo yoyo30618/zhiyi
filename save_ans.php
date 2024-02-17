@@ -9,8 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // 確保收到有效數據
     if ($data && isset($data['page']) && isset($data['ans'])) {
         // 獲取頁面
-        if(strlen($data['page'])==16) $page=substr($data['page'],10,2);
-        else $page=substr($data['page'],10,4);	
+        $page=$data['page'];	
         $ans=$data['ans'];
         include_once("conn_mysql.php");   
 		$sql_query_visitTime="INSERT INTO `ansrecord`( `Account`, `Page`, `ans`) VALUES ('".$_SESSION['TELic-LAB_Account']."','$page','$ans')";

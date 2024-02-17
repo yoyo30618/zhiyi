@@ -9,10 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // 確保收到有效數據
     if ($data && isset($data['page']) && isset($data['visitTime'])) {
         // 獲取頁面和瀏覽時間
-        if(strlen($data['page'])==16)
-            $page=substr($data['page'],10,2);
-        else
-            $page=substr($data['page'],10,4);		
+        $page=$data['page'];	
         $visitTime = $data['visitTime'];
         include_once("conn_mysql.php");        
 		$sql_query_visitTime="INSERT INTO `visitrecord` (`Account`, `Page`, `Time`) VALUES ('".$_SESSION['TELic-LAB_Account']."','$page', '$visitTime')";
@@ -26,10 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     else if($data && isset($data['left']) && isset($data['right']) && isset($data['page']) && isset($data['lookTime'])) {
         include_once("conn_mysql.php");    
-        if(strlen($data['page'])==16)
-            $page=substr($data['page'],10,2);
-        else
-            $page=substr($data['page'],10,4);		
+        $page=$data['page'];	
         $CodeMode=$data['left']; 
         $FlowOperation=$data['right'];
         $sql_query_lookTime="INSERT INTO `actionrecord`(`Account`, `Page`, `CodeMode`, `FlowOperation`, `Time`) VALUES  ('".$_SESSION['TELic-LAB_Account']."','".$page."','".$CodeMode."','".$FlowOperation."','".$data['lookTime']."')";
