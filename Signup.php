@@ -1,3 +1,6 @@
+<?php
+	session_start();//開啟session
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -14,10 +17,12 @@
 	</head>
 	<body>
 		<?php 
+			$nowdir=basename(dirname($_SERVER['PHP_SELF']));
+			$parentDirectory = ($nowdir === "C1" || $nowdir === "C2"  || $nowdir === "C3"  || $nowdir === "C4") ? "../" : "";
 			define('IN_INDEX', true);
-			include 'header.php'; 
-			if(isset($_SESSION['TELic-LAB_Islogin']) && $_SESSION['TELic-LAB_Islogin']=="1")
-				echo"<script  language=\"JavaScript\">alert('您已經登入');location.href=\"index.php\";</script>";
+			include $parentDirectory.'header.php'; 
+			if(!isset($_SESSION['TELic-LAB_Islogin']))
+				echo"<script  language=\"JavaScript\">alert('請先登入');location.href=\"".$parentDirectory."login.php\";</script>";
 		?>
 		<div class="container-fluid content">
 			<div class="row">

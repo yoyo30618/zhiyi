@@ -1,12 +1,3 @@
-<?php
-	if (!defined('IN_INDEX')) {
-		// 如果未定义 IN_INDEX 常量，表示未通过合法入口文件引入，终止脚本执行
-		exit('Access denied.');
-	}
-	session_start();//開啟session
-	$nowdir=basename(dirname($_SERVER['PHP_SELF']));
-	$parentDirectory = ($nowdir === "C1" || $nowdir === "C2"  || $nowdir === "C3"  || $nowdir === "C4") ? "../" : "";
-?>
 <nav class="navbar navbar-expand-lg navbar-dark">
 	<div class="container">
 		<a class="navbar-brand" href="<?php echo $parentDirectory; ?>index.php">

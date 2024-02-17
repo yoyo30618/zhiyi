@@ -1,3 +1,6 @@
+<?php
+	session_start();//開啟session
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -20,7 +23,6 @@
 			include $parentDirectory.'header.php'; 
 			if(!isset($_SESSION['TELic-LAB_Islogin']))
 				echo"<script  language=\"JavaScript\">alert('請先登入');location.href=\"".$parentDirectory."login.php\";</script>";
-				
 		?>
 		<div class="container-fluid content">
 			<div class="row">

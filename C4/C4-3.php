@@ -1,10 +1,11 @@
+<?php
+	session_start();//開啟session
+?>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
-		<!-- 引入 Bootstrap 的 CSS 文件 -->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" /><link href="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/themes/prism.min.css" rel="stylesheet" />
-		<!-- 引入自定義的 CSS 文件 -->
 		<link href="../style.css" rel="stylesheet" />
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -93,7 +94,7 @@ LoadProblemCode($ThisPage,2);
 								<div class="tab-content" id="right-tabs-content">
 									<div class="tab-pane fade show active" id="visualization" role="tabpanel" aria-labelledby="visualization-tab">
 										<!-- 右側區塊的程式邏輯分析內容 -->
-										<div id="SVGPlace"></div>	
+										<div id="SVGPlace"></div>
 									</div>
 									<div class="tab-pane fade" id="flowchart" role="tabpanel" aria-labelledby="flowchart-tab">
 										<!-- 右側區塊的程式流程圖內容 -->

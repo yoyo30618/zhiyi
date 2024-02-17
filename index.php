@@ -1,3 +1,6 @@
+<?php
+	session_start();//開啟session
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -11,10 +14,12 @@
 	</head>
 	<body>
 		<?php 
+			$nowdir=basename(dirname($_SERVER['PHP_SELF']));
+			$parentDirectory = ($nowdir === "C1" || $nowdir === "C2"  || $nowdir === "C3"  || $nowdir === "C4") ? "../" : "";
 			define('IN_INDEX', true);
-			include 'header.php'; 
+			include $parentDirectory.'header.php'; 
+			
 		?>
-
 		<div class="container-fluid content">
 			<div class="row">
 				<?php include 'sidebar.php'; ?>
