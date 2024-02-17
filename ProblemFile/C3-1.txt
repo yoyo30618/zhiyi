@@ -9,13 +9,13 @@
         {Hint2}
             判斷該成績是否及格
         {EndHint2}
-    {EndIf}
+   
 ，並
     {Output}
         {Hint3}
             輸出相對應的結果
         {EndHint3}
     {EndOutput}
-。
+。 {EndIf}
     {\n}
 (如 輸入成績:90 輸出:及格!；輸入成績:55 輸出:不及格!)

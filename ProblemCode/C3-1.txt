@@ -1,5 +1,7 @@
-{Input}grade = int(input("請輸入成績:")){EndInput}
-{If}if({Input}grade{EndInput} >= 60):{EndIf}
-	{Output}print("及格!"){EndOutput}
-{If}else:{EndIf}
-	{Output}print("不及格!"){EndOutput}
+<table>
+	<tr><td style="background-color:lightblue">grade = int(input("請輸入成績:"))</td></tr>
+	<tr><td style="background-color:lightyellow">if({Input}grade{EndInput} >= 60): </td></tr>
+	<tr><td style="background-color:lightyellow">    {Output}print("及格!"){EndOutput}</td></tr>
+	<tr><td style="background-color:lightyellow">else:</td></tr>
+	<tr><td style="background-color:lightyellow">    {Output}print("不及格!"){EndOutput}</td></tr>
+</table>

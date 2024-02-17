@@ -61,11 +61,14 @@
 		$lines = explode("\n", $code);//以行切割
 		$formattedCode = '';
 		foreach ($lines as $index => $line) {
-			$stepNumber = $index;
+			$stepNumber = $index-1;
+			$formattedLine=$line;
 			if($mode==1)
-				$formattedLine = "<a id='step{$stepNumber}' class='step-arrow'> ➥</a>{$line}";
+				$formattedLine = str_replace("{Arrow}", "<a id='step{$stepNumber}' class='step-arrow'> ➥</a>", $formattedLine);//補入箭頭
+				// $formattedLine = "<a id='step{$stepNumber}' class='step-arrow'> ➥</a>{$line}";
 			else if($mode==2)
-				$formattedLine = "<a id='solo-step{$stepNumber}' class='solo-step-arrow'> ➥</a>{$line}";
+				$formattedLine = str_replace("{Arrow}", "<a id='solo-step{$stepNumber}' class='solo-step-arrow'> ➥</a>", $formattedLine);//補入箭頭
+				// $formattedLine = "<a id='solo-step{$stepNumber}' class='solo-step-arrow'> ➥</a>{$line}";
 			foreach ($tags as $tag => $replacement) {
 				$formattedLine = str_replace("{{$tag}}", ($replacement), $formattedLine);
 			}

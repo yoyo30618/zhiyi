@@ -137,7 +137,7 @@
 							}
 							else{
 								echo "<li><a class='dropdown-item' href='".$parentDirectory."login.php'>Login</a></li>";
-								echo "<li><a class='dropdown-item' href='".$parentDirectory."Signup.php'>Signup</a></li>";
+								// echo "<li><a class='dropdown-item' href='".$parentDirectory."Signup.php'>Signup</a></li>";
 							}
 						?>
 					</ul>

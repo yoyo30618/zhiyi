@@ -1,4 +1,6 @@
-{Input}h = float(input("請輸入身高(公尺):")){EndInput}
-{Input}w = float(input("請輸入體重:")){EndInput}
-{Operationstyle}bmi = w/(h*h){EndOperationstyle}
-{Output}print("BMI為",bmi){EndOutput}
+<table>
+	<tr><td style="background-color:lightblue">{Arrow}h = float(input("請輸入身高(公尺):"))</td></tr>
+	<tr><td style="background-color:lightblue">{Arrow}w = float(input("請輸入體重:"))</td></tr>
+	<tr><td style="background-color:#EAD1E7">{Arrow}bmi = w/(h*h)</td></tr>
+	<tr><td style="background-color:lightpink">{Arrow}print("BMI為",bmi)</td></tr>
+</table>

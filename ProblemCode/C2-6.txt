@@ -1,6 +1,7 @@
-{Input}r = int(input("請輸入半徑")){EndInput}
-{Operationstyle}area = (r ** 2) * 3.14{EndOperationstyle}
-{Operationstyle}c = r * 2 * 3.14{EndOperationstyle}
-{Output}print("圓面積為", area){EndOutput}
-{Output}print("圓周長為", c){EndOutput}
-
+<table>
+	<tr><td style="background-color:lightblue">{Arrow}r = int(input("請輸入半徑"))</td></tr>
+	<tr><td style="background-color:#EAD1E7">{Arrow}area = (r ** 2) * 3.14</td></tr>
+	<tr><td style="background-color:#EAD1E7">{Arrow}c = r * 2 * 3.14</td></tr>
+	<tr><td style="background-color:lightpink">{Arrow}print("圓面積為", area)</td></tr>
+	<tr><td style="background-color:lightpink">{Arrow}print("圓周長為", c)</td></tr>
+</table>

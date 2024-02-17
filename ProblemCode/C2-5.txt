@@ -1,3 +1,5 @@
-{Input}TWD = int(input("請輸入新台幣金額：")){EndInput}
-{Operationstyle}JPY = TWD * 4.72 * 0.95{EndOperationstyle}
-{Output}print("新台幣", TWD, "共可換日圓", JPY, "元"){EndOutput}
+<table>
+	<tr><td style="background-color:lightblue">{Arrow}TWD = int(input("請輸入新台幣金額："))</td></tr>
+	<tr><td style="background-color:#EAD1E7">{Arrow}JPY = TWD * 4.72 * 0.95</td></tr>
+	<tr><td style="background-color:lightpink">{Arrow}print("新台幣", TWD, "共可換日圓", JPY, "元")</td></tr>
+</table>

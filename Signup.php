@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		
+		<script  language="JavaScript">alert('暫時停用註冊功能，請直接登入');location.href="login.php";</script>
 		<meta content="width=device-width, initial-scale=1.0" name="viewport">
 		<!-- 引入 Bootstrap 的 CSS 文件 -->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
