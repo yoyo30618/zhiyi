@@ -13,161 +13,179 @@ var SoloFlowStep_SVG = [0,0,0,0,0,0,0,1,1,1,1,1,1,1,2,2,2,2,2,2,2,3,3,3,3,3,4];
 
 var SoloOperationInfo=[
     [
-        ["ImgBox",10,10,600,600,"C2-4/vision/pic1.png"]
+        ["ImgBox",10,10,600,600,"C2-4/vision/pic1.png"],
+        ["DrawText","input(\"請輸入國文成績：\")",425,140,14,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-4/vision/pic2.png"],
-        ["DrawText","\"{InputBox1}\"",435,190,20,"black"]
+        ["DrawText","input(\"請輸入國文成績：\")",425,140,14,"black"],
+        ["DrawText","\"{InputBox1}\"",455,190,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-4/vision/pic3.png"],
-        ["DrawText","{InputBox1}",435,190,20,"black"]
+        ["DrawText","float(\"{InputBox1}\")",425,145,14,"black"],
+        ["DrawText","{Output1}",455,190,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-4/vision/pic4.png"],
-        ["DrawText","{InputBox1}",435,190,20,"black"]
+        ["DrawText","{Output1}",455,190,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-4/vision/pic5.png"],
-        ["DrawText","{InputBox1}",270,190,20,"black"]
+        ["DrawText","{Output1}",270,190,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-4/vision/pic6.png"],
-        ["DrawText","{InputBox1}",270,190,20,"black"]
+        ["DrawText","{Output1}",270,190,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-4/vision/pic7.png"],
-        ["DrawText","{InputBox1}",270,190,20,"black"]
+        ["DrawText","{Output1}",270,190,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-4/vision/pic8.png"],
-        ["DrawText","{InputBox1}",270,190,20,"black"]
+        ["DrawText","input(\"請輸入英文成績：\")",425,210,14,"black"],
+        ["DrawText","{Output1}",270,190,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-4/vision/pic9.png"],
-        ["DrawText","{InputBox1}",270,190,20,"black"],
-        ["DrawText","\"{InputBox2}\"",435,270,20,"black"]
+        ["DrawText","{Output1}",270,190,20,"black"],
+        ["DrawText","input(\"請輸入英文成績：\")",425,210,14,"black"],
+        ["DrawText","\"{InputBox2}\"",445,260,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-4/vision/pic10.png"],
-        ["DrawText","{InputBox1}",270,190,20,"black"],
-        ["DrawText","{InputBox2}",435,270,20,"black"]
+        ["DrawText","{Output1}",270,190,20,"black"],
+        ["DrawText","float(\"{InputBox2}\")",425,210,14,"black"],
+        ["DrawText","{Output2}",445,260,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-4/vision/pic11.png"],
-        ["DrawText","{InputBox1}",270,190,20,"black"],
-        ["DrawText","{InputBox2}",435,270,20,"black"]
+        ["DrawText","{Output1}",270,190,20,"black"],
+        ["DrawText","{Output2}",445,260,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-4/vision/pic12.png"],
-        ["DrawText","{InputBox1}",270,190,20,"black"],
-        ["DrawText","{InputBox2}",270,250,20,"black"]
+        ["DrawText","{Output1}",270,190,20,"black"],
+        ["DrawText","{Output2}",270,250,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-4/vision/pic13.png"],
-        ["DrawText","{InputBox1}",270,190,20,"black"],
-        ["DrawText","{InputBox2}",270,250,20,"black"]
+        ["DrawText","{Output1}",270,190,20,"black"],
+        ["DrawText","{Output2}",270,250,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-4/vision/pic14.png"],
-        ["DrawText","{InputBox1}",270,190,20,"black"],
-        ["DrawText","{InputBox2}",270,250,20,"black"]
+        ["DrawText","{Output1}",270,190,20,"black"],
+        ["DrawText","{Output2}",270,250,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-4/vision/pic15.png"],
-        ["DrawText","{InputBox1}",270,190,20,"black"],
-        ["DrawText","{InputBox2}",270,250,20,"black"]
+        ["DrawText","input(\"請輸入數學成績：\")",425,280,14,"black"],
+        ["DrawText","{Output1}",270,190,20,"black"],
+        ["DrawText","{Output2}",270,250,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-4/vision/pic16.png"],
-        ["DrawText","{InputBox1}",270,190,20,"black"],
-        ["DrawText","{InputBox2}",270,250,20,"black"],
-        ["DrawText","\"{InputBox3}\"",440,330,20,"black"]
+        ["DrawText","input(\"請輸入數學成績：\")",425,280,14,"black"],
+        ["DrawText","{Output1}",270,190,20,"black"],
+        ["DrawText","{Output2}",270,250,20,"black"],
+        ["DrawText","\"{InputBox3}\"",450,325,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-4/vision/pic17.png"],
-        ["DrawText","{InputBox1}",270,190,20,"black"],
-        ["DrawText","{InputBox2}",270,250,20,"black"],
-        ["DrawText","{InputBox3}",440,330,20,"black"]
+        ["DrawText","float(\"{InputBox3}\")",425,280,14,"black"],
+        ["DrawText","{Output1}",270,190,20,"black"],
+        ["DrawText","{Output2}",270,250,20,"black"],
+        ["DrawText","{Output3}",455,325,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-4/vision/pic18.png"],
-        ["DrawText","{InputBox1}",270,190,20,"black"],
-        ["DrawText","{InputBox2}",270,250,20,"black"],
-        ["DrawText","{InputBox3}",440,330,20,"black"]
+        ["DrawText","{Output1}",270,190,20,"black"],
+        ["DrawText","{Output2}",270,250,20,"black"],
+        ["DrawText","{Output3}",455,325,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-4/vision/pic19.png"],
-        ["DrawText","{InputBox1}",270,190,20,"black"],
-        ["DrawText","{InputBox2}",270,250,20,"black"],
-        ["DrawText","{InputBox3}",270,315,20,"black"]
+        ["DrawText","{Output1}",270,190,20,"black"],
+        ["DrawText","{Output2}",270,250,20,"black"],
+        ["DrawText","{Output3}",270,315,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-4/vision/pic20.png"],
-        ["DrawText","{InputBox1}",270,190,20,"black"],
-        ["DrawText","{InputBox2}",270,250,20,"black"],
-        ["DrawText","{InputBox3}",270,315,20,"black"]
+        ["DrawText","{Output1}",270,190,20,"black"],
+        ["DrawText","{Output2}",270,250,20,"black"],
+        ["DrawText","{Output3}",270,315,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-4/vision/pic21.png"],
-        ["DrawText","{InputBox1}",270,190,20,"black"],
-        ["DrawText","{InputBox2}",270,250,20,"black"],
-        ["DrawText","{InputBox3}",270,315,20,"black"]
+        ["DrawText","{Output1}",270,190,20,"black"],
+        ["DrawText","{Output2}",270,250,20,"black"],
+        ["DrawText","{Output3}",270,315,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-4/vision/pic22.png"],
-        ["DrawText","{InputBox1}",270,190,20,"black"],
-        ["DrawText","{InputBox2}",270,250,20,"black"],
-        ["DrawText","{InputBox3}",270,315,20,"black"]
+        ["DrawText","{Output1}",270,190,20,"black"],
+        ["DrawText","{Output2}",270,250,20,"black"],
+        ["DrawText","{Output3}",270,315,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-4/vision/pic23.png"],
-        ["DrawText","{InputBox1}",270,190,20,"black"],
-        ["DrawText","{InputBox2}",270,250,20,"black"],
-        ["DrawText","{InputBox3}",270,315,20,"black"],
-        ["DrawText","{InputBox1}",220,490,20,"black"],
-        ["DrawText","{InputBox2}",290,490,20,"black"],
-        ["DrawText","{InputBox3}",365,490,20,"black"]
+        ["DrawText","{Output1}",270,190,20,"black"],
+        ["DrawText","{Output2}",270,250,20,"black"],
+        ["DrawText","{Output3}",270,315,20,"black"],
+        ["DrawText","{Output1}",220,490,20,"black"],
+        ["DrawText","{Output2}",290,490,20,"black"],
+        ["DrawText","{Output3}",365,490,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-4/vision/pic24.png"],
-        ["DrawText","{InputBox1}",270,190,20,"black"],
-        ["DrawText","{InputBox2}",270,250,20,"black"],
-        ["DrawText","{InputBox3}",270,315,20,"black"],
-        ["DrawText","{InputBox1}",220,490,20,"black"],
-        ["DrawText","{InputBox2}",290,490,20,"black"],
-        ["DrawText","{InputBox3}",365,490,20,"black"],
-        ["DrawText","{Output2}",135,490,20,"black"],
-        ["DrawText","{Output2}",270,375,20,"black"]
+        ["DrawText","{Output1}",270,190,20,"black"],
+        ["DrawText","{Output2}",270,250,20,"black"],
+        ["DrawText","{Output3}",270,315,20,"black"],
+        ["DrawText","{Output1}",220,490,20,"black"],
+        ["DrawText","{Output2}",290,490,20,"black"],
+        ["DrawText","{Output3}",365,490,20,"black"],
+        ["DrawText","{Output5}",135,490,20,"black"],
+        ["DrawText","{Output5}",270,375,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-4/vision/pic25.png"],
-        ["DrawText","{InputBox1}",270,190,20,"black"],
-        ["DrawText","{InputBox2}",270,250,20,"black"],
-        ["DrawText","{InputBox3}",270,315,20,"black"],
-        ["DrawText","{InputBox1}",220,490,20,"black"],
-        ["DrawText","{InputBox2}",290,490,20,"black"],
-        ["DrawText","{InputBox3}",365,490,20,"black"],
-        ["DrawText","{Output2}",135,490,20,"black"],
-        ["DrawText","{Output2}",270,375,20,"black"]
+        ["DrawText","{Output1}",270,190,20,"black"],
+        ["DrawText","{Output2}",270,250,20,"black"],
+        ["DrawText","{Output3}",270,315,20,"black"],
+        ["DrawText","{Output1}",220,490,20,"black"],
+        ["DrawText","{Output2}",290,490,20,"black"],
+        ["DrawText","{Output3}",365,490,20,"black"],
+        ["DrawText","{Output5}",135,490,20,"black"],
+        ["DrawText","{Output5}",270,375,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-4/vision/pic26.png"],
-        ["DrawText","{InputBox1}",270,190,20,"black"],
-        ["DrawText","{InputBox2}",270,250,20,"black"],
-        ["DrawText","{InputBox3}",270,315,20,"black"],
-        ["DrawText","{InputBox1}",220,490,20,"black"],
-        ["DrawText","{InputBox2}",290,490,20,"black"],
-        ["DrawText","{InputBox3}",365,490,20,"black"],
-        ["DrawText","{Output2}",135,490,20,"black"],
-        ["DrawText","{Output2}",270,375,20,"black"]
+        ["DrawText","{Output1}",270,190,20,"black"],
+        ["DrawText","{Output2}",270,250,20,"black"],
+        ["DrawText","{Output3}",270,315,20,"black"],
+        ["DrawText","{Output1}",220,490,20,"black"],
+        ["DrawText","{Output2}",290,490,20,"black"],
+        ["DrawText","{Output3}",365,490,20,"black"],
+        ["DrawText","{Output5}",135,490,20,"black"],
+        ["DrawText","{Output5}",270,375,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-4/vision/pic27.png"],
-        ["DrawText","平均分數為：{Output2}",230,280,16,"white"]
+        ["DrawText","平均分數為：{Output5}",230,280,16,"white"]
     ]
 ];
 function SetSolodata(){
-    SoloOutput[1]=(Number(SoloInput[1])+Number(SoloInput[2])+Number(SoloInput[3]))/3;
-    SoloOutput[2]=((Number(SoloInput[1])+Number(SoloInput[2])+Number(SoloInput[3]))/3).toFixed(2);
+    var parsedValue1 = parseFloat(SoloInput[1]);
+    if (Number.isInteger(parsedValue1))  SoloOutput[1] = parsedValue1.toFixed(1);
+    else SoloOutput[1] = parsedValue1;
+    var parsedValue2 = parseFloat(SoloInput[2]);
+    if (Number.isInteger(parsedValue2))  SoloOutput[2] = parsedValue2.toFixed(1);
+    else SoloOutput[2] = parsedValue2;
+    var parsedValue3 = parseFloat(SoloInput[3]);
+    if (Number.isInteger(parsedValue3))  SoloOutput[3] = parsedValue3.toFixed(1);
+    else SoloOutput[3] = parsedValue3;
+    SoloOutput[4]=(Number(SoloInput[1])+Number(SoloInput[2])+Number(SoloInput[3]))/3;
+    SoloOutput[5]=((Number(SoloInput[1])+Number(SoloInput[2])+Number(SoloInput[3]))/3).toFixed(2);
 }

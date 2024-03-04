@@ -57,19 +57,22 @@
     ],
     "OperationInfo":[
         [
-            ["ImgBox",10,10,600,600,"C2-2/vision/pic1.png"]
+            ["ImgBox",10,10,600,600,"C2-2/vision/pic1.png"],
+            ["DrawText","input(\"請輸入攝氏溫度\")",430,145,14,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-2/vision/pic2.png"],
-            ["DrawText","\"25.0\"",440,210,20,"black"]
+            ["DrawText","input(\"請輸入攝氏溫度\")",430,145,14,"black"],
+            ["DrawText","\"25\"",445,200,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-2/vision/pic3.png"],
-            ["DrawText","25.0",440,210,20,"black"]
+            ["DrawText","float(\"25\")",430,145,14,"black"],
+            ["DrawText","25.0",445,200,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-2/vision/pic4.png"],
-            ["DrawText","25.0",440,210,20,"black"]
+            ["DrawText","25.0",445,200,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-2/vision/pic5.png"],
@@ -90,26 +93,26 @@
         [
             ["ImgBox",10,10,600,600,"C2-2/vision/pic9.png"],
             ["DrawText","25.0",275,195,20,"black"],
-            ["DrawText","25.0",305,455,20,"black"]
+            ["DrawText","25.0",305,460,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-2/vision/pic10.png"],
             ["DrawText","25.0",275,195,20,"black"],
-            ["DrawText","25.0",305,455,20,"black"],
+            ["DrawText","25.0",305,460,20,"black"],
             ["DrawText","77.0",160,455,20,"black"],
             ["DrawText","77.0",275,295,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-2/vision/pic11.png"],
             ["DrawText","25.0",275,195,20,"black"],
-            ["DrawText","25.0",305,455,20,"black"],
+            ["DrawText","25.0",305,460,20,"black"],
             ["DrawText","77.0",160,455,20,"black"],
             ["DrawText","77.0",275,295,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-2/vision/pic12.png"],
             ["DrawText","25.0",275,195,20,"black"],
-            ["DrawText","25.0",305,455,20,"black"],
+            ["DrawText","25.0",305,460,20,"black"],
             ["DrawText","77.0",160,455,20,"black"],
             ["DrawText","77.0",275,295,20,"black"]
         ],

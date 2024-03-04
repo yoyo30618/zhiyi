@@ -27,7 +27,7 @@
         "Output1":75.5,
         "Output2":2,
         "Output3":0,
-        "Output4":0,
+        "Output4":75.5,
         "Output5":0
     },
     "CodeStep":5,
@@ -39,7 +39,7 @@
         "請輸入國文成績：{Input1}<br>請輸入英文成績：{Input2}",
         "請輸入國文成績：{Input1}<br>請輸入英文成績：{Input2}<br>請輸入數學成績：{InputBox3}",
         "請輸入國文成績：{Input1}<br>請輸入英文成績：{Input2}<br>請輸入數學成績：{Input3}",
-        "請輸入國文成績：{Input1}<br>請輸入英文成績：{Input2}<br>請輸入數學成績：{Input3}<br>平均分數為：{Output1}"
+        "請輸入國文成績：{Input1}<br>請輸入英文成績：{Input2}<br>請輸入數學成績：{Input3}<br>平均分數為：{Output4}"
     ],
     "MsgStep":[0,2,4,5,6],
     "ArrowStep":[0,1,2,3,4],
@@ -61,19 +61,22 @@
     ],
     "OperationInfo":[
         [
-            ["ImgBox",10,10,600,600,"C2-4/vision/pic1.png"]
+            ["ImgBox",10,10,600,600,"C2-4/vision/pic1.png"],
+            ["DrawText","input(\"請輸入國文成績：\")",425,140,14,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic2.png"],
-            ["DrawText","\"85\"",435,190,20,"black"]
+            ["DrawText","input(\"請輸入國文成績：\")",425,140,14,"black"],
+            ["DrawText","\"85\"",455,190,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic3.png"],
-            ["DrawText","85.0",435,190,20,"black"]
+            ["DrawText","float(\"85\")",425,145,14,"black"],
+            ["DrawText","85.0",455,190,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic4.png"],
-            ["DrawText","85.0",435,190,20,"black"]
+            ["DrawText","85.0",455,190,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic5.png"],
@@ -89,22 +92,25 @@
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic8.png"],
+            ["DrawText","input(\"請輸入英文成績：\")",425,210,14,"black"],
             ["DrawText","85.0",270,190,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic9.png"],
             ["DrawText","85.0",270,190,20,"black"],
-            ["DrawText","\"77.2\"",435,270,20,"black"]
+            ["DrawText","input(\"請輸入英文成績：\")",425,210,14,"black"],
+            ["DrawText","\"77.2\"",445,260,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic10.png"],
             ["DrawText","85.0",270,190,20,"black"],
-            ["DrawText","77.2",435,270,20,"black"]
+            ["DrawText","float(\"77.2\")",425,210,14,"black"],
+            ["DrawText","77.2",445,260,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic11.png"],
             ["DrawText","85.0",270,190,20,"black"],
-            ["DrawText","77.2",435,270,20,"black"]
+            ["DrawText","77.2",445,260,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic12.png"],
@@ -123,26 +129,29 @@
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic15.png"],
+            ["DrawText","input(\"請輸入數學成績：\")",425,280,14,"black"],
             ["DrawText","85.0",270,190,20,"black"],
             ["DrawText","77.2",270,250,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic16.png"],
+            ["DrawText","input(\"請輸入數學成績：\")",425,280,14,"black"],
             ["DrawText","85.0",270,190,20,"black"],
             ["DrawText","77.2",270,250,20,"black"],
-            ["DrawText","\"64.3\"",440,330,20,"black"]
+            ["DrawText","\"64.3\"",450,325,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic17.png"],
+            ["DrawText","float(\"64.3\")",425,280,14,"black"],
             ["DrawText","85.0",270,190,20,"black"],
             ["DrawText","77.2",270,250,20,"black"],
-            ["DrawText","64.3",440,330,20,"black"]
+            ["DrawText","64.3",455,325,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic18.png"],
             ["DrawText","85.0",270,190,20,"black"],
             ["DrawText","77.2",270,250,20,"black"],
-            ["DrawText","64.3",440,330,20,"black"]
+            ["DrawText","64.3",455,325,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-4/vision/pic19.png"],

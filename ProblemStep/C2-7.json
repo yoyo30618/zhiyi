@@ -59,82 +59,88 @@
     ],
     "OperationInfo":[
         [
-            ["ImgBox",10,10,600,600,"C2-7/vision/pic1.png"]
+            ["ImgBox",10,10,600,600,"C2-7/vision/pic1.png"],
+            ["DrawText","input(\"請輸入身高(公尺):\")",430,140,14,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-7/vision/pic2.png"],
-            ["DrawText","\"1.75\"",430,185,20,"black"]
+            ["DrawText","input(\"請輸入身高(公尺):\")",430,140,14,"black"],
+            ["DrawText","\"1.75\"",445,185,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-7/vision/pic3.png"],
-            ["DrawText","1.75",430,185,20,"black"]
+            ["DrawText","float(\"1.75\")",430,140,14,"black"],
+            ["DrawText","1.75",445,185,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-7/vision/pic4.png"],
-            ["DrawText","1.75",430,185,20,"black"]
+            ["DrawText","1.75",445,185,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-7/vision/pic5.png"],
-            ["DrawText","1.75",280,190,20,"black"]
+            ["DrawText","1.75",280,180,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-7/vision/pic6.png"],
-            ["DrawText","1.75",280,190,20,"black"]
+            ["DrawText","1.75",280,180,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-7/vision/pic7.png"],
-            ["DrawText","1.75",280,190,20,"black"]
+            ["DrawText","1.75",280,180,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-7/vision/pic8.png"],
-            ["DrawText","1.75",280,190,20,"black"]
+            ["DrawText","1.75",280,180,20,"black"],
+            ["DrawText","input(\"請輸入體重:\")",430,210,14,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-7/vision/pic9.png"],
-            ["DrawText","1.75",280,190,20,"black"],
-            ["DrawText","\"70\"",430,265,20,"black"]
+            ["DrawText","1.75",280,180,20,"black"],
+            ["DrawText","input(\"請輸入體重:\")",430,210,14,"black"],
+            ["DrawText","\"70\"",455,255,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-7/vision/pic10.png"],
-            ["DrawText","1.75",280,190,20,"black"],
-            ["DrawText","70",430,265,20,"black"]
+            ["DrawText","1.75",280,180,20,"black"],
+            ["DrawText","float(\"70\")",430,210,14,"black"],
+            ["DrawText","70.0",460,255,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-7/vision/pic11.png"],
-            ["DrawText","1.75",280,190,20,"black"],
-            ["DrawText","70",430,265,20,"black"]
+            ["DrawText","1.75",280,180,20,"black"],
+            ["DrawText","70.0",460,255,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-7/vision/pic12.png"],
-            ["DrawText","1.75",280,190,20,"black"],
-            ["DrawText","70",280,250,20,"black"]
+            ["DrawText","1.75",280,180,20,"black"],
+            ["DrawText","70.0",280,250,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-7/vision/pic13.png"],
-            ["DrawText","1.75",280,190,20,"black"],
-            ["DrawText","70",280,250,20,"black"]
+            ["DrawText","1.75",280,180,20,"black"],
+            ["DrawText","70.0",280,250,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-7/vision/pic14.png"],
-            ["DrawText","1.75",280,190,20,"black"],
-            ["DrawText","70",280,250,20,"black"]
+            ["DrawText","1.75",280,180,20,"black"],
+            ["DrawText","70.0",280,250,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-7/vision/pic15.png"],
-            ["DrawText","1.75",280,190,20,"black"],
-            ["DrawText","70",280,250,20,"black"]
+            ["DrawText","1.75",280,180,20,"black"],
+            ["DrawText","70.0",280,250,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-7/vision/pic16.png"],
-            ["DrawText","1.75",280,190,20,"black"],
-            ["DrawText","70",280,250,20,"black"],
-            ["DrawText","70",250,465,20,"black"],
+            ["DrawText","1.75",280,180,20,"black"],
+            ["DrawText","70.0",280,250,20,"black"],
+            ["DrawText","70.0",250,465,20,"black"],
             ["DrawText","1.75",345,465,20,"black"],
             ["DrawText","1.75",410,465,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-7/vision/pic17.png"],
-            ["DrawText","1.75",280,190,20,"black"],
+            ["DrawText","1.75",280,180,20,"black"],
             ["DrawText","70",280,250,20,"black"],
             ["DrawText","70",250,465,20,"black"],
             ["DrawText","1.75",345,465,20,"black"],
@@ -144,7 +150,7 @@
         ],
         [
             ["ImgBox",10,10,600,600,"C2-7/vision/pic18.png"],
-            ["DrawText","1.75",280,190,20,"black"],
+            ["DrawText","1.75",280,180,20,"black"],
             ["DrawText","70",280,250,20,"black"],
             ["DrawText","70",250,465,20,"black"],
             ["DrawText","1.75",345,465,20,"black"],
@@ -154,7 +160,7 @@
         ],
         [
             ["ImgBox",10,10,600,600,"C2-7/vision/pic19.png"],
-            ["DrawText","1.75",280,190,20,"black"],
+            ["DrawText","1.75",280,180,20,"black"],
             ["DrawText","70",280,250,20,"black"],
             ["DrawText","70",250,465,20,"black"],
             ["DrawText","1.75",345,465,20,"black"],

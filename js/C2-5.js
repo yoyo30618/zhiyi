@@ -12,19 +12,22 @@ var SoloArrowStep_SVG = [0,0,0,0,0,0,0,1,1,1,1,1,2];
 var SoloFlowStep_SVG =[0,0,0,0,0,0,0,1,1,1,1,1,2];
 var SoloOperationInfo=[
     [
-        ["ImgBox",10,10,600,600,"C2-5/vision/pic1.png"]
+        ["ImgBox",10,10,600,600,"C2-5/vision/pic1.png"],
+        ["DrawText","input(\"請輸入新台幣金額\")",435,150,14,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-5/vision/pic2.png"],
-        ["DrawText","\"{InputBox1}\"",435,210,20,"black"]
+        ["DrawText","input(\"請輸入新台幣金額\")",435,150,14,"black"],
+        ["DrawText","\"{InputBox1}\"",465,205,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-5/vision/pic3.png"],
-        ["DrawText","{InputBox1}",435,210,20,"black"]
+        ["DrawText","int(\"{InputBox1}\")",435,150,14,"black"],
+        ["DrawText","{InputBox1}",465,205,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-5/vision/pic4.png"],
-        ["DrawText","{InputBox1}",435,210,20,"black"]
+        ["DrawText","{InputBox1}",465,205,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-5/vision/pic5.png"],

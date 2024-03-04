@@ -14,14 +14,17 @@ var SoloFlowStep_SVG = [0,0,0,0,0,0,0,1,1,1,1,1,2,2,2,2,2,3];
 
 var SoloOperationInfo=[
     [
-        ["ImgBox",10,10,600,600,"C2-3/vision/pic1.png"]
+        ["ImgBox",10,10,600,600,"C2-3/vision/pic1.png"],
+        ["DrawText","input(\"請輸入雞蛋總數：\")",425,145,14,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-3/vision/pic2.png"],
+        ["DrawText","input(\"請輸入雞蛋總數：\")",425,145,14,"black"],
         ["DrawText","\"{InputBox1}\"",450,200,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-3/vision/pic3.png"],
+        ["DrawText","int(\"{InputBox1}\")",425,145,14,"black"],
         ["DrawText","{InputBox1}",450,200,20,"black"]
     ],
     [
@@ -47,79 +50,79 @@ var SoloOperationInfo=[
     [
         ["ImgBox",10,10,600,600,"C2-3/vision/pic9.png"],
         ["DrawText","{InputBox1}",280,195,20,"black"],
-        ["DrawText","{InputBox1}",210,490,20,"black"]
+        ["DrawText","{InputBox1}",185,490,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-3/vision/pic10.png"],
         ["DrawText","{InputBox1}",280,195,20,"black"],
-        ["DrawText","{InputBox1}",210,490,20,"black"],
-        ["DrawText","{Output1}",130,490,20,"black"],
-        ["DrawText","{Output1}",280,270,20,"black"],
-        ["DrawText","{Output1}",550,470,20,"black"]
+        ["DrawText","{InputBox1}",185,490,20,"black"],
+        ["DrawText","{Output1}",115,490,20,"black"],
+        ["DrawText","{Output1}",280,275,20,"black"],
+        ["DrawText","{Output1}",530,455,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-3/vision/pic11.png"],
         ["DrawText","{InputBox1}",280,195,20,"black"],
-        ["DrawText","{InputBox1}",210,490,20,"black"],
-        ["DrawText","{Output1}",130,490,20,"black"],
-        ["DrawText","{Output1}",280,270,20,"black"],
-        ["DrawText","{Output1}",550,470,20,"black"]
+        ["DrawText","{InputBox1}",185,490,20,"black"],
+        ["DrawText","{Output1}",115,490,20,"black"],
+        ["DrawText","{Output1}",280,275,20,"black"],
+        ["DrawText","{Output1}",530,455,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-3/vision/pic12.png"],
         ["DrawText","{InputBox1}",280,195,20,"black"],
-        ["DrawText","{InputBox1}",210,490,20,"black"],
-        ["DrawText","{Output1}",130,490,20,"black"],
-        ["DrawText","{Output1}",280,270,20,"black"],
-        ["DrawText","{Output1}",550,470,20,"black"]
+        ["DrawText","{InputBox1}",185,490,20,"black"],
+        ["DrawText","{Output1}",115,490,20,"black"],
+        ["DrawText","{Output1}",280,275,20,"black"],
+        ["DrawText","{Output1}",530,455,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-3/vision/pic13.png"],
         ["DrawText","{InputBox1}",280,195,20,"black"],
-        ["DrawText","{Output1}",280,270,20,"black"],
-        ["DrawText","{Output1}",550,470,20,"black"]
+        ["DrawText","{Output1}",280,275,20,"black"],
+        ["DrawText","{Output1}",530,455,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-3/vision/pic14.png"],
         ["DrawText","{InputBox1}",280,195,20,"black"],
-        ["DrawText","{InputBox1}",210,490,20,"black"],
-        ["DrawText","{Output1}",280,270,20,"black"],
-        ["DrawText","{Output1}",550,470,20,"black"]
+        ["DrawText","{InputBox1}",185,490,20,"black"],
+        ["DrawText","{Output1}",280,275,20,"black"],
+        ["DrawText","{Output1}",530,455,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-3/vision/pic15.png"],
         ["DrawText","{InputBox1}",280,195,20,"black"],
-        ["DrawText","{InputBox1}",210,490,20,"black"],
-        ["DrawText","{Output2}",130,490,20,"black"],
-        ["DrawText","{Output1}",280,270,20,"black"],
-        ["DrawText","{Output2}",280,355,20,"black"],
-        ["DrawText","{Output1}",550,470,20,"black"],
-        ["DrawText","{Output2}",550,510,20,"black"]
+        ["DrawText","{InputBox1}",185,490,20,"black"],
+        ["DrawText","{Output1}",280,275,20,"black"],
+        ["DrawText","{Output2}",280,365,20,"black"],
+        ["DrawText","{Output1}",530,455,20,"black"],
+        ["DrawText","{Output2}",530,505,20,"black"],
+        ["DrawText","{Output2}",115,490,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-3/vision/pic16.png"],
         ["DrawText","{InputBox1}",280,195,20,"black"],
-        ["DrawText","{InputBox1}",210,490,20,"black"],
-        ["DrawText","{Output2}",130,490,20,"black"],
-        ["DrawText","{Output1}",280,270,20,"black"],
-        ["DrawText","{Output2}",280,355,20,"black"],
-        ["DrawText","{Output1}",550,470,20,"black"],
-        ["DrawText","{Output2}",550,510,20,"black"]
+        ["DrawText","{InputBox1}",185,490,20,"black"],
+        ["DrawText","{Output1}",280,275,20,"black"],
+        ["DrawText","{Output2}",280,365,20,"black"],
+        ["DrawText","{Output1}",530,455,20,"black"],
+        ["DrawText","{Output2}",530,505,20,"black"],
+        ["DrawText","{Output2}",115,490,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-3/vision/pic17.png"],
         ["DrawText","{InputBox1}",280,195,20,"black"],
-        ["DrawText","{InputBox1}",210,490,20,"black"],
-        ["DrawText","{Output2}",130,490,20,"black"],
-        ["DrawText","{Output1}",280,270,20,"black"],
-        ["DrawText","{Output2}",280,355,20,"black"],
-        ["DrawText","{Output1}",550,470,20,"black"],
-        ["DrawText","{Output2}",550,510,20,"black"]
+        ["DrawText","{InputBox1}",185,490,20,"black"],
+        ["DrawText","{Output1}",280,275,20,"black"],
+        ["DrawText","{Output2}",280,365,20,"black"],
+        ["DrawText","{Output1}",530,455,20,"black"],
+        ["DrawText","{Output2}",530,505,20,"black"],
+        ["DrawText","{Output2}",115,490,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-3/vision/pic18.png"],
-        ["DrawText","{Output3}",230,280,16,"white"],
-        ["DrawText","{Output4}",230,300,16,"white"]
+        ["DrawText","總共可以販售{Output1}盒雞蛋",230,280,16,"white"],
+        ["DrawText","，剩餘{Output2}顆雞蛋",230,300,16,"white"]
     ]
 ];
 function SetSolodata(){

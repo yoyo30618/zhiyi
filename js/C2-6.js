@@ -12,19 +12,22 @@ var SoloArrowStep_SVG = [0,0,0,0,0,0,0,1,1,1,1,1,2,2,2,2,2,3,4];
 var SoloFlowStep_SVG = [0,0,0,0,0,0,0,1,1,1,1,1,2,2,2,2,2,3,4];
 var SoloOperationInfo=[
     [
-        ["ImgBox",10,10,600,600,"C2-6/vision/pic1.png"]
+        ["ImgBox",10,10,600,600,"C2-6/vision/pic1.png"],
+        ["DrawText","input(\"請輸入半徑\")",430,145,14,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-6/vision/pic2.png"],
-        ["DrawText","\"{InputBox1}\"",460,200,20,"black"]
+        ["DrawText","input(\"請輸入半徑\")",430,145,14,"black"],
+        ["DrawText","\"{InputBox1}\"",470,190,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-6/vision/pic3.png"],
-        ["DrawText","{InputBox1}",460,200,20,"black"]
+        ["DrawText","int(\"{InputBox1}\")",430,145,14,"black"],
+        ["DrawText","{InputBox1}",470,190,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-6/vision/pic4.png"],
-        ["DrawText","{InputBox1}",460,200,20,"black"]
+        ["DrawText","{InputBox1}",470,190,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-6/vision/pic5.png"],

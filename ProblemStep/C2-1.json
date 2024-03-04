@@ -59,60 +59,65 @@
     ],
     "OperationInfo":[
         [
-            ["ImgBox",10,10,600,600,"C2-1/vision/pic1.png"]
+            ["ImgBox",10,10,600,600,"C2-1/vision/pic1.png"],
+            ["DrawText","input(\"請輸入名字：\")",445,155,14,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-1/vision/pic2.png"],
-            ["DrawText","\"王小明\"",440,195,20,"black"]
+            ["DrawText","\"王小明\"",450,210,20,"black"],
+            ["DrawText","input(\"請輸入名字：\")",445,155,14,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-1/vision/pic3.png"],
-            ["DrawText","\"王小明\"",440,195,20,"black"]
+            ["DrawText","\"王小明\"",450,210,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-1/vision/pic4.png"],
-            ["DrawText","\"王小明\"",280,200,20,"black"]
+            ["DrawText","\"王小明\"",260,195,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-1/vision/pic5.png"],
-            ["DrawText","\"王小明\"",280,200,20,"black"]
+            ["DrawText","\"王小明\"",260,195,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-1/vision/pic6.png"],
-            ["DrawText","\"王小明\"",280,200,20,"black"]
+            ["DrawText","\"王小明\"",260,195,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-1/vision/pic7.png"],
-            ["DrawText","\"王小明\"",280,200,20,"black"]
+            ["DrawText","\"王小明\"",260,195,20,"black"],
+            ["DrawText","input(\"請輸入座號：\")",445,240,14,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-1/vision/pic8.png"],
-            ["DrawText","\"王小明\"",280,200,20,"black"],
+            ["DrawText","\"王小明\"",260,195,20,"black"],
+            ["DrawText","input(\"請輸入座號：\")",445,240,14,"black"],
             ["DrawText","\"23\"",475,295,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-1/vision/pic9.png"],
-            ["DrawText","\"王小明\"",280,200,20,"black"],
+            ["DrawText","\"王小明\"",260,195,20,"black"],
+            ["DrawText","int(\"23\")",445,240,14,"black"],
             ["DrawText","23",475,295,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-1/vision/pic10.png"],
-            ["DrawText","\"王小明\"",280,200,20,"black"],
+            ["DrawText","\"王小明\"",260,195,20,"black"],
             ["DrawText","23",475,295,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-1/vision/pic11.png"],
-            ["DrawText","\"王小明\"",280,200,20,"black"],
+            ["DrawText","\"王小明\"",260,195,20,"black"],
             ["DrawText","23",280,295,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-1/vision/pic12.png"],
-            ["DrawText","\"王小明\"",280,200,20,"black"],
+            ["DrawText","\"王小明\"",260,195,20,"black"],
             ["DrawText","23",280,295,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-1/vision/pic13.png"],
-            ["DrawText","\"王小明\"",280,200,20,"black"],
+            ["DrawText","\"王小明\"",260,195,20,"black"],
             ["DrawText","23",280,295,20,"black"]
         ],
         [

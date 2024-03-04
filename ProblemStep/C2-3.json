@@ -57,14 +57,17 @@
     ],
     "OperationInfo":[
         [
-            ["ImgBox",10,10,600,600,"C2-3/vision/pic1.png"]
+            ["ImgBox",10,10,600,600,"C2-3/vision/pic1.png"],
+            ["DrawText","input(\"請輸入雞蛋總數：\")",425,145,14,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-3/vision/pic2.png"],
+            ["DrawText","input(\"請輸入雞蛋總數：\")",425,145,14,"black"],
             ["DrawText","\"8\"",450,200,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-3/vision/pic3.png"],
+            ["DrawText","int(\"8\")",425,145,14,"black"],
             ["DrawText","8",450,200,20,"black"]
         ],
         [
@@ -90,74 +93,74 @@
         [
             ["ImgBox",10,10,600,600,"C2-3/vision/pic9.png"],
             ["DrawText","8",280,195,20,"black"],
-            ["DrawText","8",210,490,20,"black"]
+            ["DrawText","8",185,490,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-3/vision/pic10.png"],
             ["DrawText","8",280,195,20,"black"],
-            ["DrawText","8",210,490,20,"black"],
-            ["DrawText","1",130,490,20,"black"],
-            ["DrawText","1",280,270,20,"black"],
-            ["DrawText","1",550,470,20,"black"]
+            ["DrawText","8",185,490,20,"black"],
+            ["DrawText","1",115,490,20,"black"],
+            ["DrawText","1",280,275,20,"black"],
+            ["DrawText","1",530,455,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-3/vision/pic11.png"],
             ["DrawText","8",280,195,20,"black"],
-            ["DrawText","8",210,490,20,"black"],
-            ["DrawText","1",130,490,20,"black"],
-            ["DrawText","1",280,270,20,"black"],
-            ["DrawText","1",550,470,20,"black"]
+            ["DrawText","8",185,490,20,"black"],
+            ["DrawText","1",115,490,20,"black"],
+            ["DrawText","1",280,275,20,"black"],
+            ["DrawText","1",530,455,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-3/vision/pic12.png"],
             ["DrawText","8",280,195,20,"black"],
-            ["DrawText","8",210,490,20,"black"],
-            ["DrawText","1",130,490,20,"black"],
-            ["DrawText","1",280,270,20,"black"],
-            ["DrawText","1",550,470,20,"black"]
+            ["DrawText","8",185,490,20,"black"],
+            ["DrawText","1",115,490,20,"black"],
+            ["DrawText","1",280,275,20,"black"],
+            ["DrawText","1",530,455,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-3/vision/pic13.png"],
             ["DrawText","8",280,195,20,"black"],
-            ["DrawText","1",280,270,20,"black"],
-            ["DrawText","1",550,470,20,"black"]
+            ["DrawText","1",280,275,20,"black"],
+            ["DrawText","1",530,455,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-3/vision/pic14.png"],
             ["DrawText","8",280,195,20,"black"],
-            ["DrawText","8",210,490,20,"black"],
-            ["DrawText","1",280,270,20,"black"],
-            ["DrawText","1",550,470,20,"black"]
+            ["DrawText","8",185,490,20,"black"],
+            ["DrawText","1",280,275,20,"black"],
+            ["DrawText","1",530,455,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-3/vision/pic15.png"],
             ["DrawText","8",280,195,20,"black"],
-            ["DrawText","8",210,490,20,"black"],
-            ["DrawText","2",130,490,20,"black"],
-            ["DrawText","1",280,270,20,"black"],
-            ["DrawText","2",280,355,20,"black"],
-            ["DrawText","1",550,470,20,"black"],
-            ["DrawText","2",550,510,20,"black"]
+            ["DrawText","8",185,490,20,"black"],
+            ["DrawText","1",280,275,20,"black"],
+            ["DrawText","2",280,365,20,"black"],
+            ["DrawText","1",530,455,20,"black"],
+            ["DrawText","2",530,505,20,"black"],
+            ["DrawText","2",115,490,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-3/vision/pic16.png"],
             ["DrawText","8",280,195,20,"black"],
-            ["DrawText","8",210,490,20,"black"],
-            ["DrawText","2",130,490,20,"black"],
-            ["DrawText","1",280,270,20,"black"],
-            ["DrawText","2",280,355,20,"black"],
-            ["DrawText","1",550,470,20,"black"],
-            ["DrawText","2",550,510,20,"black"]
+            ["DrawText","8",185,490,20,"black"],
+            ["DrawText","1",280,275,20,"black"],
+            ["DrawText","2",280,365,20,"black"],
+            ["DrawText","1",530,455,20,"black"],
+            ["DrawText","2",530,505,20,"black"],
+            ["DrawText","2",115,490,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-3/vision/pic17.png"],
             ["DrawText","8",280,195,20,"black"],
-            ["DrawText","8",210,490,20,"black"],
-            ["DrawText","2",130,490,20,"black"],
-            ["DrawText","1",280,270,20,"black"],
-            ["DrawText","2",280,355,20,"black"],
-            ["DrawText","1",550,470,20,"black"],
-            ["DrawText","2",550,510,20,"black"]
+            ["DrawText","8",185,490,20,"black"],
+            ["DrawText","1",280,275,20,"black"],
+            ["DrawText","2",280,365,20,"black"],
+            ["DrawText","1",530,455,20,"black"],
+            ["DrawText","2",530,505,20,"black"],
+            ["DrawText","2",115,490,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-3/vision/pic18.png"],

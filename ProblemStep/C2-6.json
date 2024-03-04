@@ -58,19 +58,22 @@
     ],
     "OperationInfo":[
         [
-            ["ImgBox",10,10,600,600,"C2-6/vision/pic1.png"]
+            ["ImgBox",10,10,600,600,"C2-6/vision/pic1.png"],
+            ["DrawText","input(\"請輸入半徑\")",430,145,14,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-6/vision/pic2.png"],
-            ["DrawText","\"3\"",460,200,20,"black"]
+            ["DrawText","input(\"請輸入半徑\")",430,145,14,"black"],
+            ["DrawText","\"3\"",470,190,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-6/vision/pic3.png"],
-            ["DrawText","3",460,200,20,"black"]
+            ["DrawText","int(\"3\")",430,145,14,"black"],
+            ["DrawText","3",470,190,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-6/vision/pic4.png"],
-            ["DrawText","3",460,200,20,"black"]
+            ["DrawText","3",470,190,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-6/vision/pic5.png"],

@@ -59,19 +59,22 @@
     ],
     "OperationInfo":[
         [
-            ["ImgBox",10,10,600,600,"C2-8/vision/pic1.png"]
+            ["ImgBox",10,10,600,600,"C2-8/vision/pic1.png"],
+            ["DrawText","input(\"請輸入呎：\")",430,145,14,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-8/vision/pic2.png"],
-            ["DrawText","\"6\"",430,195,20,"black"]
+            ["DrawText","input(\"請輸入呎：\")",430,145,14,"black"],
+            ["DrawText","\"6\"",450,190,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-8/vision/pic3.png"],
-            ["DrawText","6",430,195,20,"black"]
+            ["DrawText","int(\"6\")",430,145,14,"black"],
+            ["DrawText","6",450,190,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-8/vision/pic4.png"],
-            ["DrawText","6",430,195,20,"black"]
+            ["DrawText","6",450,190,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-8/vision/pic5.png"],
@@ -87,22 +90,25 @@
         ],
         [
             ["ImgBox",10,10,600,600,"C2-8/vision/pic8.png"],
+            ["DrawText","input(\"請輸入吋：\")",435,210,14,"black"],
             ["DrawText","6",270,185,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-8/vision/pic9.png"],
+            ["DrawText","input(\"請輸入吋：\")",435,210,14,"black"],
             ["DrawText","6",270,185,20,"black"],
-            ["DrawText","\"9\"",430,260,20,"black"]
+            ["DrawText","\"9\"",460,255,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-8/vision/pic10.png"],
+            ["DrawText","int(\"9\")",435,210,14,"black"],
             ["DrawText","6",270,185,20,"black"],
-            ["DrawText","9",430,260,20,"black"]
+            ["DrawText","9",460,255,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-8/vision/pic11.png"],
             ["DrawText","6",270,185,20,"black"],
-            ["DrawText","9",430,260,20,"black"]
+            ["DrawText","9",460,255,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-8/vision/pic12.png"],
@@ -125,15 +131,16 @@
             ["DrawText","9",270,250,20,"black"]
         ],
         [
-            ["ImgBox",10,10,600,600,"C2-8/vision/pic16.png"],
+            ["ImgBox",10,10,600,600,"C2-8/vision/pic15.png"],
             ["DrawText","6",270,185,20,"black"],
             ["DrawText","9",270,250,20,"black"],
             ["DrawText","6",250,485,20,"black"]
         ],
         [
-            ["ImgBox",10,10,600,600,"C2-8/vision/pic17.png"],
-            ["DrawText","72",270,185,20,"black"],
+            ["ImgBox",10,10,600,600,"C2-8/vision/pic16.png"],
+            ["DrawText","6",270,185,20,"black"],
             ["DrawText","9",270,250,20,"black"],
+            ["DrawText","72",270,315,20,"black"],
             ["DrawText","6",250,485,20,"black"],
             ["DrawText","72",160,485,20,"black"]
         ],
@@ -146,14 +153,14 @@
             ["ImgBox",10,10,600,600,"C2-8/vision/pic19.png"],
             ["DrawText","72",270,185,20,"black"],
             ["DrawText","9",270,250,20,"black"],
-            ["DrawText","9",260,485,20,"black"],
+            ["DrawText","9",265,485,20,"black"],
             ["DrawText","72",210,485,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-8/vision/pic20.png"],
             ["DrawText","72",270,185,20,"black"],
             ["DrawText","9",270,250,20,"black"],
-            ["DrawText","9",260,485,20,"black"],
+            ["DrawText","9",265,485,20,"black"],
             ["DrawText","72",210,485,20,"black"],
             ["DrawText","205.74",110,485,20,"black"],
             ["DrawText","205.74",260,320,20,"black"]
@@ -162,7 +169,7 @@
             ["ImgBox",10,10,600,600,"C2-8/vision/pic21.png"],
             ["DrawText","72",270,185,20,"black"],
             ["DrawText","9",270,250,20,"black"],
-            ["DrawText","9",260,485,20,"black"],
+            ["DrawText","9",265,485,20,"black"],
             ["DrawText","72",210,485,20,"black"],
             ["DrawText","205.74",110,485,20,"black"],
             ["DrawText","205.74",260,320,20,"black"]
@@ -171,7 +178,7 @@
             ["ImgBox",10,10,600,600,"C2-8/vision/pic22.png"],
             ["DrawText","72",270,185,20,"black"],
             ["DrawText","9",270,250,20,"black"],
-            ["DrawText","9",260,485,20,"black"],
+            ["DrawText","9",265,485,20,"black"],
             ["DrawText","72",210,485,20,"black"],
             ["DrawText","205.74",110,485,20,"black"],
             ["DrawText","205.74",260,320,20,"black"]

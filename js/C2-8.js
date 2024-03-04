@@ -12,19 +12,22 @@ var SoloArrowStep_SVG = [0,0,0,0,0,0,0,1,1,1,1,1,1,1,2,2,2,3,3,3,3,3,4];
 var SoloFlowStep_SVG = [0,0,0,0,0,0,0,1,1,1,1,1,1,1,2,2,2,3,3,3,3,3,4];
 var SoloOperationInfo=[
     [
-        ["ImgBox",10,10,600,600,"C2-8/vision/pic1.png"]
+        ["ImgBox",10,10,600,600,"C2-8/vision/pic1.png"],
+        ["DrawText","input(\"請輸入呎：\")",430,145,14,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-8/vision/pic2.png"],
-        ["DrawText","\"{InputBox1}\"",430,195,20,"black"]
+        ["DrawText","input(\"請輸入呎：\")",430,145,14,"black"],
+        ["DrawText","\"{InputBox1}\"",450,190,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-8/vision/pic3.png"],
-        ["DrawText","{InputBox1}",430,195,20,"black"]
+        ["DrawText","int(\"{InputBox1}\")",430,145,14,"black"],
+        ["DrawText","{InputBox1}",450,190,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-8/vision/pic4.png"],
-        ["DrawText","{InputBox1}",430,195,20,"black"]
+        ["DrawText","{InputBox1}",450,190,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-8/vision/pic5.png"],
@@ -40,22 +43,25 @@ var SoloOperationInfo=[
     ],
     [
         ["ImgBox",10,10,600,600,"C2-8/vision/pic8.png"],
+        ["DrawText","input(\"請輸入吋：\")",435,210,14,"black"],
         ["DrawText","{InputBox1}",270,185,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-8/vision/pic9.png"],
+        ["DrawText","input(\"請輸入吋：\")",435,210,14,"black"],
         ["DrawText","{InputBox1}",270,185,20,"black"],
-        ["DrawText","\"{InputBox2}\"",430,260,20,"black"]
+        ["DrawText","\"{InputBox2}\"",460,255,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-8/vision/pic10.png"],
+        ["DrawText","int(\"{InputBox2}\")",435,210,14,"black"],
         ["DrawText","{InputBox1}",270,185,20,"black"],
-        ["DrawText","{InputBox2}",430,260,20,"black"]
+        ["DrawText","{InputBox2}",460,255,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-8/vision/pic11.png"],
         ["DrawText","{InputBox1}",270,185,20,"black"],
-        ["DrawText","{InputBox2}",430,260,20,"black"]
+        ["DrawText","{InputBox2}",460,255,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-8/vision/pic12.png"],
@@ -78,15 +84,16 @@ var SoloOperationInfo=[
         ["DrawText","{InputBox2}",270,250,20,"black"]
     ],
     [
-        ["ImgBox",10,10,600,600,"C2-8/vision/pic16.png"],
+        ["ImgBox",10,10,600,600,"C2-8/vision/pic15.png"],
         ["DrawText","{InputBox1}",270,185,20,"black"],
         ["DrawText","{InputBox2}",270,250,20,"black"],
         ["DrawText","{InputBox1}",250,485,20,"black"]
     ],
     [
-        ["ImgBox",10,10,600,600,"C2-8/vision/pic17.png"],
-        ["DrawText","{Output1}",270,185,20,"black"],
+        ["ImgBox",10,10,600,600,"C2-8/vision/pic16.png"],
+        ["DrawText","{InputBox1}",270,185,20,"black"],
         ["DrawText","{InputBox2}",270,250,20,"black"],
+        ["DrawText","{Output1}",270,315,20,"black"],
         ["DrawText","{InputBox1}",250,485,20,"black"],
         ["DrawText","{Output1}",160,485,20,"black"]
     ],
@@ -99,14 +106,14 @@ var SoloOperationInfo=[
         ["ImgBox",10,10,600,600,"C2-8/vision/pic19.png"],
         ["DrawText","{Output1}",270,185,20,"black"],
         ["DrawText","{InputBox2}",270,250,20,"black"],
-        ["DrawText","{InputBox2}",260,485,20,"black"],
+        ["DrawText","{InputBox2}",265,485,20,"black"],
         ["DrawText","{Output1}",210,485,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-8/vision/pic20.png"],
         ["DrawText","{Output1}",270,185,20,"black"],
         ["DrawText","{InputBox2}",270,250,20,"black"],
-        ["DrawText","{InputBox2}",260,485,20,"black"],
+        ["DrawText","{InputBox2}",265,485,20,"black"],
         ["DrawText","{Output1}",210,485,20,"black"],
         ["DrawText","{Output3}",110,485,20,"black"],
         ["DrawText","{Output3}",260,320,20,"black"]
@@ -115,7 +122,7 @@ var SoloOperationInfo=[
         ["ImgBox",10,10,600,600,"C2-8/vision/pic21.png"],
         ["DrawText","{Output1}",270,185,20,"black"],
         ["DrawText","{InputBox2}",270,250,20,"black"],
-        ["DrawText","{InputBox2}",260,485,20,"black"],
+        ["DrawText","{InputBox2}",265,485,20,"black"],
         ["DrawText","{Output1}",210,485,20,"black"],
         ["DrawText","{Output3}",110,485,20,"black"],
         ["DrawText","{Output3}",260,320,20,"black"]
@@ -124,7 +131,7 @@ var SoloOperationInfo=[
         ["ImgBox",10,10,600,600,"C2-8/vision/pic22.png"],
         ["DrawText","{Output1}",270,185,20,"black"],
         ["DrawText","{InputBox2}",270,250,20,"black"],
-        ["DrawText","{InputBox2}",260,485,20,"black"],
+        ["DrawText","{InputBox2}",265,485,20,"black"],
         ["DrawText","{Output1}",210,485,20,"black"],
         ["DrawText","{Output3}",110,485,20,"black"],
         ["DrawText","{Output3}",260,320,20,"black"]
