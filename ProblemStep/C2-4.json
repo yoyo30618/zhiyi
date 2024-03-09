@@ -194,7 +194,6 @@
             ["DrawText","85.0",220,490,20,"black"],
             ["DrawText","77.2",290,490,20,"black"],
             ["DrawText","64.3",365,490,20,"black"],
-            ["DrawText","75.5",135,490,20,"black"],
             ["DrawText","75.5",270,375,20,"black"]
         ],
         [
@@ -205,7 +204,6 @@
             ["DrawText","85.0",220,490,20,"black"],
             ["DrawText","77.2",290,490,20,"black"],
             ["DrawText","64.3",365,490,20,"black"],
-            ["DrawText","75.5",135,490,20,"black"],
             ["DrawText","75.5",270,375,20,"black"]
         ],
         [

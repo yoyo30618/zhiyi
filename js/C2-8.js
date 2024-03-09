@@ -115,7 +115,6 @@ var SoloOperationInfo=[
         ["DrawText","{InputBox2}",270,250,20,"black"],
         ["DrawText","{InputBox2}",265,485,20,"black"],
         ["DrawText","{Output1}",210,485,20,"black"],
-        ["DrawText","{Output3}",110,485,20,"black"],
         ["DrawText","{Output3}",260,320,20,"black"]
     ],
     [
@@ -124,7 +123,6 @@ var SoloOperationInfo=[
         ["DrawText","{InputBox2}",270,250,20,"black"],
         ["DrawText","{InputBox2}",265,485,20,"black"],
         ["DrawText","{Output1}",210,485,20,"black"],
-        ["DrawText","{Output3}",110,485,20,"black"],
         ["DrawText","{Output3}",260,320,20,"black"]
     ],
     [

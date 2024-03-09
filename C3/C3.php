@@ -60,6 +60,27 @@
 											</button>
 										</h2>
 									</div>
+									<div class="accordion-item">
+										<h2 class="accordion-header" id="headingC3">
+											<button class="accordion-button collapsed" type="button" onclick="window.location.href='C3-4.php'">
+												C3-4 題目四
+											</button>
+										</h2>
+									</div>
+									<div class="accordion-item">
+										<h2 class="accordion-header" id="headingC3">
+											<button class="accordion-button collapsed" type="button" onclick="window.location.href='C3-5.php'">
+												C3-5 題目五
+											</button>
+										</h2>
+									</div>
+									<div class="accordion-item">
+										<h2 class="accordion-header" id="headingC3">
+											<button class="accordion-button collapsed" type="button" onclick="window.location.href='C3-6.php'">
+												C3-6 題目六
+											</button>
+										</h2>
+									</div>
 								</div>
 							</div>
 						</div>

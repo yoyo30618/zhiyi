@@ -99,15 +99,13 @@
             ["ImgBox",10,10,600,600,"C2-5/vision/pic10.png"],
             ["DrawText","10000",270,190,20,"black"],
             ["DrawText","44840.0",260,290,20,"black"],
-            ["DrawText","10000",250,440,20,"black"],
-            ["DrawText","44840.0",140,440,20,"black"]
+            ["DrawText","10000",250,440,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-5/vision/pic11.png"],
             ["DrawText","10000",270,190,20,"black"],
             ["DrawText","44840.0",260,290,20,"black"],
-            ["DrawText","10000",250,440,20,"black"],
-            ["DrawText","44840.0",140,440,20,"black"]
+            ["DrawText","10000",250,440,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-5/vision/pic12.png"],

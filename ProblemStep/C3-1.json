@@ -17,42 +17,40 @@
         "OperationInfo":"視覺化的內容"
     },
     "DefaultInput":{
-        "Input1":59,
-        "Input2":0,
-        "Input3":0,
+        "Input1":40,
+        "Input2":56,
+        "Input3":64,
         "Input4":0,
         "Input5":0
     },
     "DefaultOutput":{
-        "Output1":"及格",
-        "Output2":"不及格",
+        "Output1":52.800000000000004,
+        "Output2":0,
         "Output3":0,
         "Output4":0,
         "Output5":0
     },
-    "CodeStep":4,
-    "CodeStep_SVG":3,
+    "CodeStep":3,
+    "CodeStep_SVG":30,
     "Msg": [
-        "請輸入成績：{InputBox1}",
-        "請輸入成績：{Input1}分",
-        "請輸入成績：{Input1}分<br>{Output1}！",
-        "請輸入成績：{Input1}分<br>{Output2}！"
+        "請輸入作業分數：{InputBox1}",
+        "請輸入作業分數：{Input1}",
+        "請輸入作業分數：{Input1}<br>請輸入小考分數：{InputBox2}",
+        "請輸入作業分數：{Input1}<br>請輸入小考分數：{Input2}",
+        "請輸入作業分數：{Input1}<br>請輸入小考分數：{Input2}<br>請輸入期末考分數：{InputBox3}",
+        "請輸入作業分數：{Input1}<br>請輸入小考分數：{Input2}<br>請輸入期末考分數：{Input3}",
+        "請輸入作業分數：{Input1}<br>請輸入小考分數：{Input2}<br>請輸入期末考分數：{Input3}<br>學期總成績: {Output1} 分，不及格!",
+        "請輸入作業分數：{Input1}<br>請輸入小考分數：{Input2}<br>請輸入期末考分數：{Input3}<br>學期總成績: {Output1} 分，及格了!"
     ],
-    "MsgStep":[0,1,1,3],
-    "ArrowStep":[0,1,3,4],
+    "MsgStep":[0,1,2],
+    "ArrowStep":[0,1,2],
     "FlowStep":[0,1,4,5],
-    "OperationStep_SVG":[0,1,2,3],
-    "MsgStep_SVG":[0,1,2],
-    "ArrowStep_SVG":[0,1,2],
+    "OperationStep_SVG":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30],
+    "MsgStep_SVG":[0,1,1,1,1,1,1,2,3,3,3,3,3,3,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,6],
+    "ArrowStep_SVG":[0,0,0,0,0,0,0,1,1,1,1,1,1,1,2,2,2,2,2,2,2,3,3,3,3,3,4,6,6,7],
     "FlowStep_SVG":[0,1,2],
     "FlowPicPath":"../pic/C3-1",
     "FlowInfo1":[
-        ["grade={Input1}",290,140],
-        ["grade={Input1}",220,200],
-        ["grade={Input1}",360,220],
-        ["grade={Input1}",360,220],
-        ["grade={Input1}",220,310],
-        ["grade={Input1}",260,390]
     ], 
     "FlowInfo2":[
     ], 
@@ -64,28 +62,181 @@
     ],
     "OperationInfo":[
         [
-            ["DrawLine",10,10,30,30,"black"],
-            ["DrawText","步驟一耶黑",10,10,15,"black"]
+            ["ImgBox",10,10,600,600,"C3-1/vision/pic1.png"],
+            ["DrawText","input(\"請輸入作業分數：\") ",430,145,14,"black"]
         ],
         [
-            ["DrawLine",10,10,40,40,"black"],
-            ["DrawText","步驟二耶黑",10,20,15,"black"]
+            ["ImgBox",10,10,600,600,"C3-1/vision/pic2.png"],
+            ["DrawText","input(\"請輸入作業分數：\") ",430,145,14,"black"],
+            ["DrawText","\"40\"",450,190,18,"black"]
         ],
         [
-            ["DrawLine",10,10,50,50,"black"],
-            ["DrawText","步驟三耶黑",10,30,15,"black"]
+            ["ImgBox",10,10,600,600,"C3-1/vision/pic3.png"],
+            ["DrawText","int(\"40\")",430,145,14,"black"],
+            ["DrawText","40",450,190,18,"black"]
         ],
         [
-            ["DrawLine",10,10,60,60,"black"],
-            ["DrawText","步驟五耶黑",10,40,15,"black"]
+            ["ImgBox",10,10,600,600,"C3-1/vision/pic4.png"],
+            ["DrawText","40",450,190,18,"black"]
         ],
         [
-            ["DrawLine",10,10,60,60,"black"],
-            ["DrawText","步驟六耶黑",10,40,15,"black"]
+            ["ImgBox",10,10,600,600,"C3-1/vision/pic5.png"],
+            ["DrawText","40",280,195,18,"black"]
         ],
         [
-            ["DrawLine",10,10,60,60,"black"],
-            ["DrawText","步驟七耶黑",10,40,15,"black"]
+            ["ImgBox",10,10,600,600,"C3-1/vision/pic6.png"],
+            ["DrawText","40",280,195,18,"black"]
+        ],
+        [
+            ["ImgBox",10,10,600,600,"C3-1/vision/pic7.png"],
+            ["DrawText","40",280,195,18,"black"]
+        ],
+        [
+            ["ImgBox",10,10,600,600,"C3-1/vision/pic8.png"],
+            ["DrawText","input(\"請輸入小考分數：\") ",450,207,14,"black"],
+            ["DrawText","40",280,195,18,"black"]
+        ],
+        [
+            ["ImgBox",10,10,600,600,"C3-1/vision/pic9.png"],
+            ["DrawText","input(\"請輸入小考分數：\") ",450,207,14,"black"],
+            ["DrawText","40",280,195,18,"black"],
+            ["DrawText","\"56\"",480,250,18,"black"]
+        ],
+        [
+            ["ImgBox",10,10,600,600,"C3-1/vision/pic10.png"],
+            ["DrawText","int(\"56\")",450,207,14,"black"],
+            ["DrawText","40",280,195,18,"black"],
+            ["DrawText","56",480,250,18,"black"]
+        ],
+        [
+            ["ImgBox",10,10,600,600,"C3-1/vision/pic11.png"],
+            ["DrawText","40",280,195,18,"black"],
+            ["DrawText","56",480,250,18,"black"]
+        ],
+        [
+            ["ImgBox",10,10,600,600,"C3-1/vision/pic12.png"],
+            ["DrawText","40",280,195,18,"black"],
+            ["DrawText","56",280,255,18,"black"]
+        ],
+        [
+            ["ImgBox",10,10,600,600,"C3-1/vision/pic13.png"],
+            ["DrawText","40",280,195,18,"black"],
+            ["DrawText","56",280,255,18,"black"]
+        ],
+        [
+            ["ImgBox",10,10,600,600,"C3-1/vision/pic14.png"],
+            ["DrawText","40",280,195,18,"black"],
+            ["DrawText","56",280,255,18,"black"]
+        ],
+        [
+            ["ImgBox",10,10,600,600,"C3-1/vision/pic15.png"],
+            ["DrawText","40",280,195,18,"black"],
+            ["DrawText","56",280,255,18,"black"],
+            ["DrawText","input(\"請輸入期末考分數：\") ",450,270,14,"black"]
+        ],
+        [
+            ["ImgBox",10,10,600,600,"C3-1/vision/pic16.png"],
+            ["DrawText","40",280,195,18,"black"],
+            ["DrawText","56",280,255,18,"black"],
+            ["DrawText","input(\"請輸入期末考分數：\") ",450,270,14,"black"],
+            ["DrawText","\"64\"",480,320,18,"black"]
+        ],
+        [
+            ["ImgBox",10,10,600,600,"C3-1/vision/pic17.png"],
+            ["DrawText","40",280,195,18,"black"],
+            ["DrawText","56",280,255,18,"black"],
+            ["DrawText"," int(\"64\")",450,270,14,"black"],
+            ["DrawText","64",480,320,18,"black"]
+        ],
+        [
+            ["ImgBox",10,10,600,600,"C3-1/vision/pic18.png"],
+            ["DrawText","40",280,195,18,"black"],
+            ["DrawText","56",280,255,18,"black"],
+            ["DrawText","64",480,320,18,"black"]
+        ],
+        [
+            ["ImgBox",10,10,600,600,"C3-1/vision/pic19.png"],
+            ["DrawText","40",280,195,18,"black"],
+            ["DrawText","56",280,255,18,"black"],
+            ["DrawText","64",280,320,18,"black"]
+        ],
+        [
+            ["ImgBox",10,10,600,600,"C3-1/vision/pic20.png"],
+            ["DrawText","40",280,195,18,"black"],
+            ["DrawText","56",280,255,18,"black"],
+            ["DrawText","64",280,320,18,"black"]
+        ],
+        [
+            ["ImgBox",10,10,600,600,"C3-1/vision/pic21.png"],
+            ["DrawText","40",280,195,18,"black"],
+            ["DrawText","56",280,255,18,"black"],
+            ["DrawText","64",280,320,18,"black"]
+        ],
+        [
+            ["ImgBox",10,10,600,600,"C3-1/vision/pic22.png"],
+            ["DrawText","40",280,195,18,"black"],
+            ["DrawText","56",280,255,18,"black"],
+            ["DrawText","64",280,320,18,"black"]
+        ],
+        [
+            ["ImgBox",10,10,600,600,"C3-1/vision/pic23.png"],
+            ["DrawText","40",280,195,18,"black"],
+            ["DrawText","56",280,255,18,"black"],
+            ["DrawText","64",280,320,18,"black"],
+            ["DrawText","40",220,495,18,"black"],
+            ["DrawText","56",325,495,18,"black"],
+            ["DrawText","64",425,495,18,"black"]
+        ],
+        [
+            ["ImgBox",10,10,600,600,"C3-1/vision/pic24.png"],
+            ["DrawText","40",280,195,18,"black"],
+            ["DrawText","56",280,255,18,"black"],
+            ["DrawText","64",280,320,18,"black"],
+            ["DrawText","40",220,495,18,"black"],
+            ["DrawText","56",325,495,18,"black"],
+            ["DrawText","64",425,495,18,"black"],
+            ["DrawText","52.80...4",280,380,18,"black"]
+        ],
+        [
+            ["ImgBox",10,10,600,600,"C3-1/vision/pic25.png"],
+            ["DrawText","40",280,195,18,"black"],
+            ["DrawText","56",280,255,18,"black"],
+            ["DrawText","64",280,320,18,"black"],
+            ["DrawText","40",220,495,18,"black"],
+            ["DrawText","56",325,495,18,"black"],
+            ["DrawText","64",425,495,18,"black"],
+            ["DrawText","52.80...4",280,380,18,"black"]
+        ],
+        [
+            ["ImgBox",10,10,600,600,"C3-1/vision/pic26.png"],
+            ["DrawText","40",280,195,18,"black"],
+            ["DrawText","56",280,255,18,"black"],
+            ["DrawText","64",280,320,18,"black"],
+            ["DrawText","40",220,495,18,"black"],
+            ["DrawText","56",325,495,18,"black"],
+            ["DrawText","64",425,495,18,"black"],
+            ["DrawText","52.80...4",280,380,18,"black"],
+            ["DrawText","52.80...4",125,495,18,"black"]
+        ],
+        [
+            ["ImgBox",10,10,600,600,"C3-1/vision/pic27.png"],
+            ["DrawText","52.80...4",230,185,18,"black"]
+            
+        ],
+        [
+            ["ImgBox",10,10,600,600,"C3-1/vision/pic28.png"],
+            ["DrawText","52.80...4",230,185,18,"black"]
+            
+        ],
+        [
+            ["ImgBox",10,10,600,600,"C3-1/vision/pic29.png"],
+            ["DrawText","52.80...4",230,185,18,"black"]
+            
+        ],
+        [
+            ["ImgBox",10,10,600,600,"C3-1/vision/pic30.png"],
+            ["DrawText","學期總成績: 52.80...4 分，不及格!",190,250,14,"white"]
+            
         ]
     ]
 } 

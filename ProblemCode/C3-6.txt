@@ -1,0 +1,13 @@
+<table>
+	<tr><td style="background-color:lightblue">{Arrow}height = float(input("請輸入身高（公分）:"))</td></tr>
+	<tr><td style="background-color:lightblue">{Arrow}weight = float(input("請輸入體重（公斤）:"))</td></tr>
+    <tr><td style="background-color:#EAD1E7">{Arrow}bmi = weight / (height / 100) ** 2</td></tr>
+    <tr><td style="background-color:lightyellow">{Arrow}if bmi > 50 or bmi < 1:</td></tr>
+    <tr><td style="background-color:lightyellow">{Arrow}    {Output}print("輸入錯誤"){EndOutput}</td></tr>
+    <tr><td style="background-color:lightyellow">{Arrow}elif bmi < 18.5:</td></tr>
+    <tr><td style="background-color:lightyellow">{Arrow}    {Output}print("過輕"){EndOutput}</td></tr>
+    <tr><td style="background-color:lightyellow">{Arrow}elif 18.5 <= bmi < 24:</td></tr>
+    <tr><td style="background-color:lightyellow">{Arrow}    {Output}print("標準"){EndOutput}</td></tr>
+    <tr><td style="background-color:lightyellow">{Arrow}else:</td></tr>
+    <tr><td style="background-color:lightyellow">{Arrow}    {Output}print("過重"){EndOutput}</td></tr>
+</table>

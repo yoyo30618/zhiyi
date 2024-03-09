@@ -99,14 +99,12 @@
             ["ImgBox",10,10,600,600,"C2-2/vision/pic10.png"],
             ["DrawText","25.0",275,195,20,"black"],
             ["DrawText","25.0",305,460,20,"black"],
-            ["DrawText","77.0",160,455,20,"black"],
             ["DrawText","77.0",275,295,20,"black"]
         ],
         [
             ["ImgBox",10,10,600,600,"C2-2/vision/pic11.png"],
             ["DrawText","25.0",275,195,20,"black"],
             ["DrawText","25.0",305,460,20,"black"],
-            ["DrawText","77.0",160,455,20,"black"],
             ["DrawText","77.0",275,295,20,"black"]
         ],
         [

@@ -98,7 +98,6 @@ var SoloOperationInfo=[
         ["DrawText","{Output4}",250,465,20,"black"],
         ["DrawText","{Output3}",345,465,20,"black"],
         ["DrawText","{Output3}",410,465,20,"black"],
-        ["DrawText","{Output2}",160,465,20,"black"],
         ["DrawText","{Output2}",260,320,20,"black"]
     ],
     [
@@ -108,7 +107,6 @@ var SoloOperationInfo=[
         ["DrawText","{Output4}",250,465,20,"black"],
         ["DrawText","{Output3}",345,465,20,"black"],
         ["DrawText","{Output3}",410,465,20,"black"],
-        ["DrawText","{Output2}",160,465,20,"black"],
         ["DrawText","{Output2}",260,320,20,"black"]
     ],
     [

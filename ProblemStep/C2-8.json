@@ -162,7 +162,6 @@
             ["DrawText","9",270,250,20,"black"],
             ["DrawText","9",265,485,20,"black"],
             ["DrawText","72",210,485,20,"black"],
-            ["DrawText","205.74",110,485,20,"black"],
             ["DrawText","205.74",260,320,20,"black"]
         ],
         [
@@ -171,7 +170,6 @@
             ["DrawText","9",270,250,20,"black"],
             ["DrawText","9",265,485,20,"black"],
             ["DrawText","72",210,485,20,"black"],
-            ["DrawText","205.74",110,485,20,"black"],
             ["DrawText","205.74",260,320,20,"black"]
         ],
         [

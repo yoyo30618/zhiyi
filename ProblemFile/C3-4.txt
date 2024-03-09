@@ -1,0 +1,2 @@
+三角形是一個基本的幾何形狀，且有著神祕的特質，例如{If}{Hint1}構成三角形的條件必須為任兩邊相加要大於第三邊{EndHint1}{EndIf}。<br>
+請寫一個程式，讓{Input}{Hint2}使用者輸入三個邊長{EndHint2}{EndInput}，並判斷{Output}{Hint3}是否可以組成三角形{EndHint3}{EndOutput}。

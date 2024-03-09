@@ -1,0 +1,3 @@
+GOGO百貨週年慶「{If}{Hint1}全館八折，滿萬七折{EndHint1}{EndIf}」活動中，請{Input}{Hint2}讀取採購總金額{EndHint2}{EndInput}
+，{Operationstyle}{Hint3}計算折扣{EndHint3}{EndOperationstyle}，並{Output}{Hint4}顯示折扣後該收取的總金額{EndHint4}{EndOutput}。<br>
+例如：23456元滿萬打七折，應付16419.2元。9000元打八折，應付7200.0元

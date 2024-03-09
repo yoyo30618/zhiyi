@@ -54,15 +54,13 @@ var SoloOperationInfo=[
         ["ImgBox",10,10,600,600,"C2-5/vision/pic10.png"],
         ["DrawText","{InputBox1}",270,190,20,"black"],
         ["DrawText","{Output2}",260,290,20,"black"],
-        ["DrawText","{InputBox1}",250,440,20,"black"],
-        ["DrawText","{Output2}",140,440,20,"black"]
+        ["DrawText","{InputBox1}",250,440,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-5/vision/pic11.png"],
         ["DrawText","{InputBox1}",270,190,20,"black"],
         ["DrawText","{Output2}",260,290,20,"black"],
-        ["DrawText","{InputBox1}",250,440,20,"black"],
-        ["DrawText","{Output2}",140,440,20,"black"]
+        ["DrawText","{InputBox1}",250,440,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-5/vision/pic12.png"],

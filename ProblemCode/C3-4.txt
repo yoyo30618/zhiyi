@@ -1,0 +1,9 @@
+<table>
+	<tr><td style="background-color:lightblue">{Arrow}a = int(input("請輸入a邊長:"))</td></tr>
+	<tr><td style="background-color:lightblue">{Arrow}b = int(input("請輸入b邊長:"))</td></tr>
+	<tr><td style="background-color:lightblue">{Arrow}c = int(input("請輸入c邊長:"))</td></tr>
+	<tr><td style="background-color:lightyellow">{Arrow}if ((a+b>c) and (a+c>b) and (b+c>a)):</td></tr>
+	<tr><td style="background-color:lightyellow">{Arrow}   {Output}print("可以構成三角形"){EndOutput}</td></tr>
+	<tr><td style="background-color:lightyellow">{Arrow}else:</td></tr>
+	<tr><td style="background-color:lightyellow">{Arrow}   {Output}print("不能構成三角形"){EndOutput}</td></tr>
+</table>

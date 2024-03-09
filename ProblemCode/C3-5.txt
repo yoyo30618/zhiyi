@@ -1,0 +1,9 @@
+<table>
+	<tr><td style="background-color:lightblue">{Arrow}age = int(input("請輸入年齡:"))</td></tr>
+	<tr><td style="background-color:lightyellow">{Arrow}if (age >= 60):</td></tr>
+	<tr><td style="background-color:lightyellow">{Arrow}    {Output}print("票價150元"){EndOutput}</td></tr>
+	<tr><td style="background-color:lightyellow">{Arrow}elif (age >= 12):</td></tr>
+	<tr><td style="background-color:lightyellow">{Arrow}    {Output}print("票價200元"){EndOutput}</td></tr>
+	<tr><td style="background-color:lightyellow">{Arrow}else:</td></tr>
+	<tr><td style="background-color:lightyellow">{Arrow}    {Output}print("票價170元"){EndOutput}</td></tr>
+</table>

@@ -54,14 +54,12 @@ var SoloFlowStep_SVG = [0,0,0,0,1,1,1,1,2,2,2,2,2];
         ["ImgBox",10,10,600,600,"C2-2/vision/pic10.png"],
         ["DrawText","{Output2}",275,195,20,"black"],
         ["DrawText","{Output2}",305,460,20,"black"],
-        ["DrawText","{Output1}",160,455,20,"black"],
         ["DrawText","{Output1}",275,295,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-2/vision/pic11.png"],
         ["DrawText","{Output2}",275,195,20,"black"],
         ["DrawText","{Output2}",305,460,20,"black"],
-        ["DrawText","{Output1}",160,455,20,"black"],
         ["DrawText","{Output1}",275,295,20,"black"]
     ],
     [

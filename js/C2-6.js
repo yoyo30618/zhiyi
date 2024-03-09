@@ -54,15 +54,13 @@ var SoloOperationInfo=[
         ["ImgBox",10,10,600,600,"C2-6/vision/pic10.png"],
         ["DrawText","{InputBox1}",280,190,20,"black"],
         ["DrawText","{InputBox1}",250,460,20,"black"],
-        ["DrawText","{Output3}",280,255,20,"black"],
-        ["DrawText","{Output3}",145,460,20,"black"]
+        ["DrawText","{Output3}",280,255,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-6/vision/pic11.png"],
         ["DrawText","{InputBox1}",280,190,20,"black"],
         ["DrawText","{InputBox1}",250,460,20,"black"],
-        ["DrawText","{Output3}",280,255,20,"black"],
-        ["DrawText","{Output3}",145,460,20,"black"]
+        ["DrawText","{Output3}",280,255,20,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C2-6/vision/pic12.png"],
@@ -87,7 +85,6 @@ var SoloOperationInfo=[
         ["DrawText","{InputBox1}",280,190,20,"black"],
         ["DrawText","{InputBox1}",250,460,20,"black"],
         ["DrawText","{Output3}",280,255,20,"black"],
-        ["DrawText","{Output4}",145,460,20,"black"],
         ["DrawText","{Output4}",280,330,20,"black"]
     ],
     [
@@ -95,7 +92,6 @@ var SoloOperationInfo=[
         ["DrawText","{InputBox1}",280,190,20,"black"],
         ["DrawText","{InputBox1}",250,460,20,"black"],
         ["DrawText","{Output3}",280,255,20,"black"],
-        ["DrawText","{Output4}",145,460,20,"black"],
         ["DrawText","{Output4}",280,330,20,"black"]
     ],
     [

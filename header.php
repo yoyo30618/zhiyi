@@ -60,13 +60,22 @@
 									<a class="dropdown-item" href="<?php echo $parentDirectory; ?>C3/C3-0.php">選擇結構說明</a>
 								</li>
 								<li>
-									<a class="dropdown-item" href="<?php echo $parentDirectory; ?>C3/C3-1.php">題目一</a>
+									<a class="dropdown-item" href="<?php echo $parentDirectory; ?>C3/C3-1.php">C3-1 題目一</a>
 								</li>								
 								<li>
-									<a class="dropdown-item" href="<?php echo $parentDirectory; ?>C3/C3-2.php">題目二</a>
+									<a class="dropdown-item" href="<?php echo $parentDirectory; ?>C3/C3-2.php">C3-2 題目二</a>
 								</li>								
 								<li>
-									<a class="dropdown-item" href="<?php echo $parentDirectory; ?>C3/C3-3.php">題目三</a>
+									<a class="dropdown-item" href="<?php echo $parentDirectory; ?>C3/C3-3.php">C3-3 題目三</a>
+								</li>							
+								<li>
+									<a class="dropdown-item" href="<?php echo $parentDirectory; ?>C3/C3-4.php">C3-4 題目四</a>
+								</li>							
+								<li>
+									<a class="dropdown-item" href="<?php echo $parentDirectory; ?>C3/C3-5.php">C3-5 題目五</a>
+								</li>							
+								<li>
+									<a class="dropdown-item" href="<?php echo $parentDirectory; ?>C3/C3-6.php">C3-6 題目六</a>
 								</li>
 							</ul>
 						</li>						

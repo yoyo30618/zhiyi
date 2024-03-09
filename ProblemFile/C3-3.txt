@@ -1,0 +1,4 @@
+園子買了一台測謊機，想藉此試探新一對於小蘭是否有好感。<br>
+這台測謊機的運作機制會根據{Input}{Hint1}手掌出汗有無{EndHint1}{EndInput}{If}(1為出汗，0為無){EndIf}，以及{Input}心跳快慢{EndInput}{If}({Hint2}每分鐘高於80次則算快{EndHint2}){EndIf}，藉此判斷這個人{Output}{Hint3}是否有說謊{EndHint3}{EndOutput}。<br>
+輸入：手掌是否有出汗(1為出汗，0為無):1，每分鐘心跳速度:90<br>
+輸出：說謊
