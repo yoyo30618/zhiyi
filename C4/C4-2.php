@@ -98,13 +98,13 @@ LoadProblemCode($ThisPage,2);
 									</div>
 									<div class="tab-pane fade" id="flowchart" role="tabpanel" aria-labelledby="flowchart-tab">
 										<!-- 右側區塊的程式流程圖內容 -->
-										<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+										<svg width="700" height="700" xmlns="http://www.w3.org/2000/svg">
 											<defs>
 												<pattern id="image-bg" x="0" y="0" width="100%" height="100%" patternUnits="userSpaceOnUse">
-													<image id="flowpic" href="../pic/<?php echo $ThisPage;?>/stepALL.png" x="0" y="0" width="500" height="500" preserveAspectRatio="none" />
+													<image id="flowpic" href="../pic/<?php echo $ThisPage;?>/stepALL.png" x="0" y="0" width="700" height="700" preserveAspectRatio="none" />
 												</pattern>
 											</defs>
-											<rect x="0" y="0" width="500" height="500" fill="url(#image-bg)" /><!--流程圖底圖-->
+											<rect x="0" y="0" width="700" height="700" fill="url(#image-bg)" /><!--流程圖底圖-->
 											<text id='FlowInfo1' class='FlowInfo1' x="0" y="0" fill="black">FlowInfo1</text><!--流程圖提示資訊1-->
 											<text id='FlowInfo2' class='FlowInfo2' x="0" y="0" fill="black">FlowInfo2</text><!--流程圖提示資訊2-->
 											<text id='FlowInfo3' class='FlowInfo3' x="0" y="0" fill="black">FlowInfo3</text><!--流程圖提示資訊3-->

@@ -30,7 +30,7 @@
         "Output4":0,
         "Output5":0
     },
-    "CodeStep":3,
+    "CodeStep":5,
     "CodeStep_SVG":16,
     "Msg": [
         "請輸入消費金額：{InputBox1}",
@@ -38,14 +38,14 @@
         "請輸入消費金額：{Input1}<br>{Input1} 元滿萬打七折，應付 {Output1} 元",
         "請輸入消費金額：{Input1}<br>{Input1} 元打八折，應付 {Output1} 元"
     ],
-    "MsgStep":[0,1,2],
-    "ArrowStep":[0,1,2],
-    "FlowStep":[0,1,4,5],
+    "MsgStep":[0,1,1,1,2],
+    "ArrowStep":[0,1,1,2,3],
+    "FlowStep":[0,1,2,3,4],
     "OperationStep_SVG":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
     "MsgStep_SVG":  [0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2],
     "ArrowStep_SVG":[0,0,0,0,0,0,0,1,1,1,2,2,2,2,2,3],
-    "FlowStep_SVG":[0,1,2],
-    "FlowPicPath":"../pic/C3-1",
+    "FlowStep_SVG":[0,1,2,3,4],
+    "FlowPicPath":"../pic/C3-2",
     "FlowInfo1":[
     ], 
     "FlowInfo2":[

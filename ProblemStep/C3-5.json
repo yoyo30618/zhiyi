@@ -30,7 +30,7 @@
         "Output4":0,
         "Output5":0
     },
-    "CodeStep":3,
+    "CodeStep":5,
     "CodeStep_SVG":14,
     "Msg": [
         "請輸入年齡：{InputBox1}",
@@ -39,9 +39,9 @@
         "請輸入年齡：{Input1}<br>票價200元",
         "請輸入年齡：{Input1}<br>票價170元"
     ],
-    "MsgStep":[0,1,2],
-    "ArrowStep":[0,1,2],
-    "FlowStep":[0,1,4,5],
+    "MsgStep":[0,1,1,1,3],
+    "ArrowStep":[0,1,1,3,2],
+    "FlowStep":[0,1,4,5,6],
     "OperationStep_SVG":[0,1,2,3,4,5,6,7,8,9,10,11,12,13],
     "MsgStep_SVG":  [0,1,1,1,1,1,1 ,1,1,1 ,1,1,1,3],
     "ArrowStep_SVG":[0,0,0,0,0,0,0 ,1,1,1 ,3,3,3,4],
