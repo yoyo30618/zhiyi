@@ -79,12 +79,12 @@ function SetSolodata(){
     if (Number.isInteger(parsedValue)) {
         SoloOutput[2] = parsedValue.toFixed(1);
     } else {
-        SoloOutput[2] = parsedValue;
+        SoloOutput[2] = parsedValue.toFixed(1);
     }
     var parsedValue2 = parseFloat((9/5*(Number(SoloInput[1]))+32));
     if (Number.isInteger(parsedValue2)) {
         SoloOutput[1]=(9/5*(Number(SoloInput[1]))+32).toFixed(1);
     } else {
-        SoloOutput[1]=(9/5*(Number(SoloInput[1]))+32);
+        SoloOutput[1]=(9/5*(Number(SoloInput[1]))+32).toFixed(2)+"...";
     }
 }

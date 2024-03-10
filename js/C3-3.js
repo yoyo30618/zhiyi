@@ -101,8 +101,8 @@ var SoloOperationInfo=[
     ],
     [
         ["ImgBox",10,10,600,600,"C3-3/vision/pic19.png"],
-        ["DrawText","手掌是否有出汗(1為出汗，0為無):1",190,260,14,"white"],
-        ["DrawText","每分鐘心跳速度:90",190,280,14,"white"],
+        ["DrawText","手掌是否有出汗(1為出汗，0為無):{Input1}",190,260,14,"white"],
+        ["DrawText","每分鐘心跳速度:{Input2}",190,280,14,"white"],
         ["DrawText","說謊",190,300,14,"white"]
     ]//說謊TT結束
     ,[//沒說謊FF開始
@@ -127,8 +127,8 @@ var SoloOperationInfo=[
 ],
 [
     ["ImgBox",10,10,600,600,"C3-3/vision/pic24.png"],
-    ["DrawText","手掌是否有出汗(1為出汗，0為無):1",190,260,14,"white"],
-    ["DrawText","每分鐘心跳速度:90",190,280,14,"white"],
+    ["DrawText","手掌是否有出汗(1為出汗，0為無):{Input1}",190,260,14,"white"],
+    ["DrawText","每分鐘心跳速度:{Input2}",190,280,14,"white"],
     ["DrawText","沒說謊",190,300,14,"white"]
 ]//沒說謊FF結束
     ,[//沒說謊FT開始
@@ -153,8 +153,8 @@ var SoloOperationInfo=[
 ],
 [
     ["ImgBox",10,10,600,600,"C3-3/vision/pic29.png"],
-    ["DrawText","手掌是否有出汗(1為出汗，0為無):1",190,260,14,"white"],
-    ["DrawText","每分鐘心跳速度:90",190,280,14,"white"],
+    ["DrawText","手掌是否有出汗(1為出汗，0為無):{Input1}",190,260,14,"white"],
+    ["DrawText","每分鐘心跳速度:{Input2}",190,280,14,"white"],
     ["DrawText","沒說謊",190,300,14,"white"]
 ]//沒說謊FT結束
     ,[//沒說謊TF開始
@@ -179,8 +179,8 @@ var SoloOperationInfo=[
 ],
 [
     ["ImgBox",10,10,600,600,"C3-3/vision/pic34.png"],
-    ["DrawText","手掌是否有出汗(1為出汗，0為無):1",190,260,14,"white"],
-    ["DrawText","每分鐘心跳速度:90",190,280,14,"white"],
+    ["DrawText","手掌是否有出汗(1為出汗，0為無):{Input1}",190,260,14,"white"],
+    ["DrawText","每分鐘心跳速度:{Input2}",190,280,14,"white"],
     ["DrawText","沒說謊",190,300,14,"white"]
 ]//沒說謊TF結束
 ];
