@@ -1,6 +1,6 @@
 <table>
-	<tr><td style="background-color:lightblue">{Arrow}n = int(input("請輸入雞蛋總數："))</td></tr>
-	<tr><td style="background-color:#EAD1E7">{Arrow}b = n // 6</td></tr>
-	<tr><td style="background-color:#EAD1E7">{Arrow}r = n % 6</td></tr>
-	<tr><td style="background-color:lightpink">{Arrow}print("總共可以販售",b,"盒雞蛋，剩餘",r,"顆雞蛋")</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightblue">n = int(input("請輸入雞蛋總數："))</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:#EAD1E7">b = n // 6</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:#EAD1E7">r = n % 6</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightpink">print("總共可以販售",b,"盒雞蛋，剩餘",r,"顆雞蛋")</td></tr>
 </table>

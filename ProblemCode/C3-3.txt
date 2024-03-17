@@ -1,8 +1,8 @@
 <table>
-	<tr><td style="background-color:lightblue">{Arrow}hand = int(input("手掌是否有出汗(1為出汗，0為無):"))</td></tr>
-	<tr><td style="background-color:lightblue">{Arrow}heartbeat = int(input("每分鐘心跳速度:"))</td></tr>
-	<tr><td style="background-color:lightyellow">{Arrow}if hand == 1 and heartbeat >= 80:</td></tr>
-	<tr><td style="background-color:lightyellow">{Arrow}    {Output}print("說謊"){EndOutput}</td></tr>
-	<tr><td style="background-color:lightyellow">{Arrow}else:</td></tr>
-	<tr><td style="background-color:lightyellow">{Arrow}    {Output}print("沒說謊"){EndOutput}</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightblue">hand = int(input("手掌是否有出汗(1為出汗，0為無):"))</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightblue">heartbeat = int(input("每分鐘心跳速度:"))</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightyellow">if hand == 1 and heartbeat >= 80:</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightyellow">    {Output}print("說謊"){EndOutput}</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightyellow">else:</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightyellow">    {Output}print("沒說謊"){EndOutput}</td></tr>
 </table>

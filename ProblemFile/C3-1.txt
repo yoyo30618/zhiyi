@@ -1,4 +1,4 @@
 本學期期末成績計算比重分配如下：{Operationstyle}{Hint1}作業40%、小考20%、期末考40%{EndHint1}{EndOperationstyle}，請寫一個程式來計算學期的總成績。<br>
 輸入：請讓使用者分別{Input}{Hint2}輸入作業、小考、期末考分數{EndHint2}{EndInput}(假設都是整數)<br>
-輸出：請{Output}{Hint3}輸出期末的總成績{EndHint3}{EndOutput}，{If}如果學期總成績高於60分(含60){EndIf}，{Output}{Hint4}顯示"你及格了!"{EndHint4}{EndOutput}，<br>
+輸出：請{Output}{Hint3}輸出期末的總成績{EndHint3}{EndOutput}，{If}{Hint4}如果學期總成績高於60分(含60){EndHint4}{EndIf}，{Output}顯示"你及格了!"{EndOutput}，<br>
 反之學期總成績低於60分，則{Output}顯示"不及格!"{EndOutput} 

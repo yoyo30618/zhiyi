@@ -1,6 +1,6 @@
 <table>
-	<tr><td style="background-color:lightblue">{Arrow}h = float(input("請輸入身高(公尺):"))</td></tr>
-	<tr><td style="background-color:lightblue">{Arrow}w = float(input("請輸入體重:"))</td></tr>
-	<tr><td style="background-color:#EAD1E7">{Arrow}bmi = w/(h*h)</td></tr>
-	<tr><td style="background-color:lightpink">{Arrow}print("BMI為",bmi)</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightblue">h = float(input("請輸入身高(公尺):"))</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightblue">w = float(input("請輸入體重:"))</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:#EAD1E7">bmi = w/(h*h)</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightpink">print("BMI為",bmi)</td></tr>
 </table>

@@ -210,7 +210,9 @@ var SoloOperationInfo=[
 ];
 function SetSolodata(){
     SoloOutput[1]=Number(SoloInput[1])*0.4+Number(SoloInput[2])*0.2+Number(SoloInput[3])*0.4;
-    SoloOutput[2]=SoloOutput[1].toFixed(2)+"...";
+    if (Number.isInteger(SoloOutput[1]))SoloOutput[2]=SoloOutput[1].toFixed(1);
+    else SoloOutput[2]=Number(SoloInput[1]).toFixed(2)+"...";
+    if (Number.isInteger(SoloOutput[1]))SoloOutput[1]=SoloOutput[1].toFixed(1);
     if(Number(SoloInput[1])*0.4+Number(SoloInput[2])*0.2+Number(SoloInput[3])*0.4>=60){//及格
         SoloCodeStep = 7;
         SoloMsgStep=[0,2,4,5,5,5,7];

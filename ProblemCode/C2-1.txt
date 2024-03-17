@@ -1,5 +1,5 @@
 <table>
-	<tr><td style="background-color:lightblue">{Arrow}name = input("請輸入名字:")</td></tr>
-	<tr><td style="background-color:lightblue">{Arrow}num = int(input("請輸入座號:"))</td></tr>
-	<tr><td style="background-color:lightpink">{Arrow}print(name,num,"號")</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightblue">name = input("請輸入名字:")</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightblue">num = int(input("請輸入座號:"))</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightpink">print(name,num,"號")</td></tr>
 </table>

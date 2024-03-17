@@ -1,7 +1,7 @@
 <table>
-	<tr><td style="background-color:lightblue">{Arrow}feet = int(input("請輸入呎："))</td></tr>
-	<tr><td style="background-color:lightblue">{Arrow}inches = int(input("請輸入吋："))</td></tr>
-	<tr><td style="background-color:#EAD1E7">{Arrow}feet = feet * 12</td></tr>
-	<tr><td style="background-color:#EAD1E7">{Arrow}cm = (feet+inches) * 2.54</td></tr>
-	<tr><td style="background-color:lightpink">{Arrow}print(cm, "公分")</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightblue">feet = int(input("請輸入呎："))</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightblue">inches = int(input("請輸入吋："))</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:#EAD1E7">feet = feet * 12</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:#EAD1E7">cm = (feet+inches) * 2.54</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightpink">print(cm, "公分")</td></tr>
 </table>

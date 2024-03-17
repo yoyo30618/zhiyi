@@ -3,6 +3,7 @@
 		// 如果未定义 IN_INDEX 常量，表示未通过合法入口文件引入，终止脚本执行
 		exit('Access denied.');
 	}
+	$nowdir=basename(dirname($_SERVER['PHP_SELF']));
 ?>
 <div class="col-lg-2 bg-light menu-col">
 	<div class="accordion" id="courseAccordion">
@@ -12,7 +13,7 @@
 					C1 程式設計初探
 				</button>
 			</h2>
-			<div aria-labelledby="headingC1" class="accordion-collapse collapse" data-bs-parent="#courseAccordion" id="collapseC1">
+			<div aria-labelledby="headingC1" class="accordion-collapse collapse <?php if($nowdir==="C1") echo "show"; ?>" data-bs-parent="#courseAccordion" id="collapseC1" >
 				<div class="accordion-body">
 					<ul class="list-unstyled">
 						<li>
@@ -31,7 +32,7 @@
 					C2 循序結構
 				</button>
 			</h2>
-			<div aria-labelledby="headingC2" class="accordion-collapse collapse" data-bs-parent="#courseAccordion" id="collapseC2">
+			<div aria-labelledby="headingC2" class="accordion-collapse collapse <?php if($nowdir==="C2") echo "show"; ?>" data-bs-parent="#courseAccordion" id="collapseC2">
 				<div class="accordion-body">
 					<ul class="list-unstyled">
 						<li>
@@ -84,7 +85,7 @@
 					C3 選擇結構
 				</button>
 			</h2>
-			<div aria-labelledby="headingC3" class="accordion-collapse collapse" data-bs-parent="#courseAccordion" id="collapseC3">
+			<div aria-labelledby="headingC3" class="accordion-collapse collapse <?php if($nowdir==="C3") echo "show"; ?>" data-bs-parent="#courseAccordion" id="collapseC3">
 				<div class="accordion-body">
 					<ul class="list-unstyled">
 						<li>
@@ -132,7 +133,7 @@
 					C4 重複結構
 				</button>
 			</h2>
-			<div aria-labelledby="headingC4" class="accordion-collapse collapse" data-bs-parent="#courseAccordion" id="collapseC4">
+			<div aria-labelledby="headingC4" class="accordion-collapse collapse <?php if($nowdir==="C4") echo "show"; ?>" data-bs-parent="#courseAccordion" id="collapseC4">
 				<div class="accordion-body">
 					<ul class="list-unstyled">
 						<li>

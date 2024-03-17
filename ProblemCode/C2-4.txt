@@ -1,7 +1,7 @@
 <table>
-	<tr><td style="background-color:lightblue">{Arrow}Chinese = float(input("請輸入國文成績:"))</td></tr>
-	<tr><td style="background-color:lightblue">{Arrow}English = float(input("請輸入英文成績:"))</td></tr>
-	<tr><td style="background-color:lightblue">{Arrow}Math = float(input("請輸入數學成績:"))</td></tr>
-	<tr><td style="background-color:#EAD1E7">{Arrow}avg = (Chinese + English + Math) / 3</td></tr>
-	<tr><td style="background-color:lightpink">{Arrow}print("平均分數為:",avg)</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightblue">Chinese = float(input("請輸入國文成績:"))</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightblue">English = float(input("請輸入英文成績:"))</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightblue">Math = float(input("請輸入數學成績:"))</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:#EAD1E7">avg = (Chinese + English + Math) / 3</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightpink">print("平均分數為:",avg)</td></tr>
 </table>

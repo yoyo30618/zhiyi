@@ -1,4 +1,4 @@
 BMI 是身體質量指數 {Operationstyle}{Hint1}Body Mass Index=體重/(身高*身高){EndHint1}{EndOperationstyle}，我國成人BMI建議值為18.5~24。<br>
 請寫一個程式{Input}{Hint2}輸入身高體重{EndHint2}{EndInput}，顯示BMI，並{If}判斷個人BMI是否過輕、過重或符合標準{EndIf}，並{Output}{Hint3}輸出對應的結{EndHint3}{EndOutput}。<br>
 國民健康署建議BMI值：{If}BMI < 18.5{EndIf} {Output}過輕{EndOutput}；{If}18.5 ≤ BMI < 24{EndIf} {Output}標準{EndOutput}；{If}BMI ≥ 24{EndIf} {Output}過重{EndOutput}；<br>
-{If}BMI < 1 , BMI > 50{EndIf} {Output}{Hint4}輸入錯誤{EndHint4}{EndOutput}。
+{If}BMI < 1 ,{Hint4} BMI > 50{EndIf}{EndHint4} {Output}輸入錯誤{EndOutput}。

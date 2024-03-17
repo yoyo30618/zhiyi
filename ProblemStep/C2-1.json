@@ -37,7 +37,8 @@
         "請輸入名字：{Input1}",
         "請輸入名字：{Input1}<br>請輸入座號：{InputBox2}",
         "請輸入名字：{Input1}<br>請輸入座號：{Input2}",
-        "請輸入名字：{Input1}<br>請輸入座號：{Input2}<br>{Output1} 號"
+        "請輸入名字：{Input1}<br>請輸入座號：{Input2}<br>{Output1} 號",
+        "請輸入名字：{InputBoxTXT1}"
     ],
     "MsgStep":[0,2,4],
     "ArrowStep":[0,1,2],

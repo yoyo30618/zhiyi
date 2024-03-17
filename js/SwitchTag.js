@@ -63,38 +63,38 @@ function showStep(step) {
   }
 
   // 批量更新流程图提示信息
-  for (let i = 1; i <= CodeStep; i++) {
-    let flowInfoId = "FlowInfo" + i;
-    let flowInfoArray = eval("FlowInfo" + i); // 获取对应的 FlowInfo 数组
-    if(NowTagValue=="程式邏輯分析"){
-      newX = flowInfoArray[FlowStep_SVG[step]][1];
-      newY = flowInfoArray[FlowStep_SVG[step]][2];
-      newText = flowInfoArray[FlowStep_SVG[step]][0];
-    }
-    else{
-      newX = flowInfoArray[FlowStep[step]][1];
-      newY = flowInfoArray[FlowStep[step]][2];
-      newText = flowInfoArray[FlowStep[step]][0];
-    }
-    for (let i = 1; i <= 5; i++) {
-      const placeholder = "{Input" + i + "}";
-      const placeBoxholder = "{InputBox" + i + "}";
-      const placeoutholder = "{Output" + i + "}";
-      newText = newText.replace(
-        new RegExp(placeholder, "g"),
-        DefaultInput["Input" + i]
-      );
-      newText = newText.replace(
-        new RegExp(placeBoxholder, "g"),
-        DefaultInput["Input" + i]
-      );
-      newText = newText.replace(
-        new RegExp(placeoutholder, "g"),
-        DefaultOutput["Output" + i]
-      );
-    }
-    updateFlowInfo(flowInfoId, newX, newY, newText);
-  }
+  // for (let i = 1; i <= CodeStep; i++) {
+  //   let flowInfoId = "FlowInfo" + i;
+  //   let flowInfoArray = eval("FlowInfo" + i); // 获取对应的 FlowInfo 数组
+  //   if(NowTagValue=="程式邏輯分析"){
+  //     // newX = flowInfoArray[FlowStep_SVG[step]][1];
+  //     // newY = flowInfoArray[FlowStep_SVG[step]][2];
+  //     // newText = flowInfoArray[FlowStep_SVG[step]][0];
+  //   }
+  //   else{
+  //     // newX = flowInfoArray[FlowStep[step]][1];
+  //     // newY = flowInfoArray[FlowStep[step]][2];
+  //     // newText = flowInfoArray[FlowStep[step]][0];
+  //   }
+  //   for (let i = 1; i <= 5; i++) {
+  //     const placeholder = "{Input" + i + "}";
+  //     const placeBoxholder = "{InputBox" + i + "}";
+  //     const placeoutholder = "{Output" + i + "}";
+  //     newText = newText.replace(
+  //       new RegExp(placeholder, "g"),
+  //       DefaultInput["Input" + i]
+  //     );
+  //     newText = newText.replace(
+  //       new RegExp(placeBoxholder, "g"),
+  //       DefaultInput["Input" + i]
+  //     );
+  //     newText = newText.replace(
+  //       new RegExp(placeoutholder, "g"),
+  //       DefaultOutput["Output" + i]
+  //     );
+  //   }
+  //   updateFlowInfo(flowInfoId, newX, newY, newText);
+  // }
 }
 function showSoloStep(step) {
   SoloCurrentStep = step;
@@ -114,10 +114,19 @@ function showSoloStep(step) {
     for (let i = 1; i <= 5; i++) {
       const placeholder = "{Input" + i + "}";
       const placeBoxholder = "{InputBox" + i + "}";
+      const placeBoxholderTXT = "{InputBoxTXT" + i + "}";
       const placeoutholder = "{Output" + i + "}";
+      if( SoloInput[i]=="") SoloInput[i]="(錯誤)未輸入";
       NowMsg = NowMsg.replace(new RegExp(placeholder, "g"), SoloInput[i]);
       NowMsg = NowMsg.replace(
         new RegExp(placeBoxholder, "g"),
+        "<input id='SoloInput" +
+          i +
+          "' type='number'"+
+          "'>"
+      );
+      NowMsg = NowMsg.replace(
+        new RegExp(placeBoxholderTXT, "g"),
         "<input id='SoloInput" +
           i +
           "' type='text'"+
@@ -150,32 +159,33 @@ function showSoloStep(step) {
       flowInfoElement.textContent = newText;
     }
   }
-  for (let i = 1; i <= CodeStep; i++) {
-    let flowInfoId = "FlowInfo" + i;
-    let flowInfoArray = eval("FlowInfo" + i); // 获取对应的 FlowInfo 数组
-    if(NowTagValue=="程式邏輯分析"){
-      newX = flowInfoArray[SoloFlowStep_SVG[step]][1];
-      newY = flowInfoArray[SoloFlowStep_SVG[step]][2];
-      newText = flowInfoArray[SoloFlowStep_SVG[step]][0];
-    }
-    else{
-      newX = flowInfoArray[SoloFlowStep[step]][1];
-      newY = flowInfoArray[SoloFlowStep[step]][2];
-      newText = flowInfoArray[SoloFlowStep[step]][0];
-    }
-    for (let i = 1; i <= 5; i++) {
-      const placeholder = "{Input" + i + "}";
-      const placeBoxholder = "{InputBox" + i + "}";
-      const placeoutBoxholder = "{Output" + i + "}";
-      newText = newText.replace(new RegExp(placeholder, "g"), SoloInput[i]);
-      newText = newText.replace(new RegExp(placeBoxholder, "g"), SoloInput[i]);
-      newText = newText.replace(
-        new RegExp(placeoutBoxholder, "g"),
-        SoloOutput[i]
-      );
-    }
-    updateFlowInfo(flowInfoId, newX, newY, newText);
-  }
+  // for (let i = 1; i <= CodeStep; i++) {
+  //   let flowInfoId = "FlowInfo" + i;
+  //   let flowInfoArray = eval("FlowInfo" + i); // 获取对应的 FlowInfo 数组
+  //   if(NowTagValue=="程式邏輯分析"){
+  //     // newX = flowInfoArray[SoloFlowStep_SVG[step]][1];
+  //     // newY = flowInfoArray[SoloFlowStep_SVG[step]][2];
+  //     // newText = flowInfoArray[SoloFlowStep_SVG[step]][0];
+  //   }
+  //   else{
+  //     // newX = flowInfoArray[SoloFlowStep[step]][1];
+  //     // newY = flowInfoArray[SoloFlowStep[step]][2];
+  //     // newText = flowInfoArray[SoloFlowStep[step]][0];
+  //   }
+  //   for (let i = 1; i <= 5; i++) {
+  //     const placeholder = "{Input" + i + "}";
+  //     const placeBoxholder = "{InputBox" + i + "}";
+  //     const placeoutBoxholder = "{Output" + i + "}";
+  //     if( SoloInput[i]=="") SoloInput[i]="(錯誤)未輸入";
+  //     newText = newText.replace(new RegExp(placeholder, "g"), SoloInput[i]);
+  //     newText = newText.replace(new RegExp(placeBoxholder, "g"), SoloInput[i]);
+  //     newText = newText.replace(
+  //       new RegExp(placeoutBoxholder, "g"),
+  //       SoloOutput[i]
+  //     );
+  //   }
+  //   updateFlowInfo(flowInfoId, newX, newY, newText);
+  // }
 }
 // 初始化頁籤
 leftTabs.show();
@@ -216,7 +226,6 @@ window.onbeforeunload = function (event) {
   });
   ThisTagStartTime = Date.now();
   // 返回字符串值，顯示給用戶確認對話框
-  return "您確定要離開本頁面嗎？";
 };
 function hiddenArrowText() {
   var Arrows = document.querySelectorAll(".step-arrow");
@@ -262,37 +271,93 @@ document.getElementById("solo-next-btn").addEventListener("click", function () {
   if(NowTagValue=="程式邏輯分析"){
     if (SoloCurrentStep == SoloCodeStep_SVG - 1) showSoloStep(SoloCurrentStep);
     else{
+      Flag=true;
       //如果目前這一步  有輸入框 要記錄輸入框內容
       var SoloInput1 = document.getElementById("SoloInput1");
-      if (SoloInput1) SoloInput[1] = SoloInput1.value;
+      if (SoloInput1){ 
+        if(SoloInput1.value=="")
+          {alert("請檢查輸入格式");Flag=False;}
+        else
+          SoloInput[1] = SoloInput1.value;
+      }
       var SoloInput2 = document.getElementById("SoloInput2");
-      if (SoloInput2) SoloInput[2] = SoloInput2.value;
+      if (SoloInput2){ 
+        if(SoloInput2.value=="")
+          {alert("請檢查輸入格式");Flag=False;}
+        else
+          SoloInput[2] = SoloInput2.value;
+      }
       var SoloInput3 = document.getElementById("SoloInput3");
-      if (SoloInput3) SoloInput[3] = SoloInput3.value;
+      if (SoloInput3){ 
+        if(SoloInput3.value=="")
+          {alert("請檢查輸入格式");Flag=False;}
+        else
+          SoloInput[3] = SoloInput3.value;
+      }
       var SoloInput4 = document.getElementById("SoloInput4");
-      if (SoloInput4) SoloInput[4] = SoloInput4.value;
+      if (SoloInput4){ 
+        if(SoloInput4.value=="")
+          {alert("請檢查輸入格式");Flag=False;}
+        else
+          SoloInput[4] = SoloInput4.value;
+      }
       var SoloInput5 = document.getElementById("SoloInput5");
-      if (SoloInput5) SoloInput[5] = SoloInput5.value;
-      SetSolodata();
-      showSoloStep(SoloCurrentStep + 1);
+      if (SoloInput5){ 
+        if(SoloInput5.value=="")
+          {alert("請檢查輸入格式");Flag=False;}
+        else
+          SoloInput[5] = SoloInput5.value;
+      }
+      if(Flag){
+        SetSolodata();
+        showSoloStep(SoloCurrentStep + 1);
+      }
     }
   }
   else{
     if (SoloCurrentStep == SoloCodeStep - 1) showSoloStep(SoloCurrentStep);
     else {
+      Flag=true;
       //如果目前這一步  有輸入框 要記錄輸入框內容
       var SoloInput1 = document.getElementById("SoloInput1");
-      if (SoloInput1) SoloInput[1] = SoloInput1.value;
+      if (SoloInput1){ 
+        if(SoloInput1.value=="")
+          {alert("請檢查輸入格式");Flag=False;}
+        else
+          SoloInput[1] = SoloInput1.value;
+      }
       var SoloInput2 = document.getElementById("SoloInput2");
-      if (SoloInput2) SoloInput[2] = SoloInput2.value;
+      if (SoloInput2){ 
+        if(SoloInput2.value=="")
+          {alert("請檢查輸入格式");Flag=False;}
+        else
+          SoloInput[2] = SoloInput2.value;
+      }
       var SoloInput3 = document.getElementById("SoloInput3");
-      if (SoloInput3) SoloInput[3] = SoloInput3.value;
+      if (SoloInput3){ 
+        if(SoloInput3.value=="")
+          {alert("請檢查輸入格式");Flag=False;}
+        else
+          SoloInput[3] = SoloInput3.value;
+      }
       var SoloInput4 = document.getElementById("SoloInput4");
-      if (SoloInput4) SoloInput[4] = SoloInput4.value;
+      if (SoloInput4){ 
+        if(SoloInput4.value=="")
+          {alert("請檢查輸入格式");Flag=False;}
+        else
+          SoloInput[4] = SoloInput4.value;
+      }
       var SoloInput5 = document.getElementById("SoloInput5");
-      if (SoloInput5) SoloInput[5] = SoloInput5.value;
-      SetSolodata();
-      showSoloStep(SoloCurrentStep + 1);
+      if (SoloInput5){ 
+        if(SoloInput5.value=="")
+          {alert("請檢查輸入格式");Flag=False;}
+        else
+          SoloInput[5] = SoloInput5.value;
+      }
+      if(Flag){
+        SetSolodata();
+        showSoloStep(SoloCurrentStep + 1);
+      }
     }
   }
 });
@@ -535,6 +600,8 @@ document
       const left = currentLeftTab;
       const right = toTabText;
       const data = { left, right, page, lookTime };
+      if (left == "程式範例") showStep(0);
+      else showSoloStep(0);
       fetch("../save_visit_time.php", {
         // 使用fetch API將數據發送到伺服器端保存
         method: "POST",

@@ -1,7 +1,7 @@
 <table>
-	<tr><td style="background-color:lightblue">{Arrow}r = int(input("請輸入半徑"))</td></tr>
-	<tr><td style="background-color:#EAD1E7">{Arrow}area = (r ** 2) * 3.14</td></tr>
-	<tr><td style="background-color:#EAD1E7">{Arrow}c = r * 2 * 3.14</td></tr>
-	<tr><td style="background-color:lightpink">{Arrow}print("圓面積為", area)</td></tr>
-	<tr><td style="background-color:lightpink">{Arrow}print("圓周長為", c)</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightblue">r = int(input("請輸入半徑"))</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:#EAD1E7">area = (r ** 2) * 3.14</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:#EAD1E7">c = r * 2 * 3.14</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightpink">print("圓面積為", area)</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightpink">print("圓周長為", c)</td></tr>
 </table>

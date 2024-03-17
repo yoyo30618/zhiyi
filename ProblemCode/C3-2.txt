@@ -1,9 +1,9 @@
 <table>
-	<tr><td style="background-color:lightblue">{Arrow}cost = int(input("請輸入消費金額:"))</td></tr>
-	<tr><td style="background-color:lightyellow">{Arrow}if (cost >= 10000):</td></tr>
-	<tr><td style="background-color:lightyellow">{Arrow}    {Operationstyle}discount = cost * 0.7{EndOperationstyle}</td></tr>
-	<tr><td style="background-color:lightyellow">{Arrow}    {Output}print(cost, "元滿萬打七折，應付", discount, "元"){EndOutput}</td></tr>
-	<tr><td style="background-color:lightyellow">{Arrow}else:</td></tr>
-	<tr><td style="background-color:lightyellow">{Arrow}    {Operationstyle}discount = cost * 0.8{EndOperationstyle}</td></tr>
-	<tr><td style="background-color:lightyellow">{Arrow}    {Output}print(cost, "元打八折，應付", discount, "元"){EndOutput}</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightblue">cost = int(input("請輸入消費金額:"))</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightyellow">if (cost >= 10000):</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightyellow">    {Operationstyle}discount = cost * 0.7{EndOperationstyle}</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightyellow">    {Output}print(cost, "元滿萬打七折，應付", discount, "元"){EndOutput}</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightyellow">else:</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightyellow">    {Operationstyle}discount = cost * 0.8{EndOperationstyle}</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightyellow">    {Output}print(cost, "元打八折，應付", discount, "元"){EndOutput}</td></tr>
 </table>

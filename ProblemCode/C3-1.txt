@@ -1,10 +1,10 @@
 <table>
-	<tr><td style="background-color:lightblue">{Arrow}homework = int(input("請輸入作業分數："))</td></tr>
-	<tr><td style="background-color:lightblue">{Arrow}test = int(input("請輸入小考分數："))</td></tr>
-	<tr><td style="background-color:lightblue">{Arrow}exam = int(input("請輸入期末考分數："))</td></tr>
-	<tr><td style="background-color:#EAD1E7">{Arrow}score = homework*0.4 + test*0.2 + exam*0.4</td></tr>
-	<tr><td style="background-color:lightyellow">{Arrow}if score >= 60：</td></tr>
-	<tr><td style="background-color:lightyellow">{Arrow}    {Output}print("學期總成績：", score,"分，及格了!"){EndOutput}</td></tr>
-	<tr><td style="background-color:lightyellow">{Arrow}else：</td></tr>
-	<tr><td style="background-color:lightyellow">{Arrow}    {Output}print("學期總成績：", score,"分，不及格!"){EndOutput}</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightblue">homework = int(input("請輸入作業分數："))</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightblue">test = int(input("請輸入小考分數："))</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightblue">exam = int(input("請輸入期末考分數："))</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:#EAD1E7">score = homework*0.4 + test*0.2 + exam*0.4</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightyellow">if score >= 60：</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightyellow">    {Output}print("學期總成績：", score,"分，及格了!"){EndOutput}</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightyellow">else：</td></tr>
+	<tr><td>{Arrow}</td><td style="background-color:lightyellow">    {Output}print("學期總成績：", score,"分，不及格!"){EndOutput}</td></tr>
 </table>
