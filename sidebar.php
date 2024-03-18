@@ -18,7 +18,7 @@
 					<ul class="list-unstyled">
 						<li>
 							<button onclick="location.href='<?php echo $parentDirectory; ?>C1/C1-0.php'" aria-controls="collapseC1-0" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseC1-0" data-bs-toggle="collapse" type="button">
-								演算法是甚麼
+								演算法是什麼
 								<span class="visually-hidden">Toggle Button</span>
 							</button>
 						</li>

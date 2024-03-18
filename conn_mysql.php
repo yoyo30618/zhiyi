@@ -1,5 +1,5 @@
 <?php
-	$Env="Local"; //Server Local TELic
+	$Env="TELic"; //Server Local TELic
 	if($Env=="Server") $db_link=@mysqli_connect("127.0.0.1","yoyo30618","yoyo0516");
 	else if($Env=="Local") $db_link=@mysqli_connect("127.0.0.1","yoyo30618","yoyo0516");
 	else $db_link=@mysqli_connect("mariadb","root","yoyo0516");

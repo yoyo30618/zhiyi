@@ -18,7 +18,7 @@
 							<a class="dropdown-item dropdown-toggle d-inline d-lg-none" id="dropdown-submenu-1" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
 							<ul class="dropdown-menu dropdown-submenu" aria-labelledby="dropdown-submenu-1">
 								<li>
-									<a class="dropdown-item" href="<?php echo $parentDirectory; ?>C1/C1-0.php">演算法是甚麼?</a>
+									<a class="dropdown-item" href="<?php echo $parentDirectory; ?>C1/C1-0.php">演算法是什麼?</a>
 								</li>
 							</ul>
 						</li>						

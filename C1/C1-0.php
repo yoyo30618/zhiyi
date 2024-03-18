@@ -153,7 +153,7 @@
 										<button onclick="showContent(2)" class="btn btn-outline-dark">返回上個步驟</button>
 									</h2>
 									
-									<p><img src='../pic/question.png' width="40" height="40">想一想，為甚麼製作漢堡順序不一樣時，所產生的漢堡結果會不一樣呢?</p>
+									<p><img src='../pic/question.png' width="40" height="40">想一想，為什麼製作漢堡順序不一樣時，所產生的漢堡結果會不一樣呢?</p>
 									
 									<!-- 提問內容 -->
 									<textarea id="answer" class="form-control" rows="3" placeholder="請在這裡回答"></textarea>
