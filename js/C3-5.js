@@ -134,7 +134,7 @@ function SetSolodata(){
     SoloArrowStep_SVG =[0,0,0,0,0,0,0  ,1,1,1,2];
     SoloFlowStep_SVG = [0,1,2];
     }
-    else if(Number(SoloInput[1])>=12){//200(同範例)
+    else if(Number(SoloInput[1])>=13){//200(同範例)
         SoloCodeStep = 5;
         SoloMsgStep =   [0,1,1,1,3];
         SoloArrowStep = [0,1,3,3,4];

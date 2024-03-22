@@ -128,12 +128,20 @@
   background-color: #fff;
   cursor: pointer;
 }
+.Greatstep {
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  cursor: pointer;
+}
 .with-ingredient {
   background-color: yellow;
 }
 
 .stacked-images {
   position: relative;
+  width: 100% ;
 }
 
 .stacked-images img {
@@ -145,23 +153,23 @@
 }
 
 .stacked-images img:nth-child(2) {
-  transform: translateY(20%);
+  transform: translateY(12%);
   z-index: 5;
 }
 .stacked-images img:nth-child(3) {
-  transform: translateY(30%);
+  transform: translateY(24%);
   z-index: 4;
 }
 .stacked-images img:nth-child(4) {
-  transform: translateY(40%);
+  transform: translateY(36%);
   z-index: 3;
 }
 .stacked-images img:nth-child(5) {
-  transform: translateY(50%);
+  transform: translateY(48%);
   z-index: 2;
 }
 .stacked-images img:nth-child(6) {
-  transform: translateY(60%);
+  transform: translateY(65%);
   z-index: 1;
 }
 .tooltip-content {
@@ -223,4 +231,27 @@ td {
   white-space: nowrap;
   overflow: hidden;
   animation: typing 5s steps(50, end);
+}
+
+
+/* 自訂title提示框的樣式 */
+.tooltipX {
+  position: absolute;
+  z-index: 1;
+  background-color: #555;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 14px;
+  display: none; /* 預設隱藏 */
+}
+
+/* 滑鼠移到圖片時顯示提示框 */
+.ingredient-item:hover .tooltipX {
+  display: block;
+}
+
+/* 隱藏預設的title提示框 */
+.ingredient-item img[title] {
+  display: none;
 }

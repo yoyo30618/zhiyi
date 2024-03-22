@@ -14,5 +14,4 @@ window.onbeforeunload = function (event) {
     body: JSON.stringify(data),
   });
   // 返回字符串值，顯示給用戶確認對話框
-  return "您確定要離開本頁面嗎？";
 };
