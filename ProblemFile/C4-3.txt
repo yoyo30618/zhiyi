@@ -1,0 +1,2 @@
+請寫一個程式，讓使用者{Input}{Hint1}輸入a,b,c{EndHint1}{EndInput}，並利用{For}{Hint2}for迴圈從{EndHint2}{EndFor}{Output}{Hint3}a,a+c,a+2*c,....印到b{EndHint3}{EndOutput}。
+<br>如3 15 3，即印出3 6 9 12 15。

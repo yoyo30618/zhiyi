@@ -1,0 +1,2 @@
+請寫一個程式，讓使用者{Input}{Hint1}輸入整數n{EndHint1}{EndInput}，
+並利用{For}{Hint2}for迴圈從{EndHint2}{EndFor}{Output}{Hint3}1印到n中所有的奇數{EndHint3}{EndOutput}。

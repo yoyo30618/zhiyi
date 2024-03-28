@@ -1,16 +1,2 @@
-請設計一個程式，讓使用者可以自行
-    {Input}
-        輸入一個整數n
-    {EndInput}
-，並使用
-    {For}
-        for迴圈
-    {EndFor}
-    {Operationstyle}
-        算出1~n的和
-    {EndOperationstyle}
-並
-    {Output}
-        印出總和
-    {EndOutput}
-。
+請寫一個程式，讓使用者{Input}{Hint1}輸入整數n{EndHint1}{EndInput}，
+並利用{For}{Hint2}for迴圈從{EndHint2}{EndFor}{Output}{Hint3}1印到n{EndHint3}{EndOutput}。

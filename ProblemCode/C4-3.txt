@@ -1,0 +1,7 @@
+<table>
+	<tr><td>{Arrow}</td><td style="background-color:lightblue">a = int(input("請輸入a:"))</td></tr>
+    <tr><td>{Arrow}</td><td style="background-color:lightblue">b = int(input("請輸入b:"))</td></tr>
+    <tr><td>{Arrow}</td><td style="background-color:lightblue">c = int(input("請輸入c:"))</td></tr>
+    <tr><td>{Arrow}</td><td style="background-color:lightgreen">for i in range(a,b+1,c):</td></tr>
+    <tr><td>{Arrow}</td><td style="background-color:lightgreen">    {Output}print(i){EndOutput}</td></tr>
+</table>

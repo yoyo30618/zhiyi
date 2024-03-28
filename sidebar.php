@@ -152,8 +152,23 @@
 							</button>
 						</li>
 						<li>
-							<button onclick="location.href='<?php echo $parentDirectory; ?>C4/C4-3.php'"  aria-controls="collapseC4-2" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseC4-2" data-bs-toggle="collapse" type="button">
+							<button onclick="location.href='<?php echo $parentDirectory; ?>C4/C4-3.php'"  aria-controls="collapseC4-3" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseC4-3" data-bs-toggle="collapse" type="button">
 								題目三
+							</button>
+						</li>
+						<li>
+							<button onclick="location.href='<?php echo $parentDirectory; ?>C4/C4-4.php'"  aria-controls="collapseC4-4" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseC4-4" data-bs-toggle="collapse" type="button">
+								題目四
+							</button>
+						</li>
+						<li>
+							<button onclick="location.href='<?php echo $parentDirectory; ?>C4/C4-5.php'"  aria-controls="collapseC4-5" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseC4-5" data-bs-toggle="collapse" type="button">
+								題目五
+							</button>
+						</li>
+						<li>
+							<button onclick="location.href='<?php echo $parentDirectory; ?>C4/C4-6.php'"  aria-controls="collapseC4-6" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseC4-6" data-bs-toggle="collapse" type="button">
+								題目六
 							</button>
 						</li>
 					</ul>

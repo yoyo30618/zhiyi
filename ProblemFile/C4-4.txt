@@ -1,0 +1,2 @@
+請寫一個程式，讓使用者{Input}{Hint1}輸入任一整數n{EndHint1}{EndInput}，並利用{For}{Hint2}for迴圈{EndHint2}{EndFor}{Operationstyle}算出1~n的和{EndOperationstyle}
+，{Output}{Hint3}再將運算後的結果列印螢幕上{EndHint3}{EndOutput}。
