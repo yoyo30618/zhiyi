@@ -261,9 +261,10 @@ document.getElementById("next-btn").addEventListener("click", function () {
 document
   .getElementById("solo-previous-btn")
   .addEventListener("click", function () {
+    SoloCurrentStep=SoloCurrentStep-1;
     SetSolodata();
-    if (SoloCurrentStep == 0) showSoloStep(0);
-    else showSoloStep(SoloCurrentStep - 1);
+    if (SoloCurrentStep <= 0) showSoloStep(0);
+    else showSoloStep(SoloCurrentStep);
   });
 
 document.getElementById("solo-next-btn").addEventListener("click", function () {
@@ -309,8 +310,10 @@ document.getElementById("solo-next-btn").addEventListener("click", function () {
           SoloInput[5] = SoloInput5.value;
       }
       if(Flag){
+        
+        SoloCurrentStep =SoloCurrentStep + 1;
         SetSolodata();
-        showSoloStep(SoloCurrentStep + 1);
+        showSoloStep(SoloCurrentStep);
       }
     }
   }
@@ -355,8 +358,9 @@ document.getElementById("solo-next-btn").addEventListener("click", function () {
           SoloInput[5] = SoloInput5.value;
       }
       if(Flag){
+        SoloCurrentStep =SoloCurrentStep + 1;
         SetSolodata();
-        showSoloStep(SoloCurrentStep + 1);
+        showSoloStep(SoloCurrentStep);
       }
     }
   }
