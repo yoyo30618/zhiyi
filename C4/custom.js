@@ -1,6 +1,7 @@
 
 var currentArrow = 0;
 var currentLoopArrow = 0;
+let timerIds = [];
 function showContent(contentId) {
   // 隱藏所有內容區塊
   document.getElementById("content1").style.display = "none";
@@ -8,35 +9,41 @@ function showContent(contentId) {
   document.getElementById("content3").style.display = "none";
   document.getElementById("content4").style.display = "none";
   document.getElementById("Isanswered").style.display = "none";
+  var animateMotion = document.querySelector("#movingImage animateMotion");
+  console.log("停止動畫2");
+  animateMotion.endElement();
+  
 
   // 根據contentId參數顯示相應的內容區塊
   document.getElementById("content" + contentId).style.display = "block";
   if (contentId == 2) {
-	currentArrow = 0;
-	currentLoopArrow = 0;
-    toggleArrow();
-    var movingImage = document.getElementById("movingImage");
-    movingImage.setAttribute("visibility", "visible");
-    var animateMotion = document.querySelector("#movingImage animateMotion");
+	  currentArrow = 0;
+	  currentLoopArrow = 0;
+    console.log("開始動畫2");
     animateMotion.beginElement();
+    toggleArrow();
   }
   if (contentId == 3) {
-	currentArrow = 0;
-	currentLoopArrow = 0;
+    currentArrow = 0;
+    currentLoopArrow = 0;
     toggleLoopArrow();
-    var movingImage = document.getElementById("movingLoopImage");
-    movingImage.setAttribute("visibility", "visible");
-    var animateMotion = document.querySelector("#movingLoopImage animateMotion");
-    animateMotion.beginElement();
+    var video = document.getElementById("Content3Video");
+    video.play();
   }
 }
-function toggleArrow() {
-  var prevArrowElement = document.querySelector(
-    ".arrow" + (((currentArrow + 16) % 17) + 1)
-  );
-  if (prevArrowElement) {
-    prevArrowElement.style.visibility = "hidden";
+function clearAllTimeouts() {
+  for (let timerId of timerIds) {
+    clearTimeout(timerId);
   }
+  timerIds = [];// 清空定时器数组
+}
+function toggleArrow() {
+  var endImage = document.getElementById("endImage");
+  endImage.style.visibility = "hidden";
+  let prevArrowElements = document.querySelectorAll("[class^='arrow']");
+  prevArrowElements.forEach(element => {
+    element.style.visibility = "hidden";
+  });
 
   var currentArrowElement = document.querySelector(
     ".arrow" + ((currentArrow % 17) + 1)
@@ -46,37 +53,42 @@ function toggleArrow() {
   }
   currentArrow = currentArrow + 1;
   if (currentArrow < 17) {
-    setTimeout(toggleArrow, 1500);
+    clearAllTimeouts();
+    timerIds.push(setTimeout(toggleArrow, 1500));
   } else {
-    var endImage = document.getElementById("endImage");
-    endImage.setAttribute("visibility", "visible");
+    let prevArrowElements = document.querySelectorAll("[class^='arrow']");
+    prevArrowElements.forEach(element => {
+      element.style.visibility = "hidden";
+    });
+    currentArrowElement = document.querySelector(".arrow17");
+    currentArrowElement.style.visibility = "visible";
+    endImage.style.visibility = "visible";
   }
 }
 
 function toggleLoopArrow() {
-  var prevArrowElement = document.querySelector(
-    ".newarrow" + (((currentLoopArrow + 3) % 4) + 1)
-  );
-  if (prevArrowElement) prevArrowElement.style.visibility = "hidden";
+  let prevArrowElements = document.querySelectorAll("[class^='newarrow']");
+  prevArrowElements.forEach(element => {
+    element.style.visibility = "hidden";
+  });
+
   var currentArrowElement = document.querySelector(
     ".newarrow" + ((currentLoopArrow % 4) + 1)
   );
   if (currentArrowElement) currentArrowElement.style.visibility = "visible";
   currentLoopArrow = currentLoopArrow + 1;
-  if (currentLoopArrow < 17) setTimeout(toggleLoopArrow, 1500);
+  if (currentLoopArrow < 17){ 
+    clearAllTimeouts();
+    timerIds.push(setTimeout(toggleLoopArrow, 1500));
+  }
   else {
-	prevArrowElement = document.querySelector(".newarrow1");
-	prevArrowElement.style.visibility = "hidden";
-	prevArrowElement = document.querySelector(".newarrow2");
-	prevArrowElement.style.visibility = "hidden";
-	prevArrowElement = document.querySelector(".newarrow3");
-	prevArrowElement.style.visibility = "hidden";
-	prevArrowElement = document.querySelector(".newarrow4");
-	prevArrowElement.style.visibility = "hidden";
-	currentArrowElement = document.querySelector(".newarrow5");
-	currentArrowElement.style.visibility = "visible";
-    var endImage = document.getElementById("LoopendImage");
-    endImage.setAttribute("visibility", "visible");
+    let prevArrowElements = document.querySelectorAll("[class^='newarrow']");
+    prevArrowElements.forEach(element => {
+      element.style.visibility = "hidden";
+    });
+    currentArrowElement = document.querySelector(".newarrow5");
+    currentArrowElement.style.visibility = "visible";
+    endImage.style.visibility = "visible";
   }
 }
 

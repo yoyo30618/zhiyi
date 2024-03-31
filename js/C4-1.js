@@ -103,6 +103,8 @@ function SetSolodata() {
   SoloMsgStep_SVG = [0, 1, 1, 1, 1, 1, 1, 1, 1, 1];
   SoloArrowStep_SVG = [0, 0, 0, 0, 0, 0, 0, 1, 1];
 
+  SoloOperationStep_SVG=[];
+  for(var i=0;i<SoloCodeStep_SVG;i++)SoloOperationStep_SVG.push(i);
   for (var i = 1; i <= Cnt&&i<=7; i++) {
     SoloMsgStep_SVG.push(9);
     SoloMsgStep_SVG.push(9);
@@ -179,24 +181,29 @@ function SetSolodata() {
     SoloOperationInfo.push(Temp2);
   }
   SoloOutput[1] = "";
-  console.log(SoloCurrentStep);
-  if (SoloCurrentStep > 8) {
-    if(SoloCurrentStep==16){
-      SoloOutput[1] = "1<br>2<br>3<br>.....<br>";
+  console.log("SoloCodeStep_SVG:"+SoloCodeStep_SVG);
+  console.log("SoloCurrentStep:"+SoloCurrentStep);
+  console.log("Cnt:"+Cnt);
+  if (Cnt <= 7) {
+    for (var i = 1; i <= Cnt-Math.floor((SoloCodeStep_SVG-SoloCurrentStep)/2); i++) {
+      SoloOutput[1] = SoloOutput[1] + i + "<br>";
     }
-    else if(SoloCurrentStep>16){
-      SoloOutput[1] = "1<br>2<br>3<br>.....<br>";
-      for (var i = 0; i < (SoloCurrentStep - 17) / 2; i++) {
-        SoloOutput[1] = SoloOutput[1] + (Cnt-2+i) + "<br>";
+    
+  } 
+  else {
+    if (SoloCurrentStep > 8) {
+      if (SoloCurrentStep >= 16) {
+        for (var i = 1; i <= Cnt-Math.floor((SoloCodeStep_SVG-SoloCurrentStep)/2); i++) {
+          SoloOutput[1] = SoloOutput[1] + i + "<br>";
+        }
       }
-    }
-    else{
-      for (var i = 1; i <= (SoloCurrentStep - 8) / 2; i++) {
-        SoloOutput[1] = SoloOutput[1] + i + "<br>";
+       else {
+        for (var i = 1; i <= (SoloCurrentStep - 8) / 2; i++) {
+          SoloOutput[1] = SoloOutput[1] + i + "<br>";
+        }
       }
     }
   }
-
   SoloOutput[2] = "";
   if(Cnt<=7){
     for (var i = 1; i <= Cnt; i++) {

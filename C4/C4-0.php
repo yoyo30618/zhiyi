@@ -82,7 +82,7 @@
 												<image x="0" y="0" width="600" height="450" xlink:href="../pic/playground.png" />
 
 												<!-- 沿路径滑动的跑步人偶 -->
-												<image id="movingImage" x="0" y="0" width="50" height="50" xlink:href="../pic/runningman.png" visibility="hidden">
+												<image id="movingImage" x="0" y="0" width="50" height="50" xlink:href="../pic/runningman.png" visibility="visible">
 													<animateMotion dur="6s" repeatCount="4" fill="freeze">
 														<mpath href="#motionPath" />
 													</animateMotion>
@@ -113,23 +113,10 @@
 
 										</div>
 										<div class="col-lg-9 flow-section">
-
-
-											<svg id="animation" width="600" height="450">
-												<!-- 操场底图 -->
-												<image x="0" y="0" width="600" height="450" xlink:href="../pic/playground.png" />
-
-												<!-- 沿路径滑动的跑步人偶 -->
-												<image id="movingLoopImage" x="0" y="0" width="50" height="50" xlink:href="../pic/runningman.png" visibility="hidden">
-													<animateMotion dur="6s" repeatCount="4" fill="freeze">
-														<mpath href="#motionPath" />
-													</animateMotion>
-												</image>
-												<!-- 逆时针路径 -->
-												<path id="motionPath" d="M400,300 A50,50 0 0,0 400,50 L120,50 A50,50 0 0,0 120,300 L400,300" fill="transparent" stroke="none" />
-											    <image id="LoopendImage" x="450" y="330" width="100" height="100" xlink:href="../pic/finish.png" visibility="hidden" />
-
-											</svg>
+											<video  id="Content3Video" width="640" height="480">
+												<source src="../pic/Produce_0.mp4" type="video/mp4">
+												Your browser does not support the video tag.
+											</video>
 											<br><button onclick="showContent(4)" class="btn btn-primary">下一頁</button>
 										</div>	
 									</div>
@@ -139,7 +126,7 @@
 									<h2>
 										<img src='../pic/answer.png' width="40" height="40">
 										提問環節
-										<button onclick="showContent(2)" class="btn btn-outline-dark">返回上個步驟</button>
+										<button onclick="showContent(3)" class="btn btn-outline-dark">返回上個步驟</button>
 									</h2>
 									
 									<p><img src='../pic/question.png' width="40" height="40">想一想，使用迴圈來處理重複的程序有什麼優點呢?</p>
