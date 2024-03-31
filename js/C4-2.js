@@ -18,10 +18,10 @@ var SoloOperationStep_SVG = [
 ];
 var SoloCodeStep_SVG = 23;
 var SoloMsgStep_SVG = [
-  0, 1, 1, 1, 1, 1, 1, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9,
+  0, 1, 1, 1, 1, 1, 1, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
 ];
 var SoloArrowStep_SVG = [
-  0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2,
+  0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2
 ];
 var SoloFlowStep_SVG = [
   0, 1, 2, 3, 6, 7, 10, 11, 12, 13, 1, 2, 3, 6, 7, 10, 11, 12, 13, 1, 2, 3, 6,
@@ -98,7 +98,8 @@ function SetSolodata() {
   ]
   */
 
-  Cnt = Number(SoloInput[1]);
+  Cnt = Math.ceil(Number(SoloInput[1])/2);
+  console.log("Cnt:"+Cnt);
   SoloCodeStep_SVG = 9 + 2 * (Cnt>=7?7:Cnt); //輸入7步 每一次迴圈兩步
   SoloMsgStep_SVG = [0, 1, 1, 1, 1, 1, 1, 1, 1, 1];
   SoloArrowStep_SVG = [0, 0, 0, 0, 0, 0, 0, 1, 1];
@@ -106,8 +107,8 @@ function SetSolodata() {
   SoloOperationStep_SVG=[];
   for(var i=0;i<SoloCodeStep_SVG;i++)SoloOperationStep_SVG.push(i);
   for (var i = 1; i <= Cnt&&i<=7; i++) {
-    SoloMsgStep_SVG.push(9);
-    SoloMsgStep_SVG.push(9);
+    SoloMsgStep_SVG.push(6);
+    SoloMsgStep_SVG.push(6);
     SoloArrowStep_SVG.push(1);
     SoloArrowStep_SVG.push(2);
   }
@@ -186,20 +187,19 @@ function SetSolodata() {
   console.log("Cnt:"+Cnt);
   if (Cnt <= 7) {
     for (var i = 1; i <= Cnt-Math.floor((SoloCodeStep_SVG-SoloCurrentStep)/2); i++) {
-      SoloOutput[1] = SoloOutput[1] + i + "<br>";
+      SoloOutput[1] = SoloOutput[1] + Number(i*2-1) + "<br>";
     }
-    
   } 
   else {
     if (SoloCurrentStep > 8) {
       if (SoloCurrentStep >= 16) {
         for (var i = 1; i <= Cnt-Math.floor((SoloCodeStep_SVG-SoloCurrentStep)/2); i++) {
-          SoloOutput[1] = SoloOutput[1] + i + "<br>";
+          SoloOutput[1] = SoloOutput[1] + Number(i*2-1) + "<br>";
         }
       }
        else {
         for (var i = 1; i <= (SoloCurrentStep - 8) / 2; i++) {
-          SoloOutput[1] = SoloOutput[1] + i + "<br>";
+          SoloOutput[1] = SoloOutput[1] + Number(i*2-1) + "<br>";
         }
       }
     }
@@ -208,27 +208,27 @@ function SetSolodata() {
   if(Cnt<=7){
     for (var i = 1; i <= Cnt; i++) {
       if (i != 1) SoloOutput[2] = SoloOutput[2] + "　,　";
-      SoloOutput[2] = SoloOutput[2] + i;
+      SoloOutput[2] = SoloOutput[2] + (i*2-1);
     }
   }
   else{
     for (var i = 1; i <= 3; i++) {
       if (i != 1) SoloOutput[2] = SoloOutput[2] + "　,　";
-      SoloOutput[2] = SoloOutput[2] + i;
+      SoloOutput[2] = SoloOutput[2] + (i*2-1);
     }
     SoloOutput[2] = SoloOutput[2] + "　,　.....";
     for (var i = Cnt-2; i <= Cnt; i++) {
       if (i != 1) SoloOutput[2] = SoloOutput[2] + "　,  ";
-      SoloOutput[2] = SoloOutput[2] + i;
+      SoloOutput[2] = SoloOutput[2] + (i*2-1);
     }
   }
   SoloOutput[3] = 1;
   if(SoloCurrentStep>9)
-    SoloOutput[3] = Math.floor((SoloCurrentStep - 9) / 2)+1;
+    SoloOutput[3] = (Math.floor((SoloCurrentStep - 9) / 2)+1)*2-1;
   if(Cnt>7){
     if(SoloCurrentStep==15||SoloCurrentStep==16)
       SoloOutput[3] = "...";
     if(SoloCurrentStep>16)
-      SoloOutput[3] =  Cnt-Math.floor((SoloCodeStep_SVG-SoloCurrentStep+1)/2)+1;
+      SoloOutput[3] =  (Cnt+1)*2-Math.floor((SoloCodeStep_SVG-SoloCurrentStep+1)/2)*2-1;
   }
 }

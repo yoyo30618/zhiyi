@@ -277,7 +277,9 @@ document.getElementById("solo-next-btn").addEventListener("click", function () {
       var SoloInput1 = document.getElementById("SoloInput1");
       if (SoloInput1){ 
         if(SoloInput1.value=="")
-          {alert("請檢查輸入格式");Flag=False;}
+          {alert("請檢查輸入格式");Flag=False;}  
+        else if(Number(SoloInput1.value)<0)
+          {alert("請勿輸入負數");Flag=False;}
         else
           SoloInput[1] = SoloInput1.value;
       }
@@ -285,6 +287,8 @@ document.getElementById("solo-next-btn").addEventListener("click", function () {
       if (SoloInput2){ 
         if(SoloInput2.value=="")
           {alert("請檢查輸入格式");Flag=False;}
+        else if(Number(SoloInput2.value)<0)
+          {alert("請勿輸入負數");Flag=False;}
         else
           SoloInput[2] = SoloInput2.value;
       }
@@ -292,6 +296,8 @@ document.getElementById("solo-next-btn").addEventListener("click", function () {
       if (SoloInput3){ 
         if(SoloInput3.value=="")
           {alert("請檢查輸入格式");Flag=False;}
+        else if(Number(SoloInput3.value)<0)
+            {alert("請勿輸入負數");Flag=False;}
         else
           SoloInput[3] = SoloInput3.value;
       }
@@ -299,6 +305,8 @@ document.getElementById("solo-next-btn").addEventListener("click", function () {
       if (SoloInput4){ 
         if(SoloInput4.value=="")
           {alert("請檢查輸入格式");Flag=False;}
+        else if(Number(SoloInput4.value)<0)
+            {alert("請勿輸入負數");Flag=False;}
         else
           SoloInput[4] = SoloInput4.value;
       }
@@ -306,6 +314,8 @@ document.getElementById("solo-next-btn").addEventListener("click", function () {
       if (SoloInput5){ 
         if(SoloInput5.value=="")
           {alert("請檢查輸入格式");Flag=False;}
+        else if(Number(SoloInput5.value)<0)
+          {alert("請勿輸入負數");Flag=False;}
         else
           SoloInput[5] = SoloInput5.value;
       }
