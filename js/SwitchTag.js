@@ -543,11 +543,16 @@ function generateSvgContent(step, IsSolo) {
   //將目前步驟之SVG指令包裝
   var svgContent ='<svg width="700" height="700" xmlns="http://www.w3.org/2000/svg" id="your-svg-id">';
   if (IsSolo) {
-    for (var Operation of SoloOperationInfo[SoloOperationStep_SVG[step]])
+    var Temp=(step<SoloOperationStep_SVG.length)?step:0;
+    var Temp2=(Temp<SoloOperationInfo.length)?Temp:0;
+    for (var Operation of SoloOperationInfo[Temp2])
       svgContent+=AddSVG(Operation);
   } 
   else {
-    for (var Operation of OperationInfo[OperationStep_SVG[step]])
+    var Temp=(step<OperationStep_SVG.length)?step:0;
+    var Temp2=(Temp<OperationInfo.length)?Temp:0;
+    for (var Operation of OperationInfo[Temp2])
+    // for (var Operation of OperationInfo[OperationStep_SVG[(step>=length(OperationStep_SVG))?step:0]])
       svgContent+=AddSVG(Operation);
   }
   svgContent += "</svg>";
