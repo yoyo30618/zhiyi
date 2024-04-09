@@ -1,5 +1,5 @@
 請利用{For}{Hint1}for迴圈{EndHint1}{EndFor}設計一個程式。(1){Input}{Hint2}請輸入幾次考試?例如:5次{EndHint2}{EndInput}<br>
 (2){Input}{Hint3}則會輸入幾次考試成績(正整數){EndHint3}{EndInput}，並{Operationstyle}{Hint4}計算平均成績{EndHint4}{EndOperationstyle}，
-再{Output}{Hint5}輸出平均分數{EndHint5}{EndOutput}。(或輸入十次，須出現十個輸入)<br>
+再{Output}{Hint5}輸出平均分數{EndHint5}{EndOutput}。<br>
 輸入: 請輸入幾次考試: 5 考試成績: 90 考試成績: 89 考試成績: 88 考試成績:87 考試成績: 86<br>
 輸出：平均為88分

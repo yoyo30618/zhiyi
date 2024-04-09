@@ -185,8 +185,12 @@ if(SoloCurrentStep>21){
     console.log("Temp:"+Temp);
     Cnt = Math.floor((Temp-Number(SoloInput[1]))/Number(SoloInput[3]))+1;//迴圈要跑幾次
 }
-  Cnt = isNaN(Cnt) ? 5 : Cnt;
+Cnt = isNaN(Cnt) ? 5 : Cnt;
+
   console.log("Cnt:"+Cnt);
+  
+  if(Cnt>=5&&SoloCurrentStep==27)SoloCurrentStep=29;//跳過點點點的步驟
+  if(Cnt>=5&&SoloCurrentStep==28)SoloCurrentStep=26;//跳過點點點的步驟
   SoloCodeStep_SVG = 23 + 2 * (Cnt>=5?5:Cnt); //輸入步 每一次迴圈兩步
   
   SoloMsgStep_SVG =   [0,1,1,1,1,1,1,2,3,3,3,3,3,3,4,5,5,5,5,5,5,5,5];

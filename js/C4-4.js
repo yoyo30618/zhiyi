@@ -236,6 +236,8 @@ function SetSolodata() {
   Cnt = Number(SoloInput[1]);//迴圈要跑幾次
   Cnt = isNaN(Cnt) ? 6 : Cnt;
   console.log("Cnt:"+Cnt);
+  if(Cnt>=6&&SoloCurrentStep==21)SoloCurrentStep=24;//跳過點點點的步驟
+  if(Cnt>=6&&SoloCurrentStep==23)SoloCurrentStep=20;//跳過點點點的步驟
   SoloCodeStep_SVG = 13 + 3 * (Cnt>=6?6:Cnt); //輸入步 每一次迴圈3步
   
   SoloMsgStep_SVG =   [0,1,1,1,1,1,1,1,1,1,1,1];

@@ -100,6 +100,8 @@ function SetSolodata() {
 
   Cnt = Math.ceil(Number(SoloInput[1])/2);
   console.log("Cnt:"+Cnt);
+  if(Cnt>=7&&SoloCurrentStep==15)SoloCurrentStep=17;//跳過點點點的步驟
+  if(Cnt>=7&&SoloCurrentStep==16)SoloCurrentStep=14;//跳過點點點的步驟
   SoloCodeStep_SVG = 9 + 2 * (Cnt>=7?7:Cnt); //輸入7步 每一次迴圈兩步
   SoloMsgStep_SVG = [0, 1, 1, 1, 1, 1, 1, 1, 1, 1];
   SoloArrowStep_SVG = [0, 0, 0, 0, 0, 0, 0, 1, 1];
