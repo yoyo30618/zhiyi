@@ -1,10 +1,11 @@
 var SoloCurrentStep = 0; // 目前顯示的步驟
 var SoloInput = [];
 var SoloOutput = [0, 0, 0, 0, 0, 0];
-var SoloCodeStep = 10;
-var SoloMsgStep =   [0,1,1,1,1,1,1,2,3,3,3,3,3,3,4,5,5,5,5,5,5 ,5,5 ,5,6 ,6,7 ,7,8 ,8,9 ,9,10];
-var SoloArrowStep = [0,0,0,0,0,0,0,1,1,1,1,1,1,1,2,2,2,2,2,2,2 ,3,3 ,3,4 ,3,4 ,3,4 ,3,4 ,3,4];
-var SoloFlowStep = [0,1,2,3,6,7,10,11,12,13];
+var SoloCodeStep = 21;
+var SoloMsgStep =   [0,2,4,5,5,5,5,12,12,12,12,12,12,12,12,12,12,12,12,12,12];
+var SoloArrowStep = [0,1,2,3,3,3,3,4,3,3,4,3,3,4,3,3,4,3,3,4,3];
+var SoloFlowStep = [0,1,2,3,4,5,6,7,5,6,7,5,6,7,5,6,7,5,6,7,8];
+
 var SoloOperationStep_SVG = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32];
 var SoloCodeStep_SVG = 33;
 var SoloMsgStep_SVG =   [0,1,1,1,1,1,1,2,3,3,3,3,3,3,4,5,5,5,5,5,5 ,5,5 ,5,6 ,6,7 ,7,8 ,8,9 ,9,10];
@@ -177,7 +178,10 @@ function SetSolodata() {
   ]
   */
 Cnt=0;
-if(SoloCurrentStep>21){
+if(SoloCurrentStep>1){
+    SoloInput[1] = isNaN(SoloInput[1]) ? 1 : SoloInput[1];
+    SoloInput[2] = isNaN(SoloInput[2]) ? 1 : SoloInput[2];
+    SoloInput[3] = isNaN(SoloInput[3]) ? 1 : SoloInput[3];
     var Temp = Number(SoloInput[2]);
     while ((Temp - Number(SoloInput[1])) % Number(SoloInput[3]) != 0) {
       Temp -= 1; //最後一個數字
@@ -195,6 +199,28 @@ Cnt = isNaN(Cnt) ? 5 : Cnt;
   
   SoloMsgStep_SVG =   [0,1,1,1,1,1,1,2,3,3,3,3,3,3,4,5,5,5,5,5,5,5,5];
   SoloArrowStep_SVG = [0,0,0,0,0,0,0,1,1,1,1,1,1,1,2,2,2,2,2,2,2,3,3];
+
+  SoloCodeStep = 6 + 3 * (Cnt>=5?5:Cnt); //輸入步 每一次迴圈兩步
+  SoloMsgStep =   [0,2,4,5,5];
+  SoloArrowStep = [0,1,2,3,3];
+  SoloFlowStep =  [0,1,2,3,4];
+
+
+  for (var i = 1; i <= Cnt&&i<=5; i++) {
+    SoloMsgStep.push(12);
+    SoloMsgStep.push(12);
+    SoloMsgStep.push(12);
+    SoloArrowStep.push(3);
+    SoloArrowStep.push(3);
+    SoloArrowStep.push(4);
+    SoloFlowStep.push(5);
+    SoloFlowStep.push(6);
+    SoloFlowStep.push(7);
+  }
+  SoloArrowStep.push(3);
+  SoloFlowStep.push(8);
+  SoloMsgStep.push(12);
+
 
   SoloOperationStep_SVG=[];
   for(var i=0;i<SoloCodeStep_SVG;i++)SoloOperationStep_SVG.push(i);
@@ -466,5 +492,28 @@ Cnt = isNaN(Cnt) ? 5 : Cnt;
         if(SoloCurrentStep==31||SoloCurrentStep==32||SoloCurrentStep==33)
             SoloOutput[3] = Number(Temp);
     }
-  }        
+   }    
+   
+  SoloOutput[5]="";
+  //為了流程圖
+  if (Cnt <= 5) {
+    for (var i = 0; i < Math.floor((SoloCurrentStep-4)/3); i++) {
+      SoloOutput[5] = SoloOutput[5] + Number(Number(SoloInput[1])+Number(SoloInput[3])*i) + "<br>";
+    }
+  } 
+  else {
+    if (SoloCurrentStep > 4) {
+      if (SoloCurrentStep >= 13) {//印到底
+        for (var i = 0; i <= Cnt-Math.floor((SoloCodeStep-SoloCurrentStep)/3)-1; i++) {
+          SoloOutput[5] = SoloOutput[5] + Number(Number(SoloInput[1])+Number(SoloInput[3])*i) + "<br>";
+        }
+      }
+       else {
+        for (var i = 0; i < Math.floor((SoloCurrentStep-4)/3); i++) {
+          SoloOutput[5] = SoloOutput[5] + Number(Number(SoloInput[1])+Number(SoloInput[3])*i) + "<br>";
+        }
+      }
+    }
+  }
+  if(SoloCurrentStep<7)SoloOutput[5]="";    
 }

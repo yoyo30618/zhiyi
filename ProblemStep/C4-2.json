@@ -39,7 +39,8 @@
         "請輸入n:{Input1}<br>1<br>3",
         "請輸入n:{Input1}<br>1<br>3<br>5",
         "請輸入n:{Input1}<br>1<br>3<br>5<br>7",
-        "請輸入n:{Input1}<br>{Output1}"
+        "請輸入n:{Input1}<br>{Output1}",
+        "請輸入n:{Input1}<br>{Output5}"
     ],
     "MsgStep":  [0,1,1,1,1,2,2,2,3,3,3,4,4,4,5,5],
     "ArrowStep":[0,1,1,1,1,2,1,1,2,1,1,2,1,1,2,1],

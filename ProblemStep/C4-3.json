@@ -44,7 +44,8 @@
         "請輸入a:{Input1}<br>請輸入b:{Input2}<br>請輸入c:{Input3}<br>3<br>6<br>9",
         "請輸入a:{Input1}<br>請輸入b:{Input2}<br>請輸入c:{Input3}<br>3<br>6<br>9<br>12",
         "請輸入a:{Input1}<br>請輸入b:{Input2}<br>請輸入c:{Input3}<br>3<br>6<br>9<br>12<br>15",
-        "請輸入a:{Input1}<br>請輸入b:{Input2}<br>請輸入c:{Input3}<br>{Output1}"
+        "請輸入a:{Input1}<br>請輸入b:{Input2}<br>請輸入c:{Input3}<br>{Output1}",
+        "請輸入a:{Input1}<br>請輸入b:{Input2}<br>請輸入c:{Input3}<br>{Output5}"
     ],
     "MsgStep":  [0,2,4,5,5,5,5,6,6,6,7,7,7,8,8,8,9,9,9,10,10],
     "ArrowStep":[0,1,2,3,3,3,3,4,3,3,4,3,3,4,3,3,4,3,3,4,3],
