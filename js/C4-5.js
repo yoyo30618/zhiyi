@@ -1,10 +1,10 @@
 var SoloCurrentStep = 0; // 目前顯示的步驟
 var SoloInput = [];
 var SoloOutput = [0, 0, 0, 0, 0, 0];
-var SoloCodeStep = 10;
-var SoloMsgStep =    [0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2];
-var SoloArrowStep =  [0,0,0,0,0,0,0,1,1,1,2,2,2,3,3,2,3,3,2,3,3,2,3,3,2,3,3,4];
-var SoloFlowStep = [0,1,2,3,6,7,10,11,12,13];
+var SoloCodeStep = 21;
+var SoloMsgStep =    [0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2];
+var SoloArrowStep =  [0,1,2,2,2,2,3,2,2,3,2,2,3,2,2,3,2,2,3,2,4];
+var SoloFlowStep =   [0,1,2,3,4,5,6,4,5,6,4,5,6,4,5,6,4,5,6,7,8];
 var SoloOperationStep_SVG = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27];
 var SoloCodeStep_SVG = 28;
 var SoloMsgStep_SVG =   [0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2];
@@ -235,11 +235,57 @@ function SetSolodata() {
   
   Cnt = Math.floor(Number(SoloInput[1])/2);//迴圈要跑幾次
   Cnt = isNaN(Cnt) ? 6 : Cnt;
-  if(Cnt>=6&&SoloCurrentStep==21)SoloCurrentStep=24;//跳過點點點的步驟
-  if(Cnt>=6&&SoloCurrentStep==23)SoloCurrentStep=20;//跳過點點點的步驟
+  if(Cnt>6&&SoloCurrentStep==21)SoloCurrentStep=24;//跳過點點點的步驟
+  if(Cnt>6&&SoloCurrentStep==23)SoloCurrentStep=20;//跳過點點點的步驟
   console.log("Cnt:"+Cnt);
   SoloCodeStep_SVG = 13 + 3 * (Cnt>=6?6:Cnt); //輸入步 每一次迴圈3步
   
+  if(Cnt<=6){
+    SoloCodeStep = 6+3*Cnt;
+    SoloMsgStep =    [0,1,1,1];
+    SoloArrowStep =  [0,1,2,2];
+    SoloFlowStep =   [0,1,2,3];
+    for (var i = 1; i <= Cnt; i++) {
+        SoloMsgStep.push(1);
+        SoloMsgStep.push(1);
+        SoloMsgStep.push(1);
+        SoloArrowStep.push(2);
+        SoloArrowStep.push(2);
+        SoloArrowStep.push(3);
+        SoloFlowStep.push(4);
+        SoloFlowStep.push(5);
+        SoloFlowStep.push(6);
+    }
+    SoloMsgStep.push(1);
+    SoloMsgStep.push(2);
+    SoloArrowStep.push(2);
+    SoloArrowStep.push(4);
+    SoloFlowStep.push(7);
+    SoloFlowStep.push(8);
+}
+else{
+    SoloCodeStep = 6+3*(Cnt>=6?6:Cnt);
+    SoloMsgStep =    [0,1,1,1];
+    SoloArrowStep =  [0,1,2,2];
+    SoloFlowStep =   [0,1,2,3];
+    for (var i = 1; i <= (Cnt>5?5:Cnt); i++) {
+        SoloMsgStep.push(1);
+        SoloMsgStep.push(1);
+        SoloMsgStep.push(1);
+        SoloArrowStep.push(2);
+        SoloArrowStep.push(2);
+        SoloArrowStep.push(3);
+        SoloFlowStep.push(4);
+        SoloFlowStep.push(5);
+        SoloFlowStep.push(6);
+    }
+    SoloMsgStep.push(1);
+    SoloMsgStep.push(2);
+    SoloArrowStep.push(2);
+    SoloArrowStep.push(4);
+    SoloFlowStep.push(7);
+    SoloFlowStep.push(8);
+}
   SoloMsgStep_SVG =   [0,1,1,1,1,1,1,1,1,1,1,1];
   SoloArrowStep_SVG = [0,0,0,0,0,0,0,1,1,1,2,2];
 

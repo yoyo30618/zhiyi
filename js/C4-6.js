@@ -1,10 +1,10 @@
 var SoloCurrentStep = 0; // 目前顯示的步驟
 var SoloInput = [];
 var SoloOutput = [0, 0, 0, 0, 0, 0];
-var SoloCodeStep = 10;
-var SoloMsgStep =    [0,1,1,1,1,1,1, 1,1,1, 1,1, 1,2,2,2, 2,3,3,3, 3,4,4,4, 4,5,5,5, 5,6,6,6 ,7];
-var SoloArrowStep =  [0,0,0,0,0,0,0, 1,1,1, 2,2, 2,3,4,4, 2,3,4,4, 2,3,4,4, 2,3,4,4, 2,3,4,4 ,5];
-var SoloFlowStep = [0,1,2,3,6,7,10,11,12,13];
+var SoloCodeStep = 21;
+var SoloMsgStep =    [0,1,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5,6,6,6,7];
+var SoloArrowStep =  [0,1,2,2,2,3,4,2,3,4,2,3,4,2,3,4,2,3,4,2,5];
+var SoloFlowStep =   [0,1,2,3,4,5,6,4,5,6,4,5,6,4,5,6,4,5,6,7,8];
 var SoloOperationStep_SVG = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32];
 var SoloCodeStep_SVG = 33;
 var SoloMsgStep_SVG =   [0,1,1,1,1,1,1, 1,1,1, 1,1, 1,2,2,2, 2,3,3,3, 3,4,4,4, 4,5,5,5, 5,6,6,6 ,7];
@@ -85,6 +85,54 @@ function SetSolodata() {
   console.log("Cnt:"+Cnt);
   SoloCodeStep_SVG = 13 + 4 * (Cnt>=5?5:Cnt); //輸入步 每一次迴圈3步
   
+  SoloCodeStep = 6+3*Cnt;
+  SoloMsgStep =    [0,1,1,1];
+  SoloArrowStep =  [0,1,2,2];
+  SoloFlowStep =   [0,1,2,3];
+
+  
+  for (var i = 1; i <= Cnt&&i<=5; i++) {
+    SoloMsgStep.push(12);
+    SoloMsgStep.push(11);
+    SoloMsgStep.push(12);
+    SoloArrowStep.push(2);
+    SoloArrowStep.push(3);
+    SoloArrowStep.push(4);
+    SoloFlowStep.push(4);
+    SoloFlowStep.push(5);
+    SoloFlowStep.push(6);
+  }
+  SoloMsgStep.push(12);
+  SoloMsgStep.push(12);
+  SoloArrowStep.push(2);
+  SoloArrowStep.push(5);
+  SoloFlowStep.push(7);
+  SoloFlowStep.push(8);
+
+
+
+
+  var TEMP="";
+  SoloOutput[6]="";
+  if(SoloCurrentStep==1) FlowGrade=[0,0,0,0,0,0,0];//分數暫存器，步驟回1時重製作
+  if(SoloCurrentStep==6)FlowGrade[1]=Number(SoloInput[6]);
+  if(SoloCurrentStep==9)FlowGrade[2]=Number(SoloInput[6]);
+  if(SoloCurrentStep==12)FlowGrade[3]=Number(SoloInput[6]);
+  if(SoloCurrentStep==15)FlowGrade[4]=Number(SoloInput[6]);
+  if(SoloCurrentStep==18)FlowGrade[5]=Number(SoloInput[6]);
+  if(SoloCurrentStep<6)SoloOutput[6] = "<br>";
+  if(SoloCurrentStep>=6)SoloOutput[6]="<br>考試成績："+FlowGrade[1]+"<br>";
+  if(SoloCurrentStep>=9)SoloOutput[6]="<br>考試成績："+FlowGrade[1]+"<br>考試成績："+FlowGrade[2]+"<br>";
+  if(SoloCurrentStep>=12)SoloOutput[6]="<br>考試成績："+FlowGrade[1]+"<br>考試成績："+FlowGrade[2]+"<br>考試成績："+FlowGrade[3]+"<br>";
+  if(SoloCurrentStep>=15)SoloOutput[6]="<br>考試成績："+FlowGrade[1]+"<br>考試成績："+FlowGrade[2]+"<br>考試成績："+FlowGrade[3]+"<br>考試成績："+FlowGrade[4]+"<br>";
+  if(SoloCurrentStep>=18)SoloOutput[6]="<br>考試成績："+FlowGrade[1]+"<br>考試成績："+FlowGrade[2]+"<br>考試成績："+FlowGrade[3]+"<br>考試成績："+FlowGrade[4]+"<br>考試成績："+FlowGrade[5]+"<br>";
+
+
+  if(SoloCurrentStep>=(20-(5-Cnt)*3)){//最終列印
+    var Avg=(FlowGrade[1]+FlowGrade[2]+FlowGrade[3]+FlowGrade[4]+FlowGrade[5])/Cnt;
+    SoloOutput[6]=SoloOutput[6]+Avg;
+  }
+  /*以上流程圖*/
   SoloMsgStep_SVG =   [0,1,1,1,1,1,1, 1,1,1, 1,1];
   SoloArrowStep_SVG = [0,0,0,0,0,0,0, 1,1,1, 2,2];
 

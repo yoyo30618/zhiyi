@@ -21,14 +21,16 @@
         "Input2":9,
         "Input3":0,
         "Input4":0,
-        "Input5":0
+        "Input5":0,
+        "Input6":0
     },
     "DefaultOutput":{
         "Output1":72,
         "Output2":205.74,
         "Output3":205.74,
         "Output4":0,
-        "Output5":0
+        "Output5":0,
+        "Output6":0
     },
     "CodeStep":5,
     "CodeStep_SVG":23,

@@ -19,7 +19,7 @@ function showStep(step) {
   if (stepIndicator) {
     if(NowTagValue=="程式邏輯分析") NowMsg = Msg[MsgStep_SVG[step]];
     else  NowMsg = Msg[MsgStep[step]];
-    for (let i = 1; i <= 5; i++) {
+    for (let i = 1; i <= 6; i++) {
       const placeholder = "{Input" + i + "}";
       const placeBoxholder = "{InputBox" + i + "}";
       const placeoutholder = "{Output" + i + "}";
@@ -111,7 +111,7 @@ function showSoloStep(step) {
   if (stepIndicator) {
     if(NowTagValue=="程式邏輯分析") NowMsg = Msg[SoloMsgStep_SVG[step]];
     else  NowMsg = Msg[SoloMsgStep[step]];
-    for (let i = 1; i <= 5; i++) {
+    for (let i = 1; i <= 6; i++) {
       const placeholder = "{Input" + i + "}";
       const placeBoxholder = "{InputBox" + i + "}";
       const placeBoxholderTXT = "{InputBoxTXT" + i + "}";
@@ -319,6 +319,15 @@ document.getElementById("solo-next-btn").addEventListener("click", function () {
         else
           SoloInput[5] = SoloInput5.value;
       }
+      var SoloInput6 = document.getElementById("SoloInput6");
+      if (SoloInput6){ 
+        if(SoloInput6.value=="")
+          {alert("請檢查輸入格式");Flag=False;}
+        else if(Number(SoloInput6.value)<0)
+          {alert("請勿輸入負數");Flag=False;}
+        else
+          SoloInput[6] = SoloInput6.value;
+      }
       if(Flag){
         
         SoloCurrentStep =SoloCurrentStep + 1;
@@ -366,6 +375,13 @@ document.getElementById("solo-next-btn").addEventListener("click", function () {
           {alert("請檢查輸入格式");Flag=False;}
         else
           SoloInput[5] = SoloInput5.value;
+      }
+      var SoloInput6 = document.getElementById("SoloInput6");
+      if (SoloInput6){ 
+        if(SoloInput6.value=="")
+          {alert("請檢查輸入格式");Flag=False;}
+        else
+          SoloInput[6] = SoloInput6.value;
       }
       if(Flag){
         SoloCurrentStep =SoloCurrentStep + 1;
