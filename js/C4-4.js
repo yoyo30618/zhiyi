@@ -291,7 +291,7 @@ function SetSolodata() {
 
   SoloOperationStep_SVG=[];
   for(var i=0;i<SoloCodeStep_SVG;i++)SoloOperationStep_SVG.push(i);
-  for (var i = 1; i <= Cnt&&i<6; i++) {
+  for (var i = 1; i <= Cnt&&i<=6; i++) {
     SoloMsgStep_SVG.push(1);
     SoloMsgStep_SVG.push(1);
     SoloMsgStep_SVG.push(1);
@@ -441,14 +441,15 @@ if(SoloCurrentStep==14)SoloOutput[3]=1;
 if(SoloCurrentStep==17)SoloOutput[3]=3;
 if(SoloCurrentStep==20)SoloOutput[3]=6;
 if(Cnt<=6){
-    if(SoloCurrentStep==23)SoloOutput[3]=10;
-    if(SoloCurrentStep==26)SoloOutput[3]=15;
-    if(SoloCurrentStep==29)SoloOutput[3]=21;
+    if(SoloCurrentStep>=21)SoloOutput[3]=10;
+    if(SoloCurrentStep>=24)SoloOutput[3]=15;
+    if(SoloCurrentStep>=27)SoloOutput[3]=21;
 }
 else{
-    if(SoloCurrentStep==23)SoloOutput[3]="...";
-    if(SoloCurrentStep==26)SoloOutput[3]=SoloOutput[1]-SoloInput[1];
-    if(SoloCurrentStep==29)SoloOutput[3]=SoloOutput[1];
+    if(SoloCurrentStep>=21)SoloOutput[3]="...";
+    if(SoloCurrentStep>=24)SoloOutput[3]=SoloOutput[1]-SoloInput[1]*2+1;
+    if(SoloCurrentStep>=26)SoloOutput[3]=SoloOutput[1]-SoloInput[1];//888
+    if(SoloCurrentStep>=29)SoloOutput[3]=SoloOutput[1];
 } 
 
 SoloOutput[4]="";
@@ -462,7 +463,7 @@ if(Cnt<=6){
 }
 else{
     if(SoloCurrentStep==22||SoloCurrentStep==23)SoloOutput[4]="...";
-    if(SoloCurrentStep==25||SoloCurrentStep==26)SoloOutput[4]=SoloOutput[1]-SoloInput[1]*2;
+    if(SoloCurrentStep==25||SoloCurrentStep==26)SoloOutput[4]=SoloOutput[1]-SoloInput[1]*2+1;
     if(SoloCurrentStep==28||SoloCurrentStep==29)SoloOutput[4]=SoloOutput[1]-SoloInput[1];
 }
 

@@ -76,7 +76,7 @@ function SetSolodata() {
   //{Output2}為字串陣列 紀錄1,2,3,4,5
   //{Output3}為當前i的數值
   if(Number(SoloInput[1])>5){
-    alert("本題特殊限制，迴圈次數不得大於5");
+    alert("請輸入小於或等於5的數字");
     SoloCurrentStep-=1;
   }
   Cnt = Number(SoloInput[1]);//迴圈要跑幾次

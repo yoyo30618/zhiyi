@@ -125,24 +125,24 @@ var SoloOperationInfo = [
   ],
   [
       ["ImgBox",10,10,600,600,"C4-3/vision/pic22.png"],
-      ["DrawText","{Input1}",250,210,18,"black"],
-      ["DrawText","{Input2}",250,275,18,"black"],
-      ["DrawText","{Input3}",250,340,18,"black"],
-      ["DrawText","{Input1}",445,225,18,"black"],
-      ["DrawText","{Input2}",480,225,18,"black"],
-      ["DrawText","{Input3}",545,225,18,"black"]
+      ["DrawText","{Input1}",270,130,18,"black"],
+      ["DrawText","{Input2}",270,200,18,"black"],
+      ["DrawText","{Input3}",270,275,18,"black"],
+      ["DrawText","{Input1}",145,450,18,"black"],
+      ["DrawText","{Input2}",180,450,18,"black"],
+      ["DrawText","{Input3}",250,450,18,"black"]
   ],
   [
       ["ImgBox",10,10,600,600,"C4-3/vision/pic23.png"],
-      ["DrawText","{Input1}",250,210,18,"black"],
-      ["DrawText","{Input2}",250,275,18,"black"],
-      ["DrawText","{Input3}",250,340,18,"black"],
-      ["DrawText","{Input1}",445,225,18,"black"],
-      ["DrawText","{Input2}",480,225,18,"black"],
-      ["DrawText","{Input3}",545,225,18,"black"],
-      ["DrawText","{Output2}",390,285,14,"black"],
-      ["ImgBox",390,303,20,20,"C4-3/vision/pic25.png"],
-      ["DrawText","{Output3}",250,410,18,"black"]
+      ["DrawText","{Input1}",270,130,18,"black"],
+      ["DrawText","{Input2}",270,200,18,"black"],
+      ["DrawText","{Input3}",270,275,18,"black"],
+      ["DrawText","{Input1}",145,450,18,"black"],
+      ["DrawText","{Input2}",180,450,18,"black"],
+      ["DrawText","{Input3}",250,450,18,"black"],
+      ["DrawText","{Output2}",340,450,14,"black"],
+      ["ImgBox",335,468,20,20,"C4-3/vision/pic25.png"],
+      ["DrawText","{Output3}",270,355,18,"black"]
   ]
 ];
 function SetSolodata() {
@@ -153,28 +153,28 @@ function SetSolodata() {
   一步的原始數值，每次增加"ImgBox"12的X40,
   [
       ["ImgBox",10,10,600,600,"C4-3/vision/pic24.png"],
-      ["DrawText","{Input1}",250,210,18,"black"],
-      ["DrawText","{Input2}",250,275,18,"black"],
-      ["DrawText","{Input3}",250,340,18,"black"],
-      ["DrawText","{Input1}",445,225,18,"black"],
-      ["DrawText","{Input2}",480,225,18,"black"],
-      ["DrawText","{Input3}",545,225,18,"black"],
-      ["DrawText","{Output2}",390,285,14,"black"],
+      ["DrawText","{Input1}",270,130,18,"black"],
+      ["DrawText","{Input2}",270,200,18,"black"],
+      ["DrawText","{Input3}",270,275,18,"black"],
+      ["DrawText","{Input1}",145,450,18,"black"],
+      ["DrawText","{Input2}",180,450,18,"black"],
+      ["DrawText","{Input3}",250,450,18,"black"],
+      ["DrawText","{Output2}",340,450,14,"black"],
       ["ImgBox",390,303,20,20,"C4-3/vision/pic25.png"],
-      ["DrawText","{Output3}",250,410,18,"black"]
+      ["DrawText","{Output3}",270,355,18,"black"]
   ],
   [
       ["ImgBox",10,10,600,600,"C4-3/vision/pic24.png"],
-      ["DrawText","{Input1}",250,210,18,"black"],
-      ["DrawText","{Input2}",250,275,18,"black"],
-      ["DrawText","{Input3}",250,340,18,"black"],
-      ["DrawText","{Input1}",445,225,18,"black"],
-      ["DrawText","{Input2}",480,225,18,"black"],
-      ["DrawText","{Input3}",545,225,18,"black"],
-      ["DrawText","{Output2}",390,285,14,"black"],
+      ["DrawText","{Input1}",270,130,18,"black"],
+      ["DrawText","{Input2}",270,200,18,"black"],
+      ["DrawText","{Input3}",270,275,18,"black"],
+      ["DrawText","{Input1}",145,450,18,"black"],
+      ["DrawText","{Input2}",180,450,18,"black"],
+      ["DrawText","{Input3}",250,450,18,"black"],
+      ["DrawText","{Output2}",340,450,14,"black"],
       ["ImgBox",390,303,20,20,"C4-3/vision/pic25.png"],
-      ["DrawText","{Output3}",250,410,18,"black"],
-      ["DrawText","{Output1}",520,410,18,"black"]
+      ["DrawText","{Output3}",270,355,18,"black"],
+      ["DrawText","{Output1}",475,580,18,"black"]
   ]
   */
 Cnt=0;
@@ -193,8 +193,8 @@ Cnt = isNaN(Cnt) ? 5 : Cnt;
 
   console.log("Cnt:"+Cnt);
   
-  if(Cnt>=5&&SoloCurrentStep==27)SoloCurrentStep=29;//跳過點點點的步驟
-  if(Cnt>=5&&SoloCurrentStep==28)SoloCurrentStep=26;//跳過點點點的步驟
+  if(Cnt>5&&SoloCurrentStep==27)SoloCurrentStep=29;//跳過點點點的步驟
+  if(Cnt>5&&SoloCurrentStep==28)SoloCurrentStep=26;//跳過點點點的步驟
   SoloCodeStep_SVG = 23 + 2 * (Cnt>=5?5:Cnt); //輸入步 每一次迴圈兩步
   
   SoloMsgStep_SVG =   [0,1,1,1,1,1,1,2,3,3,3,3,3,3,4,5,5,5,5,5,5,5,5];
@@ -345,52 +345,52 @@ Cnt = isNaN(Cnt) ? 5 : Cnt;
     ],
     [
         ["ImgBox",10,10,600,600,"C4-3/vision/pic22.png"],
-        ["DrawText","{Input1}",250,210,18,"black"],
-        ["DrawText","{Input2}",250,275,18,"black"],
-        ["DrawText","{Input3}",250,340,18,"black"],
-        ["DrawText","{Input1}",445,225,18,"black"],
-        ["DrawText","{Input2}",480,225,18,"black"],
-        ["DrawText","{Input3}",545,225,18,"black"]
+        ["DrawText","{Input1}",270,130,18,"black"],
+        ["DrawText","{Input2}",270,200,18,"black"],
+        ["DrawText","{Input3}",270,275,18,"black"],
+        ["DrawText","{Input1}",145,450,18,"black"],
+        ["DrawText","{Input2}",180,450,18,"black"],
+        ["DrawText","{Input3}",250,450,18,"black"]
     ],
     [
         ["ImgBox",10,10,600,600,"C4-3/vision/pic23.png"],
-        ["DrawText","{Input1}",250,210,18,"black"],
-        ["DrawText","{Input2}",250,275,18,"black"],
-        ["DrawText","{Input3}",250,340,18,"black"],
-        ["DrawText","{Input1}",445,225,18,"black"],
-        ["DrawText","{Input2}",480,225,18,"black"],
-        ["DrawText","{Input3}",545,225,18,"black"],
-        ["DrawText","{Output2}",390,285,14,"black"],
-        ["ImgBox",390,303,20,20,"C4-3/vision/pic25.png"],
-        ["DrawText","{Output3}",250,410,18,"black"]
+        ["DrawText","{Input1}",270,130,18,"black"],
+        ["DrawText","{Input2}",270,200,18,"black"],
+        ["DrawText","{Input3}",270,275,18,"black"],
+        ["DrawText","{Input1}",145,450,18,"black"],
+        ["DrawText","{Input2}",180,450,18,"black"],
+        ["DrawText","{Input3}",250,450,18,"black"],
+        ["DrawText","{Output2}",340,450,14,"black"],
+        ["ImgBox",335,468,20,20,"C4-3/vision/pic25.png"],
+        ["DrawText","{Output3}",270,355,18,"black"]
     ]
   ];
   //
   for (var i = 0; i < Cnt&&i<5; i++) {
     var Temp =[
       ["ImgBox",10,10,600,600,"C4-3/vision/pic24.png"],
-      ["DrawText","{Input1}",250,210,18,"black"],
-      ["DrawText","{Input2}",250,275,18,"black"],
-      ["DrawText","{Input3}",250,340,18,"black"],
-      ["DrawText","{Input1}",445,225,18,"black"],
-      ["DrawText","{Input2}",480,225,18,"black"],
-      ["DrawText","{Input3}",545,225,18,"black"],
-      ["DrawText","{Output2}",390,285,14,"black"],
-      ["ImgBox",390 + i * 40,303,20,20,"C4-3/vision/pic25.png"],
-      ["DrawText","{Output3}",250,410,18,"black"]
+      ["DrawText","{Input1}",270,130,18,"black"],
+      ["DrawText","{Input2}",270,200,18,"black"],
+      ["DrawText","{Input3}",270,275,18,"black"],
+      ["DrawText","{Input1}",145,450,18,"black"],
+      ["DrawText","{Input2}",180,450,18,"black"],
+      ["DrawText","{Input3}",250,450,18,"black"],
+      ["DrawText","{Output2}",340,450,14,"black"],
+      ["ImgBox",335 + i * 40,468,20,20,"C4-3/vision/pic25.png"],
+      ["DrawText","{Output3}",270,355,18,"black"]
   ];
     var Temp2 =[
       ["ImgBox",10,10,600,600,"C4-3/vision/pic24.png"],
-      ["DrawText","{Input1}",250,210,18,"black"],
-      ["DrawText","{Input2}",250,275,18,"black"],
-      ["DrawText","{Input3}",250,340,18,"black"],
-      ["DrawText","{Input1}",445,225,18,"black"],
-      ["DrawText","{Input2}",480,225,18,"black"],
-      ["DrawText","{Input3}",545,225,18,"black"],
-      ["DrawText","{Output2}",390,285,14,"black"],
-      ["ImgBox",390 + i * 40,303,20,20,"C4-3/vision/pic25.png"],
-      ["DrawText","{Output3}",250,410,18,"black"],
-      ["DrawText","{Output3}",520,410,18,"black"]
+      ["DrawText","{Input1}",270,130,18,"black"],
+      ["DrawText","{Input2}",270,200,18,"black"],
+      ["DrawText","{Input3}",270,275,18,"black"],
+      ["DrawText","{Input1}",145,450,18,"black"],
+      ["DrawText","{Input2}",180,450,18,"black"],
+      ["DrawText","{Input3}",250,450,18,"black"],
+      ["DrawText","{Output2}",340,450,14,"black"],
+      ["ImgBox",335 + i * 40,468,20,20,"C4-3/vision/pic25.png"],
+      ["DrawText","{Output3}",270,355,18,"black"],
+      ["DrawText","{Output3}",475,580,18,"black"]
     ];
     //加入迴圈點點
     SoloOperationInfo.push(Temp);

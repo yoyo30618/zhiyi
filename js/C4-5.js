@@ -452,9 +452,11 @@ else{
     var Temp=0;
     if(SoloCurrentStep>10)Temp=Number(SoloInput[1]);
     if(Temp%2!=0)Temp-=1;
-    if(SoloCurrentStep==23)SoloOutput[3]="...";
-    if(SoloCurrentStep==26)SoloOutput[3]=SoloOutput[1]-Temp;
-    if(SoloCurrentStep==29)SoloOutput[3]=SoloOutput[1];
+
+    if(SoloCurrentStep>=21)SoloOutput[3]="...";
+    if(SoloCurrentStep>=24)SoloOutput[3]=SoloOutput[1]-Temp*2+2;
+    if(SoloCurrentStep>=26)SoloOutput[3]=SoloOutput[1]-Temp;//888
+    if(SoloCurrentStep>=29)SoloOutput[3]=SoloOutput[1];
 } 
 
 SoloOutput[4]="";
