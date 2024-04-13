@@ -358,6 +358,7 @@ else{
         ["ImgBox",10,10,600,600,"C4-5/vision/pic12.png"],
         ["DrawText","{Input1}",215,215,18,"black"],
         ["DrawText","{Output3}",215,305,18,"black"],
+        ["DrawText","{Input4}",215,400,18,"black"],
         ["DrawText","{Input1}",465,205,18,"black"],
         ["DrawText","{Output2}",350,260,14,"black"],
         ["ImgBox",340,287,20,20,"C4-5/vision/pic14.png"]
@@ -369,6 +370,7 @@ else{
         ["ImgBox",10,10,600,600,"C4-5/vision/pic13.png"],
         ["DrawText","{Input1}",215,215,18,"black"],
         ["DrawText","{Output3}",215,305,18,"black"],
+        ["DrawText","{Input4}",215,400,18,"black"],
         ["DrawText","{Input1}",465,205,18,"black"],
         ["DrawText","{Output2}",350,260,14,"black"],
         ["ImgBox",340+40*i,287,20,20,"C4-5/vision/pic14.png"]
@@ -377,6 +379,7 @@ else{
         ["ImgBox",10,10,600,600,"C4-5/vision/pic13.png"],
         ["DrawText","{Input1}",215,215,18,"black"],
         ["DrawText","{Output3}",215,305,18,"black"],
+        ["DrawText","{Input4}",215,400,18,"black"],
         ["DrawText","{Input1}",465,205,18,"black"],
         ["DrawText","{Output2}",350,260,14,"black"],
         ["ImgBox",340+40*i,287,20,20,"C4-5/vision/pic14.png"],
@@ -387,6 +390,7 @@ else{
         ["ImgBox",10,10,600,600,"C4-5/vision/pic13.png"],
         ["DrawText","{Input1}",215,215,18,"black"],
         ["DrawText","{Output3}",215,305,18,"black"],
+        ["DrawText","{Input4}",215,400,18,"black"],
         ["DrawText","{Input1}",465,205,18,"black"],
         ["DrawText","{Output2}",350,260,14,"black"],
         ["ImgBox",340+40*i,287,20,20,"C4-5/vision/pic14.png"],
@@ -494,5 +498,29 @@ else{
     if(SoloCurrentStep==22||SoloCurrentStep==23)SoloOutput[5]="...";
     if(SoloCurrentStep==25||SoloCurrentStep==26)SoloOutput[5]=Temp-2;
     if(SoloCurrentStep==28||SoloCurrentStep==29)SoloOutput[5]=Temp;
+}
+
+
+//為了i
+if(SoloCurrentStep<=11)SoloInput[4]=2;
+if(Cnt<=6){
+    if(SoloCurrentStep>=12)SoloInput[4]=2;
+    if(SoloCurrentStep>=15)SoloInput[4]=4;
+    if(SoloCurrentStep>=18)SoloInput[4]=6;
+    if(SoloCurrentStep>=21)SoloInput[4]=8;
+    if(SoloCurrentStep>=24)SoloInput[4]=10;
+    if(SoloCurrentStep>=27)SoloInput[4]=12;
+}
+else{
+    var Temp=SoloInput[1];
+    while(Temp%2!=0){
+        Temp-=1;
+    }
+    if(SoloCurrentStep>=12)SoloInput[4]=2;
+    if(SoloCurrentStep>=15)SoloInput[4]=4;
+    if(SoloCurrentStep>=18)SoloInput[4]=6;
+    if(SoloCurrentStep>=21)SoloInput[4]=Temp-4;
+    if(SoloCurrentStep>=24)SoloInput[4]=Temp-2;
+    if(SoloCurrentStep>=27)SoloInput[4]=Temp;
 }
 }

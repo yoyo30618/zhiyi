@@ -339,20 +339,19 @@ function SetSolodata() {
   if(SoloCurrentStep==30)SoloOutput[5]=Grade[1]+Grade[2]+Grade[3]+Grade[4];
   if(SoloCurrentStep==34)SoloOutput[5]=Grade[1]+Grade[2]+Grade[3]+Grade[4]+Grade[5];
   if(SoloCurrentStep>=(32-(5-Cnt)*4)){//最終列印
-    var Temp=SoloOutput[2]/Cnt;
-    if (Number.isInteger(Temp)) {
-        Temp = Temp.toFixed(1);
+    SoloInput[4]=SoloOutput[2]/Cnt;
+    if (Number.isInteger(SoloInput[4])) {
+        SoloInput[4] = SoloInput[4].toFixed(1);
     } else {
-        Temp = Temp;
+        SoloInput[4] = SoloInput[4];
     }
-    SoloInput[4]="平均為"+Temp;
     SoloOutput[1]="";
     if(SoloCurrentStep==16)SoloOutput[1]="<br>考試成績："+Grade[1];
     if(SoloCurrentStep==20)SoloOutput[1]="<br>考試成績："+Grade[1]+"<br>考試成績："+Grade[2];
     if(SoloCurrentStep==24)SoloOutput[1]="<br>考試成績："+Grade[1]+"<br>考試成績："+Grade[2]+"<br>考試成績："+Grade[3];
     if(SoloCurrentStep==28)SoloOutput[1]="<br>考試成績："+Grade[1]+"<br>考試成績："+Grade[2]+"<br>考試成績："+Grade[3]+"<br>考試成績："+Grade[4];
     if(SoloCurrentStep==32)SoloOutput[1]="<br>考試成績："+Grade[1]+"<br>考試成績："+Grade[2]+"<br>考試成績："+Grade[3]+"<br>考試成績："+Grade[4]+"<br>考試成績："+Grade[5];
-    SoloOutput[1]=SoloOutput[1]+"<br>平均為"+Temp;
+    SoloOutput[1]=SoloOutput[1]+"<br>"+SoloInput[4];
 
   }
 }

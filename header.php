@@ -103,6 +103,9 @@
 								</li>								
 								<li>
 									<a class="dropdown-item" href="<?php echo $parentDirectory; ?>C4/C4-6.php">題目六</a>
+								</li>							
+								<li>
+									<a class="dropdown-item" href="<?php echo $parentDirectory; ?>C4/C4-7.php">題目七</a>
 								</li>
 							</ul>
 						</li>

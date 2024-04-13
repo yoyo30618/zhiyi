@@ -81,6 +81,13 @@
 											</button>
 										</h2>
 									</div>
+									<div class="accordion-item">
+										<h2 class="accordion-header" id="headingC4">
+											<button class="accordion-button collapsed" type="button" onclick="window.location.href='C4-7.php'">
+												C4-7 題目七
+											</button>
+										</h2>
+									</div>
 								</div>
 							</div>
 						</div>

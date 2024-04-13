@@ -171,6 +171,11 @@
 								題目六
 							</button>
 						</li>
+						<li>
+							<button onclick="location.href='<?php echo $parentDirectory; ?>C4/C4-7.php'"  aria-controls="collapseC4-7" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseC4-7" data-bs-toggle="collapse" type="button">
+								題目七
+							</button>
+						</li>
 					</ul>
 				</div>
 			</div>
