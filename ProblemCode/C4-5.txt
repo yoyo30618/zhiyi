@@ -1,6 +1,6 @@
 <table>
 	<tr><td>{Arrow}</td><td style="background-color:lightblue">n = int(input("請輸入n:"))</td></tr>
-    <tr><td>{Arrow}</td><td style="">sum = 0</td></tr>
+    <tr><td>{Arrow}</td><td style="background-color:lightblue">sum = 0</td></tr>
     <tr><td>{Arrow}</td><td style="background-color:lightgreen">for i in range(2,n+1,2):</td></tr>
     <tr><td>{Arrow}</td><td style="background-color:lightgreen">    {Operationstyle}sum = sum + i{EndOperationstyle}</td></tr>
     <tr><td>{Arrow}</td><td style="background-color:lightgreen">{Output}print(sum){EndOutput}</td></tr>
