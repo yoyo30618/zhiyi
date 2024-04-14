@@ -557,19 +557,26 @@ function AddSVG(Operation) {
 
 function generateSvgContent(step, IsSolo) {
   //將目前步驟之SVG指令包裝
-  var svgContent ='<svg width="700" height="700" xmlns="http://www.w3.org/2000/svg" id="your-svg-id">';
+  var svgContent =
+    '<svg width="700" height="700" xmlns="http://www.w3.org/2000/svg" id="your-svg-id">';
   if (IsSolo) {
-    var Temp=(step<SoloOperationStep_SVG.length)?step:0;
-    var Temp2=(Temp<SoloOperationInfo.length)?Temp:0;
-    for (var Operation of SoloOperationInfo[Temp2])
-      svgContent+=AddSVG(Operation);
+    if (step > SoloOperationStep_SVG.length) {//不幹
+    } else if (SoloOperationStep_SVG[step] > SoloOperationInfo.length) {//也不幹
+    } else {
+      for (var Operation of SoloOperationInfo[SoloOperationStep_SVG[step]])
+        svgContent += AddSVG(Operation);
+    }
   } 
   else {
-    var Temp=(step<OperationStep_SVG.length)?step:0;
-    var Temp2=(Temp<OperationInfo.length)?Temp:0;
-    for (var Operation of OperationInfo[Temp2])
+    if (step > OperationStep_SVG.length) {//不幹
+    } else if (OperationStep_SVG[step] > OperationInfo.length) {//也不幹
+    } else {
+      for (var Operation of OperationInfo[OperationStep_SVG[step]])
+        svgContent += AddSVG(Operation);
+    }
     // for (var Operation of OperationInfo[OperationStep_SVG[(step>=length(OperationStep_SVG))?step:0]])
-      svgContent+=AddSVG(Operation);
+    // for (var Operation of OperationInfo[OperationStep_SVG[step]])
+    //   svgContent += AddSVG(Operation);
   }
   svgContent += "</svg>";
   return svgContent;
