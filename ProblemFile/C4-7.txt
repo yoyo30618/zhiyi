@@ -2,4 +2,4 @@
 (2){Input}{Hint3}則會輸入幾次考試成績(正整數){EndHint3}{EndInput}，並{Operationstyle}{Hint4}計算平均成績{EndHint4}{EndOperationstyle}，
 再{Output}{Hint5}輸出平均分數{EndHint5}{EndOutput}。<br>
 輸入: 請輸入幾次考試: 3 考試成績: 90 考試成績: 54 考試成績: 30<br>
-輸出：平均為58.0分
+輸出：平均為58.0
