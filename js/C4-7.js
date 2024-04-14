@@ -377,7 +377,7 @@ function SetSolodata() {
   SoloArrowStep =  [0,1,2];
   SoloFlowStep =   [0,1,2];
   
-  for (var i = 1; i <= Cnt&&i<=5; i++) {
+  for (var i = 1; i <= Cnt; i++) {
     SoloMsgStep.push(12);
     SoloMsgStep.push(11);
     SoloMsgStep.push(12);
